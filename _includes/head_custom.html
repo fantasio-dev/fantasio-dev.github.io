@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ================================
   var COLLAPSE_KEY = 'peSidebarCollapsed';
   var rootEl = document.documentElement;
+  var btn = null;
 
   function isCollapsed() {
     try { return localStorage.getItem(COLLAPSE_KEY) === '1'; } catch (e) { return false; }
@@ -20,12 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
     try { localStorage.setItem(COLLAPSE_KEY, next ? '1' : '0'); } catch (e) {}
   }
 
+  function syncBtn() {
+    if (!btn) return;
+    var collapsed = rootEl.classList.contains('sidebar-collapsed');
+    btn.textContent = collapsed ? '»' : '«';
+    btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+    btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+  }
+
   // init from storage
   setCollapsed(isCollapsed());
 
   // Add a toggle button (visible on desktop only via CSS)
   if (!document.querySelector('.sidebar-collapse-toggle')) {
-    var btn = document.createElement('button');
+    btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'sidebar-collapse-toggle';
     btn.setAttribute('aria-controls', 'site-nav');
@@ -33,16 +42,35 @@ document.addEventListener('DOMContentLoaded', function() {
       setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
       syncBtn();
     });
-
-    function syncBtn() {
-      var collapsed = rootEl.classList.contains('sidebar-collapsed');
-      btn.textContent = collapsed ? '»' : '«';
-      btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-      btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-    }
     syncBtn();
     document.body.appendChild(btn);
+  } else {
+    btn = document.querySelector('.sidebar-collapse-toggle');
+    syncBtn();
   }
+
+  // Keyboard shortcut (desktop): '[' toggles sidebar
+  // - ignore when typing in inputs / contenteditable
+  // - ignore when modifier keys are pressed
+  window.addEventListener('keydown', function(e) {
+    if (e.defaultPrevented) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key !== '[') return;
+
+    // desktop only (same breakpoint as CSS)
+    if (!window.matchMedia || !window.matchMedia('(min-width: 66.5rem)').matches) return;
+
+    var ae = document.activeElement;
+    if (ae) {
+      var tag = (ae.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      if (ae.isContentEditable) return;
+    }
+
+    e.preventDefault();
+    setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
+    syncBtn();
+  });
 
   // 사이드바의 네비게이션 영역 찾기 (.site-nav 앞에 삽입)
   var siteNav = document.querySelector('.site-nav');
