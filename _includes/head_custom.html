@@ -5,6 +5,45 @@
 <!-- 사이드바 상단 퀵 버튼 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // ================================
+  // Sidebar collapse (desktop)
+  // ================================
+  var COLLAPSE_KEY = 'peSidebarCollapsed';
+  var rootEl = document.documentElement;
+
+  function isCollapsed() {
+    try { return localStorage.getItem(COLLAPSE_KEY) === '1'; } catch (e) { return false; }
+  }
+  function setCollapsed(next) {
+    if (next) rootEl.classList.add('sidebar-collapsed');
+    else rootEl.classList.remove('sidebar-collapsed');
+    try { localStorage.setItem(COLLAPSE_KEY, next ? '1' : '0'); } catch (e) {}
+  }
+
+  // init from storage
+  setCollapsed(isCollapsed());
+
+  // Add a toggle button (visible on desktop only via CSS)
+  if (!document.querySelector('.sidebar-collapse-toggle')) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sidebar-collapse-toggle';
+    btn.setAttribute('aria-controls', 'site-nav');
+    btn.addEventListener('click', function() {
+      setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
+      syncBtn();
+    });
+
+    function syncBtn() {
+      var collapsed = rootEl.classList.contains('sidebar-collapsed');
+      btn.textContent = collapsed ? '»' : '«';
+      btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+      btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+    }
+    syncBtn();
+    document.body.appendChild(btn);
+  }
+
   // 사이드바의 네비게이션 영역 찾기 (.site-nav 앞에 삽입)
   var siteNav = document.querySelector('.site-nav');
   if (siteNav) {
@@ -78,6 +117,77 @@ main.main-content-wrap,
   .main-content {
     padding: 0 1rem 0 0 !important;
     margin: 0 !important;
+  }
+}
+
+/* ====================================
+   사이드바 접기/펼치기 (Desktop)
+   - html.sidebar-collapsed 클래스 기반
+   ==================================== */
+@media (min-width: 66.5rem) {
+  html.sidebar-collapsed .side-bar {
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    border-right: 0 !important;
+  }
+
+  html.sidebar-collapsed .sidebar-quick-btns,
+  html.sidebar-collapsed .site-header,
+  html.sidebar-collapsed .site-nav {
+    display: none !important;
+  }
+
+  html.sidebar-collapsed .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* 사이드바가 없을 때 본문이 화면 좌측에 너무 붙지 않도록 여백 복구 */
+  html.sidebar-collapsed .main-content-wrap,
+  html.sidebar-collapsed main.main-content-wrap {
+    padding-left: 2rem !important;
+  }
+
+  html.sidebar-collapsed .main-content {
+    padding-left: 1rem !important;
+  }
+
+  .sidebar-collapse-toggle {
+    position: fixed;
+    top: 0.9rem;
+    left: 0.9rem;
+    z-index: 9999;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #334155;
+    cursor: pointer;
+  }
+
+  .sidebar-collapse-toggle:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  /* 사이드바가 펼쳐진 상태에서는 버튼을 사이드바 안쪽 상단에 배치 */
+  html:not(.sidebar-collapsed) .sidebar-collapse-toggle {
+    left: 0.9rem;
+  }
+}
+
+/* 모바일에서는 기존 Just the Docs 메뉴 버튼 사용 */
+@media (max-width: 66.49rem) {
+  .sidebar-collapse-toggle {
+    display: none !important;
   }
 }
 
@@ -280,5 +390,95 @@ div.dataTables_wrapper div.dataTables_length {
   .sidebar-quick-btns {
     display: none;
   }
+}
+
+/* ====================================
+   도메인 인덱스: 토픽 맵 (촘촘한 링크 그리드)
+   ==================================== */
+
+.topic-map {
+  margin: 1rem 0 1.5rem;
+}
+
+.topic-map__sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+/* 화면이 넓을수록 더 촘촘하게 */
+@media (min-width: 66.5rem) {
+  .topic-map__sections {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (min-width: 90rem) {
+  .topic-map__sections {
+    grid-template-columns: repeat(4, minmax(210px, 1fr));
+  }
+}
+
+.topic-map__section {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  padding: 10px 10px 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+.topic-map__section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.topic-map__section-link {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  text-decoration: none !important;
+  color: #0f172a;
+}
+
+.topic-map__section-link:hover {
+  text-decoration: underline !important;
+}
+
+.topic-map__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topic-map__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-decoration: none !important;
+  color: #0f172a;
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.topic-map__chip:hover {
+  background: rgba(226, 232, 240, 0.9);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+.topic-map__chip--primary {
+  color: #fff;
+  background: #2563eb;
+  border-color: rgba(37, 99, 235, 0.9);
+}
+
+.topic-map__chip--primary:hover {
+  background: #1d4ed8;
 }
 </style>
