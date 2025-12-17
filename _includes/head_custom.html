@@ -81,20 +81,10 @@ main.main-content-wrap,
   }
 }
 
-/* 더 넓은 화면 */
-@media (min-width: 100rem) {
-  .main-content-wrap {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-
-/* 초대형 화면 */
-@media (min-width: 120rem) {
-  .main-content-wrap {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
+/* 어떤 화면 크기에서도 좌측 여백이 다시 생기지 않도록 고정 */
+.main-content-wrap,
+main.main-content-wrap {
+  padding-left: 0 !important;
 }
 
 /* ====================================
