@@ -509,4 +509,161 @@ div.dataTables_wrapper div.dataTables_length {
 .topic-map__chip--primary:hover {
   background: #1d4ed8;
 }
+
+/* ====================================
+   NW 도메인: 매트릭스(표) 레이아웃
+   ==================================== */
+
+.nw-matrix {
+  margin: 1rem 0 1.5rem;
+}
+
+.nw-matrix__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (min-width: 66.5rem) {
+  .nw-matrix__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a b c"
+      "d x e";
+  }
+}
+
+.nw-card {
+  border-right: 1px solid rgba(15, 23, 42, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.18);
+  min-height: 240px;
+}
+
+@media (min-width: 66.5rem) {
+  .nw-card:nth-child(3n) { border-right: 0; }
+  .nw-card--a { grid-area: a; }
+  .nw-card--b { grid-area: b; }
+  .nw-card--c { grid-area: c; }
+  .nw-card--d { grid-area: d; }
+  .nw-card--e { grid-area: e; }
+  .nw-card--c,
+  .nw-card--e { border-right: 0; }
+}
+
+.nw-spacer {
+  display: none;
+}
+
+@media (min-width: 66.5rem) {
+  .nw-spacer {
+    display: block;
+    grid-area: x;
+    border-right: 1px solid rgba(15, 23, 42, 0.18);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.18);
+    background: #fff;
+    min-height: 240px;
+  }
+}
+
+.nw-card__header {
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.nw-card__body {
+  padding: 10px 12px 12px;
+}
+
+.nw-sub {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.nw-sub:last-child {
+  margin-bottom: 0;
+}
+
+.nw-sub__title {
+  background: rgba(226, 232, 240, 0.8);
+  color: #0f172a;
+  font-weight: 800;
+  padding: 8px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nw-sub__title a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.nw-sub__title a:hover {
+  text-decoration: underline !important;
+}
+
+.nw-sub__content {
+  padding: 8px 10px 10px;
+}
+
+.nw-badge-hot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #7f1d1d;
+  background: rgba(254, 202, 202, 0.9);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  white-space: nowrap;
+}
+
+.nw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* topic-map 칩 스타일 재사용 */
+.nw-chips a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-decoration: none !important;
+  color: #0f172a;
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.nw-chips a:hover {
+  background: rgba(226, 232, 240, 0.9);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+.nw-chips a.nw-chip--primary {
+  color: #fff;
+  background: #2563eb;
+  border-color: rgba(37, 99, 235, 0.9);
+}
+
+.nw-chips a.nw-chip--primary:hover {
+  background: #1d4ed8;
+}
 </style>
