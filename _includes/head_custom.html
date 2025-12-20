@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var COLLAPSE_KEY = 'peSidebarCollapsed';
   var rootEl = document.documentElement;
   var btn = null;
+  var mainBtn = null;
 
   function isCollapsed() {
     try { return localStorage.getItem(COLLAPSE_KEY) === '1'; } catch (e) { return false; }
@@ -22,11 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function syncBtn() {
-    if (!btn) return;
     var collapsed = rootEl.classList.contains('sidebar-collapsed');
-    btn.textContent = collapsed ? '»' : '«';
-    btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-    btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+    if (btn) {
+      btn.textContent = collapsed ? '»' : '«';
+      btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+      btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+    }
+    if (mainBtn) {
+      mainBtn.textContent = collapsed ? '사이드바 펼치기' : '사이드바 접기';
+      mainBtn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+      mainBtn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
+    }
   }
 
   // init from storage
@@ -46,6 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(btn);
   } else {
     btn = document.querySelector('.sidebar-collapse-toggle');
+    syncBtn();
+  }
+
+  // Add an inline toggle button inside main content header (always reachable)
+  // This helps when the floating toggle is hard to click due to overlays / layout.
+  var mainHeader = document.querySelector('.main-header');
+  if (mainHeader && !document.querySelector('.main-collapse-toggle')) {
+    mainBtn = document.createElement('button');
+    mainBtn.type = 'button';
+    mainBtn.className = 'main-collapse-toggle';
+    mainBtn.addEventListener('click', function() {
+      setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
+      syncBtn();
+    });
+    syncBtn();
+    mainHeader.appendChild(mainBtn);
+  } else {
+    mainBtn = document.querySelector('.main-collapse-toggle');
     syncBtn();
   }
 
@@ -95,6 +120,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // site-nav 바로 앞에 삽입 (제목 아래, Home 위)
     siteNav.parentNode.insertBefore(quickBtns, siteNav);
   }
+
+  // ================================
+  // Main content quick buttons (shown when sidebar collapsed)
+  // ================================
+  // When sidebar is collapsed, the sidebar quick buttons disappear.
+  // Provide the same domain buttons at the top of the main content for quick navigation.
+  function ensureMainQuickBtns() {
+    var mainContent = document.querySelector('.main-content');
+    if (!mainContent) return;
+    if (document.querySelector('.main-quick-btns')) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'main-quick-btns';
+    bar.innerHTML = `
+      <div class="mq-row">
+        <a href="{{ site.baseurl }}/docs/ds" class="mqbtn mqbtn-purple">DS</a>
+        <a href="{{ site.baseurl }}/docs/sw" class="mqbtn mqbtn-blue">SW</a>
+        <a href="{{ site.baseurl }}/docs/ai" class="mqbtn mqbtn-green">AI</a>
+        <a href="{{ site.baseurl }}/docs/sec" class="mqbtn mqbtn-red">SEC</a>
+      </div>
+      <div class="mq-row">
+        <a href="{{ site.baseurl }}/docs/nw" class="mqbtn mqbtn-orange">NW</a>
+        <a href="{{ site.baseurl }}/docs/db" class="mqbtn mqbtn-teal">DB</a>
+        <a href="{{ site.baseurl }}/docs/biz" class="mqbtn mqbtn-pink">BIZ</a>
+        <a href="{{ site.baseurl }}/docs/caos" class="mqbtn mqbtn-gray">CAOS</a>
+      </div>
+    `;
+
+    // Insert near the top of content (before title content)
+    mainContent.insertBefore(bar, mainContent.firstChild);
+  }
+  ensureMainQuickBtns();
 });
 </script>
 
@@ -186,7 +243,7 @@ main.main-content-wrap,
     position: fixed;
     top: 0.9rem;
     left: 0.9rem;
-    z-index: 9999;
+    z-index: 100000;
     width: 34px;
     height: 34px;
     border-radius: 10px;
@@ -200,6 +257,7 @@ main.main-content-wrap,
     font-weight: 700;
     color: #334155;
     cursor: pointer;
+    pointer-events: auto;
   }
 
   .sidebar-collapse-toggle:hover {
@@ -210,11 +268,34 @@ main.main-content-wrap,
   html:not(.sidebar-collapsed) .sidebar-collapse-toggle {
     left: 0.9rem;
   }
+
+  /* Main header inline toggle (always reachable) */
+  .main-collapse-toggle {
+    margin-left: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    color: #334155;
+    cursor: pointer;
+  }
+  .main-collapse-toggle:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+  }
 }
 
 /* 모바일에서는 기존 Just the Docs 메뉴 버튼 사용 */
 @media (max-width: 66.49rem) {
   .sidebar-collapse-toggle {
+    display: none !important;
+  }
+  .main-collapse-toggle {
     display: none !important;
   }
 }
@@ -419,6 +500,63 @@ div.dataTables_wrapper div.dataTables_length {
     display: none;
   }
 }
+
+/* ====================================
+   본문 상단 미니 도메인 버튼 (사이드바 접힘 상태에서만 노출)
+   ==================================== */
+
+.main-quick-btns {
+  display: none;
+  margin: 0.5rem 0 1rem 0;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(248, 250, 252, 0.75);
+}
+
+html.sidebar-collapsed .main-quick-btns {
+  display: block;
+}
+
+.mq-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.mq-row:last-child {
+  margin-bottom: 0;
+}
+
+.mqbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  min-width: 44px;
+  padding: 0 10px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+.mqbtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+/* reuse the same palette as sidebar qbtn */
+.mqbtn-purple { background: #6366f1; }
+.mqbtn-blue { background: #0ea5e9; }
+.mqbtn-green { background: #10b981; }
+.mqbtn-red { background: #f43f5e; }
+.mqbtn-orange { background: #f59e0b; }
+.mqbtn-teal { background: #06b6d4; }
+.mqbtn-pink { background: #ec4899; }
+.mqbtn-gray { background: #64748b; }
 
 /* ====================================
    도메인 인덱스: 토픽 맵 (촘촘한 링크 그리드)
