@@ -134,13 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var bar = document.createElement('div');
     bar.className = 'main-quick-btns';
     bar.innerHTML = `
-      <div class="mq-row">
+      <div class="mq-row mq-row--single" aria-label="도메인 빠른 이동">
         <a href="{{ site.baseurl }}/docs/ds" class="mqbtn mqbtn-purple">DS</a>
         <a href="{{ site.baseurl }}/docs/sw" class="mqbtn mqbtn-blue">SW</a>
         <a href="{{ site.baseurl }}/docs/ai" class="mqbtn mqbtn-green">AI</a>
         <a href="{{ site.baseurl }}/docs/sec" class="mqbtn mqbtn-red">SEC</a>
-      </div>
-      <div class="mq-row">
         <a href="{{ site.baseurl }}/docs/nw" class="mqbtn mqbtn-orange">NW</a>
         <a href="{{ site.baseurl }}/docs/db" class="mqbtn mqbtn-teal">DB</a>
         <a href="{{ site.baseurl }}/docs/biz" class="mqbtn mqbtn-pink">BIZ</a>
@@ -511,7 +509,9 @@ div.dataTables_wrapper div.dataTables_length {
   padding: 10px 10px;
   border-radius: 14px;
   border: 1px solid rgba(15, 23, 42, 0.10);
-  background: rgba(248, 250, 252, 0.75);
+  background: rgba(248, 250, 252, 0.70);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 html.sidebar-collapsed .main-quick-btns {
@@ -521,11 +521,11 @@ html.sidebar-collapsed .main-quick-btns {
 .mq-row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
 }
-.mq-row:last-child {
-  margin-bottom: 0;
+
+.mq-row--single {
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .mqbtn {
@@ -533,30 +533,45 @@ html.sidebar-collapsed .main-quick-btns {
   align-items: center;
   justify-content: center;
   height: 28px;
+  flex: 0 0 auto;
   min-width: 44px;
-  padding: 0 10px;
+  padding: 0 12px;
   border-radius: 10px;
   text-decoration: none !important;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: -0.2px;
-  color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  gap: 6px;
 }
 .mqbtn:hover {
+  background: rgba(226, 232, 240, 0.85);
+  border-color: rgba(15, 23, 42, 0.16);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 }
 
-/* reuse the same palette as sidebar qbtn */
-.mqbtn-purple { background: #6366f1; }
-.mqbtn-blue { background: #0ea5e9; }
-.mqbtn-green { background: #10b981; }
-.mqbtn-red { background: #f43f5e; }
-.mqbtn-orange { background: #f59e0b; }
-.mqbtn-teal { background: #06b6d4; }
-.mqbtn-pink { background: #ec4899; }
-.mqbtn-gray { background: #64748b; }
+/* subtle color accent (dot) */
+.mqbtn::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--mq-accent, #64748b);
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.06);
+}
+
+.mqbtn-purple { --mq-accent: #6366f1; }
+.mqbtn-blue { --mq-accent: #0ea5e9; }
+.mqbtn-green { --mq-accent: #10b981; }
+.mqbtn-red { --mq-accent: #f43f5e; }
+.mqbtn-orange { --mq-accent: #f59e0b; }
+.mqbtn-teal { --mq-accent: #06b6d4; }
+.mqbtn-pink { --mq-accent: #ec4899; }
+.mqbtn-gray { --mq-accent: #64748b; }
 
 /* ====================================
    도메인 인덱스: 토픽 맵 (촘촘한 링크 그리드)
