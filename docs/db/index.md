@@ -29,7 +29,7 @@ permalink: /docs/db
 
 {% assign big_concept = big_all | where_exp: "p", "p.url contains '/bigdata-3v-6v' or p.url contains '/bigdata-visualization' or p.url contains '/bigdata-analysis-tool' or p.url contains '/correlation-causation'" %}
 {% assign big_platform = big_all | where_exp: "p", "p.url contains '/hadoop-' or p.url contains '/lambda-kappa' or p.url contains '/apache-kafka' or p.url contains '/data-warehouse' or p.url contains '/data-lake' or p.url contains '/data-fabric'" %}
-{% assign big_mining = big_all | where_exp: "p", \"p.url contains '/bagging-boosting' or p.url contains '/random-forest' or p.url contains '/ensemble-learning' or p.url contains '/analysis-model-evaluation'\" %}
+{% assign big_mining = big_all | where_exp: "p", "p.url contains '/bagging-boosting' or p.url contains '/random-forest' or p.url contains '/ensemble-learning' or p.url contains '/analysis-model-evaluation'" %}
 {% assign big_security = big_all | where_exp: "p", "p.url contains '/bigdata-security'" %}
 
 {% assign basics_type = basics_all | where_exp: "p", "p.url contains '/nosql' or p.url contains '/cap-theorem' or p.url contains '/pacelc' or p.url contains '/newsql' or p.url contains '/distributed-db' or p.url contains '/other-databases'" %}
