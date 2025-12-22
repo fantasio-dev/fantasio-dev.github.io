@@ -44,7 +44,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">공격 기법</div>
                 <div class="nw-links">
                   {% for item in atk_methods %}
-                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -52,7 +52,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">프레임워크</div>
                 <div class="nw-links">
                   {% for item in atk_framework %}
-                    <a class="nw-link nw-link--blue nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -70,7 +70,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">SW(OWASP)</div>
                 <div class="nw-links">
                   {% for item in vuln_sw %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -78,7 +78,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">플랫폼</div>
                 <div class="nw-links">
                   {% for item in vuln_platform %}
-                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -105,7 +105,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">기본</div>
                 <div class="nw-links">
                   {% for item in crypto_basic %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -113,7 +113,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">공개키/서명</div>
                 <div class="nw-links">
                   {% for item in crypto_pk %}
-                    <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -121,7 +121,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">최신</div>
                 <div class="nw-links">
                   {% for item in crypto_new %}
-                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -129,7 +129,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">양자</div>
                 <div class="nw-links">
                   {% for item in crypto_quantum %}
-                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -147,7 +147,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">인증</div>
                 <div class="nw-links">
                   {% for item in iam_auth %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -155,7 +155,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">접근통제</div>
                 <div class="nw-links">
                   {% for item in iam_access %}
-                    <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -174,7 +174,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in netsec_all %}
-                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
@@ -190,7 +190,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">클라우드</div>
                 <div class="nw-links">
                   {% for item in cloud_core %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -198,7 +198,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">IoT/스마트</div>
                 <div class="nw-links">
                   {% for item in smart_core %}
-                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -217,7 +217,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in ops_all %}
-                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
@@ -228,7 +228,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in devsec_all %}
-                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
@@ -245,7 +245,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in forensic_all %}
-                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
@@ -267,7 +267,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">법·제도</div>
                 <div class="nw-links">
                   {% for item in p_law %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -275,7 +275,7 @@ permalink: /docs/sec
                 <div class="nw-chip-group__title">PET</div>
                 <div class="nw-links">
                   {% for item in p_pet %}
-                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
                   {% endfor %}
                 </div>
               </div>
@@ -294,7 +294,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in policy_all %}
-                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
@@ -319,7 +319,7 @@ permalink: /docs/sec
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in trend_all %}
-                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
             </div>
           </div>
