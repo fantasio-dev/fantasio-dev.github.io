@@ -778,6 +778,53 @@ div.dataTables_wrapper div.dataTables_length {
   padding: 8px 10px 10px;
 }
 
+/* ====================================
+   DS 도메인: 매트릭스(표) 레이아웃
+   - 샘플(웹/연동/클라우드/가상화/위치/블록체인/서비스별/전략) 흐름에 맞춘 카드 그리드
+   ==================================== */
+
+.ds-matrix {
+  margin: 1rem 0 1.5rem;
+}
+
+.ds-matrix__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (min-width: 66.5rem) {
+  .ds-matrix__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.ds-card {
+  border-right: 1px solid rgba(15, 23, 42, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+@media (min-width: 66.5rem) {
+  .ds-card:nth-child(4n) { border-right: 0; }
+}
+
+.ds-card__header {
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.ds-card__body {
+  padding: 8px 10px 10px;
+}
+
 /* NW 소그룹(하위 분류) */
 .nw-chip-groups {
   display: grid;
