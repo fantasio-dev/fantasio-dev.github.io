@@ -81,17 +81,39 @@ permalink: /docs/nw
             무선 통신 기술 (주파수)
           </div>
           <div class="nw-sub__content">
-            <div class="nw-chips">
-              {% assign mobile_items = site.pages | where: "parent", "8. 이동통신" | where: "grand_parent", nw_root | sort: "nav_order" %}
-              {% assign wlan_items = nw_topics | where_exp: "p", "p.url contains '/04-infrastructure/wlan-architecture' or p.url contains '/04-infrastructure/wifi7'" %}
-              {% assign radio_infra = nw_topics | where_exp: "p", "p.url contains '/04-infrastructure/o-ran' or p.url contains '/04-infrastructure/5g-' or p.url contains '/04-infrastructure/ps-lte' or p.url contains '/04-infrastructure/leo-mobile' or p.url contains '/04-infrastructure/ran-sharing' or p.url contains '/04-infrastructure/6g'" %}
-              {% assign wireless = mobile_items | concat: wlan_items | concat: radio_infra | uniq %}
+            {% assign mobile_items = site.pages | where: "parent", "8. 이동통신" | where: "grand_parent", nw_root | sort: "nav_order" %}
+            {% assign wlan_items = nw_topics | where_exp: "p", "p.url contains '/04-infrastructure/wlan-architecture' or p.url contains '/04-infrastructure/wifi7'" %}
+            {% assign radio_infra = nw_topics | where_exp: "p", "p.url contains '/04-infrastructure/o-ran' or p.url contains '/04-infrastructure/5g-' or p.url contains '/04-infrastructure/ps-lte' or p.url contains '/04-infrastructure/leo-mobile' or p.url contains '/04-infrastructure/ran-sharing' or p.url contains '/04-infrastructure/6g'" %}
 
-              <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/08-mobile">이동통신</a>
-              <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/04-infrastructure">WLAN/구축</a>
-              {% for item in wireless %}
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-              {% endfor %}
+            <div class="nw-chip-groups">
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">이동통신</div>
+                <div class="nw-chips">
+                  <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/08-mobile">Index</a>
+                  {% for item in mobile_items %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">WLAN</div>
+                <div class="nw-chips">
+                  <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/04-infrastructure">구축</a>
+                  {% for item in wlan_items %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">망 구축(무선 인프라)</div>
+                <div class="nw-chips">
+                  {% for item in radio_infra %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -99,26 +121,50 @@ permalink: /docs/nw
         <div class="nw-sub">
           <div class="nw-sub__title">분야 별 통신기술</div>
           <div class="nw-sub__content">
-            <div class="nw-chips">
-              {% assign iot_items = site.pages | where: "parent", "1. IoT" | where: "grand_parent", nw_root | sort: "nav_order" %}
-              {% for item in iot_items %}
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-              {% endfor %}
+            {% assign iot_items = site.pages | where: "parent", "1. IoT" | where: "grand_parent", nw_root | sort: "nav_order" %}
+            {% assign adhoc_items = site.pages | where: "parent", "2. 드론 (Ad-hoc)" | where: "grand_parent", nw_root | sort: "nav_order" %}
+            {% assign loc_items = site.pages | where: "parent", "9. 위치 측위" | where: "grand_parent", nw_root | sort: "nav_order" %}
+            {% assign etc_domain = nw_topics | where_exp: "p", "p.url contains '/10-etc/wireless-charging'" %}
 
-              {% assign adhoc_items = site.pages | where: "parent", "2. 드론 (Ad-hoc)" | where: "grand_parent", nw_root | sort: "nav_order" %}
-              {% for item in adhoc_items %}
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-              {% endfor %}
+            <div class="nw-chip-groups">
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">IoT</div>
+                <div class="nw-chips">
+                  <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/01-iot">Index</a>
+                  {% for item in iot_items %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
 
-              {% assign loc_items = site.pages | where: "parent", "9. 위치 측위" | where: "grand_parent", nw_root | sort: "nav_order" %}
-              {% for item in loc_items %}
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-              {% endfor %}
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">Ad-hoc / 드론</div>
+                <div class="nw-chips">
+                  <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/02-adhoc">Index</a>
+                  {% for item in adhoc_items %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
 
-              {% assign etc_domain = nw_topics | where_exp: "p", "p.url contains '/10-etc/wireless-charging'" %}
-              {% for item in etc_domain %}
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-              {% endfor %}
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">위치 측위</div>
+                <div class="nw-chips">
+                  <a class="nw-chip--primary" href="{{ site.baseurl }}/docs/nw/09-location">Index</a>
+                  {% for item in loc_items %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">기타(도메인성)</div>
+                <div class="nw-chips">
+                  {% for item in etc_domain %}
+                    <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
         </div>

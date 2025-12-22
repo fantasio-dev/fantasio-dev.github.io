@@ -825,4 +825,43 @@ html.sidebar-collapsed .main-quick-btns {
 .nw-chips a.nw-chip--primary:hover {
   background: #1d4ed8;
 }
+
+/* NW 소그룹(하위 분류) */
+.nw-chip-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 90rem) {
+  .nw-chip-groups {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nw-chip-group {
+  border: 1px dashed rgba(15, 23, 42, 0.12);
+  border-radius: 10px;
+  padding: 8px 10px 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.nw-chip-group__title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  color: rgba(15, 23, 42, 0.85);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nw-chip-group__title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(30, 58, 138, 0.85);
+}
 </style>
