@@ -12,49 +12,203 @@ permalink: /docs/caos
 컴퓨터 구조 및 운영체제 관련 학습 자료입니다. 총 **40개** 항목
 {: .fs-6 .fw-300 }
 
-<style>
-.btn-outline-purple { color: #7253ed; border: 1px solid #7253ed; background: transparent; }
-.btn-outline-purple:hover { color: white; background: #7253ed; }
-.btn-outline-blue { color: #2869e6; border: 1px solid #2869e6; background: transparent; }
-.btn-outline-blue:hover { color: white; background: #2869e6; }
-.btn-outline-green { color: #1db954; border: 1px solid #1db954; background: transparent; }
-.btn-outline-green:hover { color: white; background: #1db954; }
-.btn-outline-red { color: #e05d44; border: 1px solid #e05d44; background: transparent; }
-.btn-outline-red:hover { color: white; background: #e05d44; }
-.btn-outline-orange { color: #f5a623; border: 1px solid #f5a623; background: transparent; }
-.btn-outline-orange:hover { color: white; background: #f5a623; }
-.btn-outline-teal { color: #17a2b8; border: 1px solid #17a2b8; background: transparent; }
-.btn-outline-teal:hover { color: white; background: #17a2b8; }
-.btn-outline-pink { color: #e83e8c; border: 1px solid #e83e8c; background: transparent; }
-.btn-outline-pink:hover { color: white; background: #e83e8c; }
-.btn-outline-gray { color: #6c757d; border: 1px solid #6c757d; background: transparent; }
-.btn-outline-gray:hover { color: white; background: #6c757d; }
-.btn-outline-indigo { color: #6610f2; border: 1px solid #6610f2; background: transparent; }
-.btn-outline-indigo:hover { color: white; background: #6610f2; }
-.btn-outline-cyan { color: #00bcd4; border: 1px solid #00bcd4; background: transparent; }
-.btn-outline-cyan:hover { color: white; background: #00bcd4; }
-.btn-outline-lime { color: #7cb342; border: 1px solid #7cb342; background: transparent; }
-.btn-outline-lime:hover { color: white; background: #7cb342; }
-.btn-outline-brown { color: #795548; border: 1px solid #795548; background: transparent; }
-.btn-outline-brown:hover { color: white; background: #795548; }
-</style>
+---
 
-[Computer]({{ site.baseurl }}/docs/caos/00-computer){: .btn .btn-outline-purple .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[CPU스케줄링]({{ site.baseurl }}/docs/caos/01-cpu-scheduling){: .btn .btn-outline-blue .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[동기화]({{ site.baseurl }}/docs/caos/02-synchronization){: .btn .btn-outline-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[교착상태]({{ site.baseurl }}/docs/caos/03-deadlock){: .btn .btn-outline-red .fs-5 .mb-4 .mb-md-0 }
+{% assign caos_root = page.title %}
 
-[가상메모리]({{ site.baseurl }}/docs/caos/04-virtual-memory){: .btn .btn-outline-orange .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[캐시메모리]({{ site.baseurl }}/docs/caos/05-cache-memory){: .btn .btn-outline-teal .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[RAID]({{ site.baseurl }}/docs/caos/06-raid){: .btn .btn-outline-pink .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[프로세스]({{ site.baseurl }}/docs/caos/07-process){: .btn .btn-outline-indigo .fs-5 .mb-4 .mb-md-0 }
+{% assign computer_all = site.pages | where: "parent", "0. Computer" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign cpu_sched_all = site.pages | where: "parent", "1. CPU 스케줄링" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign sync_all = site.pages | where: "parent", "2. 동기화" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign deadlock_all = site.pages | where: "parent", "3. 교착상태" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign vm_all = site.pages | where: "parent", "4. 가상메모리" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign cache_all = site.pages | where: "parent", "5. 캐시메모리" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign raid_all = site.pages | where: "parent", "6. RAID" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign process_all = site.pages | where: "parent", "7. 프로세스" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign pipe_all = site.pages | where: "parent", "8. 파이프라인" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign memory_all = site.pages | where: "parent", "9. 메모리" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign irq_all = site.pages | where: "parent", "10. 인터럽트" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign os_all = site.pages | where: "parent", "11. 운영체제" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign semi_all = site.pages | where: "parent", "12. 반도체" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign cpugpu_all = site.pages | where: "parent", "13. CPU/GPU" | where: "grand_parent", caos_root | sort: "nav_order" %}
+{% assign ca_etc_all = site.pages | where: "parent", "14. CA 기타" | where: "grand_parent", caos_root | sort: "nav_order" %}
 
-[파이프라인]({{ site.baseurl }}/docs/caos/08-pipeline){: .btn .btn-outline-cyan .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[메모리]({{ site.baseurl }}/docs/caos/09-memory){: .btn .btn-outline-lime .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[인터럽트]({{ site.baseurl }}/docs/caos/10-interrupt){: .btn .btn-outline-brown .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[OS]({{ site.baseurl }}/docs/caos/11-os){: .btn .btn-outline-gray .fs-5 .mb-4 .mb-md-0 }
+<div class="caos-matrix">
+  <div class="caos-matrix__grid">
+    <!-- ① CA (Computer Architecture) -->
+    <section class="caos-card">
+      <div class="caos-card__header">① CA (Computer Architecture)</div>
+      <div class="caos-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/00-computer">CA 일반</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in computer_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
 
-[반도체]({{ site.baseurl }}/docs/caos/12-semiconductor){: .btn .btn-outline-purple .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[CPU/GPU]({{ site.baseurl }}/docs/caos/13-cpu-gpu){: .btn .btn-outline-blue .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[CA기타]({{ site.baseurl }}/docs/caos/14-ca-etc){: .btn .btn-outline-green .fs-5 .mb-4 .mb-md-0 }
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/13-cpu-gpu">CPU/GPU · 병렬처리</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in cpugpu_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/05-cache-memory">캐시</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in cache_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/08-pipeline">파이프라인</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in pipe_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/09-memory">메모리(신기술)</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in memory_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+              {% for item in ca_etc_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/12-semiconductor">반도체</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in semi_all %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② OS (Operation System) -->
+    <section class="caos-card">
+      <div class="caos-card__header">② OS (Operation System)</div>
+      <div class="caos-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/11-os">운영체제</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in os_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/07-process">프로세스/스레드</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in process_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/01-cpu-scheduling">CPU 스케줄링</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in cpu_sched_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/02-synchronization">동기화</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in sync_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/03-deadlock">교착상태</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in deadlock_all %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/04-virtual-memory">가상메모리</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in vm_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/06-raid">저장장치</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in raid_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/caos/10-interrupt">인터럽트</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in irq_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>CA</strong>(구성요소·성능) → <strong>OS</strong>(프로세스·스케줄링·동기화) → <strong>메모리</strong>(가상/캐시) → <strong>I/O</strong>(인터럽트/저장) → <strong>하드웨어 트렌드</strong>(가속기/반도체)
+  </div>
+</div>
 
