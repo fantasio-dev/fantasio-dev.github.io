@@ -35,7 +35,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">교환/회선</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/03-fundamentals">Index</a>
                   {% for item in f_core %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -164,7 +163,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">기본(유선)</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/03-fundamentals">Index</a>
                   {% for item in wired_core %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -174,7 +172,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">구성요소</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/04-infrastructure">Index</a>
                   {% for item in wired_infra %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -206,7 +203,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">이동통신</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/08-mobile">Index</a>
                   {% for item in mobile_items %}
                     <a class="nw-link{% if item.url contains '/network-slicing' or item.url contains '/mec-fog' %} nw-link--blue{% elsif item.url contains '/6g' %} nw-link--red{% endif %}" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -216,7 +212,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">WLAN</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/04-infrastructure">Index</a>
                   {% for item in wlan_items %}
                     <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -247,7 +242,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">IoT</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/01-iot">Index</a>
                   {% for item in iot_items %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -257,7 +251,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">Ad-hoc / 드론</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/02-adhoc">Index</a>
                   {% for item in adhoc_items %}
                     <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -267,7 +260,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">위치 측위</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/09-location">Index</a>
                   {% for item in loc_items %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -308,7 +300,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">개요</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/05-qos">Index</a>
                   {% for item in qos_basic %}
                     <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
@@ -375,7 +366,6 @@ permalink: /docs/nw
               <div class="nw-chip-group">
                 <div class="nw-chip-group__title">SDx / SDDC / SD-WAN</div>
                 <div class="nw-links">
-                  <a class="nw-link nw-link--muted" href="{{ site.baseurl }}/docs/nw/06-management">Index</a>
                   {% for item in sdx_items %}
                     <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
