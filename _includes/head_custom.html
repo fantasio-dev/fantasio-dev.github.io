@@ -825,6 +825,64 @@ div.dataTables_wrapper div.dataTables_length {
   padding: 8px 10px 10px;
 }
 
+/* ====================================
+   AI 도메인: 매트릭스(표) 레이아웃
+   - 샘플 흐름: (좌)개요/윤리/운영, (중)기계학습(크게), (우)기술/하드웨어/서비스
+   ==================================== */
+
+.ai-matrix {
+  margin: 1rem 0 1.5rem;
+}
+
+.ai-matrix__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (min-width: 66.5rem) {
+  .ai-matrix__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas:
+      "overview ml tech"
+      "ethics   ml hardware"
+      "ops      ml service";
+  }
+}
+
+.ai-card {
+  border-right: 1px solid rgba(15, 23, 42, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+@media (min-width: 66.5rem) {
+  .ai-card { border-right: 0; }
+  .ai-card--overview { grid-area: overview; }
+  .ai-card--ethics { grid-area: ethics; }
+  .ai-card--ops { grid-area: ops; }
+  .ai-card--ml { grid-area: ml; }
+  .ai-card--tech { grid-area: tech; }
+  .ai-card--hardware { grid-area: hardware; }
+  .ai-card--service { grid-area: service; }
+}
+
+.ai-card__header {
+  background: #0f172a;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.ai-card__body {
+  padding: 8px 10px 10px;
+}
+
 /* NW 소그룹(하위 분류) */
 .nw-chip-groups {
   display: grid;
