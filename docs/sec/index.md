@@ -30,9 +30,67 @@ permalink: /docs/sec
 
 <div class="sec-matrix">
   <div class="sec-matrix__grid">
-    <!-- ① 보안기술 (암호화 등) -->
+    <!-- ① 공격기법 (침해사고, 위협) -->
     <section class="sec-card">
-      <div class="sec-card__header">① 보안기술 (암호화 등)</div>
+      <div class="sec-card__header">① 공격기법 (침해사고, 위협)</div>
+      <div class="sec-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sec/05-cyber-attack">공격 기법/프레임워크</a></div>
+          <div class="nw-sub__content">
+            {% assign atk_framework = attack_all | where_exp: "p", "p.url contains '/mitre-attack' or p.url contains '/cyber-kill-chain' or p.url contains '/apt'" %}
+            {% assign atk_methods = attack_all | where_exp: "p", "p.url contains '/dos-ddos' or p.url contains '/ransomware' or p.url contains '/raas' or p.url contains '/supply-chain-attack' or p.url contains '/social-engineering' or p.url contains '/infostealer'" %}
+            <div class="nw-chip-groups">
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">공격 기법</div>
+                <div class="nw-links">
+                  {% for item in atk_methods %}
+                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">프레임워크</div>
+                <div class="nw-links">
+                  {% for item in atk_framework %}
+                    <a class="nw-link nw-link--blue nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sec/06-vulnerability">취약점</a></div>
+          <div class="nw-sub__content">
+            {% assign vuln_sw = vuln_all | where_exp: "p", "p.url contains '/owasp-top10' or p.url contains '/injection' or p.url contains '/xss' or p.url contains '/csrf' or p.url contains '/ssrf'" %}
+            {% assign vuln_platform = vuln_all | where_exp: "p", "p.url contains '/cloud' or p.url contains '/iot' or p.url contains '/smart-' or p.url contains '/metaverse' or p.url contains '/blockchain' or p.url contains '/ai' or p.url contains '/mec' or p.url contains '/uam'" %}
+            <div class="nw-chip-groups">
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">SW(OWASP)</div>
+                <div class="nw-links">
+                  {% for item in vuln_sw %}
+                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="nw-chip-group">
+                <div class="nw-chip-group__title">플랫폼</div>
+                <div class="nw-links">
+                  {% for item in vuln_platform %}
+                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② 보안기술 (암호화 등) -->
+    <section class="sec-card">
+      <div class="sec-card__header">② 보안기술 (암호화 등)</div>
       <div class="sec-card__body">
         <div class="nw-sub">
           <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sec/01-cryptography">암호 기술</a></div>
@@ -98,64 +156,6 @@ permalink: /docs/sec
                 <div class="nw-links">
                   {% for item in iam_access %}
                     <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ② 공격기법 (침해사고, 위협) -->
-    <section class="sec-card">
-      <div class="sec-card__header">② 공격기법 (침해사고, 위협)</div>
-      <div class="sec-card__body">
-        <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sec/05-cyber-attack">공격 기법/프레임워크</a></div>
-          <div class="nw-sub__content">
-            {% assign atk_framework = attack_all | where_exp: "p", "p.url contains '/mitre-attack' or p.url contains '/cyber-kill-chain' or p.url contains '/apt'" %}
-            {% assign atk_methods = attack_all | where_exp: "p", "p.url contains '/dos-ddos' or p.url contains '/ransomware' or p.url contains '/raas' or p.url contains '/supply-chain-attack' or p.url contains '/social-engineering' or p.url contains '/infostealer'" %}
-            <div class="nw-chip-groups">
-              <div class="nw-chip-group">
-                <div class="nw-chip-group__title">공격 기법</div>
-                <div class="nw-links">
-                  {% for item in atk_methods %}
-                    <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="nw-chip-group">
-                <div class="nw-chip-group__title">프레임워크</div>
-                <div class="nw-links">
-                  {% for item in atk_framework %}
-                    <a class="nw-link nw-link--blue nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sec/06-vulnerability">취약점</a></div>
-          <div class="nw-sub__content">
-            {% assign vuln_sw = vuln_all | where_exp: "p", "p.url contains '/owasp-top10' or p.url contains '/injection' or p.url contains '/xss' or p.url contains '/csrf' or p.url contains '/ssrf'" %}
-            {% assign vuln_platform = vuln_all | where_exp: "p", "p.url contains '/cloud' or p.url contains '/iot' or p.url contains '/smart-' or p.url contains '/metaverse' or p.url contains '/blockchain' or p.url contains '/ai' or p.url contains '/mec' or p.url contains '/uam'" %}
-            <div class="nw-chip-groups">
-              <div class="nw-chip-group">
-                <div class="nw-chip-group__title">SW(OWASP)</div>
-                <div class="nw-links">
-                  {% for item in vuln_sw %}
-                    <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="nw-chip-group">
-                <div class="nw-chip-group__title">플랫폼</div>
-                <div class="nw-links">
-                  {% for item in vuln_platform %}
-                    <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                   {% endfor %}
                 </div>
               </div>
