@@ -177,15 +177,20 @@ main.main-content-wrap,
 
 /* 사이드바 고정 */
 @media (min-width: 66.5rem) {
+  :root {
+    /* 사이드바/본문 간격 체감은 거의 이 값으로 결정됨 */
+    --pe-sidebar-width: 240px;
+  }
+
   .side-bar {
-    width: 280px;
-    min-width: 280px;
+    width: var(--pe-sidebar-width);
+    min-width: var(--pe-sidebar-width);
     flex-shrink: 0;
   }
   
   .main {
-    margin-left: 280px;
-    width: calc(100% - 280px) !important;
+    margin-left: var(--pe-sidebar-width);
+    width: calc(100% - var(--pe-sidebar-width)) !important;
     max-width: none !important;
     padding-left: 0 !important;
   }
