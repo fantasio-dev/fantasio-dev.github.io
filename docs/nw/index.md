@@ -395,9 +395,6 @@ permalink: /docs/nw
       </div>
     </section>
 
-    <!-- (표 느낌용) 빈 칸 -->
-    <div class="nw-spacer" aria-hidden="true"></div>
-
     <!-- 네트워크 관리 / 정책 -->
     <section class="nw-card nw-card--e">
       <div class="nw-card__header">네트워크 관리 / 정책</div>
