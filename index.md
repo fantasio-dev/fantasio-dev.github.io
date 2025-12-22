@@ -52,7 +52,7 @@ permalink: /
 <summary>더보기</summary>
 
 ###### ITPE
-[온라인강의](https://itpe.co.kr/mypage/main.do){:target="_blank"} | [ITPE 카페](https://cafe.naver.com/81th?iframe_url=/MyCafeIntro.nhn%3Fclubid=12409209){:target="_blank"} | [제인스 서브노트](https://docs.google.com/spreadsheets/d/1zVG3gtJVNiG65rVvsaVVgQcKCGp7ikCgwmB1Ky_0fP0/edit?gid=1129232147#gid=1129232147){:target="_blank"} | [공부기록](https://docs.google.com/spreadsheets/d/1JOI_iJWZHMGW02z1qPtWEYYOpJ2cxa7aFkeBmzxysHU/edit?gid=366531422#gid=366531422){:target="_blank"}
+[온라인강의](https://itpe.co.kr/mypage/main.do){:target="_blank"} | [ITPE 카페](https://cafe.naver.com/81th?iframe_url=/MyCafeIntro.nhn%3Fclubid=12409209){:target="_blank"} | [합격 수기(참고)](https://cafe.naver.com/81th/176488){:target="_blank"} | [제인스 서브노트](https://docs.google.com/spreadsheets/d/1zVG3gtJVNiG65rVvsaVVgQcKCGp7ikCgwmB1Ky_0fP0/edit?gid=1129232147#gid=1129232147){:target="_blank"} | [공부기록](https://docs.google.com/spreadsheets/d/1JOI_iJWZHMGW02z1qPtWEYYOpJ2cxa7aFkeBmzxysHU/edit?gid=366531422#gid=366531422){:target="_blank"}
 
 ###### 기필 125기
 [웹하드 - 81thxal](http://naver.me/FUGEtYSa){:target="_blank"} | [기출문제 웹하드 - itpexal](http://naver.me/FBJsf72o){:target="_blank"} | [125기 1조](https://docs.google.com/spreadsheets/d/1BVHhSvjzv5shjfSKgYKzkXnjEGl3aLnLw9kvw3iFP94/edit?gid=0#gid=0){:target="_blank"} | [125기 웹하드](https://mybox.naver.com/#/share/url/detail?shareKey=vaYHGbHTFkebsjflKpZIPnQl0edC0Y0DdAArrJtsBnwG&resourceKey=Y2luYW1pfDM0NzI1OTE4OTY2MzQxODk5MDR8RHwxNTk2OTQ0MQ&fromLanding=true&downloadable=true&editable=true&time=1740390981984){:target="_blank"}
