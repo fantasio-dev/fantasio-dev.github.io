@@ -12,51 +12,276 @@ permalink: /docs/sw
 소프트웨어공학 기술 관련 학습 자료입니다. 총 **130개** 항목
 {: .fs-6 .fw-300 }
 
-<style>
-.btn-outline-purple { color: #7253ed; border: 1px solid #7253ed; background: transparent; }
-.btn-outline-purple:hover { color: white; background: #7253ed; }
-.btn-outline-blue { color: #2869e6; border: 1px solid #2869e6; background: transparent; }
-.btn-outline-blue:hover { color: white; background: #2869e6; }
-.btn-outline-green { color: #1db954; border: 1px solid #1db954; background: transparent; }
-.btn-outline-green:hover { color: white; background: #1db954; }
-.btn-outline-red { color: #e05d44; border: 1px solid #e05d44; background: transparent; }
-.btn-outline-red:hover { color: white; background: #e05d44; }
-.btn-outline-orange { color: #f5a623; border: 1px solid #f5a623; background: transparent; }
-.btn-outline-orange:hover { color: white; background: #f5a623; }
-.btn-outline-teal { color: #17a2b8; border: 1px solid #17a2b8; background: transparent; }
-.btn-outline-teal:hover { color: white; background: #17a2b8; }
-.btn-outline-pink { color: #e83e8c; border: 1px solid #e83e8c; background: transparent; }
-.btn-outline-pink:hover { color: white; background: #e83e8c; }
-.btn-outline-gray { color: #6c757d; border: 1px solid #6c757d; background: transparent; }
-.btn-outline-gray:hover { color: white; background: #6c757d; }
-.btn-outline-indigo { color: #6610f2; border: 1px solid #6610f2; background: transparent; }
-.btn-outline-indigo:hover { color: white; background: #6610f2; }
-.btn-outline-cyan { color: #00bcd4; border: 1px solid #00bcd4; background: transparent; }
-.btn-outline-cyan:hover { color: white; background: #00bcd4; }
-.btn-outline-lime { color: #7cb342; border: 1px solid #7cb342; background: transparent; }
-.btn-outline-lime:hover { color: white; background: #7cb342; }
-.btn-outline-brown { color: #795548; border: 1px solid #795548; background: transparent; }
-.btn-outline-brown:hover { color: white; background: #795548; }
-</style>
+---
 
-[SW안전]({{ site.baseurl }}/docs/sw/01-safety){: .btn .btn-outline-purple .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[SW품질]({{ site.baseurl }}/docs/sw/02-quality){: .btn .btn-outline-blue .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[프로젝트관리]({{ site.baseurl }}/docs/sw/03-project-management){: .btn .btn-outline-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[아키텍처]({{ site.baseurl }}/docs/sw/04-architecture){: .btn .btn-outline-red .fs-5 .mb-4 .mb-md-0 }
+{% assign sw_root = page.title %}
 
-[UML]({{ site.baseurl }}/docs/sw/05-uml){: .btn .btn-outline-orange .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[개발방법론]({{ site.baseurl }}/docs/sw/06-methodology){: .btn .btn-outline-teal .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[OOP]({{ site.baseurl }}/docs/sw/07-oop){: .btn .btn-outline-pink .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[디자인패턴]({{ site.baseurl }}/docs/sw/08-design-pattern){: .btn .btn-outline-indigo .fs-5 .mb-4 .mb-md-0 }
+{% assign safety_all = site.pages | where: "parent", "1. 소프트웨어 안전" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign quality_all = site.pages | where: "parent", "2. 소프트웨어 품질" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign pm_all = site.pages | where: "parent", "3. 프로젝트 관리" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign arch_all = site.pages | where: "parent", "4. 소프트웨어 아키텍처" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign uml_all = site.pages | where: "parent", "5. UML" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign method_all = site.pages | where: "parent", "6. 개발방법론" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign oop_all = site.pages | where: "parent", "7. 객체지향(OOP)" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign pattern_all = site.pages | where: "parent", "8. 디자인 패턴" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign test_all = site.pages | where: "parent", "9. 소프트웨어 테스트" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign maint_all = site.pages | where: "parent", "10. 유지보수" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign procure_all = site.pages | where: "parent", "11. 발주 프로세스 & 공공SW" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign req_all = site.pages | where: "parent", "12. 요구사항 공학" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign audit_all = site.pages | where: "parent", "13. 감리" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign fp_all = site.pages | where: "parent", "14. FP(Function Point)" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign devops_all = site.pages | where: "parent", "15. DevOps / TDD / SRE" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign oss_all = site.pages | where: "parent", "16. 오픈소스" | where: "grand_parent", sw_root | sort: "nav_order" %}
+{% assign etc_all = site.pages | where: "parent", "17. 기타 SW 일반" | where: "grand_parent", sw_root | sort: "nav_order" %}
 
-[테스트]({{ site.baseurl }}/docs/sw/09-testing){: .btn .btn-outline-cyan .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[유지보수]({{ site.baseurl }}/docs/sw/10-maintenance){: .btn .btn-outline-lime .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[발주프로세스]({{ site.baseurl }}/docs/sw/11-procurement){: .btn .btn-outline-brown .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[요구사항]({{ site.baseurl }}/docs/sw/12-requirements){: .btn .btn-outline-gray .fs-5 .mb-4 .mb-md-0 }
+<div class="sw-matrix">
+  <div class="sw-matrix__grid">
+    <!-- ① 개발방법론 -->
+    <section class="sw-card">
+      <div class="sw-card__header">① SW 개발방법론</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/06-methodology">개발방법론</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in method_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-[감리]({{ site.baseurl }}/docs/sw/13-audit){: .btn .btn-outline-purple .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[FP]({{ site.baseurl }}/docs/sw/14-function-point){: .btn .btn-outline-blue .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[DevOps]({{ site.baseurl }}/docs/sw/15-devops){: .btn .btn-outline-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[오픈소스]({{ site.baseurl }}/docs/sw/16-opensource){: .btn .btn-outline-red .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[SW기타]({{ site.baseurl }}/docs/sw/17-etc){: .btn .btn-outline-orange .fs-5 .mb-4 .mb-md-0 }
+    <!-- ② 요구사항 -->
+    <section class="sw-card">
+      <div class="sw-card__header">② SW 요구사항</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/12-requirements">요구사항 공학</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in req_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 분석/설계 -->
+    <section class="sw-card">
+      <div class="sw-card__header">③ SW 분석/설계</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/04-architecture">아키텍처</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in arch_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/05-uml">UML</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in uml_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/07-oop">OOP</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in oop_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/08-design-pattern">디자인 패턴</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in pattern_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 증명/검증 -->
+    <section class="sw-card">
+      <div class="sw-card__header">④ SW 증명/검증(테스트)</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/09-testing">테스트</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in test_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ 배포/운영 -->
+    <section class="sw-card">
+      <div class="sw-card__header">⑤ SW 배포/운영</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/15-devops">DevOps / TDD / SRE</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in devops_all %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+              {% for item in etc_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/16-opensource">오픈소스</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in oss_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑥ 유지관리 -->
+    <section class="sw-card">
+      <div class="sw-card__header">⑥ SW 유지관리</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/10-maintenance">유지보수</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in maint_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑦ 품질/안전 -->
+    <section class="sw-card">
+      <div class="sw-card__header">⑦ SW 품질/안전</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/02-quality">품질</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in quality_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/01-safety">안전</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in safety_all %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑧ 제도/가이드 -->
+    <section class="sw-card">
+      <div class="sw-card__header">⑧ 제도/가이드</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/11-procurement">발주/공공SW</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in procure_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/13-audit">감리</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in audit_all %}
+                <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/14-function-point">FP</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in fp_all %}
+                <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑨ 프로젝트관리/애자일 -->
+    <section class="sw-card">
+      <div class="sw-card__header">⑨ 프로젝트관리/애자일</div>
+      <div class="sw-card__body">
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/sw/03-project-management">프로젝트 관리(PM)</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              {% for item in pm_all %}
+                <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+              {% assign agile_like = method_all | where_exp: "p", "p.url contains '/agile' or p.url contains '/scrum' or p.url contains '/kanban'" %}
+              {% for item in agile_like %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+              {% assign safe_like = etc_all | where_exp: "p", "p.url contains '/safe'" %}
+              {% for item in safe_like %}
+                <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>개발방법론</strong> → <strong>요구사항</strong> → <strong>분석/설계</strong>(아키텍처/UML/OOP/패턴) → <strong>검증</strong>(테스트) → <strong>배포/운영</strong>(DevOps/OSS) → <strong>유지관리</strong> → <strong>품질/안전</strong> → <strong>제도/PM</strong>
+  </div>
+</div>
 
