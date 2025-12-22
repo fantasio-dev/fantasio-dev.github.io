@@ -243,7 +243,7 @@ main.main-content-wrap,
 
   .sidebar-collapse-toggle {
     position: fixed;
-    top: 0.9rem;
+    top: 0.85rem;
     left: 0.9rem;
     z-index: 100000;
     width: 34px;
@@ -268,7 +268,9 @@ main.main-content-wrap,
 
   /* 사이드바가 펼쳐진 상태에서는 버튼을 사이드바 안쪽 상단에 배치 */
   html:not(.sidebar-collapsed) .sidebar-collapse-toggle {
-    left: 0.9rem;
+    /* 사이드바 우측 상단에 붙여서 헤더/타이틀과 겹치지 않게 */
+    left: calc(var(--pe-sidebar-width) - 42px);
+    top: 0.85rem;
   }
 
   /* Main header inline toggle (always reachable) */
