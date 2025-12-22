@@ -242,3 +242,10 @@ permalink: /docs/db
   </div>
 </div>
 
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>DB 기초/트랜잭션</strong> → <strong>모델링</strong> → <strong>분석</strong>(빅데이터/마이닝) → <strong>품질</strong> → <strong>정책/공공데이터</strong>
+  </div>
+</div>
+

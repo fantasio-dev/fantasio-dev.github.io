@@ -449,6 +449,13 @@ permalink: /docs/nw
   </div>
 </div>
 
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>기초</strong> → <strong>통신 기술</strong> → <strong>품질/라우팅</strong> → <strong>가상화(SDE)</strong> → <strong>관리/정책</strong>
+  </div>
+</div>
+
 ---
 
 [📝 기출문제 (62문제)]({{ site.baseurl }}/docs/nw/exam){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }

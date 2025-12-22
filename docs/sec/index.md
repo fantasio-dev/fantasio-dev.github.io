@@ -329,3 +329,10 @@ permalink: /docs/sec
   </div>
 </div>
 
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>공격/취약점</strong> → <strong>방어 기술</strong> → <strong>운영/대응</strong> → <strong>포렌식</strong> → <strong>개인정보</strong> → <strong>정책/표준</strong> → <strong>트렌드</strong>
+  </div>
+</div>
+

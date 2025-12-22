@@ -373,3 +373,10 @@ permalink: /docs/ds
   </div>
 </div>
 
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>사용자 접점</strong>(웹/UX) → <strong>연동</strong>(API/자동화) → <strong>기반</strong>(분산/클라우드/가상화) → <strong>기능 축</strong>(공간/블록체인) → <strong>응용 서비스</strong> → <strong>거버넌스/전략</strong>
+  </div>
+</div>
+

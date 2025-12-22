@@ -272,3 +272,10 @@ permalink: /docs/ai
   </div>
 </div>
 
+<div class="story-flow">
+  <div class="story-flow__title">스토리 흐름</div>
+  <div class="story-flow__line">
+    <strong>개요</strong> → <strong>기계학습</strong>(중심) → <strong>딥러닝/NLP</strong> → <strong>윤리/보안</strong> → <strong>운영/프로세스</strong> → <strong>하드웨어/서비스</strong>
+  </div>
+</div>
+
