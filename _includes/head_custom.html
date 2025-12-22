@@ -883,6 +883,61 @@ div.dataTables_wrapper div.dataTables_length {
   padding: 8px 10px 10px;
 }
 
+/* ====================================
+   DB 도메인: 매트릭스(표) 레이아웃
+   - 스토리: (기초/트랜잭션) → 모델링 → 분석(빅데이터) → 품질 → 정책/공공
+   ==================================== */
+
+.db-matrix {
+  margin: 1rem 0 1.5rem;
+}
+
+.db-matrix__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (min-width: 66.5rem) {
+  .db-matrix__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "core modeling analytics"
+      "core quality policy";
+  }
+}
+
+.db-card {
+  border-right: 1px solid rgba(15, 23, 42, 0.18);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+@media (min-width: 66.5rem) {
+  .db-card { border-right: 0; }
+  .db-card--core { grid-area: core; }
+  .db-card--modeling { grid-area: modeling; }
+  .db-card--analytics { grid-area: analytics; }
+  .db-card--quality { grid-area: quality; }
+  .db-card--policy { grid-area: policy; }
+}
+
+.db-card__header {
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.db-card__body {
+  padding: 8px 10px 10px;
+}
+
 /* NW 소그룹(하위 분류) */
 .nw-chip-groups {
   display: grid;
