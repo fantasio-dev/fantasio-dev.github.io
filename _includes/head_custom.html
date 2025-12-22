@@ -104,17 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var quickBtns = document.createElement('div');
     quickBtns.className = 'sidebar-quick-btns';
     quickBtns.innerHTML = `
-      <div class="quick-btn-row">
-        <a href="{{ site.baseurl }}/docs/ds" class="qbtn qbtn-purple">DS</a>
-        <a href="{{ site.baseurl }}/docs/sw" class="qbtn qbtn-blue">SW</a>
-        <a href="{{ site.baseurl }}/docs/ai" class="qbtn qbtn-green">AI</a>
-        <a href="{{ site.baseurl }}/docs/sec" class="qbtn qbtn-red">SEC</a>
-      </div>
-      <div class="quick-btn-row">
-        <a href="{{ site.baseurl }}/docs/nw" class="qbtn qbtn-orange">NW</a>
-        <a href="{{ site.baseurl }}/docs/db" class="qbtn qbtn-teal">DB</a>
-        <a href="{{ site.baseurl }}/docs/biz" class="qbtn qbtn-pink">BIZ</a>
-        <a href="{{ site.baseurl }}/docs/caos" class="qbtn qbtn-gray">CAOS</a>
+      <div class="domain-chips domain-chips--sidebar" aria-label="도메인 빠른 이동">
+        <a href="{{ site.baseurl }}/docs/ds" class="domain-chip domain-chip--ds">DS</a>
+        <a href="{{ site.baseurl }}/docs/sw" class="domain-chip domain-chip--sw">SW</a>
+        <a href="{{ site.baseurl }}/docs/ai" class="domain-chip domain-chip--ai">AI</a>
+        <a href="{{ site.baseurl }}/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
+        <a href="{{ site.baseurl }}/docs/nw" class="domain-chip domain-chip--nw">NW</a>
+        <a href="{{ site.baseurl }}/docs/db" class="domain-chip domain-chip--db">DB</a>
+        <a href="{{ site.baseurl }}/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
+        <a href="{{ site.baseurl }}/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
       </div>
     `;
     // site-nav 바로 앞에 삽입 (제목 아래, Home 위)
@@ -134,15 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var bar = document.createElement('div');
     bar.className = 'main-quick-btns';
     bar.innerHTML = `
-      <div class="mq-row mq-row--single" aria-label="도메인 빠른 이동">
-        <a href="{{ site.baseurl }}/docs/ds" class="mqbtn mqbtn-purple">DS</a>
-        <a href="{{ site.baseurl }}/docs/sw" class="mqbtn mqbtn-blue">SW</a>
-        <a href="{{ site.baseurl }}/docs/ai" class="mqbtn mqbtn-green">AI</a>
-        <a href="{{ site.baseurl }}/docs/sec" class="mqbtn mqbtn-red">SEC</a>
-        <a href="{{ site.baseurl }}/docs/nw" class="mqbtn mqbtn-orange">NW</a>
-        <a href="{{ site.baseurl }}/docs/db" class="mqbtn mqbtn-teal">DB</a>
-        <a href="{{ site.baseurl }}/docs/biz" class="mqbtn mqbtn-pink">BIZ</a>
-        <a href="{{ site.baseurl }}/docs/caos" class="mqbtn mqbtn-gray">CAOS</a>
+      <div class="domain-chips domain-chips--main" aria-label="도메인 빠른 이동">
+        <a href="{{ site.baseurl }}/docs/ds" class="domain-chip domain-chip--ds">DS</a>
+        <a href="{{ site.baseurl }}/docs/sw" class="domain-chip domain-chip--sw">SW</a>
+        <a href="{{ site.baseurl }}/docs/ai" class="domain-chip domain-chip--ai">AI</a>
+        <a href="{{ site.baseurl }}/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
+        <a href="{{ site.baseurl }}/docs/nw" class="domain-chip domain-chip--nw">NW</a>
+        <a href="{{ site.baseurl }}/docs/db" class="domain-chip domain-chip--db">DB</a>
+        <a href="{{ site.baseurl }}/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
+        <a href="{{ site.baseurl }}/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
       </div>
     `;
 
@@ -397,106 +395,68 @@ div.dataTables_wrapper div.dataTables_length {
    ==================================== */
 
 .sidebar-quick-btns {
-  padding: 1rem 0.75rem;
+  padding: 0.75rem 0.75rem;
   margin: 0.5rem 0.5rem 1rem 0.5rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.quick-btn-row {
+/* 공용: 도메인 pill 버튼 (사이드바/본문 공통) */
+.domain-chips {
   display: flex;
-  justify-content: flex-start;
-  gap: 6px;
-  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.quick-btn-row:last-child {
-  margin-bottom: 0;
-}
-
-.qbtn {
-  flex: 0 0 auto;
-  width: 48px;
-  text-align: center;
-  padding: 10px 4px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  border-radius: 10px;
+.domain-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
   text-decoration: none !important;
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
 }
 
-.qbtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.domain-chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--dc-accent, #64748b);
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.06);
 }
 
-.qbtn:active {
+.domain-chip:hover {
+  background: rgba(226, 232, 240, 0.85);
+  border-color: rgba(15, 23, 42, 0.16);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transform: translateY(-1px);
+}
+
+.domain-chip:active {
   transform: translateY(0);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-/* 모던한 색상 팔레트 (부드러운 톤) */
-.qbtn-purple { 
-  color: #fff; 
-  background: #6366f1;
-}
-.qbtn-purple:hover {
-  background: #4f46e5;
-}
-.qbtn-blue { 
-  color: #fff; 
-  background: #0ea5e9;
-}
-.qbtn-blue:hover {
-  background: #0284c7;
-}
-.qbtn-green { 
-  color: #fff; 
-  background: #10b981;
-}
-.qbtn-green:hover {
-  background: #059669;
-}
-.qbtn-red { 
-  color: #fff; 
-  background: #f43f5e;
-}
-.qbtn-red:hover {
-  background: #e11d48;
-}
-.qbtn-orange { 
-  color: #fff; 
-  background: #f59e0b;
-}
-.qbtn-orange:hover {
-  background: #d97706;
-}
-.qbtn-teal { 
-  color: #fff; 
-  background: #06b6d4;
-}
-.qbtn-teal:hover {
-  background: #0891b2;
-}
-.qbtn-pink { 
-  color: #fff; 
-  background: #ec4899;
-}
-.qbtn-pink:hover {
-  background: #db2777;
-}
-.qbtn-gray { 
-  color: #fff; 
-  background: #64748b;
-}
-.qbtn-gray:hover {
-  background: #475569;
-}
+/* 팔레트 */
+.domain-chip--ds { --dc-accent: #6366f1; }
+.domain-chip--sw { --dc-accent: #0ea5e9; }
+.domain-chip--ai { --dc-accent: #10b981; }
+.domain-chip--sec { --dc-accent: #f43f5e; }
+.domain-chip--nw { --dc-accent: #f59e0b; }
+.domain-chip--db { --dc-accent: #06b6d4; }
+.domain-chip--biz { --dc-accent: #ec4899; }
+.domain-chip--caos { --dc-accent: #64748b; }
 
 /* 모바일에서는 숨김 (작은 화면) */
 @media (max-width: 50rem) {
@@ -510,7 +470,6 @@ div.dataTables_wrapper div.dataTables_length {
    ==================================== */
 
 .main-quick-btns {
-  display: none;
   margin: 0.5rem 0 1rem 0;
   padding: 10px 10px;
   border-radius: 14px;
@@ -520,64 +479,19 @@ div.dataTables_wrapper div.dataTables_length {
   -webkit-overflow-scrolling: touch;
 }
 
-html.sidebar-collapsed .main-quick-btns {
-  display: block;
+/* 데스크탑에서는 항상 보이게 */
+@media (min-width: 66.5rem) {
+  .main-quick-btns {
+    display: block;
+  }
 }
 
-.mq-row {
-  display: flex;
-  gap: 8px;
+/* 모바일에서는 숨김 (작은 화면) */
+@media (max-width: 66.49rem) {
+  .main-quick-btns {
+    display: none;
+  }
 }
-
-.mq-row--single {
-  flex-wrap: nowrap;
-  white-space: nowrap;
-}
-
-.mqbtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  flex: 0 0 auto;
-  min-width: 44px;
-  padding: 0 12px;
-  border-radius: 10px;
-  text-decoration: none !important;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
-  color: #0f172a;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  gap: 6px;
-}
-.mqbtn:hover {
-  background: rgba(226, 232, 240, 0.85);
-  border-color: rgba(15, 23, 42, 0.16);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
-  transform: translateY(-1px);
-}
-
-/* subtle color accent (dot) */
-.mqbtn::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--mq-accent, #64748b);
-  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.06);
-}
-
-.mqbtn-purple { --mq-accent: #6366f1; }
-.mqbtn-blue { --mq-accent: #0ea5e9; }
-.mqbtn-green { --mq-accent: #10b981; }
-.mqbtn-red { --mq-accent: #f43f5e; }
-.mqbtn-orange { --mq-accent: #f59e0b; }
-.mqbtn-teal { --mq-accent: #06b6d4; }
-.mqbtn-pink { --mq-accent: #ec4899; }
-.mqbtn-gray { --mq-accent: #64748b; }
 
 /* ====================================
    도메인 인덱스: 토픽 맵 (촘촘한 링크 그리드)
