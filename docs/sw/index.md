@@ -3,6 +3,7 @@ layout: default
 title: SW (소프트웨어공학)
 nav_order: 3
 has_children: true
+has_toc: false
 permalink: /docs/sw
 ---
 

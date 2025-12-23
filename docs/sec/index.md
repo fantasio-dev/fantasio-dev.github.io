@@ -3,6 +3,7 @@ layout: default
 title: SEC (정보보안)
 nav_order: 5
 has_children: true
+has_toc: false
 permalink: /docs/sec
 ---
 

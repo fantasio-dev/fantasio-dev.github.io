@@ -3,6 +3,7 @@ layout: default
 title: CAOS (컴퓨터구조/OS)
 nav_order: 9
 has_children: true
+has_toc: false
 permalink: /docs/caos
 ---
 

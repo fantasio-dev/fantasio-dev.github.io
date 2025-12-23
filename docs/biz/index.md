@@ -3,6 +3,7 @@ layout: default
 title: BIZ (경영)
 nav_order: 8
 has_children: true
+has_toc: false
 permalink: /docs/biz
 ---
 

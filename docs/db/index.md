@@ -3,6 +3,7 @@ layout: default
 title: DB (데이터베이스)
 nav_order: 7
 has_children: true
+has_toc: false
 permalink: /docs/db
 ---
 
