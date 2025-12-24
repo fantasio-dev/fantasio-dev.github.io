@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/ds
 ---
 
-# DS (Digital Service)
-{: .fs-9 }
+# DS (Digital Service) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제 (43문제)</a>
+{: .fs-9 .page-title-with-cta }
 
 디지털 서비스 기술 관련 학습 자료입니다. 총 **135개** 항목
 {: .fs-6 .fw-300 }
@@ -364,7 +364,6 @@ permalink: /docs/ds
           <div class="nw-sub__title">학습</div>
           <div class="nw-sub__content">
             <div class="nw-links">
-              <a class="nw-link nw-link--red nw-link--strong" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제 (43문제)</a>
               <a class="nw-link nw-link--blue" href="{{ site.baseurl }}/docs/ds/notes">📚 학습노트</a>
             </div>
           </div>

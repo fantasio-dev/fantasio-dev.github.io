@@ -969,6 +969,43 @@ div.dataTables_wrapper div.dataTables_length {
 }
 
 /* ====================================
+   도메인 메인: 타이틀 옆 "기출문제" CTA
+   ==================================== */
+
+.page-title-with-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-title-with-cta .exam-top-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none !important;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.18);
+}
+
+.page-title-with-cta .exam-top-cta:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.24);
+}
+
+.page-title-with-cta .exam-top-cta:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35);
+  outline-offset: 2px;
+}
+
+/* ====================================
    CAOS 도메인: 매트릭스(표) 레이아웃
    - 샘플: ① CA / ② OS 두 축
    ==================================== */

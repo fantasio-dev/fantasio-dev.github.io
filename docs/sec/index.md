@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/sec
 ---
 
-# SEC (정보보안)
-{: .fs-9 }
+# SEC (정보보안) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/sec/exam">📝 기출문제 (114문제)</a>
+{: .fs-9 .page-title-with-cta }
 
 정보보안 관련 학습 자료입니다. 총 **106개** 항목
 {: .fs-6 .fw-300 }
@@ -297,14 +297,6 @@ permalink: /docs/sec
               {% for item in policy_all %}
                 <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
-            </div>
-          </div>
-        </div>
-        <div class="nw-sub">
-          <div class="nw-sub__title">기출문제</div>
-          <div class="nw-sub__content">
-            <div class="nw-links">
-              <a class="nw-link nw-link--red nw-link--strong" href="{{ site.baseurl }}/docs/sec/exam">📝 기출문제 (114문제)</a>
             </div>
           </div>
         </div>

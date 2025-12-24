@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/nw
 ---
 
-# NW (네트워크)
-{: .fs-9 }
+# NW (네트워크) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/exam">📝 기출문제 (62문제)</a>
+{: .fs-9 .page-title-with-cta }
 
 네트워크 관련 학습 자료입니다. 총 **85개** 항목
 {: .fs-6 .fw-300 }
@@ -441,7 +441,6 @@ permalink: /docs/nw
           <div class="nw-sub__content">
             <div class="nw-links">
               <a class="nw-link nw-link--red" href="{{ site.baseurl }}/docs/nw/10-etc/network-neutrality">망중립성</a>
-              <a class="nw-link nw-link--blue nw-link--strong" href="{{ site.baseurl }}/docs/nw/exam">📝 기출문제 (62문제)</a>
             </div>
           </div>
         </div>
@@ -456,8 +455,4 @@ permalink: /docs/nw
     <strong>기초</strong> → <strong>통신 기술</strong> → <strong>품질/라우팅</strong> → <strong>가상화(SDE)</strong> → <strong>관리/정책</strong>
   </div>
 </div>
-
----
-
-[📝 기출문제 (62문제)]({{ site.baseurl }}/docs/nw/exam){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
 
