@@ -3,6 +3,7 @@ layout: default
 title: 📝 기출문제
 parent: SEC (정보보안)
 has_children: true
+has_toc: false
 nav_order: 99
 permalink: /docs/sec/exam
 ---

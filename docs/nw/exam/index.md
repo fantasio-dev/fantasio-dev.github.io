@@ -3,6 +3,7 @@ layout: default
 title: 📝 기출문제
 parent: NW (네트워크)
 has_children: true
+has_toc: false
 nav_order: 99
 permalink: /docs/nw/exam
 ---

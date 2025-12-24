@@ -10,12 +10,16 @@ permalink: /docs/ai
 # AI (인공지능)
 {: .fs-9 }
 
-인공지능 관련 학습 자료입니다. 총 **80개** 항목
+인공지능 관련 학습 자료입니다.
 {: .fs-6 .fw-300 }
 
 ---
 
 {% assign ai_root = page.title %}
+{% assign ai_exam_pages = site.pages | where: "parent", "📝 기출문제" | where: "grand_parent", ai_root | sort: "nav_order" %}
+
+기출문제 **{{ ai_exam_pages | size }}개** 포함
+{: .fs-6 .fw-300 }
 
 {% assign ml_all = site.pages | where: "parent", "1. 기계학습" | where: "grand_parent", ai_root | sort: "nav_order" %}
 {% assign dl_all = site.pages | where: "parent", "2. 딥러닝" | where: "grand_parent", ai_root | sort: "nav_order" %}
@@ -265,6 +269,15 @@ permalink: /docs/ai
               {% for item in etc_all %}
                 <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nw-sub">
+          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/exam">📝 기출문제</a></div>
+          <div class="nw-sub__content">
+            <div class="nw-links">
+              <a class="nw-link nw-link--red nw-link--strong" href="{{ site.baseurl }}/docs/ai/exam">AI 기출문제 ({{ ai_exam_pages | size }}개)</a>
             </div>
           </div>
         </div>
