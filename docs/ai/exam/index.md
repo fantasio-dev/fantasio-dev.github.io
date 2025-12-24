@@ -181,7 +181,7 @@ AI(인공지능) 관련 기출문제 모음입니다. **검색, 정렬, 필터�
 <tr class="has-page"><td>137</td><td>컴시응</td><td>4</td><td>3</td><td><a href="/docs/ai/exam/137-4-3-topic-137-4-3">양자 머신러닝(QML, Quantum Machine Learning)의 주요 기술 및 알고리즘을 설명하고, 기존 머신러닝과 비교하시오.</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>137</td><td>관리</td><td>4</td><td>5</td><td><a href="/docs/ai/exam/137-4-5-topic-137-4-5">유전 알고리즘(Genetic Algorithm)에 대하여 설명하시오. 가. 유전 알고리즘의 개념 및 절차 나. 유전 알고리즘의 최적화 방법</a></td><td>-</td><td>-</td></tr>
 <!-- 136회 -->
-<tr class="has-page"><td>136</td><td>관리</td><td>1</td><td>2</td><td><a href="/docs/ai/exam/136-1-2-ai-136-1-2">범용 AI(General-Purpose AI) 위험관리 프레임워크</a></td><td>-</td><td>-</td></tr>
+<tr class="has-page has-mnemonic"><td>136</td><td>관리</td><td>1</td><td>2</td><td><a href="/docs/ai/exam/136-1-2-ai-136-1-2">범용 AI(General-Purpose AI) 위험관리 프레임워크</a></td><td>GPAI Risk</td><td><code>(절차) 식분평대</code> <code>(대응) 제완모수</code> <code>(평가) 점3등</code></td></tr>
 <tr class="has-page"><td>136</td><td>관리</td><td>1</td><td>3</td><td><a href="/docs/ai/exam/136-1-3-ai-136-1-3">에이전틱 AI(Agentic AI)</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>136</td><td>관리</td><td>1</td><td>13</td><td><a href="/docs/ai/exam/136-1-13-mcp-136-1-13">MCP(Model Context Protocol)</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>136</td><td>관리</td><td>2</td><td>3</td><td><a href="/docs/ai/exam/136-2-3-ai-llm-3">AI 기반 소프트웨어 개발에서 LLM(Large Language Model)을 도입할 때 고려해야 할보안 위험을 3 가지 이상 쓰고 각 대응 방안을 설명하시오.</a></td><td>-</td><td>-</td></tr>
