@@ -168,7 +168,7 @@ AI(인공지능) 관련 기출문제 모음입니다. **검색, 정렬, 필터�
 </thead>
 <tbody>
 <!-- 137회 -->
-<tr class="has-page"><td>137</td><td>관리</td><td>1</td><td>5</td><td><a href="/docs/ai/exam/137-1-5-gnn">GNN(Graph Neural Network)을 설명하시오</a></td><td>-</td><td>-</td></tr>
+<tr class="has-page has-mnemonic"><td>137</td><td>관리</td><td>1</td><td>5</td><td><a href="/docs/ai/exam/137-1-5-gnn">GNN(Graph Neural Network)을 설명하시오</a></td><td>GNN</td><td><code>(절차) 변취업생</code> <code>(구성요소) 인노엣라</code> <code>(모델) GCN-SAGE-GAT-GIN</code></td></tr>
 <tr class="has-page"><td>137</td><td>관리</td><td>1</td><td>7</td><td><a href="/docs/ai/exam/137-1-7-moe">트랜스포머(Transformer)와 MoE(Mixture of Experts)를 설명하시오.</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>137</td><td>관리</td><td>1</td><td>8</td><td><a href="/docs/ai/exam/137-1-8-ai">AI 신뢰성 검인증 제도(CAT)를 설명하시오</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>137</td><td>컴시응</td><td>1</td><td>8</td><td><a href="/docs/ai/exam/137-1-8-rag-fine-tuning">RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 프레임워크</a></td><td>-</td><td>-</td></tr>
