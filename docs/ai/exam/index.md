@@ -191,7 +191,7 @@ AI(인공지능) 관련 기출문제 모음입니다. **검색, 정렬, 필터�
 <tr class="has-page"><td>136</td><td>관리</td><td>4</td><td>1</td><td><a href="/docs/ai/exam/136-4-1-ai-3-10-ai">국내 인공지능(AI) 윤리기준과 생성형 AI에 대하여 다음을 설명하시오. 가. 3대 기본 원칙과 10대 핵심요건(과기정통부 인공지능 윤리기준) 나. 인공지능 윤리 관점에서 생성형 AI의 역기능 요소</a></td><td>-</td><td>-</td></tr>
 <!-- 135회 -->
 <tr class="has-page has-mnemonic"><td>135</td><td>관리</td><td>1</td><td>1</td><td><a href="/docs/ai/exam/135-1-1-pr-roc">PR(Precision Recall) 곡선과 ROC(Receiver Operating Characteristic) 곡선 비교</a></td><td>PR, ROC, AUC</td><td><code>(PR) 정재F1</code> <code>(ROC) 참거특</code> <code>(비교) 축목불곡AUC장단사</code></td></tr>
-<tr class="has-page"><td>135</td><td>관리</td><td>1</td><td>2</td><td><a href="/docs/ai/exam/135-1-2-multimodal-llm">Multimodal LLM(Large Language Model)</a></td><td>-</td><td>-</td></tr>
+<tr class="has-page has-mnemonic"><td>135</td><td>관리</td><td>1</td><td>2</td><td><a href="/docs/ai/exam/135-1-2-multimodal-llm">Multimodal LLM(Large Language Model)</a></td><td>Multimodal LLM</td><td><code>(전처리) 토해스영</code> <code>(인코더) 트비웨</code> <code>(융합) 얼미레</code></td></tr>
 <tr class="has-page"><td>135</td><td>컴시응</td><td>1</td><td>4</td><td><a href="/docs/ai/exam/135-1-4-topic-135-1-4">몬테카를로 트리탐색(Monte Carlo Tree Search)</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>135</td><td>관리</td><td>1</td><td>6</td><td><a href="/docs/ai/exam/135-1-6-topic-135-1-6">실루엣 계수(Silhouette Coefficient)</a></td><td>-</td><td>-</td></tr>
 <tr class="has-page"><td>135</td><td>관리</td><td>1</td><td>8</td><td><a href="/docs/ai/exam/135-1-8-topic-135-1-8">불편추정량(Unbiased Estimator)</a></td><td>-</td><td>-</td></tr>
