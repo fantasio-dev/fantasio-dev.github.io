@@ -55,7 +55,7 @@ permalink: /docs/ai
       <div class="ai-card__header">① AI 개요</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title">핵심 키워드</div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-1">핵심 키워드</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in ml_overview %}
@@ -75,7 +75,7 @@ permalink: /docs/ai
       <div class="ai-card__header">② 기계학습 (Machine Learning)</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/01-machine-learning">기계학습</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2">기계학습</a></div>
           <div class="nw-sub__content">
             <div class="nw-chip-groups">
               <div class="nw-chip-group">
@@ -132,7 +132,7 @@ permalink: /docs/ai
       <div class="ai-card__header">③ AI 기술</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/02-deep-learning">딥러닝</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-3">딥러닝</a></div>
           <div class="nw-sub__content">
             <div class="nw-chip-groups">
               <div class="nw-chip-group">
@@ -190,7 +190,7 @@ permalink: /docs/ai
       <div class="ai-card__header">④ AI 윤리/보안</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/05-ai-ethics">윤리/신뢰</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-4">윤리/신뢰</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in ethics_core %}
@@ -230,7 +230,7 @@ permalink: /docs/ai
       <div class="ai-card__header">⑥ 운영/프로세스</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title">프로세스/학습기법</div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-6">프로세스/학습기법</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in process_all %}
@@ -259,7 +259,7 @@ permalink: /docs/ai
       <div class="ai-card__header">⑦ 서비스</div>
       <div class="ai-card__body">
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/10-ai-etc">활용/기타</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-7">활용/기타</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in etc_all %}
