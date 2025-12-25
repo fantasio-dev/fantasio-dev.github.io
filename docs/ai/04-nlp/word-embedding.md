@@ -6,6 +6,104 @@ grand_parent: AI (인공지능)
 nav_order: 3
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=41 | 중토픽=워드 임베딩 -->
+# 워드 임베딩(Word Embedding)
+{: .fs-8 }
+
+자연어
+{: .label .label-purple }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **워드 임베딩**: 전체 단어들 간의 관계에 맞춰 해당 단어의 특성을 갖는 벡터로 바꿔주므로 단어들 사이의 유사도를 계산하는 기법
+> - 암기: `통텀핫` `신워벗`
+> - 키워드: `워드 임베딩` `Term > Document Matrix` `TDM`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **워드 임베딩** | 핵심 개념/대상 | - |
+| **Term > Document Matrix** | 주요 기법/구성요소 | - |
+| **TDM** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | 전체 단어들 간의 관계에 맞춰 해당 단어의 특성을 갖는 벡터로 바꿔주므로 단어들 사이의 유사도를 계산하는 기법 |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **워드 임베딩** | 전체 단어들 간의 관계에 맞춰 해당 단어의 특성을 갖는 벡터로 바꿔주므로 단어들 사이의 유사도를 계산하는 기법 |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: 기술의 발전 측면 기술유형
+{: .highlight-purple }
+
+| 암기 | 항목 | 설명 |
+|:--|:--|:--|
+| **통** | **통텀핫 신워벗** | - |
+| **텀** | **> 통계적 기반** | TDM(Term > Document Matrix), TF > IDF, One > hot Encoding |
+| **핫** | **> 신경망 기반** | Word2Vec, BERT |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 내용
+
+- 전체 단어들 간의 관계에 맞춰 해당 단어의 특성을 갖는 벡터로 바꿔주므로 단어들 사이의 유사도를 계산하는 기법
+
+#### 기술의 발전 측면 기술유형
+
+- 통텀핫 신워벗
+- > 통계적 기반: TDM(Term > Document Matrix), TF > IDF, One > hot Encoding
+- > 신경망 기반: Word2Vec, BERT
+
+#### 임베딩 수준 측면 기술유형
+
+- > 단어 수준의 임베딩: Word2Vec, FastText, ELMo(Embedding from Language Models)
+- > 문장 수준의 임베딩: BERT, GPT
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # 워드 임베딩(Word Embedding)
 {: .fs-8 }
 
@@ -127,3 +225,6 @@ nav_order: 3
 - [BERT](/docs/ai/04-nlp/bert)
 - [트랜스포머](/docs/ai/04-nlp/transformer)
 - [TF-IDF](/docs/ai/04-nlp/tf-idf)
+
+</details>
+

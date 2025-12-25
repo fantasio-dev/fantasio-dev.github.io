@@ -6,6 +6,111 @@ grand_parent: AI (인공지능)
 nav_order: 3
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=42 | 중토픽=ROC Curve, Precision-Recall Curve -->
+# ROC Curve / PR Curve
+{: .fs-8 }
+
+인공지능 평가
+{: .label .label-purple }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **ROC Curve, Precision-Recall Curve**: [ROC Curve] 알특민
+> - 암기: `알특민` `정재정`
+> - 키워드: `ROC Curve, Precision-Recall Curve` `Sensitivity` `Specificity`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **ROC Curve, Precision-Recall Curve** | 핵심 개념/대상 | - |
+| **Sensitivity** | 주요 기법/구성요소 | - |
+| **Specificity** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | [ROC Curve] 알특민 |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **ROC Curve, Precision-Recall Curve** | [ROC Curve] 알특민 |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: ROC Curve
+{: .highlight-purple }
+
+| 항목 | 설명 |
+|:--|:--|
+| **알특민** | - |
+| **모든 분류 임계값에서 민감도(Sensitivity)와 특이도(Specificity)의 매개 변수를 표시를 통해 분류 모델의 성능을 보여주는 그래프** | - |
+| **+구성** | - |
+| **> X축** | 특이도(Specificity): FP / (FP+TN) |
+| **> Y축** | 민감도(Sensitivity): TP / (TP+FN) |
+| **+AUC(Area Under the Curve)** | - |
+| **> ROC Curve 아래의 면적으로 환산하여 평가하는 방법** | - |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### ROC Curve
+
+- 알특민
+- 모든 분류 임계값에서 민감도(Sensitivity)와 특이도(Specificity)의 매개 변수를 표시를 통해 분류 모델의 성능을 보여주는 그래프
+- +구성
+- > X축 : 특이도(Specificity): FP / (FP+TN)
+- > Y축 : 민감도(Sensitivity): TP / (TP+FN)
+- +AUC(Area Under the Curve)
+- > ROC Curve 아래의 면적으로 환산하여 평가하는 방법
+
+#### Precision > Recall Curve
+
+- 정재정
+- > X축 정밀도(Precision)이고, Y축이 재현율(Recal)을 기준으로 불균형한 데이터 셋일 때 성능 평가에 유리한 그래프
+- +구성
+- > X축: 정밀도(Precision) : TP / (TP + FP)
+- > Y축: 재현율(Recal) : TP / (TP + FN)
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # ROC Curve / Precision-Recall Curve
 {: .fs-8 }
 
@@ -128,3 +233,6 @@ nav_order: 3
 
 - [혼동행렬](/docs/ai/06-ml-evaluation/confusion-matrix)
 - [정밀도/재현율](/docs/ai/06-ml-evaluation/precision-recall)
+
+</details>
+

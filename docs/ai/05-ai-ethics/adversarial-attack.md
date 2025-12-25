@@ -6,6 +6,107 @@ grand_parent: AI (인공지능)
 nav_order: 5
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=33 | 중토픽=적대적공격 -->
+# 적대적 공격(Adversarial Attack)
+{: .fs-8 }
+
+AI공격
+{: .label .label-purple }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **적대적공격**: > 오염공격(Poisoning)
+> - 암기: `오회전추`
+> - 키워드: `적대적공격` `Poisoning` `Evasion`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **적대적공격** | 핵심 개념/대상 | - |
+| **Poisoning** | 주요 기법/구성요소 | - |
+| **Evasion** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | > 오염공격(Poisoning) |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **적대적공격** | > 오염공격(Poisoning) |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: 내용
+{: .highlight-purple }
+
+| 항목 | 설명 |
+|:--|:--|
+| **> 오염공격(Poisoning)** | - |
+| **> 학습데이터 악의적인 데이터 주입** | - |
+| **> 회피공격과는 다르게 학습과정 공격** | - |
+| **> 회피공격(Evasion)** | - |
+| **> 입력데이터에 perturbation(작은변화) 추가** | - |
+| **> 모델이 정답을 피해가게 만듬** | - |
+| **> 전도공격(Inversion)** | - |
+| **> 모델에 쿼리를 계속 던져서 학습데이터 유추 복원** | - |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 내용
+
+- > 오염공격(Poisoning)
+- > 학습데이터 악의적인 데이터 주입
+- > 회피공격과는 다르게 학습과정 공격
+- > 회피공격(Evasion)
+- > 입력데이터에 perturbation(작은변화) 추가
+- > 모델이 정답을 피해가게 만듬
+- > 전도공격(Inversion)
+- > 모델에 쿼리를 계속 던져서 학습데이터 유추 복원
+- > 추출공격(Extraction)
+- > 모델에 쿼리를 던져 모델 자체를 알아냄, 모델복사
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # 적대적 공격(Adversarial Attack)
 {: .fs-8 }
 
@@ -116,4 +217,6 @@ AI공격
 
 - [AI 보안](/docs/ai/05-ai-ethics/ai-security)
 - [GAN](/docs/ai/02-deep-learning/gan)
+
+</details>
 

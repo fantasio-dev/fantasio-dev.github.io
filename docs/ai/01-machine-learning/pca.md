@@ -6,6 +6,122 @@ grand_parent: AI (인공지능)
 nav_order: 19
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=22 | 중토픽=PCA(주성분분석) (Principal Component Analysis) -->
+# PCA
+{: .fs-8 }
+
+1.3 비지도학습
+{: .label .label-green }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **PCA(주성분분석) (Principal Component Analysis)**: 고차원의 데이터를 저차원의 데이터로 환원시키는 기법
+> - 암기: `전공고투` `공행벡상` `피카플다`
+> - 키워드: `PCA` `주성분` `고유벡터`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **PCA** | 핵심 개념/대상 | - |
+| **주성분** | 주요 기법/구성요소 | - |
+| **고유벡터** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | 고차원의 데이터를 저차원의 데이터로 환원시키는 기법 |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **PCA(주성분분석) (Principal Component Analysis)** | 고차원의 데이터를 저차원의 데이터로 환원시키는 기법 |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: 기술요소
+{: .highlight-purple }
+
+| 항목 | 설명 |
+|:--|:--|
+| **공행벡상** | - |
+| **> 공분산** | x, y의 흩어진 정도가 얼마나 서로 상관관계를 가지고 흩어졌는지를 나타냄. |
+| **> 서로 상관관계가 없을 경우 공분산은 0,** | - |
+| **> 공분산 행렬** | 데이터 좌표성분들 사이의 공분산 값을 원소로 하는 행렬 |
+| **> Eigen Vector(고유벡터)** | 행렬 A를 선형변환한 결과가 자기 자신의 상수배가 되게 하는 벡터 |
+| **> Eigen Value(고유상수)** | 행렬 A를 선형변환한 결과가 자기 자신의 상수배가 되게 하는 값 |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 내용
+
+- 고차원의 데이터를 저차원의 데이터로 환원시키는 기법
+- 선형 연관성이 없는 저차원공간(주성분)의 표본으로 변환
+
+#### 절차
+
+- 전공고투
+- 1. 데이터 전처리: 데이터 정규화 수행
+- 2. 공분산행렬 계산: 평균값, 편차를 통한 공분산 계산
+- 3. 고유값, 고유벡터 계산: 공분산행렬 분해를 통한 고유값, 고유벡터 계산
+- 4. 데이터 투영: 저차원 데이터 투영
+
+#### 기술요소
+
+- 공행벡상
+- > 공분산: x, y의 흩어진 정도가 얼마나 서로 상관관계를 가지고 흩어졌는지를 나타냄.
+- > 서로 상관관계가 없을 경우 공분산은 0,
+- > 공분산 행렬: 데이터 좌표성분들 사이의 공분산 값을 원소로 하는 행렬
+- > Eigen Vector(고유벡터): 행렬 A를 선형변환한 결과가 자기 자신의 상수배가 되게 하는 벡터
+- > Eigen Value(고유상수): 행렬 A를 선형변환한 결과가 자기 자신의 상수배가 되게 하는 값
+
+#### 얼굴인식
+
+- 피카플다 PICA FLDA
+- > PCA(Principal Component Analysis): 주성분분석, 3차원 > 2차원
+- > ICA(Independent Component Analysis) : 주어진 특징에서 새로운 특징 추출
+- > FDA(Fisher Discriminant Analysis) : 국부적인 특징 추출 및 분류화
+- > LDA(Linear Discriminant Analysis): 데이터를 축소해서 최적화
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # PCA(Principal Component Analysis)
 {: .fs-8 }
 
@@ -79,8 +195,6 @@ nav_order: 19
 - [ ] 공분산, Eigen Vector, Eigen Value 개념 파악
 - [ ] PCA 프로세스 5단계 암기
 
----
 
-## 참고자료
+</details>
 
-- 정보관리기술사 AI 학습자료

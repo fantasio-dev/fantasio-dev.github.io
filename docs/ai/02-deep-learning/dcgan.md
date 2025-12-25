@@ -6,6 +6,111 @@ grand_parent: AI (인공지능)
 nav_order: 12
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=24 | 중토픽=DCGAN (Deep Convolutional GAN) -->
+# DCGAN
+{: .fs-8 }
+
+7. 신경망 알고리즘
+{: .label .label-green }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **DCGAN (Deep Convolutional GAN)**: GAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘
+> - 암기: `컨배풀풀` `RLT`
+> - 키워드: `DCGAN` `평균 0, 분산 1` `Rectified Linear Unit`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **DCGAN** | 핵심 개념/대상 | - |
+| **평균 0, 분산 1** | 주요 기법/구성요소 | - |
+| **Rectified Linear Unit** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | GAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘 |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **DCGAN (Deep Convolutional GAN)** | GAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘 |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: 구성요소
+{: .highlight-purple }
+
+| 항목 | 설명 |
+|:--|:--|
+| **> 네트워크구조** | - |
+| **> Convolution** | Filter > Feature Map |
+| **> 배치정규화** | 활성화 함수 값의 정규분포화(평균 0, 분산 1), 기울기감소 해결 |
+| **> Fully > connected hidden layers 삭제** | - |
+| **> Pooling Layer 사용안함** | - |
+| **> 활성화 함수** | - |
+| **> ReLU(Rectified Linear Unit)** | 생성자층 사용 |
+| **> Tanh** | 출력층 사용 |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 내용
+
+- GAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘
+- > Convolution 적용, Pooling 적용 X
+
+#### 구성요소
+
+- > 네트워크구조
+- > Convolution: Filter > Feature Map
+- > 배치정규화: 활성화 함수 값의 정규분포화(평균 0, 분산 1), 기울기감소 해결
+- > Fully > connected hidden layers 삭제
+- > Pooling Layer 사용안함
+- > 활성화 함수
+- > ReLU(Rectified Linear Unit): 생성자층 사용
+- > Tanh: 출력층 사용
+- > Leaky ReLU: 판별자층 사용, 음수 ReLU
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # DCGAN(Deep Convolution GAN)
 {: .fs-8 }
 
@@ -85,8 +190,6 @@ Discriminator:
 - [ ] GAN과의 차이점(FC Layer 제거, 배치정규화) 파악
 - [ ] 네트워크 구조 및 활성화 함수 특징 암기
 
----
 
-## 참고자료
+</details>
 
-- 정보관리기술사 AI 학습자료

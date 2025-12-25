@@ -6,6 +6,116 @@ grand_parent: AI (인공지능)
 nav_order: 16
 ---
 
+<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=2 | 중토픽=무감독학습 -->
+# 군집분석
+{: .fs-8 }
+
+1.3 비지도학습
+{: .label .label-green }
+
+---
+
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **무감독학습**: 입력값에 대한 목표치가 주어지지 않는 기계학습
+> - 암기: `군축` `민디핸섬` `피카` `적간`
+> - 키워드: `무감독학습` `Principal Component Analysis` `Generator`
+
+---
+
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
+### 🔑 핵심 키워드 3개
+
+| 키워드 | 설명 | 예시 |
+|:--|:--|:--|
+| **무감독학습** | 핵심 개념/대상 | - |
+| **Principal Component Analysis** | 주요 기법/구성요소 | - |
+| **Generator** | 절차/평가/특징 | - |
+
+---
+
+### 📖 등장배경
+
+| 구분 | 내용 |
+|:--|:--|
+| **문제/필요성** | 입력값에 대한 목표치가 주어지지 않는 기계학습 |
+| **활용/사례** | - |
+
+---
+
+### 📝 개념 정의
+
+| 구분 | 정의 |
+|:--|:--|
+| **무감독학습** | 입력값에 대한 목표치가 주어지지 않는 기계학습 |
+
+</div>
+
+---
+
+<div class="exam-tech-block" markdown="1">
+
+## 🏗️ 기술 영역
+
+### 구성요소
+
+#### 그룹 1: 군집화
+{: .highlight-purple }
+
+| 항목 | 설명 |
+|:--|:--|
+| **Clustering** | - |
+| **- K > means** | n개의 데이터를 K개의 군집으로 분류하기 위해 거리 기반 반복 계산 |
+| **> 중심점이 변하지 않을때까지 계속 반복, K개수설정 > 초기중심점, 군집, 중심재설정, 재할당, 반복** | - |
+| **- DBSCAN** | 중심이동, 밀도기반 군집화, 밀도 |
+| **- EM Clustering** | 정규분포 기반 E > Step, M > Step 반복 군집화, 최적파라미터 찾기 |
+| **- SOM** | 자기조직학습, 차원축소, 클러스터링 동시수행 |
+
+
+</div>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 내용
+
+- 입력값에 대한 목표치가 주어지지 않는 기계학습
+
+#### 군집화
+
+- Clustering
+- - K > means: n개의 데이터를 K개의 군집으로 분류하기 위해 거리 기반 반복 계산
+- > 중심점이 변하지 않을때까지 계속 반복, K개수설정 > 초기중심점, 군집, 중심재설정, 재할당, 반복
+- - DBSCAN: 중심이동, 밀도기반 군집화, 밀도
+- - EM Clustering: 정규분포 기반 E > Step, M > Step 반복 군집화, 최적파라미터 찾기
+- - SOM: 자기조직학습, 차원축소, 클러스터링 동시수행
+
+#### 차원축소
+
+- Reduce Dimension
+- - PCA(Principal Component Analysis): 주성분분석, 3차원 > 2차원
+- - ICA(Independent Component Analysis) : 주어진 특징에서 새로운 특징 추출
+
+#### 적대적학습
+
+- - GAN: 생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하는 과정을 통해 정보를 학습
+- - DCGAN: Deep Convolutional GAN
+
+</details>
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
+
 # 군집분석(Cluster Analysis)
 {: .fs-8 }
 
@@ -83,8 +193,6 @@ Ward 연결법
 - [ ] 계층적 vs 비계층적 군집분석 차이점 파악
 - [ ] 주요 알고리즘(K-Means, DBSCAN) 특징 암기
 
----
 
-## 참고자료
+</details>
 
-- 정보관리기술사 AI 학습자료
