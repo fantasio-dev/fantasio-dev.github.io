@@ -111,6 +111,8 @@ RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 �
 
 ---
 
+<div class="exam-concept-block" markdown="1">
+
 ## 🧠 개념 영역
 
 
@@ -142,6 +144,8 @@ RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 �
 
 ---
 
+</div>
+
 ## 🏗️ 기술 영역
 
 <div class="exam-tech-block" markdown="1">
@@ -172,6 +176,8 @@ RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 �
 ---
 
 </div>
+<div class="exam-bonus-block" markdown="1">
+
 ## ⭐ 차별점 키워드 (가산점 포인트)
 
 {: .important }
@@ -182,6 +188,8 @@ RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 �
 > - LangGraph Cloud: 배포 플랫폼 (Commercial)
 
 ---
+
+</div>
 
 <details markdown="1">
 <summary><h3 style="display:inline">🧠 상세 설명 (클릭해서 펼치기)</h3></summary>

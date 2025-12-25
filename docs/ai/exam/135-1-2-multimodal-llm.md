@@ -108,6 +108,8 @@ Multimodal LLM(Large Language Model)
 
 ---
 
+<div class="exam-concept-block" markdown="1">
+
 ## 🧠 개념 영역
 
 
@@ -139,6 +141,8 @@ Multimodal LLM(Large Language Model)
 
 ---
 
+</div>
+
 ## 🏗️ 기술 영역
 
 <div class="exam-tech-block" markdown="1">
@@ -168,6 +172,8 @@ Multimodal LLM(Large Language Model)
 ---
 
 </div>
+<div class="exam-bonus-block" markdown="1">
+
 ## ⭐ 차별점 키워드 (가산점 포인트)
 
 {: .important }
@@ -177,6 +183,8 @@ Multimodal LLM(Large Language Model)
 > - 공통 표현 공간(CLIP, ImageBind)을 통해 모달 간 연관성 학습
 
 ---
+
+</div>
 
 <details markdown="1">
 <summary><h3 style="display:inline">🧠 상세 설명 (클릭해서 펼치기)</h3></summary>
