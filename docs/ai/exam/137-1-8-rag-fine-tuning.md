@@ -308,14 +308,7 @@ LLM 성능 향상 기법
 - [ ] Fine-Tuning 프레임워크 4가지 `P-U-I-O` 암기 (PEFT, Unsloth, InstructLab, OpenAI API)
 - [ ] 할루시네이션 해결에 RAG가 효과적인 이유 설명 가능
 
-</details>
-
 ---
-
-
-
-<details markdown="1">
-<summary><h3 style="display:inline">🧠 상세 설명 (클릭해서 펼치기)</h3></summary>
 
 ### 📊 RAG vs Fine-Tuning 비교 `개특장단활프`
 
@@ -351,7 +344,6 @@ LLM 성능 향상 기법
 | **O** | OpenAI API | ChatGPT 대상 파인튜닝 지원 API 도구 |
 
 ---
-
 </details>
 ## 참고(출처/메모)
 

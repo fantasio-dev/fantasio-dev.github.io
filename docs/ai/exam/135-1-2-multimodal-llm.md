@@ -282,14 +282,7 @@ Multimodal LLM(Large Language Model)
 - [ ] Multimodal LLM vs 이미지 생성 모델 차이점 설명 가능
 - [ ] 크로스 모달 이해(Cross-Modal Understanding) 개념 설명 가능
 
-</details>
-
 ---
-
-
-
-<details markdown="1">
-<summary><h3 style="display:inline">🧠 상세 설명 (클릭해서 펼치기)</h3></summary>
 
 ### 📊 Multimodal LLM vs 이미지 생성 모델 비교
 
@@ -310,7 +303,6 @@ Multimodal LLM(Large Language Model)
 | **윤리 문제** | 윤리 가이드라인 | 편향/저작권/유해성 대응 규범 정립 |
 
 ---
-
 </details>
 ## 참고(출처/메모)
 
