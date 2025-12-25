@@ -871,12 +871,21 @@ div.dataTables_wrapper div.dataTables_length {
 }
 
 .ai-card__header {
-  background: #1e3a8a;
+  /* 최상위 분류(① AI 개요/② 기계학습/③ AI 기술...) 가독성 강화 */
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
   color: #fff;
   font-weight: 900;
-  letter-spacing: -0.2px;
-  padding: 8px 10px;
-  font-size: 14px;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  padding: 10px 14px;
+  font-size: clamp(15px, 1.05vw, 18px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .ai-card__body {
