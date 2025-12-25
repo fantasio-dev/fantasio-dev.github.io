@@ -7,7 +7,7 @@ has_toc: false
 permalink: /docs/ai
 ---
 
-# AI (인공지능) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/exam">📝 기출문제 (69문제)</a>
+# AI (인공지능) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
 인공지능 관련 학습 자료입니다.
