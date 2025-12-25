@@ -111,6 +111,10 @@ SW 공학 / 난이도: 중
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -136,6 +140,7 @@ SW 공학 / 난이도: 중
 
 ---
 
+</div>
 ## 🏗️ 구성요소 (2그룹 × 4항목) `S-W-A-R` `B-C-F-E`
 
 ### 그룹 1: Client / Front End `S-W-A-R`
@@ -236,8 +241,13 @@ SW 공학 / 난이도: 중
 
 ---
 
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
+
 ### ⭐ 차별점 키워드
 
+</div>
 ### 🏆 Cold Start Optimization (콜드 스타트 최적화)
 > 서버리스 함수가 **유휴 상태에서 처음 호출될 때 발생하는 지연 시간**을 최소화하는 기술
 > - **Provisioned Concurrency**: 미리 인스턴스 예열

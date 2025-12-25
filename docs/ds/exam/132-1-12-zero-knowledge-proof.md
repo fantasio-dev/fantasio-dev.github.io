@@ -115,6 +115,10 @@ permalink: /docs/ds/exam/132-1-12-zero-knowledge-proof
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -140,6 +144,7 @@ permalink: /docs/ds/exam/132-1-12-zero-knowledge-proof
 
 ---
 
+</div>
 ## 📊 영지식 증명 개념도
 
 ```

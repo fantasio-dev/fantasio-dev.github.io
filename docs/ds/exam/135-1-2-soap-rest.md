@@ -114,6 +114,10 @@ permalink: /docs/ds/exam/135-1-2-soap-rest
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -142,6 +146,7 @@ permalink: /docs/ds/exam/135-1-2-soap-rest
 
 ---
 
+</div>
 ## 🏗️ SOAP vs REST 개념 비교
 
 ### 아키텍처 개념도

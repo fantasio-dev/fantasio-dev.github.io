@@ -112,6 +112,10 @@ permalink: /docs/ds/exam/134-1-10-cloud-service-safety
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -137,6 +141,7 @@ permalink: /docs/ds/exam/134-1-10-cloud-service-safety
 
 ---
 
+</div>
 ## 📊 근거 법령 및 고시 체계
 
 ```

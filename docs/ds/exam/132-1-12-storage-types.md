@@ -114,6 +114,10 @@ permalink: /docs/ds/exam/132-1-12-storage-types
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -139,6 +143,7 @@ permalink: /docs/ds/exam/132-1-12-storage-types
 
 ---
 
+</div>
 ## 📊 3대 스토리지 개념도
 
 ```

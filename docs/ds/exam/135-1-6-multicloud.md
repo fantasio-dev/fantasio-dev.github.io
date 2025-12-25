@@ -110,6 +110,10 @@ permalink: /docs/ds/exam/135-1-6-multicloud
 
 ## 🎯 기술사 수준 설명
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -135,6 +139,7 @@ permalink: /docs/ds/exam/135-1-6-multicloud
 
 ---
 
+</div>
 ## 🏗️ 구성요소 (2그룹 × 4항목) `인서앱통` `개CLI웹`
 
 ### 그룹 1: 멀티클라우드 핵심 기술 `인서앱통`
@@ -229,8 +234,13 @@ permalink: /docs/ds/exam/135-1-6-multicloud
 
 ---
 
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
+
 ### ⭐ 차별점 키워드
 
+</div>
 ### 🏆 Cloud Brokerage (클라우드 브로커리지)
 > 멀티클라우드 환경에서 **중개자 역할**을 수행하며, 사용자의 요구사항에 맞는 **최적의 클라우드 서비스를 선정/조합/관리**하는 서비스 모델
 > - **통합(Aggregation)**: 여러 CSP 서비스를 단일 창구로 제공
