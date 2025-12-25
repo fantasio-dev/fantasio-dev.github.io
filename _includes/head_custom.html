@@ -1266,6 +1266,21 @@ div.dataTables_wrapper div.dataTables_length {
   background: rgba(30, 58, 138, 0.85);
 }
 
+/* 소분류 타이틀을 덱 링크로 만들 때 스타일 */
+.nw-chip-group__deck-link,
+.nw-sub__title .nw-chip-group__deck-link {
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 1.5px dashed rgba(30, 58, 138, 0.35);
+  transition: border-color 0.15s, color 0.15s;
+}
+.nw-chip-group__deck-link:hover,
+.nw-sub__title .nw-chip-group__deck-link:hover {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
 /* ====================================
    NW 링크형 디자인 (샘플처럼 텍스트 + 강조)
    - 칩(버튼) 대신 가독성 위주의 링크 나열

@@ -79,7 +79,7 @@ permalink: /docs/ai
           <div class="nw-sub__content">
             <div class="nw-chip-groups">
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">지도학습(분류/회귀)</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2-supervised">지도학습(분류/회귀)</a></div>
                 <div class="nw-links">
                   {% for item in ml_supervised %}
                     <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -87,7 +87,7 @@ permalink: /docs/ai
                 </div>
               </div>
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">신경망 기본/학습 이슈</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2-nn">신경망 기본/학습 이슈</a></div>
                 <div class="nw-links">
                   {% for item in ml_nn_basics %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -95,7 +95,7 @@ permalink: /docs/ai
                 </div>
               </div>
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">비지도/차원축소</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2-unsupervised">비지도/차원축소</a></div>
                 <div class="nw-links">
                   {% for item in ml_unsupervised %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -103,7 +103,7 @@ permalink: /docs/ai
                 </div>
               </div>
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">생성/강화</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2-generative">생성/강화</a></div>
                 <div class="nw-links">
                   {% for item in ml_generative %}
                     <a class="nw-link nw-link--red" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -114,7 +114,7 @@ permalink: /docs/ai
                 </div>
               </div>
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">검증/평가/운영</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-2-ops">검증/평가/운영</a></div>
                 <div class="nw-links">
                   {% for item in ops_core %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -136,7 +136,7 @@ permalink: /docs/ai
           <div class="nw-sub__content">
             <div class="nw-chip-groups">
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">모델</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-3-dl-models">모델</a></div>
                 <div class="nw-links">
                   {% for item in dl_models %}
                     <a class="nw-link nw-link--blue" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -144,7 +144,7 @@ permalink: /docs/ai
                 </div>
               </div>
               <div class="nw-chip-group">
-                <div class="nw-chip-group__title">이슈/생성</div>
+                <div class="nw-chip-group__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-3-dl-issues">이슈/생성</a></div>
                 <div class="nw-links">
                   {% for item in dl_issues %}
                     <a class="nw-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
@@ -159,7 +159,7 @@ permalink: /docs/ai
         </div>
 
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/04-nlp">자연어처리</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-3-nlp">자연어처리</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in nlp_core %}
@@ -173,7 +173,7 @@ permalink: /docs/ai
         </div>
 
         <div class="nw-sub">
-          <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ai/03-neural-network">특수 신경망</a></div>
+          <div class="nw-sub__title"><a class="nw-chip-group__deck-link" href="{{ site.baseurl }}/docs/ai/daily?deck=topics-3-nn">특수 신경망</a></div>
           <div class="nw-sub__content">
             <div class="nw-links">
               {% for item in nn_all %}

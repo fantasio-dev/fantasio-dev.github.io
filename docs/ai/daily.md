@@ -15,7 +15,8 @@ permalink: /docs/ai/daily
 
 <div class="ai-deck2" id="aiDeckRoot"
   data-exam-url="{{ site.baseurl }}/docs/ai/exam"
-  data-topics-url="{{ site.baseurl }}/docs/ai/topics.json">
+  data-topics-url="{{ site.baseurl }}/docs/ai/topics.json"
+  data-ai-index-url="{{ site.baseurl }}/docs/ai">
 
   <div class="ai-deck2__toolbar">
     <div class="ai-deck2__row">
@@ -23,12 +24,21 @@ permalink: /docs/ai/daily
         덱
         <select id="aiDeckMode" class="ai-deck2__select">
           <option value="topics-all" selected>AI 토픽 · 전체</option>
-          <option value="topics-1">AI 토픽 · ① AI 개요</option>
-          <option value="topics-2">AI 토픽 · ② 기계학습</option>
-          <option value="topics-3">AI 토픽 · ③ AI 기술</option>
-          <option value="topics-4">AI 토픽 · ④ AI 윤리/보안</option>
-          <option value="topics-6">AI 토픽 · ⑥ 운영/프로세스</option>
-          <option value="topics-7">AI 토픽 · ⑦ 서비스</option>
+          <option value="topics-1">① AI 개요</option>
+          <option value="topics-2">② 기계학습 · 전체</option>
+          <option value="topics-2-supervised">  └ 지도학습(분류/회귀)</option>
+          <option value="topics-2-nn">  └ 신경망 기본/학습 이슈</option>
+          <option value="topics-2-unsupervised">  └ 비지도/차원축소</option>
+          <option value="topics-2-generative">  └ 생성/강화</option>
+          <option value="topics-2-ops">  └ 검증/평가/운영</option>
+          <option value="topics-3">③ AI 기술 · 전체</option>
+          <option value="topics-3-dl-models">  └ 딥러닝 모델</option>
+          <option value="topics-3-dl-issues">  └ 딥러닝 이슈/생성</option>
+          <option value="topics-3-nlp">  └ 자연어처리</option>
+          <option value="topics-3-nn">  └ 특수 신경망</option>
+          <option value="topics-4">④ AI 윤리/보안</option>
+          <option value="topics-6">⑥ 운영/프로세스</option>
+          <option value="topics-7">⑦ 서비스</option>
           <option value="exam-1">기출 · 1교시</option>
           <option value="exam-2">기출 · 2교시</option>
         </select>
@@ -130,6 +140,7 @@ permalink: /docs/ai/daily
 .ai-deck2__item:hover { background: rgba(248, 250, 252, 0.85); }
 .ai-deck2__item.is-active { background: rgba(233, 213, 255, 0.30); }
 .ai-deck2__item-title { font-size: 13px; font-weight: 900; letter-spacing: -0.2px; color: rgba(15, 23, 42, 0.90); }
+.ai-deck2__item-sub { font-size: 12px; font-weight: 900; letter-spacing: -0.2px; color: rgba(15, 23, 42, 0.60); }
 .ai-deck2__item-tagline { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
 .ai-deck2__pill { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.82); background: rgba(226, 232, 240, 0.75); border: 1px solid rgba(15, 23, 42, 0.10); }
 .ai-deck2__pill--hard { background: rgba(254, 202, 202, 0.60); border-color: rgba(239, 68, 68, 0.22); color: rgba(127, 29, 29, 0.92); }
@@ -160,6 +171,7 @@ permalink: /docs/ai/daily
 
   var examUrl = root.getAttribute('data-exam-url');
   var topicsUrl = root.getAttribute('data-topics-url');
+  var aiIndexUrl = root.getAttribute('data-ai-index-url');
 
   var elStatus = document.getElementById('aiDeckStatus');
   var elMode = document.getElementById('aiDeckMode');
@@ -187,6 +199,7 @@ permalink: /docs/ai/daily
   var idx = 0;
   var hardSet = new Set();
   var pageCache = new Map(); // url -> extracted payload
+  var aiTaxonomy = new Map(); // url(path) -> { main, sub }
 
   function safeGet(key, fallback) {
     try {
@@ -202,6 +215,29 @@ permalink: /docs/ai/daily
 
   function normalizeText(s) {
     return (s || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function shortParentLabel(s) {
+    var t = normalizeText(s || '');
+    t = t.replace(/^\d+\.\s*/, '');
+    t = t.replace(/^[①-⑦]\s*/, '');
+    return t;
+  }
+
+  function normalizeHrefToPath(href) {
+    try {
+      var u = new URL(href, window.location.origin);
+      return u.pathname;
+    } catch (e) {
+      return (href || '').split('#')[0];
+    }
+  }
+
+  function normalizeAiHeaderToMainLabel(s) {
+    var t = normalizeText(s || '');
+    t = t.replace(/^[①-⑦]\s*/, '');
+    t = t.split('(')[0].trim();
+    return t;
   }
 
   function cardKey(c) {
@@ -259,6 +295,37 @@ permalink: /docs/ai/daily
     if (mode === 'topics-6') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '6'; });
     if (mode === 'topics-7') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '7'; });
 
+    // 소분류 필터 (② 기계학습 하위)
+    if (mode === 'topics-2-supervised') base = base.filter(function(c) {
+      return c.url && (/\/supervised-learning|\/regression-analysis|\/linear-regression|\/logistic-regression|\/multiple-regression|\/multicollinearity|\/knn|\/svm/).test(c.url);
+    });
+    if (mode === 'topics-2-nn') base = base.filter(function(c) {
+      return c.url && (/\/perceptron|\/parameters|\/activation-function|\/vanishing-gradient|\/overfitting-underfitting|\/dropout|\/mlp/).test(c.url);
+    });
+    if (mode === 'topics-2-unsupervised') base = base.filter(function(c) {
+      return c.url && (/\/unsupervised-learning|\/k-means|\/dbscan|\/som|\/pca/).test(c.url);
+    });
+    if (mode === 'topics-2-generative') base = base.filter(function(c) {
+      return c.url && (/\/gan|\/dcgan|\/reinforcement-learning|\/q-learning|\/deep-reinforcement-learning|\/inverse-reinforcement-learning|\/mdp/).test(c.url);
+    });
+    if (mode === 'topics-2-ops') base = base.filter(function(c) {
+      return c.url && (c.url.indexOf('/docs/ai/06-ml-evaluation/') >= 0 || c.url.indexOf('/docs/ai/07-learning-techniques/') >= 0 || c.url.indexOf('/docs/ai/08-ml-process/') >= 0 || c.url.indexOf('/docs/ai/09-model-performance/') >= 0);
+    });
+
+    // 소분류 필터 (③ AI 기술 하위)
+    if (mode === 'topics-3-dl-models') base = base.filter(function(c) {
+      return c.url && c.url.indexOf('/docs/ai/02-deep-learning/') >= 0 && (/\/cnn|\/rnn|\/lstm|\/gru|\/mlp|\/optimizer/).test(c.url);
+    });
+    if (mode === 'topics-3-dl-issues') base = base.filter(function(c) {
+      return c.url && c.url.indexOf('/docs/ai/02-deep-learning/') >= 0 && (/\/vanishing-gradient|\/overfitting-underfitting|\/dropout|\/catastrophic-forgetting|\/gan|\/dcgan|\/vae/).test(c.url);
+    });
+    if (mode === 'topics-3-nlp') base = base.filter(function(c) {
+      return c.url && c.url.indexOf('/docs/ai/04-nlp/') >= 0;
+    });
+    if (mode === 'topics-3-nn') base = base.filter(function(c) {
+      return c.url && c.url.indexOf('/docs/ai/03-neural-network/') >= 0;
+    });
+
     if (q) {
       base = base.filter(function(c) {
         return (c.title || '').toLowerCase().includes(q) ||
@@ -312,6 +379,9 @@ permalink: /docs/ai/daily
       var hard = hardSet.has(cardKey(c));
       html += '<div class="ai-deck2__item' + (i === idx ? ' is-active' : '') + '" data-idx="' + i + '">';
       html +=   '<div class="ai-deck2__item-title">' + escapeHtml(c.title) + '</div>';
+      if (c.kind === 'topic' && c.sub_badge) {
+        html += '<div class="ai-deck2__item-sub">' + escapeHtml(c.badge + ' > ' + c.sub_badge) + '</div>';
+      }
       html +=   '<div class="ai-deck2__item-tagline">';
       html +=     '<span class="ai-deck2__pill">' + escapeHtml(c.badge) + '</span>';
       html +=     (hard ? '<span class="ai-deck2__pill ai-deck2__pill--hard">⭐</span>' : '<span class="ai-deck2__pill" style="opacity:.55"> </span>');
@@ -527,15 +597,60 @@ permalink: /docs/ai/daily
     elStatus.textContent = '데이터 로딩…';
     return Promise.all([
       fetch(examUrl, { credentials: 'same-origin' }).then(function(r) { return r.text(); }).then(function(t) { examRows = parseExamHtml(t); }),
+      fetch(aiIndexUrl, { credentials: 'same-origin' })
+        .then(function(r) { return r.text(); })
+        .then(function(html) {
+          // Build (상위/하위) 분류 맵: /docs/ai/* 링크 -> { main, sub }
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          var aiCards = doc.querySelectorAll('.ai-card');
+          aiCards.forEach(function(card) {
+            var headerEl = card.querySelector('.ai-card__header');
+            if (!headerEl) return;
+            var mainLabel = normalizeAiHeaderToMainLabel(headerEl.textContent);
+
+            // chip groups (예: 지도학습/비지도/생성/검증…)
+            var chipGroups = card.querySelectorAll('.nw-chip-group');
+            if (chipGroups && chipGroups.length) {
+              chipGroups.forEach(function(g) {
+                var gt = g.querySelector('.nw-chip-group__title');
+                var subLabel = gt ? normalizeText(gt.textContent) : '';
+                var links = g.querySelectorAll('a[href]');
+                links.forEach(function(a) {
+                  var path = normalizeHrefToPath(a.getAttribute('href') || '');
+                  if (path && path.indexOf('/docs/ai/') === 0) aiTaxonomy.set(path, { main: mainLabel, sub: subLabel });
+                });
+              });
+            }
+
+            // fallback: direct nw-sub blocks
+            var subs = card.querySelectorAll('.nw-sub');
+            subs.forEach(function(s) {
+              var st = s.querySelector('.nw-sub__title');
+              var subLabel2 = st ? normalizeText(st.textContent) : '';
+              var links2 = s.querySelectorAll('a[href]');
+              links2.forEach(function(a) {
+                var path2 = normalizeHrefToPath(a.getAttribute('href') || '');
+                if (path2 && path2.indexOf('/docs/ai/') === 0 && !aiTaxonomy.has(path2)) aiTaxonomy.set(path2, { main: mainLabel, sub: subLabel2 });
+              });
+            });
+          });
+        })
+        .catch(function() { /* taxonomy optional */ }),
       fetch(topicsUrl, { credentials: 'same-origin' }).then(function(r) { return r.json(); }).then(function(j) {
         topicRows = (Array.isArray(j) ? j : []).map(function(p) {
+          var urlPath = normalizeHrefToPath(p.url || '');
+          var tax = aiTaxonomy.get(urlPath);
+          var mainBadge = (tax && tax.main) ? tax.main : shortParentLabel(p.parent || 'AI 토픽');
+          var subBadge = (tax && tax.sub) ? tax.sub : '';
           return {
             kind: 'topic',
             title: normalizeText(p.title),
             url: p.url,
             parent: p.parent,
             grand_parent: p.grand_parent,
-            badge: normalizeText(p.parent || 'AI 토픽'),
+            badge: normalizeText(mainBadge || 'AI 토픽'),
+            sub_badge: normalizeText(subBadge),
             nav_order: p.nav_order,
             mnemonic_text: ''
           };
@@ -545,6 +660,16 @@ permalink: /docs/ai/daily
   }
 
   function init() {
+    // query param(deck 또는 mode) > prefs
+    try {
+      var params = new URLSearchParams(window.location.search || '');
+      var qsDeck = params.get('deck') || params.get('mode');
+      if (qsDeck && elMode.querySelector('option[value="' + qsDeck + '"]')) {
+        elMode.value = qsDeck;
+        safeSet(STORAGE_PREFIX + 'prefs', { mode: qsDeck, search: '' });
+      }
+    } catch (e) {}
+
     // restore prefs
     var prefs = safeGet(STORAGE_PREFIX + 'prefs', {});
     if (prefs && typeof prefs === 'object') {
