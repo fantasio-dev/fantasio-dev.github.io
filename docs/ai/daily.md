@@ -11,7 +11,7 @@ permalink: /docs/ai/daily
 {: .no_toc }
 
 **AI 전체 토픽 + 기출문제(1교시/2교시)**를 “노트 넘기기”처럼 보는 모드입니다.  
-왼쪽에서 항목을 고르면, 오른쪽에 **핵심(암기/키워드)**가 바로 펼쳐져서 *뒤집기 없이* 매일 보기 좋게 설계했습니다.
+왼쪽에서 항목을 고르면, 오른쪽에 **정의/구성요소/암기**가 바로 펼쳐져서 *뒤집기 없이* 매일 보기 좋게 설계했습니다.
 
 <div class="ai-deck2" id="aiDeckRoot"
   data-exam-url="{{ site.baseurl }}/docs/ai/exam"
@@ -22,24 +22,22 @@ permalink: /docs/ai/daily
       <label class="ai-deck2__label">
         덱
         <select id="aiDeckMode" class="ai-deck2__select">
-          <option value="topics" selected>AI 토픽 전체</option>
-          <option value="exam-1">기출 1교시</option>
-          <option value="exam-2">기출 2교시</option>
+          <option value="topics-all" selected>AI 토픽 · 전체</option>
+          <option value="topics-1">AI 토픽 · ① AI 개요</option>
+          <option value="topics-2">AI 토픽 · ② 기계학습</option>
+          <option value="topics-3">AI 토픽 · ③ AI 기술</option>
+          <option value="topics-4">AI 토픽 · ④ AI 윤리/보안</option>
+          <option value="topics-6">AI 토픽 · ⑥ 운영/프로세스</option>
+          <option value="topics-7">AI 토픽 · ⑦ 서비스</option>
+          <option value="exam-1">기출 · 1교시</option>
+          <option value="exam-2">기출 · 2교시</option>
         </select>
-      </label>
-
-      <label class="ai-deck2__label">
-        오늘 N개
-        <input id="aiDeckLimit" class="ai-deck2__input" type="number" min="10" max="300" step="10" value="40">
       </label>
 
       <label class="ai-deck2__label">
         검색
         <input id="aiDeckSearch" class="ai-deck2__input ai-deck2__input--wide" type="text" placeholder="예: Transformer / ROC / Dropout">
       </label>
-
-      <button type="button" class="ai-deck2__btn" id="aiDeckShuffle">셔플</button>
-      <button type="button" class="ai-deck2__btn ai-deck2__btn--ghost" id="aiDeckReset">리셋</button>
 
       <a class="ai-deck2__link" href="{{ site.baseurl }}/docs/ai/exam">기출 테이블</a>
       <a class="ai-deck2__link" href="{{ site.baseurl }}/docs/ai">AI 메인</a>
@@ -48,7 +46,7 @@ permalink: /docs/ai/daily
     <div class="ai-deck2__row ai-deck2__row--meta">
       <div class="ai-deck2__meta">
         <span id="aiDeckStatus">로딩 중…</span>
-        <span class="ai-deck2__kbd">⌨️ ↑/↓ 이동 · Enter 열기</span>
+        <span class="ai-deck2__kbd">⌨️ ↑/↓ 이동 · Enter 원문</span>
       </div>
     </div>
   </div>
@@ -72,12 +70,12 @@ permalink: /docs/ai/daily
 
       <div class="ai-deck2__panes">
         <div class="ai-deck2__pane">
-          <div class="ai-deck2__pane-title">핵심 암기(Quick Reference)</div>
-          <div class="ai-deck2__pane-body" id="aiDeckQuickRef">-</div>
+          <div class="ai-deck2__pane-title">개념 정의(한 줄)</div>
+          <div class="ai-deck2__pane-body" id="aiDeckDefinition">-</div>
         </div>
         <div class="ai-deck2__pane">
-          <div class="ai-deck2__pane-title">핵심 키워드</div>
-          <div class="ai-deck2__pane-body" id="aiDeckKeywords">-</div>
+          <div class="ai-deck2__pane-title">구성요소(표)</div>
+          <div class="ai-deck2__pane-body" id="aiDeckComponents">-</div>
         </div>
         <div class="ai-deck2__pane ai-deck2__pane--wide">
           <div class="ai-deck2__pane-title">암기법/핵심 구문</div>
@@ -89,8 +87,8 @@ permalink: /docs/ai/daily
         <details>
           <summary><strong>팁</strong> (클릭)</summary>
           <ul>
-            <li><strong>루틴</strong>: 오늘 N개를 정하고, 목록을 위아래로 쭉 훑는 방식이 노트 넘기기와 가장 유사합니다.</li>
-            <li><strong>키워드/암기</strong>가 비어있으면 해당 페이지 템플릿을 통일하면(지금처럼) 자동 추출 정확도가 올라갑니다.</li>
+            <li><strong>루틴</strong>: 목록을 위아래로 쭉 훑는 방식이 노트 넘기기와 가장 유사합니다.</li>
+            <li><strong>추출 품질</strong>: 페이지 템플릿(정의/구성요소 표)을 통일하면 자동 추출 정확도가 올라갑니다.</li>
           </ul>
         </details>
       </div>
@@ -106,7 +104,7 @@ permalink: /docs/ai/daily
 .ai-deck2__row--meta { margin-top: 8px; }
 .ai-deck2__label { display: inline-flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.82); }
 .ai-deck2__select, .ai-deck2__input { border: 1px solid rgba(15, 23, 42, 0.14); border-radius: 10px; padding: 6px 10px; background: #fff; font-size: 13px; }
-.ai-deck2__input { width: 110px; }
+.ai-deck2__input { width: 150px; }
 .ai-deck2__input--wide { width: 260px; }
 .ai-deck2__btn { border: 1px solid rgba(15, 23, 42, 0.14); background: #fff; border-radius: 12px; padding: 8px 12px; font-size: 13px; font-weight: 900; letter-spacing: -0.2px; cursor: pointer; text-decoration: none !important; display: inline-flex; align-items: center; justify-content: center; }
 .ai-deck2__btn:hover { background: rgba(226, 232, 240, 0.70); }
@@ -148,8 +146,10 @@ permalink: /docs/ai/daily
 .ai-deck2__pane-title { font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.75); margin-bottom: 6px; }
 .ai-deck2__pane-body { font-size: 13px; line-height: 1.5; color: rgba(15, 23, 42, 0.92); }
 .ai-deck2__pane-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; padding: 2px 6px; border-radius: 8px; background: rgba(245, 243, 255, 0.85); border: 1px solid rgba(124, 58, 237, 0.18); color: #6d28d9; margin-right: 6px; display: inline-block; margin-bottom: 6px; }
-.ai-deck2__kw { display: flex; flex-wrap: wrap; gap: 6px; }
-.ai-deck2__kw span { display: inline-flex; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 900; background: #fff; border: 1px solid rgba(15, 23, 42, 0.10); color: rgba(15, 23, 42, 0.86); }
+.ai-deck2__pane-body table { width: 100% !important; font-size: 12px; }
+.ai-deck2__pane-body table td, .ai-deck2__pane-body table th { padding: 6px 8px; white-space: normal; }
+.ai-deck2__pane-body table thead th { white-space: nowrap; }
+.ai-deck2__pane-body .highlight-purple { background: rgba(245, 243, 255, 0.55); border-radius: 10px; padding: 8px; }
 .ai-deck2__footer { margin-top: 10px; }
 </style>
 
@@ -163,24 +163,21 @@ permalink: /docs/ai/daily
 
   var elStatus = document.getElementById('aiDeckStatus');
   var elMode = document.getElementById('aiDeckMode');
-  var elLimit = document.getElementById('aiDeckLimit');
   var elSearch = document.getElementById('aiDeckSearch');
 
   var elList = document.getElementById('aiDeckList');
   var elTag = document.getElementById('aiDeckTag');
   var elTitle = document.getElementById('aiDeckTitle');
-  var elQuick = document.getElementById('aiDeckQuickRef');
-  var elKeywords = document.getElementById('aiDeckKeywords');
+  var elDef = document.getElementById('aiDeckDefinition');
+  var elComponents = document.getElementById('aiDeckComponents');
   var elMnemonic = document.getElementById('aiDeckMnemonic');
   var elOpenLink = document.getElementById('aiDeckOpenLink');
 
   var btnPrev = document.getElementById('aiDeckPrev');
   var btnNext = document.getElementById('aiDeckNext');
-  var btnShuffle = document.getElementById('aiDeckShuffle');
-  var btnReset = document.getElementById('aiDeckReset');
   var btnHard = document.getElementById('aiDeckMarkHard');
 
-  var STORAGE_PREFIX = 'peAiDeck2:v1:';
+  var STORAGE_PREFIX = 'peAiDeck2:v2:';
 
   var examRows = [];
   var topicRows = [];
@@ -190,14 +187,6 @@ permalink: /docs/ai/daily
   var idx = 0;
   var hardSet = new Set();
   var pageCache = new Map(); // url -> extracted payload
-
-  function todayKey() {
-    var d = new Date();
-    var yyyy = String(d.getFullYear());
-    var mm = String(d.getMonth() + 1).padStart(2, '0');
-    var dd = String(d.getDate()).padStart(2, '0');
-    return yyyy + mm + dd;
-  }
 
   function safeGet(key, fallback) {
     try {
@@ -215,26 +204,14 @@ permalink: /docs/ai/daily
     return (s || '').replace(/\s+/g, ' ').trim();
   }
 
-  function shuffleInPlace(arr) {
-    for (var i = arr.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
-    }
-    return arr;
-  }
-
   function cardKey(c) {
     return [c.kind, c.url || c.title].join('|');
   }
 
-  function renderKeywords(list) {
-    if (!list || !list.length) return '-';
-    var html = '<div class="ai-deck2__kw">';
-    list.slice(0, 12).forEach(function(k) {
-      html += '<span>' + escapeHtml(k) + '</span>';
-    });
-    html += '</div>';
-    return html;
+  function renderDefinition(s) {
+    var t = normalizeText(s || '');
+    if (!t) return '-';
+    return escapeHtml(t);
   }
 
   function escapeHtml(s) {
@@ -252,18 +229,35 @@ permalink: /docs/ai/daily
 
   function applyModeAndSearch() {
     var mode = elMode.value;
-    var limit = parseInt(elLimit.value || '40', 10);
-    if (!isFinite(limit) || limit < 10) limit = 40;
-    elLimit.value = String(limit);
-
     var q = normalizeText(elSearch.value).toLowerCase();
 
     var base = cardsAll.slice().filter(function(c) {
-      if (mode === 'topics') return c.kind === 'topic';
+      if (mode.indexOf('topics-') === 0 || mode === 'topics-all') return c.kind === 'topic';
       if (mode === 'exam-1') return c.kind === 'exam' && c.session === '1';
       if (mode === 'exam-2') return c.kind === 'exam' && c.session === '2';
       return true;
     });
+
+    function topicGroupForUrl(url) {
+      if (!url) return '2';
+      if (url.indexOf('/docs/ai/10-ai-etc/') >= 0) return '7';
+      if (url.indexOf('/docs/ai/02-deep-learning/') >= 0 || url.indexOf('/docs/ai/03-neural-network/') >= 0 || url.indexOf('/docs/ai/04-nlp/') >= 0) return '3';
+      if (url.indexOf('/docs/ai/05-ai-ethics/') >= 0) return '4';
+      if (url.indexOf('/docs/ai/11-ai-training-data/adversarial-attack') >= 0) return '4';
+      if (url.indexOf('/docs/ai/06-ml-evaluation/') >= 0 || url.indexOf('/docs/ai/07-learning-techniques/') >= 0 || url.indexOf('/docs/ai/08-ml-process/') >= 0 || url.indexOf('/docs/ai/09-model-performance/') >= 0 || url.indexOf('/docs/ai/11-ai-training-data/') >= 0) return '6';
+      if (url.indexOf('/docs/ai/01-machine-learning/') >= 0) {
+        if (url.indexOf('/ml-concept') >= 0 || url.indexOf('/modelops') >= 0 || url.indexOf('/dsml') >= 0 || url.indexOf('/mlops') >= 0 || url.indexOf('/aiops') >= 0) return '1';
+        return '2';
+      }
+      return '2';
+    }
+
+    if (mode === 'topics-1') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '1'; });
+    if (mode === 'topics-2') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '2'; });
+    if (mode === 'topics-3') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '3'; });
+    if (mode === 'topics-4') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '4'; });
+    if (mode === 'topics-6') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '6'; });
+    if (mode === 'topics-7') base = base.filter(function(c) { return topicGroupForUrl(c.url) === '7'; });
 
     if (q) {
       base = base.filter(function(c) {
@@ -273,21 +267,33 @@ permalink: /docs/ai/daily
       });
     }
 
-    var day = todayKey();
-    var orderKey = STORAGE_PREFIX + 'order:' + mode + ':' + day + ':' + q;
-    var saved = safeGet(orderKey, null);
-    if (saved && Array.isArray(saved) && saved.length) {
-      var map = new Map(base.map(function(c) { return [cardKey(c), c]; }));
-      var rebuilt = [];
-      saved.forEach(function(k) { if (map.has(k)) rebuilt.push(map.get(k)); });
-      base.forEach(function(c) { if (rebuilt.indexOf(c) === -1) rebuilt.push(c); });
-      base = rebuilt;
-    } else {
-      base = shuffleInPlace(base);
-      safeSet(orderKey, base.map(cardKey));
+    function toInt(x, fallback) {
+      var n = parseInt(String(x || ''), 10);
+      return isFinite(n) ? n : (fallback || 0);
     }
 
-    cards = base.slice(0, Math.min(limit, base.length));
+    base.sort(function(a, b) {
+      if (a.kind === 'topic' && b.kind === 'topic') {
+        var ao = toInt(a.nav_order, 9999);
+        var bo = toInt(b.nav_order, 9999);
+        if (ao !== bo) return ao - bo;
+        return String(a.title || '').localeCompare(String(b.title || ''), 'ko');
+      }
+      if (a.kind === 'exam' && b.kind === 'exam') {
+        var ar = toInt(a.round, 0);
+        var br = toInt(b.round, 0);
+        if (ar !== br) return br - ar;
+        var as = toInt(a.session, 0);
+        var bs = toInt(b.session, 0);
+        if (as !== bs) return as - bs;
+        var an = toInt(a.no, 0);
+        var bn = toInt(b.no, 0);
+        return an - bn;
+      }
+      return String(a.kind).localeCompare(String(b.kind));
+    });
+
+    cards = base;
     idx = 0;
     renderList();
     selectIndex(0, { scrollIntoView: true });
@@ -326,8 +332,8 @@ permalink: /docs/ai/daily
   function clearDetail() {
     elTag.textContent = '-';
     elTitle.textContent = '항목을 선택하세요';
-    elQuick.innerHTML = '-';
-    elKeywords.innerHTML = '-';
+    elDef.innerHTML = '-';
+    elComponents.innerHTML = '-';
     elMnemonic.innerHTML = '-';
     elOpenLink.setAttribute('href', '#');
   }
@@ -355,10 +361,10 @@ permalink: /docs/ai/daily
 
     // Fast-fill mnemonic from index when available
     elMnemonic.innerHTML = c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-');
-    elQuick.innerHTML = '-';
-    elKeywords.innerHTML = '-';
+    elDef.innerHTML = '-';
+    elComponents.innerHTML = '-';
 
-    // load page details (keywords/quickref)
+    // load page details (definition/components)
     hydrateFromPage(c);
 
     if (opts && opts.scrollIntoView) {
@@ -380,31 +386,7 @@ permalink: /docs/ai/daily
     selectIndex(idx, { scrollIntoView: false });
   }
 
-  function resetOrder() {
-    var mode = elMode.value;
-    var q = normalizeText(elSearch.value).toLowerCase();
-    var day = todayKey();
-    try { localStorage.removeItem(STORAGE_PREFIX + 'order:' + mode + ':' + day + ':' + q); } catch (e) {}
-    applyModeAndSearch();
-  }
-
-  function manualShuffle() {
-    var mode = elMode.value;
-    var q = normalizeText(elSearch.value).toLowerCase();
-    var day = todayKey();
-    var orderKey = STORAGE_PREFIX + 'order:' + mode + ':' + day + ':' + q;
-
-    var base = cardsAll.slice().filter(function(c) {
-      if (mode === 'topics') return c.kind === 'topic';
-      if (mode === 'exam-1') return c.kind === 'exam' && c.session === '1';
-      if (mode === 'exam-2') return c.kind === 'exam' && c.session === '2';
-      return true;
-    });
-    if (q) base = base.filter(function(c) { return (c.title || '').toLowerCase().includes(q); });
-    base = shuffleInPlace(base);
-    safeSet(orderKey, base.map(cardKey));
-    applyModeAndSearch();
-  }
+  // shuffle/reset removed: this is “노트 넘기기” 모드라서 고정 순서를 기본으로 사용
 
   function parseExamHtml(htmlText) {
     var parser = new DOMParser();
@@ -416,6 +398,9 @@ permalink: /docs/ai/daily
       if (!tds || tds.length < 7) return;
       var a = tds[4].querySelector('a');
       if (!a) return;
+      // “본문/암기법 없는 템플릿성 페이지”는 덱에서 제외 (mnemonic '-' 기준)
+      var mnemonicText = normalizeText(tds[6].textContent);
+      if (!mnemonicText || mnemonicText === '-') return;
       out.push({
         kind: 'exam',
         round: normalizeText(tds[0].textContent),
@@ -425,68 +410,52 @@ permalink: /docs/ai/daily
         title: normalizeText(a.textContent),
         url: a.getAttribute('href') || '',
         badge: normalizeText(tds[0].textContent) + '회 · ' + normalizeText(tds[2].textContent) + '교시 · ' + normalizeText(tds[3].textContent) + '번',
-        mnemonic_text: normalizeText(tds[6].textContent),
+        mnemonic_text: mnemonicText,
         mnemonic_html: (tds[6].innerHTML || '').trim()
       });
     });
     return out;
   }
 
-  function normalizeKeywordsFromHeading(doc) {
+  function findHeading(doc, keyword) {
     var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4'));
-    var target = headings.find(function(h) { return normalizeText(h.textContent).includes('핵심 키워드'); });
-    if (!target) return [];
-
-    // find next element that is table or list/paragraph
-    var el = target.nextElementSibling;
-    while (el && (el.tagName === 'HR' || el.tagName === 'P' && !normalizeText(el.textContent) || el.tagName === 'DIV' && !normalizeText(el.textContent))) {
-      el = el.nextElementSibling;
-    }
-
-    if (!el) return [];
-
-    if (el.tagName === 'TABLE') {
-      var kws = [];
-      var rows = el.querySelectorAll('tbody tr');
-      rows.forEach(function(r) {
-        var first = r.querySelector('td');
-        if (first) {
-          var t = normalizeText(first.textContent).replace(/^\*+|\*+$/g, '');
-          if (t) kws.push(t);
-        }
-      });
-      return kws;
-    }
-
-    // sometimes keywords are inline code ticks
-    var codes = el.querySelectorAll('code');
-    if (codes && codes.length) {
-      var kw2 = [];
-      codes.forEach(function(c) {
-        var t2 = normalizeText(c.textContent);
-        if (t2) kw2.push(t2);
-      });
-      return kw2;
-    }
-
-    // fallback: split by commas
-    var txt = normalizeText(el.textContent);
-    if (!txt) return [];
-    return txt.split(',').map(function(s) { return normalizeText(s); }).filter(Boolean).slice(0, 8);
+    return headings.find(function(h) { return normalizeText(h.textContent).includes(keyword); }) || null;
   }
 
-  function normalizeQuickRefFromHeading(doc) {
-    var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4'));
-    var target = headings.find(function(h) { return normalizeText(h.textContent).includes('핵심 암기'); });
-    if (!target) return null;
-    var el = target.nextElementSibling;
+  function extractDefinition(doc) {
+    var h = findHeading(doc, '개념 정의') || findHeading(doc, '개념') || findHeading(doc, '정의');
+    if (!h) return '';
+    var el = h.nextElementSibling;
     while (el && (el.tagName === 'HR')) el = el.nextElementSibling;
-    if (!el) return null;
-    // common: blockquote or div.highlight/important/note wrapper around blockquote
-    if (el.tagName === 'BLOCKQUOTE') return el.innerHTML.trim();
-    var bq = el.querySelector && el.querySelector('blockquote');
-    if (bq) return bq.innerHTML.trim();
-    return null;
+    if (!el) return '';
+    if (el.tagName === 'TABLE') {
+      var firstRow = el.querySelector('tbody tr');
+      if (!firstRow) return '';
+      var tds = firstRow.querySelectorAll('td');
+      if (tds && tds.length >= 2) return normalizeText(tds[1].textContent);
+      return normalizeText(firstRow.textContent);
+    }
+    if (el.tagName === 'BLOCKQUOTE') return normalizeText(el.textContent);
+    return normalizeText(el.textContent);
+  }
+
+  function extractComponentsTables(doc) {
+    var h = findHeading(doc, '구성요소') || findHeading(doc, '기술요소');
+    if (!h) return '';
+    var el = h.nextElementSibling;
+    var tables = [];
+    var guard = 0;
+    while (el && guard < 50) {
+      if (/^H[1-6]$/.test(el.tagName)) break;
+      if (el.tagName === 'TABLE') tables.push(el);
+      var innerTables = el.querySelectorAll ? el.querySelectorAll('table') : [];
+      if (innerTables && innerTables.length) innerTables.forEach(function(t) { if (tables.indexOf(t) === -1) tables.push(t); });
+      if (tables.length >= 2) break;
+      el = el.nextElementSibling;
+      guard += 1;
+    }
+    if (!tables.length) return '';
+    return tables.slice(0, 2).map(function(t) { return t.outerHTML; }).join('\n');
   }
 
   function normalizeMnemonicFallback(doc) {
@@ -513,8 +482,8 @@ permalink: /docs/ai/daily
       return;
     }
     // show loading markers
-    elQuick.innerHTML = '불러오는 중…';
-    elKeywords.innerHTML = '불러오는 중…';
+    elDef.innerHTML = '불러오는 중…';
+    elComponents.innerHTML = '불러오는 중…';
 
     fetch(card.url, { credentials: 'same-origin' })
       .then(function(res) { return res.text(); })
@@ -522,22 +491,22 @@ permalink: /docs/ai/daily
         var parser = new DOMParser();
         var doc = parser.parseFromString(html, 'text/html');
 
-        var keywords = normalizeKeywordsFromHeading(doc);
-        var quick = normalizeQuickRefFromHeading(doc);
+        var definition = extractDefinition(doc);
+        var componentsHtml = extractComponentsTables(doc);
         var mnemonic = card.mnemonic_html || normalizeMnemonicFallback(doc) || '';
 
         var payload = {
           url: card.url,
-          keywords: keywords,
-          quick_html: quick,
+          definition: definition,
+          components_html: componentsHtml,
           mnemonic_html: mnemonic
         };
         pageCache.set(card.url, payload);
         applyExtracted(payload);
       })
       .catch(function() {
-        elQuick.innerHTML = '-';
-        elKeywords.innerHTML = '-';
+        elDef.innerHTML = '-';
+        elComponents.innerHTML = '-';
       });
   }
 
@@ -546,8 +515,8 @@ permalink: /docs/ai/daily
     var cur = cards[idx];
     if (!cur || cur.url !== payload.url) return; // stale
 
-    elKeywords.innerHTML = renderKeywords(payload.keywords);
-    elQuick.innerHTML = payload.quick_html ? payload.quick_html : '-';
+    elDef.innerHTML = renderDefinition(payload.definition);
+    elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
     // don't wipe mnemonic if exam table already has it; but enrich when empty
     if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) {
       if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html;
@@ -567,6 +536,7 @@ permalink: /docs/ai/daily
             parent: p.parent,
             grand_parent: p.grand_parent,
             badge: normalizeText(p.parent || 'AI 토픽'),
+            nav_order: p.nav_order,
             mnemonic_text: ''
           };
         });
@@ -579,7 +549,6 @@ permalink: /docs/ai/daily
     var prefs = safeGet(STORAGE_PREFIX + 'prefs', {});
     if (prefs && typeof prefs === 'object') {
       if (prefs.mode) elMode.value = prefs.mode;
-      if (prefs.limit) elLimit.value = String(prefs.limit);
       if (prefs.search) elSearch.value = String(prefs.search);
     }
     var hardSaved = safeGet(STORAGE_PREFIX + 'hard', []);
@@ -597,15 +566,11 @@ permalink: /docs/ai/daily
       });
 
     elMode.addEventListener('change', function() {
-      safeSet(STORAGE_PREFIX + 'prefs', { mode: elMode.value, limit: parseInt(elLimit.value || '40', 10), search: elSearch.value });
-      applyModeAndSearch();
-    });
-    elLimit.addEventListener('change', function() {
-      safeSet(STORAGE_PREFIX + 'prefs', { mode: elMode.value, limit: parseInt(elLimit.value || '40', 10), search: elSearch.value });
+      safeSet(STORAGE_PREFIX + 'prefs', { mode: elMode.value, search: elSearch.value });
       applyModeAndSearch();
     });
     elSearch.addEventListener('input', function() {
-      safeSet(STORAGE_PREFIX + 'prefs', { mode: elMode.value, limit: parseInt(elLimit.value || '40', 10), search: elSearch.value });
+      safeSet(STORAGE_PREFIX + 'prefs', { mode: elMode.value, search: elSearch.value });
       // debounce-ish
       if (window.__aiDeckSearchTimer) clearTimeout(window.__aiDeckSearchTimer);
       window.__aiDeckSearchTimer = setTimeout(applyModeAndSearch, 180);
@@ -613,8 +578,6 @@ permalink: /docs/ai/daily
 
     btnPrev.addEventListener('click', function() { selectIndex(idx - 1, { scrollIntoView: true }); });
     btnNext.addEventListener('click', function() { selectIndex(idx + 1, { scrollIntoView: true }); });
-    btnShuffle.addEventListener('click', manualShuffle);
-    btnReset.addEventListener('click', resetOrder);
     btnHard.addEventListener('click', function(e) { e.preventDefault(); markHard(); });
 
     // keyboard nav: ↑/↓ select, Enter open
