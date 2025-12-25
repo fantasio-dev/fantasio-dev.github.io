@@ -48,15 +48,16 @@ permalink: /docs/ai/daily
         검색
         <input id="aiDeckSearch" class="ai-deck2__input ai-deck2__input--wide" type="text" placeholder="예: Transformer / ROC / Dropout">
       </label>
-
-      <a class="ai-deck2__link" href="{{ site.baseurl }}/docs/ai/exam">기출 테이블</a>
-      <a class="ai-deck2__link" href="{{ site.baseurl }}/docs/ai">AI 메인</a>
     </div>
 
     <div class="ai-deck2__row ai-deck2__row--meta">
       <div class="ai-deck2__meta">
         <span id="aiDeckStatus">로딩 중…</span>
         <span class="ai-deck2__kbd">⌨️ ↑/↓ 이동 · Enter 원문</span>
+      </div>
+      <div class="ai-deck2__nav-links">
+        <a class="ai-deck2__nav-pill" href="{{ site.baseurl }}/docs/ai/exam">📝 기출 테이블</a>
+        <a class="ai-deck2__nav-pill" href="{{ site.baseurl }}/docs/ai">🏠 AI 메인</a>
       </div>
     </div>
   </div>
@@ -121,8 +122,9 @@ permalink: /docs/ai/daily
 .ai-deck2__btn--primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; border-color: rgba(15, 23, 42, 0.10); }
 .ai-deck2__btn--primary:hover { filter: brightness(0.98); }
 .ai-deck2__btn--ghost { background: rgba(255, 255, 255, 0.65); }
-.ai-deck2__link { font-size: 13px; font-weight: 900; text-decoration: none !important; color: #1d4ed8; }
-.ai-deck2__link:hover { text-decoration: underline !important; }
+.ai-deck2__nav-links { display: flex; gap: 8px; }
+.ai-deck2__nav-pill { display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 20px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.12)); border: 1px solid rgba(99, 102, 241, 0.22); font-size: 12px; font-weight: 800; color: #4338ca; text-decoration: none !important; transition: all 0.15s ease; }
+.ai-deck2__nav-pill:hover { background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(139, 92, 246, 0.22)); border-color: rgba(99, 102, 241, 0.36); color: #3730a3; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(99, 102, 241, 0.18); }
 .ai-deck2__meta { display: flex; gap: 12px; align-items: center; font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.76); width: 100%; justify-content: space-between; }
 .ai-deck2__kbd { font-weight: 900; color: rgba(15, 23, 42, 0.62); }
 
