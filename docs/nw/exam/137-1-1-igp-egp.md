@@ -72,6 +72,10 @@ permalink: /docs/nw/exam/137-1-1-igp-egp
 
 ---
 
+<div class="exam-concept-block" markdown="1">
+
+## 🧠 개념 영역
+
 ### 🔑 핵심 키워드 3개
 
 | 키워드 | 설명 |
@@ -106,6 +110,7 @@ permalink: /docs/nw/exam/137-1-1-igp-egp
 | **IGP** | AS 내부 라우팅 정보 교환 프로토콜 |
 | **EGP** | AS 간 라우팅 정보 교환 프로토콜 |
 
+</div>
 ### 쉬운 비유
 
 | IGP | EGP |

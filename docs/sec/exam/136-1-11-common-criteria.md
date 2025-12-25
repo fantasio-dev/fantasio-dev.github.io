@@ -180,13 +180,16 @@ PP(기준) → ST(평가기준자료) 작성 → TOE(제품) 구현 → EAL 등�
 
 ---
 
-### ⭐ 차별점 키워드
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
 
 > **CCRA (Common Criteria Recognition Arrangement)**
 > - CC 인증결과의 국가간 상호인정 협정
 > - 한 번 인증받으면 회원국 모두에서 인정
 > - 2014년부터 IT보안인증사무국(국가보안기술연구소)에서 운영
 
+</div>
 ---
 
 ### 📈 상위 토픽 계층도

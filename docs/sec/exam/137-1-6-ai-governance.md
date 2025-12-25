@@ -187,12 +187,15 @@ permalink: /docs/sec/exam/137-1-6-ai-governance
 
 ---
 
-### ⭐ 차별점 키워드
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
 
 > **AI TRiSM (Trust, Risk, Security Management)**
 > - 가트너 선정 전략 기술
 > - AI의 신뢰성·리스크·보안을 통합 관리하는 프레임워크
 
+</div>
 ---
 
 ### 📈 상위 토픽 계층도

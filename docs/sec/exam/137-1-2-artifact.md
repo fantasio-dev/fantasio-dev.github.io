@@ -150,12 +150,15 @@ permalink: /docs/sec/exam/137-1-2-artifact
 
 ---
 
-### ⭐ 차별점 키워드
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
 
 > **증거 보관 연속성 (Chain of Custody)**
 > - 증거 수집부터 법정 제출까지 무결성·연속성 보장
 > - 해시 검증, 문서화를 통해 '생성 증거'의 신뢰성 확보
 
+</div>
 ---
 
 ### 📈 상위 토픽 계층도

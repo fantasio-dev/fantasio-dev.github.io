@@ -183,13 +183,16 @@ permalink: /docs/sec/exam/137-1-12-cloud-native-security
 
 ---
 
-### ⭐ 차별점 키워드
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
 
 > **3R 원칙 (Rotate, Repair, Repave)**
 > - **Rotate**: 자격증명, 키 주기적 교체
 > - **Repair**: 취약점 발견 시 즉시 패치
 > - **Repave**: 문제 발생 시 새로 구축 (불변 인프라)
 
+</div>
 ---
 
 ### 📈 상위 토픽 계층도

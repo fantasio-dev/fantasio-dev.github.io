@@ -251,10 +251,13 @@ permalink: /docs/sec/exam/135-1-7-personal-info-safe-zone
 
 ---
 
-### ⭐ 차별점 키워드
+<div class="exam-bonus-block" markdown="1">
+
+## ⭐ 차별점 키워드 (가산점 포인트)
 
 > **Zero Trust 기반 완전 격리 환경**: 외부 접근 완전 차단, 내부 신뢰 최소화, 개인정보 보호와 활용의 균형 실현
 
+</div>
 ---
 
 ### 📈 상위 토픽 계층도
