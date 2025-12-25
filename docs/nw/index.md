@@ -7,7 +7,7 @@ has_toc: false
 permalink: /docs/nw
 ---
 
-# NW (네트워크) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/exam">📝 기출문제 (62문제)</a>
+# NW (네트워크) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
 네트워크 관련 학습 자료입니다. 총 **85개** 항목

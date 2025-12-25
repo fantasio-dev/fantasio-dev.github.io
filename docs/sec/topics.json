@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /docs/sec/topics.json
+---
+[
+{%- assign first = true -%}
+{%- for p in site.pages -%}
+  {%- assign url = p.url | default: "" -%}
+  {%- if url contains "/docs/sec/" -%}
+    {%- if url contains "/docs/sec/exam" -%}
+      {%- continue -%}
+    {%- endif -%}
+    {%- if url == "/docs/sec/" -%}
+      {%- continue -%}
+    {%- endif -%}
+    {%- if p.name == "index.md" -%}
+      {%- continue -%}
+    {%- endif -%}
+    {%- unless first -%},{%- endunless -%}
+    {%- assign first = false -%}
+    {
+      "title": {{ p.title | jsonify }},
+      "url": {{ url | jsonify }},
+      "parent": {{ p.parent | jsonify }},
+      "grand_parent": {{ p.grand_parent | jsonify }},
+      "nav_order": {{ p.nav_order | default: 0 }},
+      "source_path": {{ p.path | jsonify }}
+    }
+  {%- endif -%}
+{%- endfor -%}
+]
+

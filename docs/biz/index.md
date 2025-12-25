@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/biz
 ---
 
-# BIZ (경영)
-{: .fs-9 }
+# BIZ (경영) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/biz/daily">🃏 데일리 암기 덱</a>
+{: .fs-9 .page-title-with-cta }
 
 경영 관련 학습 자료입니다. 총 **79개** 항목
 {: .fs-6 .fw-300 }

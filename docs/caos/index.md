@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/caos
 ---
 
-# CAOS (컴퓨터구조/OS)
-{: .fs-9 }
+# CAOS (컴퓨터구조/OS) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/caos/daily">🃏 데일리 암기 덱</a>
+{: .fs-9 .page-title-with-cta }
 
 컴퓨터 구조 및 운영체제 관련 학습 자료입니다. 총 **40개** 항목
 {: .fs-6 .fw-300 }

@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/sw
 ---
 
-# SW (소프트웨어공학)
-{: .fs-9 }
+# SW (소프트웨어공학) <a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/daily">🃏 데일리 암기 덱</a>
+{: .fs-9 .page-title-with-cta }
 
 소프트웨어공학 기술 관련 학습 자료입니다. 총 **130개** 항목
 {: .fs-6 .fw-300 }
