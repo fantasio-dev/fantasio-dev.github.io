@@ -81,9 +81,34 @@ Multimodal LLM(Large Language Model)
 > - (인코더) `트비웨` (Transformer·ViT·Wav2Vec)
 > - (융합) `얼미레` (Early·Mid·Late Fusion)
 
-### 🧠 상세 설명
+---
 
-### 1) 개념/특징
+### 🏗️ 구성요소 (핵심 암기법 상세) `토해스영` / `트비웨-얼미레`
+
+#### 그룹 1: 전처리/정규화 `토해스영`
+
+| 항목 | 설명 | 예시 |
+|:--|:--|:--|
+| **토**큰화(텍스트) | 텍스트를 모델이 처리 가능한 단위(Token)로 분해 | BPE/WordPiece |
+| **해**상도 조정 | 이미지 크기를 일정하게 맞춰 비전 모델 입력으로 변환 | Resize/Normalize |
+| **스**펙트로그램 변환 | 오디오를 주파수 분포(이미지 형태)로 변환 | Mel-Spectrogram |
+| **영**상 벡터 분석 | 프레임/시퀀스 특징을 벡터화해 이해 가능하게 변환 | Frame feature/embedding |
+
+#### 그룹 2: 인코더/융합 `트비웨-얼미레`
+
+| 항목 | 설명 | 예시 |
+|:--|:--|:--|
+| **트**랜스포머(Transformer) | 텍스트 처리 핵심 아키텍처(Attention 기반) | Attention/PosEnc/FFN |
+| **비**전 Transformer(ViT) | CNN 없이 패치 기반으로 이미지 처리 | Patch embedding |
+| **웨**이브(Wav2Vec) | 음성 신호를 표현 벡터로 변환 | Speech embedding |
+| Fusion(**얼미레**) | 모달 결합 방식: Early/Mid/Late | Concat/Intermediate/Decision |
+
+---
+
+<details markdown="1">
+<summary><h3 style="display:inline">🧠 상세 설명 (클릭해서 펼치기)</h3></summary>
+
+#### 1) 개념/특징
 
 | 구분 | 설명 |
 |:--|:--|
@@ -94,35 +119,13 @@ Multimodal LLM(Large Language Model)
 
 ---
 
-### 2) 동작 메커니즘(개요)
+#### 2) 동작 메커니즘(개요)
 
 멀티모달 입력은 **모달별 인코더/프로젝션**을 통해 LLM이 처리 가능한 형태로 변환되고, LLM의 추론 결과는 **모달별 출력 프로젝션/디코더**를 통해 텍스트/이미지/오디오/영상 등으로 출력될 수 있습니다.
 
 ---
 
-### 3) 구성요소/기술요소 (2그룹 × 4개) `토해스영` / `트비웨-얼미레`
-
-#### 그룹 1: 전처리/정규화 `토해스영`
-
-| 항목 | 설명 | 예시 |
-|:--|:--|:--|
-| **텍스트 토큰화** | 텍스트를 모델이 처리 가능한 단위(Token)로 분해 | BPE/WordPiece |
-| **해상도 조정** | 이미지 크기를 일정하게 맞춰 비전 모델 입력으로 변환 | Resize/Normalize |
-| **스펙트로그램 변환** | 오디오를 주파수 분포(이미지 형태)로 변환 | Mel-Spectrogram |
-| **영상 벡터 분석** | 프레임/시퀀스 특징을 벡터화해 이해 가능하게 변환 | Frame feature/embedding |
-
-#### 그룹 2: 인코더/융합 `트비웨-얼미레`
-
-| 항목 | 설명 | 예시 |
-|:--|:--|:--|
-| **Transformer** | 텍스트 처리 핵심 아키텍처(Attention 기반) | Attention/PosEnc/FFN |
-| **Vision Transformer(ViT)** | CNN 없이 패치 기반으로 이미지 처리 | Patch embedding |
-| **Wav2Vec** | 음성 신호를 표현 벡터로 변환 | Speech embedding |
-| **Fusion(얼미레)** | 모달 결합 방식: Early/Mid/Late | Concat/Intermediate/Decision |
-
----
-
-### 4) (예시) 멀티모달 LLM vs 이미지 생성 모델 비교(요지)
+#### 3) 멀티모달 LLM vs 이미지 생성 모델 비교
 
 | 비교 | 이미지 생성 모델(예: DALL·E/Imagen 계열) | Multimodal LLM |
 |:--|:--|:--|
@@ -132,13 +135,15 @@ Multimodal LLM(Large Language Model)
 
 ---
 
-### 5) 한계 및 과제
+#### 4) 한계 및 과제
 
 | 한계 | 과제 | 설명 |
 |:--|:--|:--|
 | **연산 비용** | 모델 경량화 | 파라미터/연산 최적화(프루닝/양자화 등) |
 | **딥페이크** | xAI 기술 발전 | 합성/조작 콘텐츠 판별·추적 |
 | **윤리 문제** | 윤리 가이드라인 | 편향/저작권/유해성 대응 규범 정립 |
+
+</details>
 
 ---
 
