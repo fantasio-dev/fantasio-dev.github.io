@@ -10,11 +10,6 @@ permalink: /docs/ai/map
 # AI 이해 가이드 (MAP)
 {: .no_toc }
 
-**목표: 주간 모의고사에서 문제에 많은 키워드를 올바른 형식에 맞추어서 작성한다.**
-{: .fs-5 .fw-500 }
-
-이 페이지는 `AI - MAP.csv` 원문을 **1글자도 누락 없이** 정리한 가이드입니다.
-
 ---
 
 <details open markdown="1">
