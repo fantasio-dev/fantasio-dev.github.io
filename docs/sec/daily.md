@@ -349,7 +349,12 @@ permalink: /docs/sec/daily
   function normalizeMnemonicFallback(doc) { var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4')); var target = headings.find(function(h) { return normalizeText(h.textContent).includes('암기'); }); if (!target) return null; var el = target.nextElementSibling; var tries = 0; while (el && tries < 6) { var codes = el.querySelectorAll ? el.querySelectorAll('code') : []; if (codes && codes.length) return el.innerHTML.trim(); if (el.tagName === 'TABLE') return el.outerHTML; el = el.nextElementSibling; tries += 1; } return null; }
 
   function extractQuickReferenceHtml(doc) {
+    // 1순위: 핵심 암기 / Quick Reference
     var h = findHeading(doc, '핵심 암기') || findHeading(doc, 'Quick Reference') || findHeading(doc, 'Quick');
+    // 2순위: 기술사 수준 설명 아래 첫 블록
+    if (!h) h = findHeading(doc, '기술사 수준 설명');
+    // 3순위: 개념 정의
+    if (!h) h = findHeading(doc, '개념 정의') || findHeading(doc, '개념');
     if (!h) return '';
     var el = h.nextElementSibling;
     while (el && (el.tagName === 'HR')) el = el.nextElementSibling;
@@ -361,7 +366,8 @@ permalink: /docs/sec/daily
       if (el.tagName === 'HR') break;
       parts.push(el.outerHTML);
       if (el.tagName === 'BLOCKQUOTE') break;
-      if (parts.length >= 2) break;
+      if (el.tagName === 'TABLE') break;
+      if (parts.length >= 3) break;
       el = el.nextElementSibling;
       guard += 1;
     }

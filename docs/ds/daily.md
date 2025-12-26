@@ -523,7 +523,12 @@ permalink: /docs/ds/daily
   }
 
   function extractQuickReferenceHtml(doc) {
+    // 1순위: 핵심 암기 / Quick Reference
     var h = findHeading(doc, '핵심 암기') || findHeading(doc, 'Quick Reference') || findHeading(doc, 'Quick');
+    // 2순위: 기술사 수준 설명 아래 첫 블록
+    if (!h) h = findHeading(doc, '기술사 수준 설명');
+    // 3순위: 개념 정의
+    if (!h) h = findHeading(doc, '개념 정의') || findHeading(doc, '개념');
     if (!h) return '';
     var el = h.nextElementSibling;
     while (el && (el.tagName === 'HR')) el = el.nextElementSibling;
@@ -535,7 +540,8 @@ permalink: /docs/ds/daily
       if (el.tagName === 'HR') break;
       parts.push(el.outerHTML);
       if (el.tagName === 'BLOCKQUOTE') break;
-      if (parts.length >= 2) break;
+      if (el.tagName === 'TABLE') break;
+      if (parts.length >= 3) break;
       el = el.nextElementSibling;
       guard += 1;
     }
