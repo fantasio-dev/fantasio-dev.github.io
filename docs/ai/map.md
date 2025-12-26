@@ -10,6 +10,9 @@ permalink: /docs/ai/map
 # AI 학습 가이드
 {: .no_toc }
 
+이 페이지는 **레거시(MAP) 버전**입니다. 최신 통합 페이지는 `{{ site.baseurl }}/docs/ai` 를 참고하세요.
+{: .note }
+
 <style>
 .section-divider {
   height: 2px;
