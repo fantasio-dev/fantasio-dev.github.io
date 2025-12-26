@@ -215,10 +215,10 @@ permalink: /docs/ai/map
 | | | | VAE | 확률적 잠재공간 생성 | 안정적 · 데이터 생성, 이상 탐지 |
 | | | | CLIP | 이미지-텍스트 연결 | 멀티모달 · 이미지 검색, 분류 |
 | | | | NeRF | 3D 장면 신경망 렌더링 | 사실적 3D · VR/AR, 시각효과 |
-| | | | Latent Variable Model | | | |
-| | | | Autogressive Model | | | |
-| | | | Flow Matching | | | |
-| | | | 가우시안 노이즈 | | | |
+| | | | Latent Variable Model | 잠재 변수 기반 생성 | 데이터 분포 학습 |
+| | | | Autoregressive Model | 순차적 토큰 생성 | GPT 계열 기반 |
+| | | | Flow Matching | 연속적 분포 변환 | 확산 모델 대안 |
+| | | | 가우시안 노이즈 | 노이즈 추가/제거 기반 | Diffusion 핵심 |
 | | **멀티모달 AI** | | CLIP | 이미지-텍스트 상호 이해 | 멀티모달 표현 학습 · 이미지 검색, 비주얼 QA |
 | | | | Gemini | 텍스트·이미지·음성 통합 모델 | 통합 처리 · AI 비서, 검색, 분석 |
 | | | | GPT-4o | 실시간 멀티모달 처리 | 음성·이미지·텍스트 동시 인식 · 대화형 AI |
