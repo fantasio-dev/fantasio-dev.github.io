@@ -151,6 +151,9 @@ permalink: /docs/sec/daily
 .sec-deck__panes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .sec-deck__pane { border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 12px; background: rgba(248, 250, 252, 0.65); padding: 10px; }
 .sec-deck__pane--wide { grid-column: 1 / -1; }
+.sec-deck--exam .sec-deck__panes { grid-template-columns: 1fr; }
+.sec-deck--exam .sec-deck__pane:not(.sec-deck__pane--wide) { display: none; }
+.sec-deck--exam .sec-deck__pane--wide { grid-column: auto; }
 .sec-deck__pane-title { font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.75); margin-bottom: 6px; }
 .sec-deck__pane-body { font-size: 13px; line-height: 1.5; color: rgba(15, 23, 42, 0.92); }
 .sec-deck__pane-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; padding: 2px 6px; border-radius: 8px; background: rgba(254, 226, 226, 0.55); border: 1px solid rgba(239, 68, 68, 0.18); color: #b91c1c; margin-right: 6px; display: inline-block; margin-bottom: 6px; }
@@ -180,6 +183,13 @@ permalink: /docs/sec/daily
   var elComponents = document.getElementById('secDeckComponents');
   var elMnemonic = document.getElementById('secDeckMnemonic');
   var elOpenLink = document.getElementById('secDeckOpenLink');
+
+  // Pane refs (exam cards show only Quick Reference)
+  var paneDef = elDef && elDef.closest ? elDef.closest('.sec-deck__pane') : null;
+  var paneComponents = elComponents && elComponents.closest ? elComponents.closest('.sec-deck__pane') : null;
+  var paneMnemonic = elMnemonic && elMnemonic.closest ? elMnemonic.closest('.sec-deck__pane') : null;
+  var paneMnemonicTitle = paneMnemonic ? paneMnemonic.querySelector('.sec-deck__pane-title') : null;
+  var mnemonicTitleDefault = paneMnemonicTitle ? paneMnemonicTitle.textContent : '암기법/핵심 구문';
 
   var btnPrev = document.getElementById('secDeckPrev');
   var btnNext = document.getElementById('secDeckNext');
@@ -302,7 +312,21 @@ permalink: /docs/sec/daily
     elTag.textContent = c.badge;
     elTitle.textContent = c.title;
     elOpenLink.setAttribute('href', c.url || '#');
-    elMnemonic.innerHTML = c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-');
+
+    var isExam = c.kind === 'exam';
+    if (root && root.classList) root.classList.toggle('sec-deck--exam', isExam);
+
+    // exam: show only Quick Reference pane
+    if (paneDef) paneDef.style.display = isExam ? 'none' : '';
+    if (paneComponents) paneComponents.style.display = isExam ? 'none' : '';
+    if (paneMnemonic) {
+      if (isExam) paneMnemonic.classList.remove('sec-deck__pane--wide');
+      else paneMnemonic.classList.add('sec-deck__pane--wide');
+    }
+    if (paneMnemonicTitle) paneMnemonicTitle.textContent = isExam ? '핵심 암기 (Quick Reference)' : mnemonicTitleDefault;
+
+    // Fast-fill: topics use mnemonic, exams wait for page extract
+    elMnemonic.innerHTML = isExam ? '불러오는 중…' : (c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-'));
     elDef.innerHTML = '-';
     elComponents.innerHTML = '-';
     hydrateFromPage(c);
@@ -324,19 +348,61 @@ permalink: /docs/sec/daily
   function extractComponentsTables(doc) { var h = findHeading(doc, '구성요소') || findHeading(doc, '기술요소'); if (!h) return ''; var el = h.nextElementSibling; var tables = []; var guard = 0; while (el && guard < 50) { if (/^H[1-6]$/.test(el.tagName)) break; if (el.tagName === 'TABLE') tables.push(el); var innerTables = el.querySelectorAll ? el.querySelectorAll('table') : []; if (innerTables && innerTables.length) innerTables.forEach(function(t) { if (tables.indexOf(t) === -1) tables.push(t); }); if (tables.length >= 2) break; el = el.nextElementSibling; guard += 1; } if (!tables.length) return ''; return tables.slice(0, 2).map(function(t) { return t.outerHTML; }).join('\n'); }
   function normalizeMnemonicFallback(doc) { var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4')); var target = headings.find(function(h) { return normalizeText(h.textContent).includes('암기'); }); if (!target) return null; var el = target.nextElementSibling; var tries = 0; while (el && tries < 6) { var codes = el.querySelectorAll ? el.querySelectorAll('code') : []; if (codes && codes.length) return el.innerHTML.trim(); if (el.tagName === 'TABLE') return el.outerHTML; el = el.nextElementSibling; tries += 1; } return null; }
 
+  function extractQuickReferenceHtml(doc) {
+    var h = findHeading(doc, '핵심 암기') || findHeading(doc, 'Quick Reference') || findHeading(doc, 'Quick');
+    if (!h) return '';
+    var el = h.nextElementSibling;
+    while (el && (el.tagName === 'HR')) el = el.nextElementSibling;
+    if (!el) return '';
+    var parts = [];
+    var guard = 0;
+    while (el && guard < 10) {
+      if (/^H[1-6]$/.test(el.tagName)) break;
+      if (el.tagName === 'HR') break;
+      parts.push(el.outerHTML);
+      if (el.tagName === 'BLOCKQUOTE') break;
+      if (parts.length >= 2) break;
+      el = el.nextElementSibling;
+      guard += 1;
+    }
+    return parts.join('\n');
+  }
+
   function hydrateFromPage(card) {
     if (!card || !card.url) return;
     if (pageCache.has(card.url)) { applyExtracted(pageCache.get(card.url)); return; }
-    elDef.innerHTML = '불러오는 중…'; elComponents.innerHTML = '불러오는 중…';
+    var isExam = card.kind === 'exam';
+    if (!isExam) { elDef.innerHTML = '불러오는 중…'; elComponents.innerHTML = '불러오는 중…'; }
     fetch(card.url, { credentials: 'same-origin' }).then(function(res) { return res.text(); }).then(function(html) {
       var parser = new DOMParser(); var doc = parser.parseFromString(html, 'text/html');
-      var definition = extractDefinition(doc); var componentsHtml = extractComponentsTables(doc); var mnemonic = card.mnemonic_html || normalizeMnemonicFallback(doc) || '';
-      var payload = { url: card.url, definition: definition, components_html: componentsHtml, mnemonic_html: mnemonic };
+      var quickrefHtml = extractQuickReferenceHtml(doc);
+      var definition = isExam ? '' : extractDefinition(doc);
+      var componentsHtml = isExam ? '' : extractComponentsTables(doc);
+      var mnemonic = card.mnemonic_html || normalizeMnemonicFallback(doc) || '';
+      var payload = { url: card.url, quickref_html: quickrefHtml, definition: definition, components_html: componentsHtml, mnemonic_html: mnemonic };
       pageCache.set(card.url, payload); applyExtracted(payload);
-    }).catch(function() { elDef.innerHTML = '-'; elComponents.innerHTML = '-'; });
+    }).catch(function() {
+      if (isExam) elMnemonic.innerHTML = '-';
+      else { elDef.innerHTML = '-'; elComponents.innerHTML = '-'; }
+    });
   }
 
-  function applyExtracted(payload) { if (!payload || !cards.length) return; var cur = cards[idx]; if (!cur || cur.url !== payload.url) return; elDef.innerHTML = renderDefinition(payload.definition); elComponents.innerHTML = payload.components_html ? payload.components_html : '-'; if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) { if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html; } }
+  function applyExtracted(payload) {
+    if (!payload || !cards.length) return;
+    var cur = cards[idx];
+    if (!cur || cur.url !== payload.url) return;
+
+    if (cur.kind === 'exam') {
+      // exam: show only Quick Reference (fallback to mnemonic if not found)
+      if (payload.quickref_html) elMnemonic.innerHTML = payload.quickref_html;
+      else elMnemonic.innerHTML = cur.mnemonic_html || (cur.mnemonic_text ? escapeHtml(cur.mnemonic_text) : '-');
+      return;
+    }
+
+    elDef.innerHTML = renderDefinition(payload.definition);
+    elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
+    if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) { if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html; }
+  }
 
   function loadSources() {
     elStatus.textContent = '데이터 로딩…';
