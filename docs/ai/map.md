@@ -10,7 +10,20 @@ permalink: /docs/ai/map
 # AI 이해 가이드 (MAP)
 {: .no_toc }
 
----
+<style>
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e2e8f0 20%, #e2e8f0 80%, transparent);
+  margin: 2.5rem 0;
+  border: none;
+}
+.section-divider-dot {
+  text-align: center;
+  margin: 2rem 0;
+  color: #cbd5e1;
+  letter-spacing: 0.5rem;
+}
+</style>
 
 <details open markdown="1">
 <summary><strong>📋 목차 (2단계까지)</strong></summary>
@@ -116,7 +129,7 @@ permalink: /docs/ai/map
   </a>
 </div>
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.1 전체 흐름 (Big Picture)
 
@@ -127,7 +140,7 @@ permalink: /docs/ai/map
 - **Data Drift**: 입력 데이터 분포 변화
 - **GPUaaS**: GPU를 서비스로 제공
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.2 [데이터 파이프라인]
 
@@ -150,7 +163,7 @@ permalink: /docs/ai/map
 >
 > 참고: 생성형AI 품질관리 가이드 3.5
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.3 [모델 선정] - AI 알고리즘
 
@@ -236,7 +249,7 @@ permalink: /docs/ai/map
 | | | | ReAct | 추론과 행동을 결합한 LLM 프레임워크 | 에이전트 핵심 구조 · 작업 자동화 |
 | | | | Chain-of-Thought (CoT) | 단계적 사고를 통한 논리적 추론 | 복잡한 문제 해결 · 수학, 논리 추론 |
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.4 [모델 학습] - AI 학습 프로세스
 
@@ -249,7 +262,7 @@ permalink: /docs/ai/map
 > |:--:|:--:|:--:|:--:|:--:|:--:|
 > | 👁️ 감지 | 🧩 분석 | ⚖️ 결정 | 🎛️ 조절 | 🏃 실행 | 📚 개선 |
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.5 [모델 평가]
 
@@ -290,19 +303,19 @@ permalink: /docs/ai/map
 | | | 정답 보존율 | |
 | | | 거리 보존 | |
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.6 [모델 배포]
 
 *(원문에 상세 내용 없음)*
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.7 [모델 튜닝]
 
 **핵심 키워드**: 파인튜닝, 하이퍼파라미터
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 1.8 [도구]
 
@@ -377,7 +390,7 @@ permalink: /docs/ai/map
 | 상세 절차 | 1) 공통기초 모델 → 2) 기관별 파인튜닝 → 3) 벡터DB로 환각방지 → 4) UI 프롬프트 검색 후 기관별 sLLM이 답변 |
 | 주요기술 | `파스파벡R` - LLM Foundation Model, sLLM, 파인튜닝, 벡터DB, RAG |
 
----
+<div class="section-divider-dot">• • •</div>
 
 ## 2.2 인공지능 기업 Level (생성형 AI 중심)
 
@@ -443,7 +456,7 @@ permalink: /docs/ai/map
 | 외부 | MCP, A2A, MAS, RAG |
 | 파인튜닝 | PEFT, LoRA, LangGraph |
 
----
+<div class="section-divider-dot">• • •</div>
 
 <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(17, 153, 142, 0.3);">
   <h1 style="margin: 0; font-size: 1.8rem;">🚀 Part 3. 활용</h1>
