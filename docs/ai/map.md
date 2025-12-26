@@ -242,31 +242,11 @@ permalink: /docs/ai/map
 {: .highlight }
 > ### 🧠 핵심 암기: `인추판제행학`
 >
-> | 인식 | 추론 | 판단 | 제어 | 행동 | 학습 |
-> |:----:|:----:|:----:|:----:|:----:|:----:|
-> | **`인`** | **`추`** | **`판`** | **`제`** | **`행`** | **`학`** |
+> 인식 → 추론 → 판단 → 제어 → 행동 → 학습 ↺ (피드백 루프)
+>
+> | 인 | 추 | 판 | 제 | 행 | 학 |
+> |:--:|:--:|:--:|:--:|:--:|:--:|
 > | 👁️ 감지 | 🧩 분석 | ⚖️ 결정 | 🎛️ 조절 | 🏃 실행 | 📚 개선 |
-
-### 학습 단계 흐름도
-
-<div style="position: relative; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); border-radius: 16px;">
-  <div style="display: flex; align-items: center; gap: 0.3rem; flex-wrap: wrap; justify-content: center;">
-    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">👁️<br>인식</div>
-    <span style="color: #667eea; font-size: 1.2rem;">→</span>
-    <div style="background: linear-gradient(135deg, #764ba2, #f093fb); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🧩<br>추론</div>
-    <span style="color: #f093fb; font-size: 1.2rem;">→</span>
-    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">⚖️<br>판단</div>
-    <span style="color: #f5576c; font-size: 1.2rem;">→</span>
-    <div style="background: linear-gradient(135deg, #f5576c, #ff9a44); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🎛️<br>제어</div>
-    <span style="color: #ff9a44; font-size: 1.2rem;">→</span>
-    <div style="background: linear-gradient(135deg, #ff9a44, #4facfe); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🏃<br>행동</div>
-    <span style="color: #4facfe; font-size: 1.2rem;">→</span>
-    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">📚<br>학습</div>
-  </div>
-  <div style="text-align: center; margin-top: 1rem; color: #00f2fe; font-size: 0.85rem;">
-    ↺ 피드백 루프 (Feedback Loop)
-  </div>
-</div>
 
 ---
 
