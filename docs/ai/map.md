@@ -47,6 +47,33 @@ permalink: /docs/ai/map
 .tag-data { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
 .tag-model { background: linear-gradient(135deg, #f093fb, #f5576c); color: white; }
 .tag-ops { background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; }
+
+/* Sticky 섹션 헤더 */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 0.8rem 1rem;
+  margin: 0 -1rem;
+  z-index: 100;
+  border-bottom: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.sticky-header-data {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+}
+.sticky-header-model {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-bottom: none;
+}
+.sticky-header-ops {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-bottom: none;
+}
 </style>
 
 <!-- 진행률 바 -->
@@ -168,7 +195,9 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-data">📦 데이터</span> 1.1 데이터 파이프라인
+<div class="sticky-header sticky-header-data">
+📦 데이터 › 1.1 데이터 파이프라인
+</div>
 
 ### 데이터 파이프라인 흐름도
 
@@ -191,7 +220,9 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-model">🧠 모델</span> 1.2 모델 선정 - AI 알고리즘
+<div class="sticky-header sticky-header-model">
+🧠 모델 › 1.2 모델 선정 - AI 알고리즘
+</div>
 
 ### 알고리즘 분류 체계
 
@@ -277,7 +308,9 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-model">🧠 모델</span> 1.3 모델 학습 - AI 학습 프로세스
+<div class="sticky-header sticky-header-model">
+🧠 모델 › 1.3 모델 학습 - AI 학습 프로세스
+</div>
 
 <div style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;">
   <div style="text-align: center; color: white; margin-bottom: 1rem;">
@@ -322,7 +355,9 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-model">🧠 모델</span> 1.4 모델 평가
+<div class="sticky-header sticky-header-model">
+🧠 모델 › 1.4 모델 평가
+</div>
 
 ### AI 모델평가 체크리스트
 
@@ -363,13 +398,17 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-ops">⚙️ 운영</span> 1.5 모델 배포 / 튜닝
+<div class="sticky-header sticky-header-ops">
+⚙️ 운영 › 1.5 모델 배포 / 튜닝
+</div>
 
 **핵심 키워드**: 파인튜닝, 하이퍼파라미터
 
 <div class="section-divider-dot">• • •</div>
 
-## <span class="section-tag tag-ops">⚙️ 운영</span> 1.6 도구
+<div class="sticky-header sticky-header-ops">
+⚙️ 운영 › 1.6 도구
+</div>
 
 | 단계 | 세부 단계 | 주요 도구 | 설명 |
 |:-----|:----------|:----------|:-----|
