@@ -103,55 +103,66 @@ flowchart TB
 
 ### 알고리즘 분류 체계
 
-| 구분 | 대분류 | 중분류 | 알고리즘 | 핵심 개념 | 특징 | 대표 활용 예시 |
-|:-----|:-------|:-------|:---------|:----------|:-----|:---------------|
-| 레거시 인공지능 알고리즘 | **지도학습 (Supervised Learning)** | **분류 (Classification)** | SVM (Support Vector Machine) | 초평면으로 클래스 분리 | 고차원 데이터에 강함 | 얼굴 인식, 텍스트 분류 |
-| | - 라벨 제공 | - 이미지 분류 | KNN (K-Nearest Neighbors) | 주변 k개 데이터 다수결 분류 | 단순하지만 계산량 큼 | 이미지 분류, 추천 |
-| | - 미래데이터 예측 | - 사기 감지 | Decision Tree | 규칙 기반 트리 구조로 분류 | 해석 쉬움, 과적합 위험 | 고객 세분화, 품질 분류 |
-| | - Y = f(x) | - 문제 진단 | Random Forest | 여러 트리의 앙상블 | 과적합 감소, 안정적 | 의료 진단, 신용 평가 |
-| | | | Naive Bayes | 확률(조건부 확률) 기반 분류 | 데이터 적어도 가능, 속도 빠름 | 스팸 필터링, 문서 분류 |
-| | | | ANN | 노드 가중치 학습, 비선형 패턴 인식 | 복잡한 비선형 문제 해결 | 음성 인식, 이미지 분류, 자율주행 |
-| | | | Logistic Regression | 확률적 분류 (시그모이드 함수) | 이진 분류에 최적, 속도 빠름 | 스팸 메일 판별, 고객 이탈 예측 |
-| | | **회귀 (Regression)** | Linear Regression | 입력과 출력의 선형 관계 학습 | 단순하고 해석 용이, 과적합 위험 낮음 | 매출 예측, 가격 예측 |
-| | | - 예측 | Regularized Linear Regression | 가중치 제약(L1/L2)으로 과적합 방지 | 라쏘(L1), 릿지(L2), 엘라스틱넷 혼합 사용 | 주가 예측, 의료 데이터 분석 |
-| | | - 공정최적화 | Regression Tree | 트리 구조로 연속값 예측 | 비선형 관계 처리 가능, 과적합 주의 | 에너지 사용량 예측, 생산량 추정 |
-| | | - 인사이트 발견 | Random Forest Regression | 여러 회귀 트리의 앙상블 평균 | 안정적, 과적합 감소 | 부동산 가격, 보험료 예측 |
-| | | | Support Vector Regression (SVR) | 마진 기반 회귀, 오차 허용 구간 내 학습 | 고차원 데이터 강함, 파라미터 민감 | 날씨 예측, 수요 예측 |
-| | **비지도학습 (Unsupervised Learning)** | **군집화 (Clustering)** | K-Means | 유사도 기반 군집화 | 간단, 초기값에 민감 | 고객 군집, 마켓 세분화 |
-| | - 라벨 미제공 | - 추천 시스템 | DBSCAN | 밀도 기반 클러스터링 | 이상치 탐지에 강함 | 위치 기반 데이터 분석 |
-| | - 데이터에 숨겨진 구조/특징 발견 | - 타겟 마케팅 | EM Clustering | 확률기반 군집화(EM) | | |
-| | - x~p(x), x=f(x) | - 고객 분할 | SOM | 자기조직화 맵 | | |
-| | | | Hierarchical Clustering | 유사도 거리 기반 트리 구조 | 시각화 용이 | 생물 유전 분석, 조직 분류 |
-| | | **차원 축소** | PCA (Principal Component Analysis) | 데이터 축소 (분산 최대 방향) | 차원 축소 및 시각화 | 이미지 압축, 특징 추출 |
-| | | - 빅데이터 가시화 | LDA (Linear Discriminant Analysis) | 클래스 간 분산 최대, 클래스 내 분산 최소 | 지도형 차원 축소, 분류 성능 향상 | 얼굴 인식, 패턴 분류 |
-| | | - 데이터 압축 | Factor Analysis | 잠재 요인으로 변수 간 관계 설명 | 노이즈 제거, 변수 간 상관 해석 | 설문 분석, 심리 요인 분석 |
-| | | - 특징 추출 | MDS (Multidimensional Scaling) | 유사도 기반 저차원 임베딩 | 거리 보존, 시각화 용이 | 고객 세분화, 마케팅 분석 |
-| | | **연관성 규칙 발견** | MBA (Market Basket Analysis) | 항목 간 동시 발생 규칙 탐색 | 지지도·신뢰도 기반, 직관적 해석 | 상품 추천, 교차판매 |
-| | | | Sequence Analysis | 순서가 있는 패턴 탐색 | 시계열·구매 순서 분석에 활용 | 고객 행동 예측, 웹 클릭 패턴 |
-| | | | Collaborative Filtering | 유사 사용자/아이템 기반 추천 | 명시적·암시적 피드백 활용 | 영화·음악 추천, 개인화 서비스 |
-| | **강화학습 (Reinforcement Learning)** | **가치기반 (Value-based)** | Q-Learning | 가치함수 기반 행동 학습 | 테이블 기반, 단순 | 게임 AI, 로봇 경로 탐색 |
-| | - 실시간 의사결정 | | DQN (Deep Q-Network) | Q-Learning + 딥러닝 | 이미지 기반 환경 처리 가능 | AlphaGo, 자율주행 |
-| | - 게임AI | **정책기반 (Policy-based)** | Policy Gradient | 정책함수 직접 최적화 | 확률적 정책 학습 | 드론 제어, 강화형 게임 |
-| | - 작업 학습 | | PPO (Proximal Policy Optimization) | 정책 기반 안정화 알고리즘 | 학습 안정성 높음 | ChatGPT 학습, 시뮬레이션 제어 |
-| | - 로봇 네비게이션 | | SARSA | 현재 정책 기반 학습 | 안정적, 보수적 | 강화형 로봇 제어 |
-| | | **하이브리드 (Actor–Critic형)** | Actor–Critic | 정책 + 가치 결합형 | 효율적 학습, 안정적 수렴 | 자율주행, 로봇 강화학습 |
-| **현대 인공지능 알고리즘** | **딥러닝** | | DBN (Deep Belief Network) | 확률 그래프 기반 신경망 | 딥러닝 전단계 구조 (초기 모델) | 패턴 인식, 음성 인식 |
-| | | | CNN (Convolutional Neural Network) | 이미지의 픽셀 관계를 학습 | 시각 정보 처리에 특화 | 이미지 분류, 얼굴 인식 |
-| | | | RNN (Recurrent Neural Network) | 순차 데이터의 시간 의존성 학습 | 시계열, 자연어 처리에 강점 | 음성 인식, 텍스트 분석 |
-| | | | GNN (Graph Neural Network) | 노드 간 연결 관계를 학습 | 비정형(그래프) 데이터 처리 | SNS 분석, 추천 시스템 |
-| | | | Transformer | Attention 메커니즘 기반 병렬 학습 | 긴 문맥 처리, 병렬화 우수 | 번역, 챗봇, 문서 요약 |
-| | | | LSTM (Long Short-Term Memory) | 장기 의존성 문제 해결한 RNN 구조 | 시계열 예측에 강함 | 음성 인식, 주가 예측 |
-| | | | GRU (Gated Recurrent Unit) | LSTM 단순화 버전, 연산 효율 높음 | 빠른 학습 속도 | 텍스트 분석, 음성 인식 |
-| | | | BERT (Bidirectional Encoder Representations from Transformers) | 양방향 Transformer 인코더 구조 | 문맥 이해에 탁월 | 검색, 질의응답, 번역 |
-| | | | Diffusion Model | 노이즈 제거 기반 데이터 생성 | 고품질 이미지·영상 생성 | 이미지 생성, Sora, 영상 합성 |
-| | **생성형 AI (Generative AI)** | | GPT (Generative Pretrained Transformer) | 대규모 언어 모델, 문맥 기반 생성 | 자연어 생성 및 이해 | ChatGPT, 코딩 보조 |
-| | | | DALL·E | 텍스트-이미지 변환 모델 | 창의적 이미지 생성 | 이미지 생성, 디자인 보조 |
-| | | | Stable Diffusion | 확산(노이즈 제거) 기반 이미지 생성 | 고품질·세밀한 이미지 생성 | 예술, 광고, 컨텐츠 생성 |
-| | | | GAN (Generative Adversarial Network) | 생성자와 판별자의 경쟁 학습 | 사실적 이미지 생성에 강함 | 딥페이크, 이미지 합성 |
-| | | | AutoEncoder | 인코더–디코더 구조로 데이터 재구성 | 비선형 특성 학습, 노이즈 제거 | 이상탐지, 데이터 압축 |
-| | | | VAE (Variational AutoEncoder) | 확률적 잠재공간 기반 생성 | 안정적 학습, 잠재 변수 추출 | 데이터 생성, 이상 탐지 |
-| | | | CLIP | | | |
-| | | | NerF | | | |
+<style>
+.algo-table th:nth-child(1),
+.algo-table th:nth-child(2),
+.algo-table th:nth-child(3),
+.algo-table th:nth-child(4) { background-color: #7c3aed; color: white; }
+.algo-table td:nth-child(2),
+.algo-table td:nth-child(3),
+.algo-table td:nth-child(4) { background-color: #f3e8ff; font-weight: 500; }
+</style>
+
+{: .algo-table}
+| 구분 | 대분류 | 중분류 | 알고리즘 | 핵심 개념 | 특징 / 활용 |
+|:-----|:-------|:-------|:---------|:----------|:------------|
+| 레거시 | **지도학습** | **분류** | SVM | 초평면으로 클래스 분리 | 고차원 강함 · 얼굴 인식, 텍스트 분류 |
+| | | | KNN | 주변 k개 다수결 분류 | 단순, 계산량 큼 · 이미지 분류, 추천 |
+| | | | Decision Tree | 규칙 기반 트리 분류 | 해석 쉬움 · 고객 세분화, 품질 분류 |
+| | | | Random Forest | 여러 트리의 앙상블 | 안정적 · 의료 진단, 신용 평가 |
+| | | | Naive Bayes | 조건부 확률 기반 분류 | 속도 빠름 · 스팸 필터링, 문서 분류 |
+| | | | ANN | 가중치 학습, 비선형 인식 | 복잡한 문제 해결 · 음성/이미지/자율주행 |
+| | | | Logistic Regression | 시그모이드 확률 분류 | 이진 분류 최적 · 이탈 예측 |
+| | | **회귀** | Linear Regression | 선형 관계 학습 | 단순, 해석 용이 · 매출/가격 예측 |
+| | | | Regularized LR | L1/L2 과적합 방지 | 라쏘/릿지 · 주가/의료 분석 |
+| | | | Regression Tree | 트리 연속값 예측 | 비선형 처리 · 에너지/생산량 추정 |
+| | | | RF Regression | 회귀 트리 앙상블 | 안정적 · 부동산/보험료 예측 |
+| | | | SVR | 마진 기반 회귀 | 고차원 강함 · 날씨/수요 예측 |
+| | **비지도학습** | **군집화** | K-Means | 유사도 기반 군집 | 간단 · 고객 군집, 마켓 세분화 |
+| | | | DBSCAN | 밀도 기반 클러스터링 | 이상치 강함 · 위치 기반 분석 |
+| | | | EM Clustering | 확률 기반 군집화 | 소프트 · 혼합 모델 추정 |
+| | | | SOM | 자기조직화 맵 | 고차원→2D · 이상 탐지 |
+| | | | Hierarchical | 거리 기반 트리 구조 | 시각화 용이 · 유전/조직 분류 |
+| | | **차원 축소** | PCA | 분산 최대 방향 축소 | 시각화 · 이미지 압축, 특징 추출 |
+| | | | LDA | 클래스 간/내 분산 | 지도형 축소 · 얼굴 인식, 패턴 분류 |
+| | | | Factor Analysis | 잠재 요인 관계 설명 | 노이즈 제거 · 설문/심리 분석 |
+| | | | MDS | 유사도 저차원 임베딩 | 거리 보존 · 마케팅 분석 |
+| | | **연관 규칙** | MBA | 동시 발생 규칙 탐색 | 지지도/신뢰도 · 상품 추천, 교차판매 |
+| | | | Sequence Analysis | 순서 패턴 탐색 | 시계열 활용 · 고객 행동, 클릭 패턴 |
+| | | | Collaborative Filtering | 유사 사용자/아이템 추천 | 피드백 활용 · 영화/음악 추천 |
+| | **강화학습** | **가치 기반** | Q-Learning | 가치함수 기반 학습 | 테이블 기반 · 게임 AI, 로봇 경로 |
+| | | | DQN | Q-Learning + 딥러닝 | 이미지 환경 · AlphaGo, 자율주행 |
+| | | **정책 기반** | Policy Gradient | 정책 직접 최적화 | 확률적 정책 · 드론 제어 |
+| | | | PPO | 정책 안정화 알고리즘 | 안정성 · ChatGPT 학습, 시뮬레이션 |
+| | | | SARSA | 현재 정책 기반 학습 | 보수적 · 강화형 로봇 제어 |
+| | | **Actor-Critic** | Actor–Critic | 정책 + 가치 결합형 | 효율적 · 자율주행, 로봇 강화학습 |
+| **현대** | **딥러닝** | | DBN | 확률 그래프 신경망 | 초기 모델 · 패턴/음성 인식 |
+| | | | CNN | 픽셀 관계 학습 | 시각 특화 · 이미지/얼굴 인식 |
+| | | | RNN | 시간 의존성 학습 | 시계열/NLP · 음성/텍스트 분석 |
+| | | | GNN | 노드 연결 관계 학습 | 그래프 처리 · SNS/추천 시스템 |
+| | | | Transformer | Attention 기반 병렬 | 긴 문맥 · 번역, 챗봇, 요약 |
+| | | | LSTM | 장기 의존성 해결 RNN | 시계열 강함 · 음성, 주가 예측 |
+| | | | GRU | LSTM 단순화 | 빠른 학습 · 텍스트, 음성 |
+| | | | BERT | 양방향 Transformer | 문맥 이해 · 검색, QA, 번역 |
+| | | | Diffusion Model | 노이즈 제거 생성 | 고품질 · Sora, 영상 합성 |
+| | **생성형 AI** | | GPT | 대규모 언어 모델 | 자연어 생성 · ChatGPT, 코딩 보조 |
+| | | | DALL·E | 텍스트→이미지 변환 | 창의적 생성 · 디자인 보조 |
+| | | | Stable Diffusion | 확산 기반 이미지 생성 | 고품질 · 예술, 광고 |
+| | | | GAN | 생성자-판별자 경쟁 | 사실적 · 딥페이크, 이미지 합성 |
+| | | | AutoEncoder | 인코더-디코더 재구성 | 노이즈 제거 · 이상탐지, 압축 |
+| | | | VAE | 확률적 잠재공간 생성 | 안정적 · 데이터 생성, 이상 탐지 |
+| | | | CLIP | 이미지-텍스트 연결 | 멀티모달 · 이미지 검색, 분류 |
+| | | | NeRF | 3D 장면 신경망 렌더링 | 사실적 3D · VR/AR, 시각효과 |
 | | | | Latent Variable Model | | | |
 | | | | Autogressive Model | | | |
 | | | | Flow Matching | | | |
