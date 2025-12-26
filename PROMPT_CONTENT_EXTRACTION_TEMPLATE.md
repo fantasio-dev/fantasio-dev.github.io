@@ -17,8 +17,8 @@ SUBJECT_NAME: "Digital Service"       # 예: AI (인공지능), 보안, 네트�
 SUBJECT_NAME_KR: "디지털서비스"        # 한글 주제명
 
 # 경로 설정
-IMAGE_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/assets/jpeg/{{SUBJECT_CODE}}/"
-MARKDOWN_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/docs/{{SUBJECT_CODE_LOWER}}/"
+IMAGE_PATH: "{레포지토리_경로}/assets/jpeg/{{SUBJECT_CODE}}/"
+MARKDOWN_PATH: "{레포지토리_경로}/docs/{{SUBJECT_CODE_LOWER}}/"
 
 # 이미지 파일명 패턴
 IMAGE_PREFIX: "{{SUBJECT_CODE}}_"     # 예: DS_, AI_, SEC_
@@ -509,8 +509,8 @@ read_file("assets/jpeg/{{SUBJECT_CODE}}/{{SUBJECT_CODE}}_004.jpg")
 SUBJECT_CODE: "AI"
 SUBJECT_NAME: "AI (인공지능)"
 SUBJECT_NAME_KR: "인공지능"
-IMAGE_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/assets/jpeg/AI/"
-MARKDOWN_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/docs/ai/"
+IMAGE_PATH: "{레포지토리_경로}/assets/jpeg/AI/"
+MARKDOWN_PATH: "{레포지토리_경로}/docs/ai/"
 IMAGE_PREFIX: "AI_"
 ```
 
@@ -520,8 +520,8 @@ IMAGE_PREFIX: "AI_"
 SUBJECT_CODE: "SEC"
 SUBJECT_NAME: "보안"
 SUBJECT_NAME_KR: "정보보안"
-IMAGE_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/assets/jpeg/SEC/"
-MARKDOWN_PATH: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/docs/sec/"
+IMAGE_PATH: "{레포지토리_경로}/assets/jpeg/SEC/"
+MARKDOWN_PATH: "{레포지토리_경로}/docs/sec/"
 IMAGE_PREFIX: "SEC_"
 ```
 

@@ -2,7 +2,7 @@
 
 디지털 전략 기술 관련 학습 자료를 정리하는 공간입니다.
 
-> 💡 **실제 블로그**: [https://jwryu87.github.io/ds/](https://jwryu87.github.io/ds/)
+> 💡 **실제 블로그**: [https://fantasio-dev.github.io/ds/](https://fantasio-dev.github.io/ds/)
 
 ---
 
@@ -324,7 +324,7 @@ _posts/ds/
 
 ## 🎯 학습 방법
 
-1. **블로그 접속**: [https://jwryu87.github.io/ds/](https://jwryu87.github.io/ds/)
+1. **블로그 접속**: [https://fantasio-dev.github.io/ds/](https://fantasio-dev.github.io/ds/)
 2. **관심 주제 선택**: 24개 카테고리 중 선택
 3. **내용 학습 및 정리**: 각 항목별로 학습 내용 작성
 4. **복습**: 태그별, 카테고리별로 검색하여 복습
@@ -375,10 +375,10 @@ comments: true
 
 ## 🌐 링크
 
-- **블로그 홈**: [https://jwryu87.github.io/](https://jwryu87.github.io/)
-- **PE 섹션**: [https://jwryu87.github.io/pe/](https://jwryu87.github.io/pe/)
-- **DS 섹션**: [https://jwryu87.github.io/ds/](https://jwryu87.github.io/ds/)
-- **GitHub 저장소**: [https://github.com/jwryu87/jwryu87.github.io](https://github.com/jwryu87/jwryu87.github.io)
+- **블로그 홈**: [https://fantasio-dev.github.io/](https://fantasio-dev.github.io/)
+- **PE 섹션**: [https://fantasio-dev.github.io/pe/](https://fantasio-dev.github.io/pe/)
+- **DS 섹션**: [https://fantasio-dev.github.io/ds/](https://fantasio-dev.github.io/ds/)
+- **GitHub 저장소**: [https://github.com/fantasio-dev/fantasio-dev.github.io](https://github.com/fantasio-dev/fantasio-dev.github.io)
 
 ---
 

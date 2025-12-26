@@ -5,7 +5,7 @@ Just the Docs 형식으로 DS 페이지 마이그레이션
 
 import os
 
-BASE_PATH = "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io/docs/ds"
+BASE_PATH = "./docs/ds"
 
 # DS 카테고리 데이터
 CATEGORIES = [

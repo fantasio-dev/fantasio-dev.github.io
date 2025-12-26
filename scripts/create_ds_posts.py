@@ -320,7 +320,7 @@ comments: true
     return True
 
 def main():
-    base_path = "/Users/jaewoo.ryu/woowa/dev/pe-study"
+    base_path = "."
     
     total = 0
     created = 0

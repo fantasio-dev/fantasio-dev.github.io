@@ -24,8 +24,8 @@ RE_TITLE_LINE = re.compile(r"^title:\s*(.+?)\s*$", re.MULTILINE)
 RE_CSV_MARKER = re.compile(r"<!--\s*CSV_APPLIED:.*?-->\s*\n", re.DOTALL)
 
 
-CSV_PATH = "/Users/jaewoo.ryu/Downloads/기술사_기본필수노트_AI - AI.csv"
-REPO_ROOT = "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io"
+CSV_PATH = "./downloads/기술사_기본필수노트_AI - AI.csv"
+REPO_ROOT = "."
 
 
 NO_TO_PATH: Dict[int, str] = {

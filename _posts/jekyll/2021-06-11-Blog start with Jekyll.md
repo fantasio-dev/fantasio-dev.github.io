@@ -24,7 +24,7 @@ gem install jekyll
 ### 3. Jekyll 프로젝트 생성
 
 ```
-jekyll new jwryu87.github.io
+jekyll new {username}.github.io
 ```
 
 ### 4. Jekyll 테마 적용
@@ -50,9 +50,9 @@ jekyll serve
 
 ### 6. Github page로 웹호스팅하기
 
-1. https://github.com/jwryu87 에 가서 레포지토리 생성
+1. https://github.com/{username} 에 가서 레포지토리 생성
     1. GitHub Pages가 웹호스팅하는 기본 repository 이름 형식은 username.github.io 이다
-    2. 따라서 jwryu87.github.io로 생성
+    2. 따라서 {username}.github.io로 생성
 2. 위에 생성한 디렉토리를 push
     1. 이 작업은 레포지토리 생성하면 방법이 나옴 -> 그대로 수행 (Quick setup)
 

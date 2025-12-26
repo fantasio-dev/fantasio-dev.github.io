@@ -18,12 +18,12 @@ SUBJECT_NAME_FULL: "SW (소프트웨어공학)" # 전체 표시명
 NAV_ORDER: 3                           # 네비게이션 순서 (DS=2, SW=3, AI=4, SEC=5...)
 
 # 경로 설정
-BLOG_ROOT: "/Users/jaewoo.ryu/woowa/dev/jwryu87.github.io"
+BLOG_ROOT: "{레포지토리_경로}"
 DOCS_PATH: "{{BLOG_ROOT}}/docs/{{SUBJECT_CODE_LOWER}}/"
 
 # Confluence 페이지 정보
 CONFLUENCE_PAGE_ID: "898702097"        # 토픽 목록이 있는 페이지 ID
-CONFLUENCE_URL: "https://cloud.wiki.woowa.in/wiki/..."
+CONFLUENCE_URL: "https://{CONFLUENCE_BASE_URL}/..."
 ```
 
 ---
@@ -218,15 +218,15 @@ Confluence 페이지 {{CONFLUENCE_URL}}의 토픽 목록을 읽어서
 
 ```
 # SW 주제
-Confluence 페이지 https://cloud.wiki.woowa.in/wiki/spaces/~jaewoo.ryu/pages/898702097/SW 의 
+Confluence 페이지 https://{CONFLUENCE_URL}/pages/898702097/SW 의 
 토픽 목록을 읽어서 SW (소프트웨어공학) 블로그 메뉴와 페이지를 만들어줘.
 
 # AI 주제
-Confluence 페이지 https://cloud.wiki.woowa.in/wiki/spaces/~jaewoo.ryu/pages/XXXXXX/AI 의 
+Confluence 페이지 https://{CONFLUENCE_URL}/pages/XXXXXX/AI 의 
 토픽 목록을 읽어서 AI (인공지능) 블로그 메뉴와 페이지를 만들어줘.
 
 # SEC 주제
-Confluence 페이지 https://cloud.wiki.woowa.in/wiki/spaces/~jaewoo.ryu/pages/XXXXXX/SEC 의 
+Confluence 페이지 https://{CONFLUENCE_URL}/pages/XXXXXX/SEC 의 
 토픽 목록을 읽어서 SEC (보안) 블로그 메뉴와 페이지를 만들어줘.
 ```
 
