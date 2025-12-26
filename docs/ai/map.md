@@ -29,14 +29,12 @@ permalink: /docs/ai/map
 <summary><strong>📋 목차 (2단계까지)</strong></summary>
 
 - **Part 1. AI 개발 Lifecycle**
-  - 1.1 전체 흐름 (Big Picture)
-  - 1.2 데이터 파이프라인
-  - 1.3 모델 선정 - AI 알고리즘
-  - 1.4 모델 학습 - AI 학습 프로세스
-  - 1.5 모델 평가
-  - 1.6 모델 배포
-  - 1.7 모델 튜닝
-  - 1.8 도구
+  - 1.1 데이터 파이프라인
+  - 1.2 모델 선정 - AI 알고리즘
+  - 1.3 모델 학습 - AI 학습 프로세스
+  - 1.4 모델 평가
+  - 1.5 모델 배포 / 튜닝
+  - 1.6 도구
 - **Part 2. 인공지능 전략 및 생태계**
   - 2.1 국가 Level
   - 2.2 기업 Level
@@ -83,7 +81,7 @@ permalink: /docs/ai/map
 </style>
 
 <div class="lifecycle-nav">
-  <a href="#12-데이터-파이프라인">
+  <a href="#11-데이터-파이프라인">
     <div class="lifecycle-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
       <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
       <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">데이터</div>
@@ -98,7 +96,7 @@ permalink: /docs/ai/map
     </div>
   </a>
   <div class="lifecycle-arrow" style="color: #667eea;">→</div>
-  <a href="#13-모델-선정---ai-알고리즘">
+  <a href="#12-모델-선정---ai-알고리즘">
     <div class="lifecycle-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);">
       <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
       <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">모델</div>
@@ -113,7 +111,7 @@ permalink: /docs/ai/map
     </div>
   </a>
   <div class="lifecycle-arrow" style="color: #f5576c;">→</div>
-  <a href="#16-모델-배포">
+  <a href="#15-모델-배포--튜닝">
     <div class="lifecycle-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);">
       <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
       <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">운영</div>
@@ -129,20 +127,12 @@ permalink: /docs/ai/map
   </a>
 </div>
 
-<div class="section-divider-dot">• • •</div>
-
-## 1.1 전체 흐름 (Big Picture)
-
-### 관련 용어
-
-- **모델 서빙(Serving)**: 모델을 API/서비스 형태로 제공
-- **딜리버리(Delivery)**: 배포/릴리즈 관점의 전달
-- **Data Drift**: 입력 데이터 분포 변화
-- **GPUaaS**: GPU를 서비스로 제공
+{: .note }
+> **관련 용어**: 모델 서빙(Serving), 딜리버리(Delivery), Data Drift, GPUaaS
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.2 [데이터 파이프라인]
+## 1.1 [데이터 파이프라인]
 
 ### 데이터 파이프라인 흐름도
 
@@ -165,7 +155,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.3 [모델 선정] - AI 알고리즘
+## 1.2 [모델 선정] - AI 알고리즘
 
 ### 알고리즘 분류 체계
 
@@ -251,7 +241,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.4 [모델 학습] - AI 학습 프로세스
+## 1.3 [모델 학습] - AI 학습 프로세스
 
 <div style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;">
   <div style="text-align: center; color: white; margin-bottom: 1rem;">
@@ -296,7 +286,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.5 [모델 평가]
+## 1.4 [모델 평가]
 
 ### AI 모델평가 체크리스트
 
@@ -337,19 +327,13 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.6 [모델 배포]
-
-*(원문에 상세 내용 없음)*
-
-<div class="section-divider-dot">• • •</div>
-
-## 1.7 [모델 튜닝]
+## 1.5 [모델 배포 / 튜닝]
 
 **핵심 키워드**: 파인튜닝, 하이퍼파라미터
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.8 [도구]
+## 1.6 [도구]
 
 | 단계 | 세부 단계 | 주요 도구 | 설명 |
 |:-----|:----------|:----------|:-----|
