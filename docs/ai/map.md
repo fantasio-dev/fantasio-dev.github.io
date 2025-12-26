@@ -23,7 +23,43 @@ permalink: /docs/ai/map
   color: #cbd5e1;
   letter-spacing: 0.5rem;
 }
+/* 진행률 바 */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #f5576c, #4facfe);
+  z-index: 9999;
+  transition: width 0.1s;
+}
+/* 섹션 태그 */
+.section-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.tag-data { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+.tag-model { background: linear-gradient(135deg, #f093fb, #f5576c); color: white; }
+.tag-ops { background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; }
 </style>
+
+<!-- 진행률 바 -->
+<div class="progress-bar" id="progressBar"></div>
+
+<script>
+window.addEventListener('scroll', function() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
 
 <details open markdown="1">
 <summary><strong>📋 목차 (2단계까지)</strong></summary>
@@ -132,7 +168,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.1 [데이터 파이프라인]
+## <span class="section-tag tag-data">📦 데이터</span> 1.1 데이터 파이프라인
 
 ### 데이터 파이프라인 흐름도
 
@@ -155,7 +191,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.2 [모델 선정] - AI 알고리즘
+## <span class="section-tag tag-model">🧠 모델</span> 1.2 모델 선정 - AI 알고리즘
 
 ### 알고리즘 분류 체계
 
@@ -241,7 +277,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.3 [모델 학습] - AI 학습 프로세스
+## <span class="section-tag tag-model">🧠 모델</span> 1.3 모델 학습 - AI 학습 프로세스
 
 <div style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;">
   <div style="text-align: center; color: white; margin-bottom: 1rem;">
@@ -286,7 +322,7 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.4 [모델 평가]
+## <span class="section-tag tag-model">🧠 모델</span> 1.4 모델 평가
 
 ### AI 모델평가 체크리스트
 
@@ -327,13 +363,13 @@ permalink: /docs/ai/map
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.5 [모델 배포 / 튜닝]
+## <span class="section-tag tag-ops">⚙️ 운영</span> 1.5 모델 배포 / 튜닝
 
 **핵심 키워드**: 파인튜닝, 하이퍼파라미터
 
 <div class="section-divider-dot">• • •</div>
 
-## 1.6 [도구]
+## <span class="section-tag tag-ops">⚙️ 운영</span> 1.6 도구
 
 | 단계 | 세부 단계 | 주요 도구 | 설명 |
 |:-----|:----------|:----------|:-----|
