@@ -32,9 +32,10 @@ permalink: /docs/ai/map
 
 </details>
 
----
-
-# Part 1. AI 개발 Lifecycle
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);">
+  <h1 style="margin: 0; font-size: 1.8rem;">📦 Part 1. AI 개발 Lifecycle</h1>
+  <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">데이터 → 모델 → 운영 | 수저처 - 선학평 - 배모튜</p>
+</div>
 
 <style>
 .lifecycle-nav {
@@ -317,9 +318,10 @@ permalink: /docs/ai/map
 | | 모니터링 | **Prometheus**, **Grafana**, Evidently AI, WhyLabs, Arize AI, Neptune.ai | 모델 드리프트, 성능, 리소스 모니터링 |
 | | 튜닝(피드백 루프) | **Optuna**, Ray Tune, **MLflow Tracking**, Hyperopt, Katib (Kubeflow) | 성능 개선 및 재학습 자동화 |
 
----
-
-# Part 2. 인공지능 전략 및 생태계 (거시적 관점)
+<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(79, 172, 254, 0.3);">
+  <h1 style="margin: 0; font-size: 1.8rem;">🌐 Part 2. 인공지능 전략 및 생태계</h1>
+  <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">거시적 관점 | 국가 Level · 기업 Level</p>
+</div>
 
 ## 2.1 인공지능 국가 Level
 
@@ -443,13 +445,17 @@ permalink: /docs/ai/map
 
 ---
 
-# Part 3. 활용
+<div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(17, 153, 142, 0.3);">
+  <h1 style="margin: 0; font-size: 1.8rem;">🚀 Part 3. 활용</h1>
+  <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">실무 적용 사례 | 추후 업데이트 예정</p>
+</div>
 
-*(원문에 상세 내용 없음 - 추후 업데이트 예정)*
+*(원문에 상세 내용 없음)*
 
----
-
-# 부록: 원문 전체 (CSV 그대로)
+<div style="background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+  <h1 style="margin: 0; font-size: 1.8rem;">📄 부록: 원문 전체</h1>
+  <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">AI - MAP.csv 원본 데이터 (누락 확인용)</p>
+</div>
 
 아래는 `AI - MAP.csv` 원문을 **그대로** 보존한 것입니다. 위의 정리본에서 누락된 내용이 있는지 확인할 때 사용하세요.
 
