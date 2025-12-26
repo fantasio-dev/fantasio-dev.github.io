@@ -61,8 +61,9 @@ permalink: /docs/ai/map
 }
 .sticky-header-data {
   background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
-  color: white;
+  color: #f1f5f9;
   border-bottom: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .sticky-header-model {
   background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
@@ -112,8 +113,8 @@ window.addEventListener('scroll', function() {
 </details>
 
 <div style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(45, 52, 54, 0.3);">
-  <h1 style="margin: 0; font-size: 1.8rem;">📦 Part 1. AI 개발 Lifecycle</h1>
-  <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">데이터 → 모델 → 운영 | 수저처 - 선학평 - 배모튜</p>
+  <h1 style="margin: 0; font-size: 1.8rem; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.3);">📦 Part 1. AI 개발 Lifecycle</h1>
+  <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem; color: #f1f5f9;">데이터 → 모델 → 운영 | 수저처 - 선학평 - 배모튜</p>
 </div>
 
 <style>
