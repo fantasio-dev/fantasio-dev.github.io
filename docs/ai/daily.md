@@ -156,6 +156,8 @@ permalink: /docs/ai/daily
 .ai-deck2__panes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .ai-deck2__pane { border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 12px; background: rgba(248, 250, 252, 0.65); padding: 10px; }
 .ai-deck2__pane--wide { grid-column: 1 / -1; }
+.ai-deck2--exam .ai-deck2__panes { grid-template-columns: 1fr; }
+.ai-deck2--exam .ai-deck2__pane--wide { grid-column: auto; }
 .ai-deck2__pane-title { font-size: 12px; font-weight: 900; color: rgba(15, 23, 42, 0.75); margin-bottom: 6px; }
 .ai-deck2__pane-body { font-size: 13px; line-height: 1.5; color: rgba(15, 23, 42, 0.92); }
 .ai-deck2__pane-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; padding: 2px 6px; border-radius: 8px; background: rgba(245, 243, 255, 0.85); border: 1px solid rgba(124, 58, 237, 0.18); color: #6d28d9; margin-right: 6px; display: inline-block; margin-bottom: 6px; }
@@ -186,6 +188,13 @@ permalink: /docs/ai/daily
   var elComponents = document.getElementById('aiDeckComponents');
   var elMnemonic = document.getElementById('aiDeckMnemonic');
   var elOpenLink = document.getElementById('aiDeckOpenLink');
+
+  // Pane refs (exam cards show only Quick Reference)
+  var paneDef = elDef && elDef.closest ? elDef.closest('.ai-deck2__pane') : null;
+  var paneComponents = elComponents && elComponents.closest ? elComponents.closest('.ai-deck2__pane') : null;
+  var paneMnemonic = elMnemonic && elMnemonic.closest ? elMnemonic.closest('.ai-deck2__pane') : null;
+  var paneMnemonicTitle = paneMnemonic ? paneMnemonic.querySelector('.ai-deck2__pane-title') : null;
+  var mnemonicTitleDefault = paneMnemonicTitle ? paneMnemonicTitle.textContent : '암기법/핵심 구문';
 
   var btnPrev = document.getElementById('aiDeckPrev');
   var btnNext = document.getElementById('aiDeckNext');
@@ -431,8 +440,20 @@ permalink: /docs/ai/daily
     elTitle.textContent = c.title;
     elOpenLink.setAttribute('href', c.url || '#');
 
-    // Fast-fill mnemonic from index when available
-    elMnemonic.innerHTML = c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-');
+    var isExam = c.kind === 'exam';
+    if (root && root.classList) root.classList.toggle('ai-deck2--exam', isExam);
+
+    // exam: show only Quick Reference pane
+    if (paneDef) paneDef.style.display = isExam ? 'none' : '';
+    if (paneComponents) paneComponents.style.display = isExam ? 'none' : '';
+    if (paneMnemonic) {
+      if (isExam) paneMnemonic.classList.remove('ai-deck2__pane--wide');
+      else paneMnemonic.classList.add('ai-deck2__pane--wide');
+    }
+    if (paneMnemonicTitle) paneMnemonicTitle.textContent = isExam ? '핵심 암기 (Quick Reference)' : mnemonicTitleDefault;
+
+    // Fast-fill: topics use mnemonic, exams wait for page extract
+    elMnemonic.innerHTML = isExam ? '불러오는 중…' : (c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-'));
     elDef.innerHTML = '-';
     elComponents.innerHTML = '-';
 
@@ -492,6 +513,26 @@ permalink: /docs/ai/daily
   function findHeading(doc, keyword) {
     var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4'));
     return headings.find(function(h) { return normalizeText(h.textContent).includes(keyword); }) || null;
+  }
+
+  function extractQuickReferenceHtml(doc) {
+    var h = findHeading(doc, '핵심 암기') || findHeading(doc, 'Quick Reference') || findHeading(doc, 'Quick');
+    if (!h) return '';
+    var el = h.nextElementSibling;
+    while (el && (el.tagName === 'HR')) el = el.nextElementSibling;
+    if (!el) return '';
+    var parts = [];
+    var guard = 0;
+    while (el && guard < 10) {
+      if (/^H[1-6]$/.test(el.tagName)) break;
+      if (el.tagName === 'HR') break;
+      parts.push(el.outerHTML);
+      if (el.tagName === 'BLOCKQUOTE') break;
+      if (parts.length >= 2) break;
+      el = el.nextElementSibling;
+      guard += 1;
+    }
+    return parts.join('\n');
   }
 
   function extractDefinition(doc) {
@@ -554,8 +595,10 @@ permalink: /docs/ai/daily
       return;
     }
     // show loading markers
-    elDef.innerHTML = '불러오는 중…';
-    elComponents.innerHTML = '불러오는 중…';
+    if (card.kind !== 'exam') {
+      elDef.innerHTML = '불러오는 중…';
+      elComponents.innerHTML = '불러오는 중…';
+    }
 
     fetch(card.url, { credentials: 'same-origin' })
       .then(function(res) { return res.text(); })
@@ -563,12 +606,14 @@ permalink: /docs/ai/daily
         var parser = new DOMParser();
         var doc = parser.parseFromString(html, 'text/html');
 
-        var definition = extractDefinition(doc);
-        var componentsHtml = extractComponentsTables(doc);
+        var quickrefHtml = extractQuickReferenceHtml(doc);
+        var definition = card.kind === 'exam' ? '' : extractDefinition(doc);
+        var componentsHtml = card.kind === 'exam' ? '' : extractComponentsTables(doc);
         var mnemonic = card.mnemonic_html || normalizeMnemonicFallback(doc) || '';
 
         var payload = {
           url: card.url,
+          quickref_html: quickrefHtml,
           definition: definition,
           components_html: componentsHtml,
           mnemonic_html: mnemonic
@@ -577,8 +622,8 @@ permalink: /docs/ai/daily
         applyExtracted(payload);
       })
       .catch(function() {
-        elDef.innerHTML = '-';
-        elComponents.innerHTML = '-';
+        if (card.kind === 'exam') elMnemonic.innerHTML = '-';
+        else { elDef.innerHTML = '-'; elComponents.innerHTML = '-'; }
       });
   }
 
@@ -586,6 +631,13 @@ permalink: /docs/ai/daily
     if (!payload || !cards.length) return;
     var cur = cards[idx];
     if (!cur || cur.url !== payload.url) return; // stale
+
+    if (cur.kind === 'exam') {
+      // exam: show only Quick Reference (fallback to mnemonic if not found)
+      if (payload.quickref_html) elMnemonic.innerHTML = payload.quickref_html;
+      else elMnemonic.innerHTML = cur.mnemonic_html || (cur.mnemonic_text ? escapeHtml(cur.mnemonic_text) : '-');
+      return;
+    }
 
     elDef.innerHTML = renderDefinition(payload.definition);
     elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
