@@ -244,9 +244,21 @@ permalink: /docs/ai/map
 
 ## 1.4 [모델 학습] - AI 학습 프로세스
 
-### 핵심 암기법
-
-**`인 추 판 제 행 학`** = 인식 → 추론 → 판단 → 제어 → 행동 → 학습
+{: .important }
+> ### 🧠 핵심 암기: `인추판제행학`
+>
+> <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0;">
+>   <span style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">인</span>
+>   <span style="background: linear-gradient(135deg, #764ba2, #f093fb); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">추</span>
+>   <span style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">판</span>
+>   <span style="background: linear-gradient(135deg, #f5576c, #ff9a44); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">제</span>
+>   <span style="background: linear-gradient(135deg, #ff9a44, #4facfe); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">행</span>
+>   <span style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem;">학</span>
+> </div>
+>
+> | 인식 | 추론 | 판단 | 제어 | 행동 | 학습 |
+> |:----:|:----:|:----:|:----:|:----:|:----:|
+> | 👁️ 감지 | 🧩 분석 | ⚖️ 결정 | 🎛️ 조절 | 🏃 실행 | 📚 개선 |
 
 ### 학습 단계 흐름도
 
