@@ -55,22 +55,43 @@ permalink: /docs/ai/map
 
 ### 전체 흐름도
 
-```mermaid
-flowchart LR
-    subgraph DATA["📦 데이터 (수저처)"]
-        direction TB
-        A1[수집] --> A2[저장] --> A3[전처리]
-    end
-    subgraph MODEL["🧠 모델 (선학평)"]
-        direction TB
-        B1[선정] --> B2[학습] --> B3[평가]
-    end
-    subgraph OPS["⚙️ 운영 (배모튜)"]
-        direction TB
-        C1[배포] --> C2[모니터링] --> C3[튜닝]
-    end
-    DATA --> MODEL --> OPS
-```
+<div class="lifecycle-diagram" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
+    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">데이터</div>
+    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">수저처</div>
+    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+    <div style="font-size: 0.85rem; line-height: 1.8;">
+      <div>▸ 수집</div>
+      <div>▸ 저장</div>
+      <div>▸ 전처리</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; font-size: 2rem; color: #667eea;">→</div>
+  <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
+    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">모델</div>
+    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">선학평</div>
+    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+    <div style="font-size: 0.85rem; line-height: 1.8;">
+      <div>▸ 선정</div>
+      <div>▸ 학습</div>
+      <div>▸ 평가</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; font-size: 2rem; color: #f5576c;">→</div>
+  <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">운영</div>
+    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">배모튜</div>
+    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+    <div style="font-size: 0.85rem; line-height: 1.8;">
+      <div>▸ 배포</div>
+      <div>▸ 모니터링</div>
+      <div>▸ 튜닝</div>
+    </div>
+  </div>
+</div>
 
 ### 관련 용어
 
@@ -85,12 +106,17 @@ flowchart LR
 
 ### 데이터 파이프라인 흐름도
 
-```mermaid
-flowchart TB
-    subgraph pipeline["📊 Data Pipeline Lifecycle"]
-        D1[데이터 수집] --> D2[데이터 저장] --> D3[데이터 처리] --> D4[데이터 분석] --> D5[데이터 시각화]
-    end
-```
+<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px;">
+  <div style="background: #667eea; padding: 0.8rem 1.2rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.9rem;">📥 수집</div>
+  <span style="color: #667eea; font-size: 1.5rem;">→</span>
+  <div style="background: #764ba2; padding: 0.8rem 1.2rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.9rem;">💾 저장</div>
+  <span style="color: #764ba2; font-size: 1.5rem;">→</span>
+  <div style="background: #f093fb; padding: 0.8rem 1.2rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.9rem;">🔧 처리</div>
+  <span style="color: #f093fb; font-size: 1.5rem;">→</span>
+  <div style="background: #f5576c; padding: 0.8rem 1.2rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.9rem;">📊 분석</div>
+  <span style="color: #f5576c; font-size: 1.5rem;">→</span>
+  <div style="background: #4facfe; padding: 0.8rem 1.2rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.9rem;">📈 시각화</div>
+</div>
 
 {: .important }
 > **인공지능은 항상 "데이터 품질"과 연결됨**
@@ -193,13 +219,24 @@ flowchart TB
 
 ### 학습 단계 흐름도
 
-```mermaid
-flowchart LR
-    subgraph learning["🔄 AI 학습 프로세스 (인추판제행학)"]
-        L1[인식] --> L2[추론] --> L3[판단] --> L4[제어] --> L5[행동] --> L6[학습]
-        L6 -.->|피드백 루프| L1
-    end
-```
+<div style="position: relative; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); border-radius: 16px;">
+  <div style="display: flex; align-items: center; gap: 0.3rem; flex-wrap: wrap; justify-content: center;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">👁️<br>인식</div>
+    <span style="color: #667eea; font-size: 1.2rem;">→</span>
+    <div style="background: linear-gradient(135deg, #764ba2, #f093fb); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🧩<br>추론</div>
+    <span style="color: #f093fb; font-size: 1.2rem;">→</span>
+    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">⚖️<br>판단</div>
+    <span style="color: #f5576c; font-size: 1.2rem;">→</span>
+    <div style="background: linear-gradient(135deg, #f5576c, #ff9a44); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🎛️<br>제어</div>
+    <span style="color: #ff9a44; font-size: 1.2rem;">→</span>
+    <div style="background: linear-gradient(135deg, #ff9a44, #4facfe); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">🏃<br>행동</div>
+    <span style="color: #4facfe; font-size: 1.2rem;">→</span>
+    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 0.7rem 1rem; border-radius: 8px; color: white; font-weight: 600; font-size: 0.85rem; text-align: center;">📚<br>학습</div>
+  </div>
+  <div style="text-align: center; margin-top: 1rem; color: #00f2fe; font-size: 0.85rem;">
+    ↺ 피드백 루프 (Feedback Loop)
+  </div>
+</div>
 
 ---
 
