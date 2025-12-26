@@ -307,15 +307,15 @@ permalink: /docs/ai/map
 
 | 단계 | 세부 단계 | 주요 도구 | 설명 |
 |:-----|:----------|:----------|:-----|
-| **데이터** | 데이터 수집 | Airflow, Kafka, Flume, AWS Glue, Fivetran, Scrapy, BeautifulSoup | 크롤링, 배치 파이프라인, 스트리밍 수집 |
-| | 데이터 저장 | S3, HDFS, BigQuery, Snowflake, PostgreSQL, MongoDB, Delta Lake, Iceberg | 원천 및 정제 데이터 저장소 (Data Lake / Warehouse) |
-| | 전처리 | Spark, Pandas, DBT, Databricks, Trino, Feature Store (Feast) | 데이터 정제, 피처 엔지니어링, 통합 처리 |
-| **모델** | 모델 선정 | Scikit-learn, AutoML (H2O.ai, Google AutoML, DataRobot), Optuna | 알고리즘 탐색 및 하이퍼파라미터 튜닝 |
-| | 모델 학습 | TensorFlow, PyTorch, Keras, XGBoost, LightGBM, Hugging Face Transformers, Kubeflow Pipelines | 딥러닝/머신러닝 학습 및 분산 트레이닝 |
-| | 모델 평가 | MLflow, Weights & Biases (W&B), TensorBoard, Neptune.ai, Comet.ml | 성능 지표 관리, 실험 비교, 모델 버전 관리 |
-| **운영** | 모델 배포 | Docker, Kubernetes, Seldon Core, MLflow Models, TensorFlow Serving, FastAPI, BentoML, AWS SageMaker | 모델 서빙, 컨테이너 기반 배포 |
-| | 모니터링 | Prometheus, Grafana, Evidently AI, WhyLabs, Arize AI, Neptune.ai | 모델 드리프트, 성능, 리소스 모니터링 |
-| | 튜닝(피드백 루프) | Optuna, Ray Tune, MLflow Tracking, Hyperopt, Katib (Kubeflow) | 성능 개선 및 재학습 자동화 |
+| **데이터** | 데이터 수집 | **Airflow**, **Kafka**, Flume, AWS Glue, Fivetran, Scrapy, BeautifulSoup | 크롤링, 배치 파이프라인, 스트리밍 수집 |
+| | 데이터 저장 | **S3**, HDFS, **BigQuery**, **Snowflake**, PostgreSQL, MongoDB, Delta Lake, Iceberg | 원천 및 정제 데이터 저장소 (Data Lake / Warehouse) |
+| | 전처리 | **Spark**, **Pandas**, DBT, Databricks, Trino, Feature Store (Feast) | 데이터 정제, 피처 엔지니어링, 통합 처리 |
+| **모델** | 모델 선정 | **Scikit-learn**, AutoML (H2O.ai, Google AutoML, DataRobot), **Optuna** | 알고리즘 탐색 및 하이퍼파라미터 튜닝 |
+| | 모델 학습 | **TensorFlow**, **PyTorch**, Keras, XGBoost, LightGBM, **Hugging Face Transformers**, Kubeflow Pipelines | 딥러닝/머신러닝 학습 및 분산 트레이닝 |
+| | 모델 평가 | **MLflow**, **Weights & Biases (W&B)**, TensorBoard, Neptune.ai, Comet.ml | 성능 지표 관리, 실험 비교, 모델 버전 관리 |
+| **운영** | 모델 배포 | **Docker**, **Kubernetes**, Seldon Core, MLflow Models, TensorFlow Serving, **FastAPI**, BentoML, AWS SageMaker | 모델 서빙, 컨테이너 기반 배포 |
+| | 모니터링 | **Prometheus**, **Grafana**, Evidently AI, WhyLabs, Arize AI, Neptune.ai | 모델 드리프트, 성능, 리소스 모니터링 |
+| | 튜닝(피드백 루프) | **Optuna**, Ray Tune, **MLflow Tracking**, Hyperopt, Katib (Kubeflow) | 성능 개선 및 재학습 자동화 |
 
 ---
 
