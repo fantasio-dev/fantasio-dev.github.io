@@ -1,13 +1,13 @@
 ---
 layout: default
-title: AI 이해 가이드 (MAP)
+title: AI 학습 가이드
 parent: AI (인공지능)
 nav_order: 0
 has_toc: true
 permalink: /docs/ai/map
 ---
 
-# AI 이해 가이드 (MAP)
+# AI 학습 가이드
 {: .no_toc }
 
 <style>
@@ -97,17 +97,19 @@ window.addEventListener('scroll', function() {
 <details open markdown="1">
 <summary><strong>📋 목차 (2단계까지)</strong></summary>
 
-- **Part 1. AI 개발 Lifecycle**
-  - 1.1 데이터 파이프라인
-  - 1.2 모델 선정 - AI 알고리즘
-  - 1.3 모델 학습 - AI 학습 프로세스
-  - 1.4 모델 평가
-  - 1.5 모델 배포 / 튜닝
-  - 1.6 도구
-- **Part 2. 인공지능 전략 및 생태계**
-  - 2.1 국가 Level
-  - 2.2 기업 Level
-- **Part 3. 활용**
+- **수저처 (데이터)**
+  - [데이터 파이프라인](#11-데이터-파이프라인)
+- **선학평 (모델)**
+  - [모델 선정 - AI 알고리즘](#12-모델-선정---ai-알고리즘)
+  - [모델 학습 - AI 학습 프로세스](#13-모델-학습---ai-학습-프로세스)
+  - [모델 평가](#14-모델-평가)
+- **배모튜 (운영)**
+  - [모델 배포 / 튜닝](#15-모델-배포--튜닝)
+  - [도구](#16-도구)
+- **전략/생태계**
+  - [인공지능 국가 Level](#21-인공지능-국가-level)
+  - [인공지능 기업 Level](#22-인공지능-기업-level)
+- **활용**
 - **부록: 원문 전체**
 
 </details>
@@ -201,7 +203,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-data">
+<div id="11-데이터-파이프라인" class="sticky-header sticky-header-data">
 📦 데이터 › 1.1 데이터 파이프라인
 </div>
 
@@ -226,7 +228,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-model">
+<div id="12-모델-선정---ai-알고리즘" class="sticky-header sticky-header-model">
 🧠 모델 › 1.2 모델 선정 - AI 알고리즘
 </div>
 
@@ -314,7 +316,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-model">
+<div id="13-모델-학습---ai-학습-프로세스" class="sticky-header sticky-header-model">
 🧠 모델 › 1.3 모델 학습 - AI 학습 프로세스
 </div>
 
@@ -361,7 +363,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-model">
+<div id="14-모델-평가" class="sticky-header sticky-header-model">
 🧠 모델 › 1.4 모델 평가
 </div>
 
@@ -404,7 +406,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-ops">
+<div id="15-모델-배포--튜닝" class="sticky-header sticky-header-ops">
 ⚙️ 운영 › 1.5 모델 배포 / 튜닝
 </div>
 
@@ -412,7 +414,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-ops">
+<div id="16-도구" class="sticky-header sticky-header-ops">
 ⚙️ 운영 › 1.6 도구
 </div>
 
@@ -433,7 +435,7 @@ window.addEventListener('scroll', function() {
   <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">거시적 관점 | 국가 Level · 기업 Level</p>
 </div>
 
-<div class="sticky-header sticky-header-strategy">
+<div id="21-인공지능-국가-level" class="sticky-header sticky-header-strategy">
 🌐 전략 › 2.1 인공지능 국가 Level
 </div>
 
@@ -491,7 +493,7 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-<div class="sticky-header sticky-header-strategy">
+<div id="22-인공지능-기업-level" class="sticky-header sticky-header-strategy">
 🌐 전략 › 2.2 인공지능 기업 Level
 </div>
 
