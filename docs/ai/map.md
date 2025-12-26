@@ -30,8 +30,8 @@ permalink: /docs/ai/map
   - 1.7 모델 튜닝
   - 1.8 도구
 - **Part 2. 인공지능 전략 및 생태계**
-  - 2.1 인공지능 국가 Level
-  - 2.2 인공지능 기업 Level
+  - 2.1 국가 Level
+  - 2.2 기업 Level
 - **Part 3. 활용**
 - **부록: 원문 전체**
 
@@ -41,57 +41,88 @@ permalink: /docs/ai/map
 
 # Part 1. AI 개발 Lifecycle
 
-{: .highlight }
-> ## 🎯 핵심 암기: `수저처` - `선학평` - `배모튜`
-> 
-> | 데이터 | 모델 | 운영 |
-> |:------:|:----:|:----:|
-> | **`수저처`** | **`선학평`** | **`배모튜`** |
-> | 수집·저장·전처리 | 선정·학습·평가 | 배포·모니터링·튜닝 |
+<style>
+.lifecycle-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.lifecycle-nav a {
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.lifecycle-nav a:hover {
+  transform: translateY(-4px);
+}
+.lifecycle-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 200px;
+  color: white;
+  cursor: pointer;
+}
+.lifecycle-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+}
+.lifecycle-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+</style>
+
+<div class="lifecycle-nav">
+  <a href="#12-데이터-파이프라인">
+    <div class="lifecycle-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
+      <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">데이터</div>
+      <div style="font-size: 1rem; opacity: 0.95; font-weight: 700; background: rgba(255,255,255,0.2); padding: 0.3rem 0.6rem; border-radius: 6px; display: inline-block;">수저처</div>
+      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+      <div style="font-size: 0.85rem; line-height: 1.8;">
+        <div>▸ 수집</div>
+        <div>▸ 저장</div>
+        <div>▸ 전처리</div>
+      </div>
+      <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.8;">👆 클릭하여 이동</div>
+    </div>
+  </a>
+  <div class="lifecycle-arrow" style="color: #667eea;">→</div>
+  <a href="#13-모델-선정---ai-알고리즘">
+    <div class="lifecycle-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
+      <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">모델</div>
+      <div style="font-size: 1rem; opacity: 0.95; font-weight: 700; background: rgba(255,255,255,0.2); padding: 0.3rem 0.6rem; border-radius: 6px; display: inline-block;">선학평</div>
+      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+      <div style="font-size: 0.85rem; line-height: 1.8;">
+        <div>▸ 선정</div>
+        <div>▸ 학습</div>
+        <div>▸ 평가</div>
+      </div>
+      <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.8;">👆 클릭하여 이동</div>
+    </div>
+  </a>
+  <div class="lifecycle-arrow" style="color: #f5576c;">→</div>
+  <a href="#16-모델-배포">
+    <div class="lifecycle-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+      <div style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.3rem;">운영</div>
+      <div style="font-size: 1rem; opacity: 0.95; font-weight: 700; background: rgba(255,255,255,0.2); padding: 0.3rem 0.6rem; border-radius: 6px; display: inline-block;">배모튜</div>
+      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
+      <div style="font-size: 0.85rem; line-height: 1.8;">
+        <div>▸ 배포</div>
+        <div>▸ 모니터링</div>
+        <div>▸ 튜닝</div>
+      </div>
+      <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.8;">👆 클릭하여 이동</div>
+    </div>
+  </a>
+</div>
 
 ---
 
 ## 1.1 전체 흐름 (Big Picture)
-
-### 전체 흐름도
-
-<div class="lifecycle-diagram" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
-  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
-    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
-    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">데이터</div>
-    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">수저처</div>
-    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
-    <div style="font-size: 0.85rem; line-height: 1.8;">
-      <div>▸ 수집</div>
-      <div>▸ 저장</div>
-      <div>▸ 전처리</div>
-    </div>
-  </div>
-  <div style="display: flex; align-items: center; font-size: 2rem; color: #667eea;">→</div>
-  <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);">
-    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</div>
-    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">모델</div>
-    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">선학평</div>
-    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
-    <div style="font-size: 0.85rem; line-height: 1.8;">
-      <div>▸ 선정</div>
-      <div>▸ 학습</div>
-      <div>▸ 평가</div>
-    </div>
-  </div>
-  <div style="display: flex; align-items: center; font-size: 2rem; color: #f5576c;">→</div>
-  <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 16px; padding: 1.5rem; min-width: 200px; color: white; box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);">
-    <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
-    <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem;">운영</div>
-    <div style="font-size: 0.9rem; opacity: 0.9; font-weight: 600;">배모튜</div>
-    <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;">
-    <div style="font-size: 0.85rem; line-height: 1.8;">
-      <div>▸ 배포</div>
-      <div>▸ 모니터링</div>
-      <div>▸ 튜닝</div>
-    </div>
-  </div>
-</div>
 
 ### 관련 용어
 
