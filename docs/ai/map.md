@@ -164,10 +164,10 @@ permalink: /docs/ai/map
 .algo-table th:nth-child(1),
 .algo-table th:nth-child(2),
 .algo-table th:nth-child(3),
-.algo-table th:nth-child(4) { background-color: #7c3aed; color: white; }
+.algo-table th:nth-child(4) { background-color: #1e3a5f; color: white; }
 .algo-table td:nth-child(2),
 .algo-table td:nth-child(3),
-.algo-table td:nth-child(4) { background-color: #f3e8ff; font-weight: 500; }
+.algo-table td:nth-child(4) { background-color: #e8f4fc; font-weight: 600; }
 </style>
 
 {: .algo-table}
@@ -224,21 +224,21 @@ permalink: /docs/ai/map
 | | | | Autogressive Model | | | |
 | | | | Flow Matching | | | |
 | | | | 가우시안 노이즈 | | | |
-| | **멀티모달 AI (Multimodal AI)** | | CLIP | 이미지-텍스트 상호 이해 | 멀티모달 표현 학습 | 이미지 검색, 비주얼 QA |
-| | | | Gemini | 텍스트·이미지·음성 통합 모델 | 다양한 입력을 통합 처리 | AI 비서, 검색, 분석 |
-| | | | GPT-4o | 실시간 멀티모달 처리 | 음성·이미지·텍스트 동시 인식 | 대화형 AI, 고객 응대 |
-| | | | Flamingo | 비전-언어 결합 대규모 모델 | 이미지·텍스트 통합 이해 | 비주얼 QA, 멀티모달 챗봇 |
-| | | | Kosmos | 텍스트-비전 통합 Transformer | 다양한 입력 포맷 처리 | 이미지 캡셔닝, 멀티모달 분석 |
-| | **설명가능한 AI (XAI)** | | LIME | 입력 변수의 영향도 분석 | 모델 예측 근거 설명 | 모델 신뢰성 평가 |
-| | | | SHAP | SHAP 값 기반 기여도 분석 | 글로벌·로컬 설명 모두 가능 | 금융·의료 의사결정 지원 |
-| | | | Counterfactual | 반사실적 시나리오 생성 | "만약 ~였다면" 분석 | 윤리적 AI, 정책 시뮬레이션 |
-| | | | Grad-CAM (Gradient-weighted Class Activation Mapping) | CNN의 시각적 주목영역 시각화 | 이미지 모델 해석 가능 | 의료 영상, 객체 탐지 |
-| | | | Integrated Gradients | 입력 특징의 중요도 누적 측정 | 모델 의사결정 해석에 용이 | 금융·의료 모델 해석 |
-| | **자율형 AI (Autonomous AI)** | | 자율주행 | 센서 데이터 기반 환경 인식 및 판단 | 실시간 의사결정 및 제어 | 자율차, 드론 |
-| | | | 로봇 제어 | 강화학습 기반 행동 최적화 | 물리적 환경에서 학습 | 산업 로봇, 서비스 로봇 |
-| | | | AutoGPT | 자체 목표 설정 및 실행 | 에이전트형 AI, 자율 문제 해결 | 업무 자동화, 연구 보조 |
-| | | | ReAct (Reason + Act) | 추론과 행동을 결합한 LLM 프레임워크 | 에이전트형 AI 핵심 구조 | AutoGPT, 작업 자동화 |
-| | | | Chain-of-Thought (CoT) | 단계적 사고를 통한 논리적 추론 | 복잡한 문제 해결 능력 향상 | 수학 문제, 논리 추론 AI |
+| | **멀티모달 AI** | | CLIP | 이미지-텍스트 상호 이해 | 멀티모달 표현 학습 · 이미지 검색, 비주얼 QA |
+| | | | Gemini | 텍스트·이미지·음성 통합 모델 | 통합 처리 · AI 비서, 검색, 분석 |
+| | | | GPT-4o | 실시간 멀티모달 처리 | 음성·이미지·텍스트 동시 인식 · 대화형 AI |
+| | | | Flamingo | 비전-언어 결합 대규모 모델 | 통합 이해 · 비주얼 QA, 멀티모달 챗봇 |
+| | | | Kosmos | 텍스트-비전 통합 Transformer | 다양한 입력 포맷 · 이미지 캡셔닝 |
+| | **설명가능한 AI (XAI)** | | LIME | 입력 변수의 영향도 분석 | 예측 근거 설명 · 모델 신뢰성 평가 |
+| | | | SHAP | SHAP 값 기반 기여도 분석 | 글로벌·로컬 설명 · 금융·의료 의사결정 |
+| | | | Counterfactual | 반사실적 시나리오 생성 | "만약 ~였다면" 분석 · 윤리적 AI |
+| | | | Grad-CAM | CNN의 시각적 주목영역 시각화 | 이미지 모델 해석 · 의료 영상, 객체 탐지 |
+| | | | Integrated Gradients | 입력 특징의 중요도 누적 측정 | 의사결정 해석 · 금융·의료 모델 해석 |
+| | **자율형 AI** | | 자율주행 | 센서 데이터 기반 환경 인식 | 실시간 의사결정 · 자율차, 드론 |
+| | | | 로봇 제어 | 강화학습 기반 행동 최적화 | 물리 환경 학습 · 산업/서비스 로봇 |
+| | | | AutoGPT | 자체 목표 설정 및 실행 | 에이전트형 AI · 업무 자동화, 연구 보조 |
+| | | | ReAct | 추론과 행동을 결합한 LLM 프레임워크 | 에이전트 핵심 구조 · 작업 자동화 |
+| | | | Chain-of-Thought (CoT) | 단계적 사고를 통한 논리적 추론 | 복잡한 문제 해결 · 수학, 논리 추론 |
 
 ---
 
