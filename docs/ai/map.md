@@ -74,6 +74,11 @@ permalink: /docs/ai/map
   color: white;
   border-bottom: none;
 }
+.sticky-header-strategy {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border-bottom: none;
+}
 </style>
 
 <!-- 진행률 바 -->
@@ -427,7 +432,9 @@ window.addEventListener('scroll', function() {
   <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">거시적 관점 | 국가 Level · 기업 Level</p>
 </div>
 
-## 2.1 인공지능 국가 Level
+<div class="sticky-header sticky-header-strategy">
+🌐 전략 › 2.1 인공지능 국가 Level
+</div>
 
 | 구분 | 항목 | 내용 |
 |:-----|:-----|:-----|
@@ -483,7 +490,9 @@ window.addEventListener('scroll', function() {
 
 <div class="section-divider-dot">• • •</div>
 
-## 2.2 인공지능 기업 Level (생성형 AI 중심)
+<div class="sticky-header sticky-header-strategy">
+🌐 전략 › 2.2 인공지능 기업 Level
+</div>
 
 | 구분 | 항목 | 내용 | 암기법 |
 |:-----|:-----|:-----|:-------|
