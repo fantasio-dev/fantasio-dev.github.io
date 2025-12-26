@@ -30,7 +30,7 @@ permalink: /docs/ai/map
   left: 0;
   width: 0%;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #f5576c, #4facfe);
+  background: linear-gradient(90deg, #2d3436, #6c5ce7, #0984e3, #00b894);
   z-index: 9999;
   transition: width 0.1s;
 }
@@ -44,9 +44,9 @@ permalink: /docs/ai/map
   margin-right: 0.5rem;
   vertical-align: middle;
 }
-.tag-data { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
-.tag-model { background: linear-gradient(135deg, #f093fb, #f5576c); color: white; }
-.tag-ops { background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; }
+.tag-data { background: linear-gradient(135deg, #2d3436, #636e72); color: white; }
+.tag-model { background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: white; }
+.tag-ops { background: linear-gradient(135deg, #0984e3, #74b9ff); color: white; }
 
 /* Sticky 섹션 헤더 */
 .sticky-header {
@@ -60,22 +60,22 @@ permalink: /docs/ai/map
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .sticky-header-data {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
   color: white;
   border-bottom: none;
 }
 .sticky-header-model {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
   color: white;
   border-bottom: none;
 }
 .sticky-header-ops {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
   color: white;
   border-bottom: none;
 }
 .sticky-header-strategy {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
   color: white;
   border-bottom: none;
 }
@@ -111,7 +111,7 @@ window.addEventListener('scroll', function() {
 
 </details>
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);">
+<div style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(45, 52, 54, 0.3);">
   <h1 style="margin: 0; font-size: 1.8rem;">📦 Part 1. AI 개발 Lifecycle</h1>
   <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">데이터 → 모델 → 운영 | 수저처 - 선학평 - 배모튜</p>
 </div>
@@ -427,7 +427,7 @@ window.addEventListener('scroll', function() {
 | | 모니터링 | **Prometheus**, **Grafana**, Evidently AI, WhyLabs, Arize AI, Neptune.ai | 모델 드리프트, 성능, 리소스 모니터링 |
 | | 튜닝(피드백 루프) | **Optuna**, Ray Tune, **MLflow Tracking**, Hyperopt, Katib (Kubeflow) | 성능 개선 및 재학습 자동화 |
 
-<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(79, 172, 254, 0.3);">
+<div style="background: linear-gradient(135deg, #00b894 0%, #55efc4 100%); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 8px 24px rgba(0, 184, 148, 0.3);">
   <h1 style="margin: 0; font-size: 1.8rem;">🌐 Part 2. 인공지능 전략 및 생태계</h1>
   <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 0.95rem;">거시적 관점 | 국가 Level · 기업 Level</p>
 </div>
