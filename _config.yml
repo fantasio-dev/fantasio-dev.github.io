@@ -30,6 +30,10 @@ nav_sort: case_insensitive
 # 목차 (Table of Contents)
 heading_anchors: true
 
+# Mermaid 다이어그램 지원
+mermaid:
+  version: "10.6.0"
+
 # 외부 링크 설정
 aux_links:
   "GitHub":
