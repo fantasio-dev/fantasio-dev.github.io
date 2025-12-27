@@ -39,6 +39,7 @@ permalink: /docs/ai/daily
           <option value="topics-4">④ AI 윤리/보안</option>
           <option value="topics-6">⑥ 운영/프로세스</option>
           <option value="topics-7">⑦ 서비스</option>
+          <option value="exam-all">기출 · 전체</option>
           <option value="exam-1">기출 · 1교시 (단답형)</option>
           <option value="exam-essay">기출 · 서술형 (2~4교시)</option>
         </select>
@@ -280,6 +281,7 @@ permalink: /docs/ai/daily
 
     var base = cardsAll.slice().filter(function(c) {
       if (mode.indexOf('topics-') === 0 || mode === 'topics-all') return c.kind === 'topic';
+      if (mode === 'exam-all') return c.kind === 'exam';
       if (mode === 'exam-1') return c.kind === 'exam' && c.session === '1';
       if (mode === 'exam-essay') return c.kind === 'exam' && ['2','3','4'].indexOf(c.session) >= 0;
       return true;
