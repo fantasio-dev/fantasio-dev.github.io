@@ -148,6 +148,51 @@ permalink: /docs/ai
 .topic-card__title { font-weight: 800; margin-bottom: 0.35rem; }
 .topic-card__desc { color: #475569; font-size: 0.9rem; line-height: 1.55; margin: 0; }
 .topic-card__meta { margin-top: 0.7rem; font-size: 0.8rem; color: #64748b; }
+
+/* 토픽 목록 (Table) */
+.topic-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+.topic-table thead th {
+  text-align: left;
+  font-size: 0.85rem;
+  color: #0f172a;
+  background: #f8fafc;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.topic-table tbody td {
+  vertical-align: top;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #eef2f7;
+  color: #0f172a;
+}
+.topic-table tbody tr:last-child td { border-bottom: none; }
+.topic-table__title a { font-weight: 800; text-decoration: none; }
+.topic-table__desc { color: #475569; font-size: 0.9rem; line-height: 1.55; }
+.topic-pill {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+}
+.topic-pill--data { background: #e2e8f0; }
+.topic-pill--model { background: #ede9fe; border-color: #ddd6fe; }
+.topic-pill--ops { background: #dbeafe; border-color: #bfdbfe; }
+.topic-pill--backend { background: #e5e7eb; border-color: #d1d5db; }
+.topic-pill--gov { background: #f1f5f9; border-color: #e2e8f0; }
 </style>
 
 <!-- 진행률 바 -->
@@ -228,204 +273,286 @@ window.addEventListener('scroll', function() {
 
 <div id="s-data" class="sticky-header sticky-header-data">📦 수저처 › 데이터</div>
 
-<div class="topic-grid">
-  {% for item in data_all %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">데이터 · 학습용 데이터</div>
-  </div>
-  {% endfor %}
-  {% for item in ml_all %}
-    {% if item.url contains '/data-labeling' %}
-    <div class="topic-card">
-      <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-      <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-      <div class="topic-card__meta">데이터 · 라벨링</div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in data_all %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 160 }}</td>
+      <td><span class="topic-pill topic-pill--data">학습용 데이터</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in ml_all %}
+      {% if item.url contains '/data-labeling' %}
+      <tr>
+        <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+        <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 160 }}</td>
+        <td><span class="topic-pill topic-pill--data">라벨링</span></td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
 
 <div class="section-divider-dot">• • •</div>
 
 <div id="s-model-select" class="sticky-header sticky-header-model">🧠 선학평 › 모델 선정(알고리즘)</div>
 
-<div class="topic-grid">
-  {% for item in ml_supervised %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">지도학습</div>
-  </div>
-  {% endfor %}
-  {% for item in ml_unsupervised %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">비지도/차원축소</div>
-  </div>
-  {% endfor %}
-  {% for item in ml_rl %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">강화학습</div>
-  </div>
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in ml_supervised %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">지도학습</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in ml_unsupervised %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">비지도</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in ml_rl %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">강화학습</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <div id="s-model-train" class="sticky-header sticky-header-model" style="margin-top: 1.2rem;">🧠 선학평 › 모델 학습(딥러닝/NLP/학습기법)</div>
 
-<div class="topic-grid">
-  {% for item in dl_models %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">딥러닝 모델</div>
-  </div>
-  {% endfor %}
-  {% for item in nlp_core %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">NLP 기초</div>
-  </div>
-  {% endfor %}
-  {% for item in learntech_all %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">학습 기법</div>
-  </div>
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in dl_models %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">딥러닝</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in nlp_core %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">NLP</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in learntech_all %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">학습기법</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <div id="s-model-eval" class="sticky-header sticky-header-model" style="margin-top: 1.2rem;">🧠 선학평 › 모델 평가/성능</div>
 
-<div class="topic-grid">
-  {% for item in eval_all %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">평가/검증</div>
-  </div>
-  {% endfor %}
-  {% for item in perf_all %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 120 }}</p>
-    <div class="topic-card__meta">성능/운영지표</div>
-  </div>
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in eval_all %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">평가</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in perf_all %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 150 }}</td>
+      <td><span class="topic-pill topic-pill--model">성능</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <div class="section-divider-dot">• • •</div>
 
 <div id="s-ops" class="sticky-header sticky-header-ops">⚙️ 배모튜 › 운영(배포·모니터링·튜닝)</div>
 
-<div class="topic-grid">
-  {% for item in process_all %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 130 }}</p>
-    <div class="topic-card__meta">프로세스</div>
-  </div>
-  {% endfor %}
-  {% for item in ml_overview %}
-    {% if item.url contains '/mlops' or item.url contains '/modelops' or item.url contains '/aiops' %}
-    <div class="topic-card">
-      <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-      <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 130 }}</p>
-      <div class="topic-card__meta">운영</div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in process_all %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 160 }}</td>
+      <td><span class="topic-pill topic-pill--ops">프로세스</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in ml_overview %}
+      {% if item.url contains '/mlops' or item.url contains '/modelops' or item.url contains '/aiops' %}
+      <tr>
+        <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+        <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 160 }}</td>
+        <td><span class="topic-pill topic-pill--ops">운영</span></td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
 
 <div class="section-divider-dot">• • •</div>
 
 <div id="s-backend" class="sticky-header sticky-header-backend">🧱 AI 백엔드 › 플랫폼/인프라/자동화</div>
 
-<div class="topic-grid">
-  {% for item in backend_core %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">플랫폼</div>
-  </div>
-  {% endfor %}
-  {% for item in backend_process %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">자동화/파이프라인</div>
-  </div>
-  {% endfor %}
-  <div class="topic-card">
-    <div class="topic-card__title">HW/인프라</div>
-    <p class="topic-card__desc">가속기/메모리/인프라 기반 지식은 CAOS 섹션을 함께 보세요.</p>
-    <div class="topic-card__meta">
-      <a href="{{ site.baseurl }}/docs/caos/13-cpu-gpu/cpu-gpu-fpga-asic">CPU/GPU/ASIC</a> ·
-      <a href="{{ site.baseurl }}/docs/caos/12-semiconductor/npu-dpu">NPU/DPU</a> ·
-      <a href="{{ site.baseurl }}/docs/caos/12-semiconductor/memory-semiconductor">메모리</a>
-    </div>
-  </div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in backend_core %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--backend">플랫폼</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in backend_process %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--backend">자동화</span></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td class="topic-table__title">HW/인프라</td>
+      <td class="topic-table__desc">가속기/메모리/인프라 기반 지식은 CAOS 섹션을 함께 보세요.</td>
+      <td><span class="topic-pill topic-pill--backend">인프라</span></td>
+    </tr>
+  </tbody>
+</table>
+<div style="margin-top: 0.6rem; color: #64748b; font-size: 0.85rem;">
+  <a href="{{ site.baseurl }}/docs/caos/13-cpu-gpu/cpu-gpu-fpga-asic">CPU/GPU/ASIC</a> ·
+  <a href="{{ site.baseurl }}/docs/caos/12-semiconductor/npu-dpu">NPU/DPU</a> ·
+  <a href="{{ site.baseurl }}/docs/caos/12-semiconductor/memory-semiconductor">메모리</a>
 </div>
 
 <div class="section-divider-dot">• • •</div>
 
 <div id="s-gov" class="sticky-header sticky-header-governance">🏛️ AI 거버넌스 › 체계</div>
 
-<div class="topic-grid">
-  {% for item in ethics_core %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">원칙/정책</div>
-  </div>
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in ethics_core %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--gov">원칙/정책</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <div id="s-risk" class="sticky-header sticky-header-governance" style="margin-top: 1.2rem;">🏛️ AI 거버넌스 › 위험관리</div>
 
-<div class="topic-grid">
-  {% for item in risk_core %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">리스크(편향/프라이버시 등)</div>
-  </div>
-  {% endfor %}
-  {% for item in perf_all %}
-    {% if item.url contains '/drift' %}
-    <div class="topic-card">
-      <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">Drift (운영 리스크)</a></div>
-      <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-      <div class="topic-card__meta">운영 리스크(성능 저하/드리프트)</div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in risk_core %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--gov">리스크</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in perf_all %}
+      {% if item.url contains '/drift' %}
+      <tr>
+        <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">Drift (운영 리스크)</a></td>
+        <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+        <td><span class="topic-pill topic-pill--gov">운영 리스크</span></td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
 
 <div id="s-security" class="sticky-header sticky-header-governance" style="margin-top: 1.2rem;">🏛️ AI 거버넌스 › AI 보안</div>
 
-<div class="topic-grid">
-  {% for item in security_core %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">AI 보안</div>
-  </div>
-  {% endfor %}
-  {% for item in adversarial_extra %}
-  <div class="topic-card">
-    <div class="topic-card__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></div>
-    <p class="topic-card__desc">{{ item.content | strip_html | strip_newlines | truncate: 140 }}</p>
-    <div class="topic-card__meta">적대적 공격</div>
-  </div>
-  {% endfor %}
-</div>
+<table class="topic-table">
+  <thead>
+    <tr>
+      <th style="width: 28%;">토픽</th>
+      <th>요약</th>
+      <th style="width: 16%;">태그</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in security_core %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--gov">보안</span></td>
+    </tr>
+    {% endfor %}
+    {% for item in adversarial_extra %}
+    <tr>
+      <td class="topic-table__title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a></td>
+      <td class="topic-table__desc">{{ item.content | markdownify | strip_html | strip_newlines | replace: "  ", " " | truncate: 170 }}</td>
+      <td><span class="topic-pill topic-pill--gov">적대적</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 <div class="section-divider-dot">• • •</div>
 
