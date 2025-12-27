@@ -1,16 +1,16 @@
 ---
 layout: default
-title: GNN
+title: GNN (Graph Neural Network)
 parent: 3. 신경망
 grand_parent: AI (인공지능)
-nav_order: 1
+nav_order: 2
 ---
 
-# GNN(Graph Neural Network)
+# GNN (Graph Neural Network)
 {: .fs-8 }
 
-7. 신경망 알고리즘
-{: .label .label-green }
+신경망
+{: .label .label-yellow }
 
 ---
 
@@ -19,75 +19,80 @@ nav_order: 1
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **GNN**: 노드, 엣지 구성 그래프 데이터 적합 신경망 알고리즘
-> - (구성) `회귀`
-> - (키워드) 인접 행렬, Target Node, Hidden State
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **GNN (Graph Neural Network)**: 데이터를 노드와 엣지로 관계를 표현하는 그래프 신경망
+> - (구성) 노드, 엣지, 메시지 전달
+> - (유형) GCN, GraphSAGE, GAT
+> - ⭐ **차별점**: 비유클리드 데이터(그래프) 처리 가능
 
 ---
+
 ## 핵심 키워드
 
-`인접 행렬` `Target Node` `Hidden State` `회귀` `분류` `Node` `Edge`
+`그래프` `노드` `엣지` `메시지 전달` `집계`
 
 ---
 
 ## 정의/개념
 
-노드, 엣지 구성 그래프 데이터 적합 신경망 알고리즘
-
-> 주어진 데이터를 인접 행렬 등 그래프로 표현할 수 있는 자료 구조로 변환하는 과정 필요
+데이터를 노드와 엣지로 관계를 표현하는 그래프 신경망
 
 ---
 
-## 아키텍처
+## 구성요소
+
+| 구성요소 | 설명 |
+|:---------|:-----|
+| **노드 (Node)** | 개체 표현 |
+| **엣지 (Edge)** | 관계 표현 |
+| **특성 (Feature)** | 노드/엣지 속성 |
+
+---
+
+## 메시지 전달 (Message Passing)
 
 ```
-                    인접
-                   /특성
-        Input  →  행렬   →  [GNN Layer] → ... → [GNN Layer] → Output
-                    │           #1                  #n         │
-                   변환     ① Aggregate                     Node 임베딩
-                           ② Combine                       Edge 임베딩
-                           ③ Readout                       Graph 임베딩
-                            │
-        ├──────────────┤├──────────────────────────────┤├─────────────┤
-            Data 변환           GNN Layers                   Output
+1. 이웃 노드 정보 수집
+      ↓
+2. 메시지 집계 (Aggregation)
+      ↓
+3. 노드 상태 업데이트
+      ↓
+4. 반복
 ```
 
 ---
 
-## 프로세스
+## GNN 유형
 
-| # | 프로세스 | 기술 | 핵심 |
-|:--|:--------|:-----|:-----|
-| 1 | **변환(Transformation)** | 인접 행렬 | 신경망 학습 적합 변환 |
-| 2 | **취합(Aggregate)** | Target Node | 타겟 노드 인접 은닉 변수 취합 |
-| 3 | **결합(Combine)** | Hidden State | 타겟 노드 업데이트 |
-| 4 | **생성(Readout)** | 회귀, 분류 | 그래프 단위 은닉 변수 생성 |
-| 5 | **출력(Output)** | Node, Edge | Layer1-n 반복 진행, 임베딩 계산 |
-
----
-
-## GNN 활용 분야
-
-| 분야 | 설명 |
+| 유형 | 설명 |
 |:-----|:-----|
-| **소셜 네트워크** | 사용자 관계 분석, 영향력 예측 |
-| **분자 구조 분석** | 신약 개발, 화학 물질 특성 예측 |
-| **추천 시스템** | 사용자-아이템 그래프 기반 추천 |
-| **교통 네트워크** | 교통 흐름 예측, 경로 최적화 |
+| **GCN (Graph Convolutional Network)** | 합성곱 적용 |
+| **GraphSAGE** | 샘플링 기반 집계 |
+| **GAT (Graph Attention Network)** | 어텐션 메커니즘 적용 |
+
+---
+
+## 활용 분야
+
+| 분야 | 활용 |
+|:-----|:-----|
+| **소셜 네트워크** | 친구 추천, 커뮤니티 탐지 |
+| **분자 구조** | 신약 개발 |
+| **추천 시스템** | 아이템 관계 모델링 |
+| **지식 그래프** | 관계 추론 |
 
 ---
 
 ## 연계 토픽
 
-- [CNN](/docs/ai/02-deep-learning/cnn)
-- [RNN](/docs/ai/01-machine-learning/rnn)
+- [CNN]({{ site.baseurl }}/docs/ai/01-machine-learning/cnn)
+- [추천 시스템]({{ site.baseurl }}/docs/ai/07-ai-service/recommendation-system)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] GNN의 정의와 아키텍처 이해
-- [ ] 프로세스 5단계(변환-취합-결합-생성-출력) 암기
-- [ ] 그래프 데이터의 특성 파악
+- [ ] GNN 정의 암기
+- [ ] 구성요소 3가지 설명
+- [ ] 메시지 전달 개념 설명
+- [ ] GNN 유형 3가지 나열

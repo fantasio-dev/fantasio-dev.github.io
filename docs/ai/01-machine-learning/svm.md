@@ -1,16 +1,16 @@
 ---
 layout: default
-title: SVM
+title: 서포트 벡터 머신 (SVM)
 parent: 1. 기계학습
 grand_parent: AI (인공지능)
 nav_order: 14
 ---
 
-# SVM(Support Vector Machine)
+# 서포트 벡터 머신 (SVM)
 {: .fs-8 }
 
-1.2 지도학습
-{: .label .label-purple }
+기계학습
+{: .label .label-blue }
 
 ---
 
@@ -19,74 +19,79 @@ nav_order: 14
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **SVM**: 데이터 사상된 공간 Support Vector간 거리가 가장 큰 경계 식별 지도학습 기반 알고리즘
-> - (구성) `결정경계`
-> - (키워드) 결정경계, Support Vector, Margin
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **SVM**: 분류 오류 최소화와 기하학적 마진 최대화를 목적으로 하는 지도학습
+> - (구성) 지지벡터, 초평면, 마진
+> - ⭐ **차별점**: 비선형은 커널함수 활용 (RBF, Poly, Sigmoid)
 
 ---
+
 ## 핵심 키워드
 
-`결정경계` `Support Vector` `Margin` `Hyperplane(초평면)` `Slack 변수` `OSH` `하드 마진` `소프트 마진`
+`마진` `초평면` `지지벡터` `커널` `분류`
 
 ---
 
 ## 정의/개념
 
-데이터 사상된 공간 Support Vector간 거리가 가장 큰 경계 식별 지도학습 기반 알고리즘
+분류 오류 최소화와 기하학적 마진 최대화를 목적으로 하는 지도학습
 
 ---
 
-## 개념도
+## 핵심 구성요소
+
+| 구성요소 | 설명 |
+|:---------|:-----|
+| **지지벡터 (Support Vector)** | 결정 경계에 가장 가까운 데이터 포인트 |
+| **초평면 (Hyperplane)** | 클래스를 분리하는 결정 경계 |
+| **마진 (Margin)** | 초평면과 지지벡터 사이의 거리 |
+
+---
+
+## SVM 개념도
 
 ```
-  X₂ ↑  최대 마진
-     │  ─────────────────  - 최대 마진을 위해 분류 수행
-     │      Support Vectors
-     │    ○       ○         - 마진이 클수록 훈련 외 데이터도 정확한 분류
-     │  ○   ○               
-     │    ○     ○           - 마진과 학습 오류는 Trade-off 관계
-     │      ○ ●              
-     │    ○     ●    OSH    - 선형적 분류 불가시 오차 허용을 위한 슬랙 변수 활용
-     └───────────────────→ X₁
+        ○                    ●
+     ○     ○              ●     ●
+   ○    ○    ○   │     ●    ●    ●
+     ○     ○     │        ●     ●
+        ○  ↓ 마진 ↑ ●
+           ├─────┤
+           
+    클래스 A   초평면   클래스 B
 ```
 
-> 슬랙 변수(이상값 처리 목적)의 엄격한 적용시 오버피팅 발생하며, 반대의 경우 언더피팅 발생
+---
+
+## 비선형 분류: 커널 함수
+
+| 커널 | 설명 | 용도 |
+|:-----|:-----|:-----|
+| **RBF (Radial Basis Function)** | 가우시안 커널 | 가장 많이 사용 |
+| **Polynomial** | 다항식 커널 | 다항 관계 |
+| **Sigmoid** | 시그모이드 커널 | 신경망 유사 |
+| **Linear** | 선형 커널 | 선형 분리 가능 데이터 |
 
 ---
 
-## 구성요소
+## SVM 장단점
 
-| 구분 | 핵심 |
+| 장점 | 단점 |
 |:-----|:-----|
-| **결정경계** | 데이터 분류 기준 경계 |
-| **Support Vector** | 훈련 데이터 중 결정경계 가장 근접 데이터 집합 |
-| **Margin** | 결정 경계에서 서포트 벡터까지 거리 |
-| **Hyperplane(초평면)** | 데이터 분류 위한 기준 |
-| **Slack 변수** | 완벽한 분리 불가능시 허용된 오차 위한 변수 |
-| **OSH** | Optimal Separating Hyperplane, 최적 경계선 |
-
----
-
-## 기법
-
-| 기법 | 핵심 |
-|:-----|:-----|
-| **Soft Margin** | 마진 안쪽 바깥쪽 이상값 허용 |
-| **Hard Margin** | 마진 안쪽 바깥쪽 이상값 미허용 |
-| **커널 기법** | 비선형 패턴 분리 |
+| 고차원 데이터에 효과적 | 대규모 데이터에 느림 |
+| 과적합에 강건 | 커널 선택 어려움 |
+| 명확한 이론적 기반 | 확률 추정 어려움 |
 
 ---
 
 ## 연계 토픽
 
-- [KNN](/docs/ai/01-machine-learning/knn)
-- [지도학습](/docs/ai/01-machine-learning/supervised-learning)
+- [KNN]({{ site.baseurl }}/docs/ai/01-machine-learning/knn)
+- [지도학습]({{ site.baseurl }}/docs/ai/01-machine-learning/supervised-learning)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] SVM의 정의와 개념도 이해
-- [ ] 구성요소(결정경계, Support Vector, Margin 등) 암기
-- [ ] Soft Margin vs Hard Margin 차이점 이해
+- [ ] SVM 정의 암기
+- [ ] 구성요소 3가지 설명
+- [ ] 커널 함수 종류와 용도 설명

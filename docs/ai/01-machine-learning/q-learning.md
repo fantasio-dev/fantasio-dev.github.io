@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Q-Learning
+title: Q-러닝 (Q-Learning)
 parent: 1. 기계학습
 grand_parent: AI (인공지능)
-nav_order: 25
+nav_order: 23
 ---
 
-# Q-Learning
+# Q-러닝 (Q-Learning)
 {: .fs-8 }
 
-1.4 강화학습
-{: .label .label-yellow }
+기계학습
+{: .label .label-blue }
 
 ---
 
@@ -19,61 +19,86 @@ nav_order: 25
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **Q-Learning**: 에이전트가 특정 상태에서 특정 행동을 취했을 때 얻을 수 있는 기대 보상을 학습하는 강화학습 기법
-> - (키워드) Q함수 사용, 최적의 정책 학습, Q-Table
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **Q-러닝**: 행동선택 가치 함수를 기반으로 강화학습 알고리즘
+> - (Q) 상태와 행동에 대한 품질값
+> - (프로세스) 상태→행동→보상→Q값 업데이트→반복
 
 ---
+
 ## 핵심 키워드
 
-`Q함수 사용` `최적의 정책 학습` `Q-Table` `Agent` `Reward 구성`
+`Q값` `상태` `행동` `보상` `강화학습`
 
 ---
 
 ## 정의/개념
 
-에이전트가 특정 상태에서 특정 행동을 취했을 때 얻을 수 있는 기대 보상을 학습하는 강화학습 기법
+행동선택 가치 함수를 기반으로 강화학습 알고리즘
+
+---
+
+## Q 테이블
+
+```
+        행동1    행동2    행동3
+상태1   Q(s1,a1) Q(s1,a2) Q(s1,a3)
+상태2   Q(s2,a1) Q(s2,a2) Q(s2,a3)
+상태3   Q(s3,a1) Q(s3,a2) Q(s3,a3)
+```
+
+---
+
+## Q값 업데이트 수식
+
+$$
+Q(s,a) \leftarrow Q(s,a) + \alpha [R + \gamma \max_{a'} Q(s',a') - Q(s,a)]
+$$
+
+| 기호 | 설명 |
+|:-----|:-----|
+| Q(s,a) | 상태 s에서 행동 a의 가치 |
+| α | 학습률 (Learning Rate) |
+| R | 보상 (Reward) |
+| γ | 할인율 (Discount Factor) |
+| s' | 다음 상태 |
 
 ---
 
 ## 프로세스
 
-| # | 프로세스 |
-|:--|:--------|
-| 1 | Q 테이블 초기화 |
-| 2 | 현재 상태 관찰 |
-| 3 | Action 선택 |
-| 4 | Reward 확인 |
-| 5 | 새로운 상태 관찰 |
-| 6 | Q 테이블 갱신 |
+```
+1. 현재 상태 s 관측
+      ↓
+2. ε-greedy로 행동 a 선택
+      ↓
+3. 행동 실행, 보상 R과 다음 상태 s' 관측
+      ↓
+4. Q값 업데이트
+      ↓
+5. s = s'로 갱신, 반복
+```
 
 ---
 
-## 구성요소
+## 탐색 vs 활용
 
-| 구분 | 기술요소 | 설명 |
-|:-----|:---------|:-----|
-| **Q 함수** | 벨만 방정식 | 현재 상태의 가치함수와 다음 상태의 가치함수 사이의 관계를 표현한 방정식<br>Q(s,a) = r + lr * max(Q(s',a')) |
-| | Q 함수 | 입력값이 state(현재상태), action(동작)이고, 출력이 reward(보상값)인 함수<br>Q(state, action) = reward |
-| | MAX Q | 임의의 상태 s(state)에서 Q 가 가질 수 있는 최대 보상값<br>Q(state, action) = reward |
-| | 정책(π) | 임의의 상태 s(state)에서 Q 가 최대값을 가지게 하는 a(action)값<br>π*(s) = argmax Q(s, a) |
-| **Q Learning 알고리즘** | Q-Table | 각각의 state-s 에서 각각의 action-a 이가지는 Q(s,a)값을 모두 포함하는 테이블 |
-| | 학습률 | Q 값의 갱신 완급을 결정하는 파라미터 |
-| | Agent | Q-Table 을 기준으로 매 state 에서 가장 적절한 action 을 선택 |
-| | Rewards | Agent 의 Action 에 따른 보상값<br>최대 보상값을 탐색하여 선택 |
+| 전략 | 설명 |
+|:-----|:-----|
+| **탐색 (Exploration)** | 새로운 행동 시도 |
+| **활용 (Exploitation)** | 현재 최적 행동 선택 |
+| **ε-greedy** | ε 확률로 탐색, (1-ε) 확률로 활용 |
 
 ---
 
 ## 연계 토픽
 
-- [DQN](/docs/ai/01-machine-learning/deep-reinforcement-learning)
-- [강화학습](/docs/ai/01-machine-learning/reinforcement-learning)
-- [MDP](/docs/ai/01-machine-learning/mdp)
+- [강화학습]({{ site.baseurl }}/docs/ai/01-machine-learning/reinforcement-learning)
+- [딥러닝]({{ site.baseurl }}/docs/ai/01-machine-learning/deep-learning)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] Q-Learning의 정의와 프로세스 이해
-- [ ] 벨만 방정식과 Q 함수 개념 파악
-- [ ] Q-Table의 역할 이해
+- [ ] Q-러닝 정의 암기
+- [ ] Q값 업데이트 수식 암기
+- [ ] 탐색과 활용 개념 설명

@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 기울기 소실 문제
+title: 기울기소실 문제(Vanishing Gradient)
 parent: 1. 기계학습
 grand_parent: AI (인공지능)
-nav_order: 17
+nav_order: 7
 ---
 
-# 기울기 소실 문제(Vanishing Gradient Problem)
+# 기울기소실 문제(Vanishing Gradient)
 {: .fs-8 }
 
-6. 퍼셉트론
-{: .label .label-purple }
+기계학습
+{: .label .label-blue }
 
 ---
 
@@ -19,69 +19,66 @@ nav_order: 17
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **기울기 소실 문제**: 심층 신경망 역전파 알고리즘 이용 학습 시 앞쪽 은닉층으로 오차 전달되지 않는 현상
-> - (키워드) 오차 미전달, 지역 최소점
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **기울기소실 문제**: 역전파(Backpropagation) 학습에서 입력층으로 갈수록 기울기가 0으로 수렴하여 학습이 잘 안되는 문제
+> - (해결방안) `활배잔` 활성화함수변경(ReLU), 배치정규화, 잔차학습
 
 ---
+
 ## 핵심 키워드
 
-`오차 미전달` `지역 최소점`
+`역전파` `Backpropagation` `Sigmoid` `ReLU` `배치정규화` `잔차학습`
 
 ---
 
 ## 정의/개념
 
-심층 신경망 역전파 알고리즘 이용 학습 시 앞쪽 은닉층으로 오차 전달되지 않는 현상
+역전파(Backpropagation) 학습에서 입력층으로 갈수록 기울기가 0으로 수렴하여 학습이 잘 안되는 문제
 
 ---
 
-## 발생원인
+## 발생 원인
 
-| 구분 | 발생 원인 | 핵심 |
-|:-----|:---------|:-----|
-| **Layer 측면** | 복잡한 문제 해결 위한 층 확장 | Local Minimum 수렴 |
-| **활성함수 측면** | 시그모이드 함수 Squash 특성 | 역전파 시 최대 미분값 1/4 |
+```
+출력층 → 은닉층 → 은닉층 → 입력층
+  ↓         ↓         ↓
+기울기    기울기     기울기
+ 큼       작음      매우 작음 → 0 수렴
+```
 
----
-
-## 해결방안
-
-| 구분 | 해결방안 | 핵심 |
-|:-----|:---------|:-----|
-| **학습 효율성 향상 측면** | LSTM 활용 | 메모리 기억 기반 |
-| | DBN 활용 | 사전 학습 기반 |
-| **활성함수 개선 측면** | ReLU | 미분 값 보존 |
-| | Leaky ReLU | 음의 값 활용 |
+- Sigmoid/Tanh의 기울기 범위: 0~0.25
+- 층이 깊을수록 기울기가 곱해져 0에 수렴
 
 ---
 
-## ReLU vs Leaky ReLU
+## 해결방안 `활배잔`
 
-| 구분 | ReLU | Leaky ReLU |
-|:-----|:-----|:----------|
-| **수식** | $f(x) = max(0, x)$ | $f(x) = max(αx, x)$ |
-| **특징** | x가 음수일 경우 0 출력 | x가 음수일 경우에도 작은 기울기 유지 |
-| **장점** | 계산 효율성, 기울기 소실 해결 | Dead ReLU 문제 해결 |
+| 암기 | 방안 | 설명 |
+|:-----|:-----|:-----|
+| **활** | 활성화함수변경 | ReLU 사용 (기울기 1 유지) |
+| **배** | 배치정규화 | Batch Normalization으로 분포 안정화 |
+| **잔** | 잔차학습 | Residual Connection (Skip Connection) |
+
+---
+
+## ReLU가 해결하는 이유
+
+| 함수 | 기울기 범위 | 문제 |
+|:-----|:-----------|:-----|
+| **Sigmoid** | 0~0.25 | 곱해질수록 0 수렴 |
+| **ReLU** | 0 또는 1 | 양수 영역에서 기울기 1 유지 |
 
 ---
 
 ## 연계 토픽
 
-- [오류역전파](/docs/ai/01-machine-learning/perceptron)
-- [활성화 함수](/docs/ai/01-machine-learning/activation-function)
-- [LSTM](/docs/ai/01-machine-learning/lstm)
+- [활성화 함수]({{ site.baseurl }}/docs/ai/01-machine-learning/activation-function)
+- [경사 하강법]({{ site.baseurl }}/docs/ai/01-machine-learning/gradient-descent)
+- [드랍아웃]({{ site.baseurl }}/docs/ai/01-machine-learning/dropout)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] 기울기 소실 문제의 정의와 발생원인 이해
-- [ ] Layer 측면, 활성함수 측면 원인 파악
-- [ ] 해결방안(LSTM, ReLU, Leaky ReLU) 암기
-
----
-
-## 참고자료
-
-- 정보관리기술사 AI 학습자료
+- [ ] 기울기소실 문제 정의 암기
+- [ ] 발생 원인 설명
+- [ ] `활배잔` 해결방안 3가지 설명

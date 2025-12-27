@@ -3,14 +3,14 @@ layout: default
 title: Pooling Layer
 parent: 1. 기계학습
 grand_parent: AI (인공지능)
-nav_order: 22
+nav_order: 11
 ---
 
 # Pooling Layer
 {: .fs-8 }
 
-1.2 딥러닝(분류·신경망)
-{: .label .label-green }
+기계학습
+{: .label .label-blue }
 
 ---
 
@@ -19,33 +19,69 @@ nav_order: 22
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **Pooling Layer**: *(이미지 내용 추출 후 작성)*
-> - (구성) `다운샘플링`
-> - (키워드) Pooling, Max Pooling, Average Pooling
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **Pooling Layer**: 데이터의 공간적 구조를 줄이고 중요한 특성을 강조하는 연산, 과적합 방지
+> - (유형) Max Pooling, Average Pooling, Stride Pooling
 
 ---
+
 ## 핵심 키워드
 
-`Pooling` `Max Pooling` `Average Pooling` `다운샘플링` `특징 추출`
+`Max Pooling` `Average Pooling` `다운샘플링` `차원축소`
 
 ---
 
 ## 정의/개념
 
-*(이미지 내용 추출 후 작성)*
+데이터의 공간적 구조를 줄이고 중요한 특성을 강조하는 연산, 과적합 방지
+
+---
+
+## Pooling 유형
+
+| 유형 | 설명 | 특징 |
+|:-----|:-----|:-----|
+| **Max Pooling** | 영역 내 최대값 선택 | 가장 많이 사용 |
+| **Average Pooling** | 영역 내 평균값 계산 | 부드러운 특성 추출 |
+| **Stride Pooling** | 스트라이드로 다운샘플링 | 학습 가능한 파라미터 없음 |
+
+---
+
+## Max Pooling 예시
+
+```
+입력 (4×4)              Max Pooling (2×2)       출력 (2×2)
+┌───┬───┬───┬───┐                              ┌───┬───┐
+│ 1 │ 2 │ 5 │ 3 │       stride=2, size=2       │ 4 │ 6 │
+├───┼───┼───┼───┤       ────────────────→      ├───┼───┤
+│ 4 │ 3 │ 6 │ 2 │                              │ 8 │ 9 │
+├───┼───┼───┼───┤                              └───┴───┘
+│ 7 │ 8 │ 1 │ 4 │
+├───┼───┼───┼───┤
+│ 2 │ 5 │ 9 │ 3 │
+└───┴───┴───┴───┘
+```
+
+---
+
+## Pooling 효과
+
+| 효과 | 설명 |
+|:-----|:-----|
+| **차원 축소** | 계산량 감소 |
+| **과적합 방지** | 파라미터 수 감소 |
+| **위치 불변성** | 작은 이동에 강건 |
+
+---
+
+## 연계 토픽
+
+- [CNN]({{ site.baseurl }}/docs/ai/01-machine-learning/cnn)
+- [딥러닝]({{ site.baseurl }}/docs/ai/01-machine-learning/deep-learning)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] 개념 이해
-- [ ] 핵심 키워드 암기
-- [ ] 실무 적용 사례 파악
-
----
-
-## 참고자료
-
-- 정보관리기술사 AI 학습자료
-
+- [ ] Pooling Layer 정의 암기
+- [ ] 유형 3가지 차이 설명
+- [ ] Max Pooling 동작 원리 설명

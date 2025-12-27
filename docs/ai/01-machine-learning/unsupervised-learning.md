@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 군집분석
+title: 비지도학습(Unsupervised Learning)
 parent: 1. 기계학습
 grand_parent: AI (인공지능)
-nav_order: 16
+nav_order: 10
 ---
 
-# 군집분석(Cluster Analysis)
+# 비지도학습(Unsupervised Learning)
 {: .fs-8 }
 
 1.3 비지도학습
@@ -19,76 +19,88 @@ nav_order: 16
 ### 📌 핵심 암기 (Quick Reference)
 
 {: .highlight }
-> **군집분석**: 개체 유사성 측정, 군집 개체 상이성, 계층, 비계층, 중복군집 비지도 학습 기법
-> - (키워드) 계층적 군집분석, 비계층적 군집분석, 중복 비계층적 군집분석
-> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+> **비지도학습**: 입력값에 대한 목표치가 주어지지 않는 기계학습
+> - (군집화) `케디이솜` K-means, DBSCAN, EM Clustering, SOM
+> - (차원축소) `피아` PCA, ICA
+> - (적대적학습) `갠디` GAN, DCGAN
+> - ⭐ **차별점**: 레이블 유무 - 비지도학습은 정답(Label) 없음, 지도학습은 정답 존재
 
 ---
+
 ## 핵심 키워드
 
-`계층적 군집분석` `비계층적 군집분석` `중복 비계층적 군집분석`
+`군집화(Clustering)` `차원축소(Reduce Dimension)` `적대적학습` `K-means` `PCA` `GAN`
 
 ---
 
 ## 정의/개념
 
-개체 유사성 측정, 군집 개체 상이성, 계층, 비계층, 중복군집 비지도 학습 기법
+입력값에 대한 목표치가 주어지지 않는 기계학습
 
 ---
 
-## 유형
+## 개념도
 
 ```
-                    군 집 분 석
-                        │
-            ┌───────────┼───────────┐
-            ↓           ↓           ↓
-    군집대상의 중복여부   ?           ?
-            │
-    ┌───────┼───────┐
-    ↓               ↓
-   작음          제약없음
-    │               │
- 자료의 크기      자료의 크기
-    │               │
-┌───┴───┐       ┌───┴───┐
-↓       ↓       ↓       ↓
-계층적   비계층적  중복 비계층적
-군집분석  군집분석    군집분석
-
-최단 연결법    K-Means 알고리즘   프림(PRIM)
-최장 연결법    DBSCAN 알고리즘
-평균 연결법
-Ward 연결법
+비지도학습 (Unsupervised Learning)
+├── 군집화 (Clustering)
+│   ├── K-means: 거리 기반 반복 계산
+│   ├── DBSCAN: 밀도 기반 군집화
+│   ├── EM Clustering: 정규분포 기반
+│   └── SOM: 자기조직학습
+├── 차원축소 (Reduce Dimension)
+│   ├── PCA: 주성분분석
+│   └── ICA: 독립 성분 분석
+└── 적대적학습
+    ├── GAN: 생성자-판별자 경쟁
+    └── DCGAN: Deep Convolutional GAN
 ```
 
 ---
 
-## 알고리즘
+## 구성요소 `군차적` / `케디이솜` / `피아` / `갠디`
 
-| 유형 | 알고리즘 | 설명 |
-|:-----|:---------|:-----|
-| **계층적 군집분석** | 최단 연결법 | n*n 거리 행렬에서 거리가 가장 가까운 데이터를 묶어서 군집형성 |
-| | 최장연결법 | 최단연결법과 같은 방법이나 거리가 먼 데이터나 군집을 묶어서 형성 |
-| | 평균연결법 | 최단연결법으로 군집을 수행하는데 그 거리를 구하는 방식이 평균을 이용 |
-| | Ward 연결법 | 군집 내 편차들의 제곱합을 최소화하는 방식으로 군집 수행 |
-| **비계층적 군집분석** | K-Means 알고리즘 | K개의 중심값을 선정하고, 중심값과 다른 **데이터 간의 거리를 이용**하여 분류를 수행하는 비지도학습 |
-| | DBSCAN 알고리즘 | 임의의 클러스터 중심을 이동, 중심으로부터 정해진 반경 거리 내에 최소 데이터 포인트 개수를 확인하여 **밀도 기반**으로 군집화를 수행하는 알고리즘 |
-| **중복군집 분석** | 프림(PRIM) | Patient Rule Induction Method<br>규칙에 의한 군집화(Clustering)와 목적함수(object function) 값의 최적화를 동시에 실시하면서 오차를 최소화 시킬 알고리즘 |
+### 그룹 1: 군집화(Clustering) `케디이솜`
+{: .highlight-purple }
 
-> 군집분석의 경우 빅데이터 기반의 집단을 분류하는 용도로 사용되어 비계층적 군집분석을 주로 활용
+| 암기 | 항목 | 설명 |
+|:-----|:-----|:-----|
+| **케** | K-means | n개의 데이터를 K개의 군집으로 분류하기 위해 거리 기반 반복 계산<br>중심점이 변하지 않을때까지 계속 반복 |
+| **디** | DBSCAN | 중심이동, 밀도기반 군집화 |
+| **이** | EM Clustering | 정규분포 기반 E-Step, M-Step 반복 군집화, 최적파라미터 찾기 |
+| **솜** | SOM | 자기조직학습, 차원축소, 클러스터링 동시수행 |
+
+### 그룹 2: 차원축소(Reduce Dimension) `피아`
+{: .highlight-purple }
+
+| 암기 | 항목 | 설명 |
+|:-----|:-----|:-----|
+| **피** | PCA(Principal Component Analysis) | 주성분분석, 3차원 → 2차원 |
+| **아** | ICA(Independent Component Analysis) | 주어진 특징에서 새로운 특징 추출 |
+
+### 그룹 3: 적대적학습 `갠디`
+{: .highlight-purple }
+
+| 암기 | 항목 | 설명 |
+|:-----|:-----|:-----|
+| **갠** | GAN | 생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하는 과정을 통해 정보를 학습 |
+| **디** | DCGAN | Deep Convolutional GAN |
 
 ---
 
 ## 연계 토픽
 
-- [K-Means](/docs/ai/01-machine-learning/k-means)
-- [DBSCAN](/docs/ai/01-machine-learning/dbscan)
+- [K-Means]({{ site.baseurl }}/docs/ai/01-machine-learning/k-means)
+- [DBSCAN]({{ site.baseurl }}/docs/ai/01-machine-learning/dbscan)
+- [PCA]({{ site.baseurl }}/docs/ai/01-machine-learning/pca)
+- [SOM]({{ site.baseurl }}/docs/ai/01-machine-learning/som)
+- [GAN]({{ site.baseurl }}/docs/ai/01-machine-learning/gan)
 
 ---
 
 ## 학습 체크리스트
 
-- [ ] 군집분석의 정의와 유형 이해
-- [ ] 계층적 vs 비계층적 군집분석 차이점 파악
-- [ ] 주요 알고리즘(K-Means, DBSCAN) 특징 암기
+- [ ] 비지도학습 정의 암기
+- [ ] `케디이솜` 군집화 알고리즘 4개 설명
+- [ ] `피아` 차원축소 알고리즘 2개 설명
+- [ ] `갠디` 적대적학습 2개 설명
