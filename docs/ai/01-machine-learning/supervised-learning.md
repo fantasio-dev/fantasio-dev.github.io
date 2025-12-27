@@ -6,115 +6,6 @@ grand_parent: AI (인공지능)
 nav_order: 9
 ---
 
-<!-- CSV_APPLIED: 기술사_기본필수노트_AI - AI.csv | NO=1 | 중토픽=감독학습/지도학습 (Supervised Learning) -->
-# 지도학습(Supervised Learning)
-{: .fs-8 }
-
-1.2 지도학습
-{: .label .label-purple }
-
----
-
-## 🎯 기술사 수준 설명
-
-### 📌 핵심 암기 (Quick Reference)
-
-{: .highlight }
-> **감독학습/지도학습 (Supervised Learning)**: 훈련데이터(Training Data)로부터 하나의 함수를 유추해내기 위한 기계학습(Machine Learning)의 한 방법
-> - 암기: `분회` `스케씨알` `선신`
-> - 키워드: `감독학습/지도학습` `Training Data` `Machine Learning`
-
----
-
-<div class="exam-concept-block" markdown="1">
-
-## 🧠 개념 영역
-
-### 🔑 핵심 키워드 3개
-
-| 키워드 | 설명 | 예시 |
-|:--|:--|:--|
-| **감독학습/지도학습** | 핵심 개념/대상 | - |
-| **Training Data** | 주요 기법/구성요소 | - |
-| **Machine Learning** | 절차/평가/특징 | - |
-
----
-
-### 📖 등장배경
-
-| 구분 | 내용 |
-|:--|:--|
-| **문제/필요성** | 훈련데이터(Training Data)로부터 하나의 함수를 유추해내기 위한 기계학습(Machine Learning)의 한 방법 |
-| **활용/사례** | 고양이의 모습에 대한 특징을 학습시키고 유투브에서 고양이 영상을 찾는 경우, 스팸메일 |
-
----
-
-### 📝 개념 정의
-
-| 구분 | 정의 |
-|:--|:--|
-| **감독학습/지도학습 (Supervised Learning)** | 훈련데이터(Training Data)로부터 하나의 함수를 유추해내기 위한 기계학습(Machine Learning)의 한 방법 |
-
-</div>
-
----
-
-<div class="exam-tech-block" markdown="1">
-
-## 🏗️ 기술 영역
-
-### 구성요소
-
-#### 그룹 1: 알고리즘
-{: .highlight-purple }
-
-| 항목 | 설명 |
-|:--|:--|
-| **+ 분류(Classification)** | 주어진 데이터 집합을 정해진 몇개의 클래스로 분류 |
-| **- SVM(Support Vector Machines)** | 경계선 근접데이터 분석(SV) |
-| **- K > NN(K > Nearest Neighbor)** | 거리기반 많은 속성을 가진 클러스터 할당 |
-| **- CNN(Convolutional Neural)** | Convolution, Pooling layer, Fully connected layer |
-| **- RNN(Recurrent)** | 셀에 정보저장, 은닉층 |
-| **+ 회귀(Regression)** | 학습된 데이터를 통해 주어진 입력에 대한 출력을 예측하는 방식 |
-| **- 선형회귀분석** | 종속변수와 한개이상의 독립변수 관계 모델링 |
-| **- 신경망(Neural networks) 분석** | - |
-
-
-</div>
-
----
-
-<details markdown="1">
-<summary><h3 style="display:inline">📖 상세 설명 (클릭해서 펼치기)</h3></summary>
-
-#### 내용
-
-- 훈련데이터(Training Data)로부터 하나의 함수를 유추해내기 위한 기계학습(Machine Learning)의 한 방법
-- ex) 고양이의 모습에 대한 특징을 학습시키고 유투브에서 고양이 영상을 찾는 경우, 스팸메일
-
-#### 알고리즘
-
-- + 분류(Classification): 주어진 데이터 집합을 정해진 몇개의 클래스로 분류
-- - SVM(Support Vector Machines): 경계선 근접데이터 분석(SV)
-- - K > NN(K > Nearest Neighbor): 거리기반 많은 속성을 가진 클러스터 할당
-- - CNN(Convolutional Neural): Convolution, Pooling layer, Fully connected layer
-- - RNN(Recurrent): 셀에 정보저장, 은닉층
-- + 회귀(Regression): 학습된 데이터를 통해 주어진 입력에 대한 출력을 예측하는 방식
-- - 선형회귀분석: 종속변수와 한개이상의 독립변수 관계 모델링
-- - 신경망(Neural networks) 분석
-
-#### 평가
-
-- - 교차검증(Cross Validation)
-- - 정밀도(Precision)와 재현율(Recall) 측정
-
-</details>
-
----
-
-<details markdown="1">
-<summary><h3 style="display:inline">🗂️ 기존 내용 (백업)</h3></summary>
-
 # 지도학습(Supervised Learning)
 {: .fs-8 }
 
@@ -257,11 +148,8 @@ nav_order: 9
 
 ## 연계 토픽
 
-- [SVM(서포트 벡터 머신)](/docs/ai/01-machine-learning/svm)
-- [KNN](/docs/ai/01-machine-learning/knn)
-- [CNN](/docs/ai/01-machine-learning/cnn)
-- [RNN](/docs/ai/01-machine-learning/rnn)
-- [비지도학습](/docs/ai/01-machine-learning/unsupervised-learning)
-
-</details>
-
+- [SVM(서포트 벡터 머신)]({{ site.baseurl }}/docs/ai/01-machine-learning/svm)
+- [KNN]({{ site.baseurl }}/docs/ai/01-machine-learning/knn)
+- [CNN]({{ site.baseurl }}/docs/ai/02-deep-learning/cnn)
+- [RNN]({{ site.baseurl }}/docs/ai/02-deep-learning/rnn)
+- [비지도학습]({{ site.baseurl }}/docs/ai/01-machine-learning/unsupervised-learning)
