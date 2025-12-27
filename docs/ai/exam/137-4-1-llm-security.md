@@ -141,6 +141,8 @@ AI 기반 소프트웨어 개발에서 LLM(Large Language Model)을 도입할 �
 
 ## Ⅳ. LLM 도입 관련 보안 전략 `DevSec전AI`
 
+![LLM 보안 전략](images/llm-security-internal-response2.png)
+
 | 구분 | 보안 전략 | 특징 |
 |:--|:--|:--|
 | **① DevSecOps** | Dev + 보안, Shift Left | DevSecOps 도입, 전사적 보안 강화 |
