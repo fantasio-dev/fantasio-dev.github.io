@@ -14,6 +14,16 @@ nav_order: 23
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **RNN**: Directed Cycle 구조, Recurrent Weight, BPTT, Sequential Data 사용 신경망 알고리즘
+> - (키워드) Directed Cycle 구조, Recurrent Weight, BPTT
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Directed Cycle 구조` `Recurrent Weight` `BPTT` `Sequential Data`

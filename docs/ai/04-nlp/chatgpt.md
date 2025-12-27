@@ -14,6 +14,16 @@ nav_order: 7
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **ChatGPT**: *(이미지 내용 추출 후 작성)*
+> - (키워드) ChatGPT, GPT, 대화형 AI
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `ChatGPT` `GPT` `대화형 AI` `RLHF` `언어 생성`

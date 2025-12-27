@@ -14,6 +14,17 @@ nav_order: 5
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **기계독해(MRC)**: *(이미지 내용 추출 후 작성)*
+> - (구성) `질의응답`
+> - (키워드) MRC, Machine Reading Comprehension, 질의응답
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `MRC` `Machine Reading Comprehension` `질의응답` `문서 이해` `BERT`

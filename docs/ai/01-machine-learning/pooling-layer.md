@@ -14,6 +14,17 @@ nav_order: 22
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Pooling Layer**: *(이미지 내용 추출 후 작성)*
+> - (구성) `다운샘플링`
+> - (키워드) Pooling, Max Pooling, Average Pooling
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Pooling` `Max Pooling` `Average Pooling` `다운샘플링` `특징 추출`

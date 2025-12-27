@@ -14,6 +14,16 @@ nav_order: 7
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Meta Learning**: *(이미지 내용 추출 후 작성)*
+> - (키워드) Meta Learning, 메타 학습, 학습하는 방법 학습
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Meta Learning` `메타 학습` `학습하는 방법 학습` `MAML` `빠른 적응`

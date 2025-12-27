@@ -14,6 +14,17 @@ nav_order: 2
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **모델 평가 방법**: [정의 필요]
+> - (구성) `혼동행렬`
+> - (키워드) 혼동행렬, ROC Curve, AUC
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `혼동행렬` `ROC Curve` `AUC` `RMSE` `Dunn's Index`

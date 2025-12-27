@@ -14,6 +14,16 @@ nav_order: 18
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **DBSCAN**: 밀도기반 군집화, Epsilon 내 중심점 P 기준, 군집판단기준(mPTS) 계산 비지도 학습 알고리즘
+> - (키워드) Core Point, Border Point, Noise Point
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Core Point` `Border Point` `Noise Point` `Epsilon` `minPTS`

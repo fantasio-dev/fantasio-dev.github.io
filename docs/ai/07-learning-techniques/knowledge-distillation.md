@@ -14,6 +14,16 @@ nav_order: 3
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Knowledge Distillation**: 앙상블 기법 활용, 학습된 모델로부터 작은 모델에 지식 전달 방법
+> - (키워드) Teacher Model, Student Model, Soft Labels
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Teacher Model` `Student Model` `Soft Labels` `Hard Labels`

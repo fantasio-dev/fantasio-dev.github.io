@@ -14,6 +14,16 @@ nav_order: 10
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **의사결정나무**: 모형의 구축과정을 나무형태로 표현하여 대상이 되는 집단을 몇 개의 소집단으로 구분하는 분류 및 예측 기법
+> - (키워드) Root Node, Child Node, Parent Node
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Root Node` `Child Node` `Parent Node` `Branch` `Depth`

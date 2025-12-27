@@ -16,6 +16,16 @@ nav_order: 25
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **GRU**: RNN 기울기 소실 문제 해결, Update, Reset Gate 구성 신경망 알고리즘
+> - (키워드) Update Gate, Reset Gate
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Update Gate` `Reset Gate`

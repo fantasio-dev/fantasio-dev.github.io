@@ -14,6 +14,16 @@ nav_order: 8
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Few-shot Learning**: *(이미지 내용 추출 후 작성)*
+> - (키워드) Few-shot Learning, 퓨샷 학습, 적은 샘플
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Few-shot Learning` `퓨샷 학습` `적은 샘플` `프로토타입 네트워크` `Siamese 네트워크`

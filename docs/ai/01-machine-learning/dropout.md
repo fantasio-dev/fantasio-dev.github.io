@@ -14,6 +14,16 @@ nav_order: 19
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **드랍아웃**: 심층 신경망의 과적합을 방지하기 위해 은닉층의 일부 노드를 무작위로 비활성화 시켜 정규화(성능 일반화)하는 신경망 학습 기법
+> - (키워드) 노드 비활성화, Overfitting, co-adaption
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `노드 비활성화` `Overfitting` `co-adaption` `droprate`

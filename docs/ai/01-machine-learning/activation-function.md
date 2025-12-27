@@ -14,6 +14,16 @@ nav_order: 16
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **활성화 함수**: 인공신경망에서 현재 레이어(Layer)의 입력 신호와 가중치의 총합을 비선형적 출력 신호로 변환하여 활성화 여부를 결정하는 함수
+> - (키워드) Sigmoid Function, Step Function, ReLU Function
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Sigmoid Function` `Step Function` `ReLU Function` `Tanh Function` `Leaky ReLU Function` `Identity Function`

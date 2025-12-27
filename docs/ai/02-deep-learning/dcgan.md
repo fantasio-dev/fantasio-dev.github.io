@@ -14,6 +14,16 @@ nav_order: 12
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **DCGAN**: GAN Fully Connected Layer 제거, 배치 정규화 구조 사용 GAN 알고리즘
+> - (키워드) GAN Fully Connected Layer 제거, 배치 정규화 구조 사용, Fractional-Strided Convolution
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `GAN Fully Connected Layer 제거` `배치 정규화 구조 사용` `Fractional-Strided Convolution`

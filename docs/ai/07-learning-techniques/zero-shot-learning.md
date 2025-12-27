@@ -14,6 +14,17 @@ nav_order: 4
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Zero-shot Learning**: 훈련 중 관찰되지 않은 클래스의 샘플을 관찰함으로써 샘플이 속하는 범주를 예측하는 학습 기법
+> - (구성) `속성`
+> - (키워드) Seen Data, Unseen Data, Side Information(Semantic Information)
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Seen Data` `Unseen Data` `Side Information(Semantic Information)` `속성` `텍스트` `class`

@@ -14,6 +14,17 @@ nav_order: 19
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **PCA**: 고차원에서 저차원 차원 축소, 잡음 제거, 전처리 작업 사용, 공분산 사용 비지도 학습 알고리즘
+> - (구성) `공분산`
+> - (키워드) 공분산, Eigen Vector, Eigen Value
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `공분산` `Eigen Vector` `Eigen Value`

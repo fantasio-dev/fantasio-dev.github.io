@@ -14,6 +14,16 @@ nav_order: 6
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Precision-Recall Curve**: *(이미지 내용 추출 후 작성)*
+> - (키워드) PR Curve, 정밀도-재현율, 불균형 데이터
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `PR Curve` `정밀도-재현율` `불균형 데이터` `AP` `mAP`

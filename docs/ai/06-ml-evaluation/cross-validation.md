@@ -14,6 +14,16 @@ nav_order: 1
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Cross Validation**: 학습 데이터 부족 현상 극복 및 평균성능(Mean Performance)과 성능분산(Performance Variance)을 구하기 위하여 Training set, Validation Set을 교차하여 사용하는 Overfitting 방지를 위한 기법
+> - (키워드) Train Set, Validation Set, Test Set
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Train Set` `Validation Set` `Test Set` `K-fold` `LOOCV` `LpOCV` `과적합/학습데이터 부족 해결`

@@ -14,6 +14,16 @@ AI 학습용 데이터
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **적대적 공격(Adversarial Attack)**: *(이미지 내용 추출 후 작성)*
+> - (키워드) 적대적 공격, Adversarial Attack, 적대적 예제
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `적대적 공격` `Adversarial Attack` `적대적 예제` `FGSM` `모델 강건성`

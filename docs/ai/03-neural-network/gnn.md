@@ -14,6 +14,17 @@ nav_order: 1
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **GNN**: 노드, 엣지 구성 그래프 데이터 적합 신경망 알고리즘
+> - (구성) `회귀`
+> - (키워드) 인접 행렬, Target Node, Hidden State
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `인접 행렬` `Target Node` `Hidden State` `회귀` `분류` `Node` `Edge`

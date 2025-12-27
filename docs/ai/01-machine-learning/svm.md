@@ -14,6 +14,17 @@ nav_order: 14
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **SVM**: 데이터 사상된 공간 Support Vector간 거리가 가장 큰 경계 식별 지도학습 기반 알고리즘
+> - (구성) `결정경계`
+> - (키워드) 결정경계, Support Vector, Margin
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `결정경계` `Support Vector` `Margin` `Hyperplane(초평면)` `Slack 변수` `OSH` `하드 마진` `소프트 마진`

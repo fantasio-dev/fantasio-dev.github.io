@@ -14,6 +14,16 @@ nav_order: 2
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **ModelOps**: 기계학습 모델링과 운영 결합, 기계학습 거버넌스, 생명주기 관리 및 자동화 방법론
+> - (키워드) Discovery, Governance, Deployment
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Discovery` `Governance` `Deployment` `운영 자동화` `생명주기 관리` `AI 가속화`

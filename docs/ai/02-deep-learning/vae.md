@@ -14,6 +14,17 @@ nav_order: 13
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **VAE**: 평균과 표준편차를 학습하여 사후확률을 최대화하여 입력 데이터와 유사한 새로운 데이터를 생성하는 AI 기술
+> - (구성) `평균`
+> - (키워드) Encoder, Decoder, Sample Latent
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Encoder` `Decoder` `Sample Latent` `평균` `표준편차 벡터`

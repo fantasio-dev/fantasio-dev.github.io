@@ -14,6 +14,16 @@ nav_order: 4
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **MLOps**: DataOps와 ModelOps 결합, CI/CD 사용, ML 파이프라인 사용 ML 운영 방법론
+> - (키워드) DataOps, ModelOps, CI/CD
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `DataOps` `ModelOps` `CI/CD` `ML 파이프라인`

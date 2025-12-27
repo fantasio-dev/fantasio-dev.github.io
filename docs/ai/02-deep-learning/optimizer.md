@@ -14,6 +14,17 @@ nav_order: 6
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **Optimizer**: 손실함수의 최소값을 찾기 위해 신경망의 가중치를 갱신하여 신경망 모델을 최적화하는 알고리즘
+> - (구성) `러닝레이트`
+> - (키워드) 가중치 갱신, epoch, 러닝레이트
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `가중치 갱신` `epoch` `러닝레이트` `경사하강법` `SGD` `Momentum` `NAG` `AdaGrad` `RMSProp` `AdaDelta` `Adam`

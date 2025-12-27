@@ -14,6 +14,16 @@ nav_order: 28
 
 ---
 
+## 🎯 기술사 수준 설명
+
+### 📌 핵심 암기 (Quick Reference)
+
+{: .highlight }
+> **CNN**: 영상, 이미지 처리 목적 Convolution, Pooling, Fully Connected Layer 구성 신경망 알고리즘
+> - (키워드) Convolution, Pooling, Fully Connected Layer
+> - ⭐ **차별점**: [TODO: 다른 기술과 구별되는 핵심 특징]
+
+---
 ## 핵심 키워드
 
 `Convolution` `Pooling` `Fully Connected Layer`
