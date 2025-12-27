@@ -105,6 +105,7 @@ Multimodal LLM(Large Language Model)
 > - (전처리) `토해스영` - 텍스트 토큰화, 해상도조정, 스펙트로그램, 영상벡터
 > - (인코더) `트비웨` - Transformer, ViT, Wav2Vec
 > - (융합) `얼미레` - Early, Mid, Late Fusion
+> - ⭐ **차별점**: 크로스 모달 이해(Cross-Modal Understanding): > - 서로 다른 입력(텍스트, 이미지, 오디오)의 관계를 파악해 의미 있는 정보를 추출
 
 ---
 

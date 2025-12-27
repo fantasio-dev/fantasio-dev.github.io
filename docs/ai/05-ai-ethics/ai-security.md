@@ -22,6 +22,7 @@ nav_order: 3
 > **인공지능 보안**: AI 시스템에 대한 공격과 방어 기술
 > - (공격) `무기 오회전추` 무결성(Poisoning, Evasion), 기밀성(Inversion, Extraction)
 > - (방어) Defence-GAN, Adversarial Training, Feature Squeezing
+> - ⭐ **차별점**: AI 보안 핵심: > - **Adversarial Training**: 적대적 샘플로 학습
 
 ---
 

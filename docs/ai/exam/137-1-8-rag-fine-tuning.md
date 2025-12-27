@@ -108,6 +108,7 @@ RAG(Retrieval Augmented Generation)과 Fine Tuning의 기본 개념과 대표 �
 > - (RAG 프레임워크) `L-L-H-R` - LangChain, LlamaIndex, Haystack, RAGFlow
 > - (Fine-Tuning 프레임워크) `P-U-I-O` - PEFT, Unsloth, InstructLab, OpenAI API
 > - (비교) `개특장단활프` - 개념, 특징, 장점, 단점, 활용, 프레임워크
+> - ⭐ **차별점**: LangChain & LangGraph 생태계: > - LangChain: LLM 애플리케이션 개발 특화 오픈소스 프레임워크
 
 ---
 

@@ -22,6 +22,7 @@ nav_order: 3
 > **ROC Curve / PR Curve**: 분류 모델의 성능을 시각화하는 그래프
 > - (ROC) `알특민` X축:특이도(Specificity), Y축:민감도(Sensitivity)
 > - (PR) `정재정` X축:정밀도(Precision), Y축:재현율(Recall)
+> - ⭐ **차별점**: ROC vs PR Curve: > - **ROC**: 균형 데이터에 적합, TN도 고려
 
 ---
 

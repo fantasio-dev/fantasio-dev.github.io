@@ -22,6 +22,7 @@ nav_order: 2
 > **Pooling Layer**: Convolution Layer 출력을 Sub-Sampling하여 차원을 축소하는 레이어
 > - (동작) `입영연이반결` 입력→영역설정→연산→이동→반복→결과출력
 > - (유형) `평최혼확` Average, Max, Mix, Stochastic
+> - ⭐ **차별점**: Pooling Layer 특징: > - **파라미터 감소**: 과적합 억제, 연산 감소
 
 ---
 
