@@ -10,10 +10,6 @@ permalink: /docs/lecture
 # 138회 대비 법인가출 특강
 {: .fs-9 }
 
-<a href="{{ site.baseurl }}/assets/pdf/138-law-standards.pdf" class="btn btn-primary" target="_blank">📄 PDF 원본 보기/다운로드</a>
-
----
-
 <details>
 <summary><strong>📖 PDF 미리보기 (클릭하여 펼치기)</strong></summary>
 
@@ -87,22 +83,4 @@ permalink: /docs/lecture
 | 6 | 제54조 | 상용SW 직접 구매 제도 | 구 분리발주제도 | |
 | 7 | 제55조 | 상용SW 품질성능 평가시험 | 품질성능 평가 | |
 
----
-
-## 출제 예상 핵심 토픽
-
-```
-#1 표준: 3, 7, 13(벡터), 14, 15, 16(AI거버넌스), 21, 23, 30, 31
-#2 가이드: 전부 출제 예상! (특히 ISP/ISMP, AI데이터 품질관리)
-#3 법: 소프트웨어 안전, 민간투자형, 영향평가
-```
-
----
-
-## 추가 공부 토픽
-
-- ISO 25000 시리즈
-- 퍼징테스트
-- AI 기능안전
-- AI 안정성, 신뢰성, 검인증
 

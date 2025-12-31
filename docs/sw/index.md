@@ -190,8 +190,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-## SDLC (Software Development Life Cycle)
-{: #s-sdlc }
+<div id="s-sdlc" class="sticky-header sticky-header-sdlc">🔄 SDLC (Software Development Life Cycle)</div>
 
 <div class="sdlc-flow">
   <div class="sdlc-flow__title">소프트웨어 개발 생명주기</div>
@@ -264,6 +263,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div id="s-req-arch"></div>
+
 ### 요구사항 정의
 
 | 토픽 | 암기법 |
@@ -303,6 +304,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div id="s-uml-pattern"></div>
+
 ### UML
 
 `구행 CCDP USA I SCIT`
@@ -340,6 +343,8 @@ window.addEventListener('scroll', function() {
 | 서킷브레이커 | 상클오하 설최대예 / Close→Open→Half Open, fallback |
 
 ---
+
+<div id="s-test-maint"></div>
 
 ### 테스트
 
@@ -381,7 +386,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-## 소프트웨어 품질관리
+<div id="s-quality" class="sticky-header sticky-header-quality">🏆 소프트웨어 품질관리</div>
 
 ### SW 품질
 
@@ -411,7 +416,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-## 소프트웨어 사업 관리
+<div id="s-mgmt" class="sticky-header sticky-header-mgmt">📋 소프트웨어 사업 관리</div>
 
 ### 발주 프로세스
 
@@ -484,7 +489,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-## 심화 토픽
+<div id="s-advanced" class="sticky-header sticky-header-advanced">🚀 심화 토픽</div>
 
 | 토픽 | 암기법 |
 |:-----|:-------|
