@@ -90,7 +90,7 @@ permalink: /docs/exam
   background: #3A7BC8;
 }
 
-/* 영역 버튼 */
+/* 영역 버튼 - 미니멀 스타일 */
 .domain-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -98,42 +98,25 @@ permalink: /docs/exam
   margin-bottom: 1rem;
 }
 .domain-btn {
-  padding: 0.5rem 1rem;
-  border: 2px solid #dee2e6;
-  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
   background: #fff;
   cursor: pointer;
   font-size: 0.85rem;
   font-weight: 500;
-  transition: all 0.2s;
+  color: #374151;
+  transition: all 0.15s;
 }
 .domain-btn:hover {
-  border-color: #4A90D9;
-  color: #4A90D9;
+  border-color: #9ca3af;
+  background: #f9fafb;
 }
 .domain-btn.active {
-  background: #4A90D9;
-  border-color: #4A90D9;
+  background: #4f46e5;
+  border-color: #4f46e5;
   color: #fff;
 }
-.domain-btn[data-domain="all"] { border-color: #6c757d; }
-.domain-btn[data-domain="all"].active { background: #6c757d; border-color: #6c757d; }
-.domain-btn[data-domain="SW"] { border-color: #28a745; }
-.domain-btn[data-domain="SW"].active { background: #28a745; border-color: #28a745; }
-.domain-btn[data-domain="AI"] { border-color: #6f42c1; }
-.domain-btn[data-domain="AI"].active { background: #6f42c1; border-color: #6f42c1; }
-.domain-btn[data-domain="SEC"] { border-color: #dc3545; }
-.domain-btn[data-domain="SEC"].active { background: #dc3545; border-color: #dc3545; }
-.domain-btn[data-domain="DS"] { border-color: #17a2b8; }
-.domain-btn[data-domain="DS"].active { background: #17a2b8; border-color: #17a2b8; }
-.domain-btn[data-domain="NW"] { border-color: #fd7e14; }
-.domain-btn[data-domain="NW"].active { background: #fd7e14; border-color: #fd7e14; }
-.domain-btn[data-domain="DB"] { border-color: #20c997; }
-.domain-btn[data-domain="DB"].active { background: #20c997; border-color: #20c997; }
-.domain-btn[data-domain="CAOS"] { border-color: #e83e8c; }
-.domain-btn[data-domain="CAOS"].active { background: #e83e8c; border-color: #e83e8c; }
-.domain-btn[data-domain="BIZ"] { border-color: #ffc107; color: #856404; }
-.domain-btn[data-domain="BIZ"].active { background: #ffc107; border-color: #ffc107; color: #856404; }
 
 /* 테이블 스타일 */
 #examTable {
