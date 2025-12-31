@@ -171,8 +171,8 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
-<details open markdown="1">
-<summary><strong>📋 목차 (주요 섹션)</strong></summary>
+<details markdown="1">
+<summary><strong>📋 목차</strong></summary>
 
 - **SDLC (개발 생명주기)**
   - [개발 모델 / 방법론](#s-sdlc)
@@ -239,7 +239,7 @@ window.addEventListener('scroll', function() {
 | 반복적 개발 모델 (Iteration) | 범위분해, 반복개발 완성 |
 | 증분형 개발 모델 (Incremental) | 병렬, 스피드, 인도물중심 |
 | 진화형 개발 모델 (Evolutional) | 핵심요구사항, 기능추가 |
-| RAD | 개발도구(CASE), 빠른개발 / 지라씨(JRAC) / JRP→JAD→Cut Over |
+| RAD | 개발도구(CASE), 빠른개발 / 지라씨(JRAC) / JRP: Joint Requirment Planning(분석,모델링,1~2주), JAD: Joint Application Design(설계,개발,평가,3~5주), Cut Over: 테스트,인수 |
 
 ---
 
@@ -248,18 +248,18 @@ window.addEventListener('scroll', function() {
 | 토픽 | 암기법 |
 |:-----|:-------|
 | 정보공학(IE) 방법론 | ISP/데이터중심 / ISPASS, 기술독립 |
-| 구조적 개발 방법론 | 분할정복 / 요구사항분석→구조분석(DFD)→구조적설계→구조적 프로그래밍 |
-| CBD | 재사용 비용절감 생산성 / 요구사항정의→영역분석→컴포넌트기반설계→조립→완성 |
-| Product Line | Core Asset개발 재사용성 극대화 / 도에코 프리인 |
+| 구조적 개발 방법론 | 분할정복 / 요구사항분석(데이터업무) 구조분석(전략적설계, DFD) 구조적설계(전술적설계), 구조적 프로그래밍(분할, 반복개발) |
+| CBD | 재사용 비용절감 생산성 / 도메인분석→도메인설계→컴포넌트추출→컴포넌트설계→컴포넌트구현→컴포넌트인증→레파지토리저장 / 요구사항정의→영역분석→컴포넌트기반설계→컴포넌트조립→시스템완성 |
+| Product Line | Core Asset개발 재사용성 극대화 / 도에코 프리인 / 도메인엔지니어링(도메인분석, 코어에셋추출), 애플리케이션엔지니어링(코어에셋조립, 시스템완성), 코어에셋(핵심업무기능, 재사용, 레파지토리생성) |
 | 객체지향 프로그래밍 특징 | 속성, 메소드, 객체 / **캡추다정상** |
-| ㄴ 캡슐화 | 메시지 |
-| ㄴ 추상화 | 기데제 |
-| ㄴ 다형성 | 로라 |
-| ㄴ 정보은닉 | PPPD |
-| ㄴ 상속성 | Extends |
-| 객체지향 설계의 원리 | **SOLID**, 응집도↑ 결합도↓, 모듈화 |
+| ㄴ 캡슐화 (encapsulation) | 메시지 |
+| ㄴ 추상화 (Abstraction) | 기데제 |
+| ㄴ 다형성 (Polymorphism) | 로라 |
+| ㄴ 정보은닉 (Information Hiding) | PPPD |
+| ㄴ 상속성 (Inheritance) | Extends |
+| 객체지향 설계의 원리 | **SOLID**, 응집도를 높이고 결합도 낮춤, 모듈화 |
 | AOP | 관심사분리, 의존성주입 / 코조 위애포 어크 |
-| 개발 방법론 테일러링 | 프로세스SW, 산출물 분석 / **특표상세문** |
+| 개발 방법론 테일러링 (Tailoring) | 프로세스SW, 산출물 분석 표준생성 최적화 / **특표상세문** / 프로젝트특성추출→표준프로세스 수립 및 검증→상위커스터마이징(SDLC)→상세커스터마이징(WBS, 일정)→문서화(테일러링문서) |
 
 ---
 
@@ -280,10 +280,10 @@ window.addEventListener('scroll', function() {
 | 토픽 | 암기법 |
 |:-----|:-------|
 | SW Architecture | 컴포넌트, 인터페이스 / 요참모프배 RMCPL |
-| ISO/IEC/IEEE 42010 | ISCPK ADVM RCR / 식표디뷰 |
+| ISO/IEC/IEEE 42010 (구 IEEE1471) | ISCPK ADVM RCR / 식표디뷰 |
 | SW Architecture 평가 | 시설 시뮬수경 |
-| ㄴ ATAM | 아시비 협기상후 / 품질특성 trade off / 유틸리티트리 |
-| ㄴ CBAM | ATAM기반, ROI, 경제성 평가 |
+| ㄴ ATAM | 아시비 협기상후 / 품질특성 trade off평가 / 유틸리티트리(유틸리티,품질속성,품질속성세분화,시나리오) / 브레인스토밍 / 아키텍처(변경성,시험성,적응성,일치성,대체성) 시스템(상호운영성,보안성,회복성,정밀성) 비즈니스(적합성,준거성,이해성,습득성) / 협력과 준비→기본평가(td)→상세평가(bu)→후속조치 |
+| ㄴ CBAM | ATAM기반, ROI, 경제성 평가 / 시나리오 수집→정제→우선순위 / 반응예측→효용성분석 / 효용예측분석→반응값 예측→예상효율→이익계산→ROI분석→결과검증 |
 
 ---
 
@@ -291,16 +291,16 @@ window.addEventListener('scroll', function() {
 
 | 토픽 | 암기법 |
 |:-----|:-------|
-| MSA | 도메인별 서비스 DB분리 API / DDD분석→설계개발→테스트/모니터링 |
-| 이벤트 스토밍 | 이벤트→도메인→커맨드→외부시스템→액터→애그리게이트→컨텍스트경계→정책 |
-| 헥사고날 아키텍처 | Drive Adapter, Application Core, Driven Adapter / Port, Adapter Layer |
-| DDD (Domain Driven Design) | 모유 MDD, 유비쿼터스언어 / 전략적설계(분석)→전술적설계(구현) |
-| SAGA 패턴 | 보상이벤트 비동기처리 원자성보장 / Choreography, Orchestration |
-| CQRS 패턴 | CUD R분리 / 이메오폴 |
-| 클린 아키텍처 | 룰엔유인프 / Entities→Use Cases→Interface Adapter→Framework |
-| 서비스 메시 | Control Plane, Data Plane / Sidecar Proxy, Service Discovery, Circuit Breaker |
-| EDA | Producer→채널→Processor→이벤트채널→이벤트프로세서 |
-| SOA | 통사정매채 / SOAP, WSDL, UDDI, XML, ESB |
+| MSA | 도메인별 서비스 DB분리 API통한 데이터 송수신 / DDD분석(이벤트스토밍,분해,이벤트맵)→비즈니스설계개발(인프라,헥사고날,PoC)→테스트 및 모니터링(CICD검증,아키텍처검증,모니터링검증,장애대응력) / Client REST/SOAP, Application APIGW, LB, Persistence DB, 서비스 |
+| 이벤트 스토밍 | 이벤트도출→도메인도출→커맨드도출→외부시스템→액터도출→애그리게이트 도출→컨텍스트 경계도출→정책설정 |
+| 헥사고날 아키텍처 | Drive Adapter, Application Core, Driven Adapter / Port Application Layer, Adapter Layer |
+| DDD (Domain Driven Design) | 모유 MDD, 유비쿼터스언어 / 전략적설계(분석단계, 이벤트 커맨드 애그리게잇 바운디드 컨텍스트 MSA도출), 전술적설계(MSA내부설계, 계구모 계층구조 Client Application, 도메인,인프라, 구현(엔티티 객체, 도메인이벤트, 커맨드), 모델관리 Module, Refactoring) |
+| SAGA 패턴 | 보상이벤트 비동기처리 원자성보장 / Choreography(APP간 메시지전송, MOM카프카), Orchestration(SAGA마스터를 통한 데이터 처리) |
+| CQRS 패턴 (Command and Query Responsibility Segregation) | CUD R분리, Command API, Read API, MOM Polyglot DB / 이메오폴(Event Sourcing, Message Queuing, ORM, Polyglot) |
+| 클린 아키텍처 (Clean Architecture) | 룰엔유인프 매커니즘과 정책분리 / Dependency Rule / Entities→Use Cases→Interface Adapter→Framework&Driver |
+| 서비스 메시 | Control Plane, Data Plane Sidecar Proxy, Service Discovery, Circuit Breaker, Business Logic |
+| EDA | Producer 채널, Processor, 중계자 메시지큐 중재자 이벤트프로세서 이벤트채널, 이벤트프로세서 이벤트채널 |
+| SOA | 통사정매채 / 서비스통합관리 서비스간 데이터처리 / 통신 SOAP, 사용 WSDL, 정의 UDDI, 메시지 XML, 채널 ESB / 중재자 중계자 서비스제공자 서비스 사용자 |
 
 ---
 
@@ -312,15 +312,16 @@ window.addEventListener('scroll', function() {
 
 | 토픽 | 암기법 |
 |:-----|:-------|
-| UML / Diagram 전체 | 구조(CCDP), 행위(USA I SCIT) |
-| UML의 관계 | 연의GR 집복 |
-| Class diagram | 관계유형, 접근제어(PPPP), 관계숫자 |
+| UML / Diagram 전체 | UML 구조 / 구행 CCDP USA I SCIT |
+| UML의 관계 (Relationship) | 연의GR 집복 |
+| Class diagram | 관계유형, 접근제어, 관계숫자 |
 | Usecase diagram | 액유시, 액유다명 |
+| 시퀀스, 액티비티, State, 컴포넌트, 배치 | - |
+| MOF (Meta Object Facility) | UML의 문법과 필수요소, 작성방법 메타모델 / RUMM Runtime Instance, User Model, Meta Model, Meta Meta Model |
 | Sequence diagram | 액터 활성객체 생명선 제어사각형, 메시지, 프레임 |
-| Activity Diagram | 구시활선 분병종 / 구역,시작점,활동,선택,분리(fork),병합,종료,전이 |
-| State Diagram | 상시전이조 / 상태,시작점,전이,이벤트,전이조건 |
-| Interaction Diagram | 커뮤니케이션(액객링메프), 인터랙션오버뷰(액티비티→시퀀스) |
-| MOF (Meta Object Facility) | RUMM / Runtime Instance, User Model, Meta Model, Meta Meta Model |
+| Activity Diagram | 구시활선 분병종 구역 / 시작점 활동 선택 분리(fork), 병합, 종료, 전이 |
+| State Diagram | 상시전이조 / 상태 시작점 전이 이벤트 전이조건 |
+| Interaction Diagram | 커뮤니케이션(액객링메프, 액터 객체 링크 메시지 프레임), 인터랙션오버뷰(액티비티→시퀀스) |
 
 ---
 
@@ -331,16 +332,16 @@ window.addEventListener('scroll', function() {
 | 토픽 | 암기법 |
 |:-----|:-------|
 | Design Pattern | **생구행** |
-| Abstract Factory | <<interface>> Abstract Factory → Concrete Factory |
-| Singleton | 전역변수, static, getInstance |
-| Factory Method | Creator → Concrete Creator → Concrete Product |
-| Adapter | 어댑터, 어댑티, 복합연관 |
-| Facade | 인터페이스 통합, <<include>> |
-| Memento | 스냅샷 |
-| Strategy | 알고리즘 |
-| Template Method | 알고리즘 골격, Final |
-| MVC | Model, View, Controller |
-| 서킷브레이커 | 상클오하 설최대예 / Close→Open→Half Open, fallback |
+| ㄴ Abstract Factory 패턴 | <<interface>> Abstract Factory, Concrete Factory |
+| ㄴ Singleton 패턴 | 전역변수, static, getInstance |
+| ㄴ Factory method 패턴 | Creator, Concrete Creator, Concrete Product |
+| ㄴ Adaptor 패턴 | 어댑터, 어댑티, 복합연관 |
+| ㄴ Facade 패턴 | 인터페이스 통합, <<include>> |
+| ㄴ Memento 패턴 | 스냅샷 |
+| ㄴ Strategy pattern | 알고리즘 |
+| ㄴ Template Method | 알고리즘골격, Final |
+| ㄴ MVC 패턴 | Model, View, Control |
+| ㄴ 서킷브레이커 | 상클오하 설최대예 / 상태 Close Open Half Open, fallback / 설정 최대실패, 대기시간, 예외이벤트 |
 
 ---
 
@@ -348,26 +349,26 @@ window.addEventListener('scroll', function() {
 
 ### 테스트
 
-`(원리) 결완초 정궤충집` · `(기법) 명구경`
+`(원리) 결완초 정궤충집` · `ISO 29119 - 개프독테키 조관동` · `(기법) 명구경 → 블동경의상 유분페원오 / 화제루커 / 경탐오체분 펀인스서 → 휴박 차박노요` · `KDT - 생실결` · `성능테스트 - 처시사 부과용 / 루스확티가 단복성`
 
 | 토픽 | 암기법 |
 |:-----|:-------|
 | Test 일반 | 결함발견, 원리, 절차 |
-| 테스트 원리 | 결함존재, 완벽테스트불가, 초기테스트, 정황의존, 오류부재궤변, 살충제패러독스, 오류집중 |
-| 명세기반 테스팅 | 블동경의상 유분페원오 |
-| 구조기반 테스트 | 화제루커 |
+| 테스트 원리 | 결함존재, 완벽테스트불가, 초기테스트, 정황에의존, 오류부재궤변, 살충제패러독스, 오류집중 |
+| 명세기반 테스팅 기법 | 블동경의상 유분페원오 |
+| 구조기반테스트 | 화제루커 |
 | 탐색적 테스팅 | 경험, 결함집중, 애자일 / 휴박 차박노요 |
-| 경험기반/리스크기반 | 경탐오체분 펀인스서 |
-| 성능 테스트 | 처시사 부과용 / 루스확티가 / 단복성 |
-| BMT | 벤치오오 오공오일 일억조사 / 발수심참 발수상설 신계수결 |
+| 경험기반 기법 리스크기반 | 경탐오체분 펀인스서 |
+| 성능 테스트 | 처리지표(TPS,Throughput,가용성), 시간지표(Response Time, Think Time, Request Interval Time), 사용자지표(Named User, Concurrent User, Active User) / 부하, 과부하, 용량 / 루프백, 스파이크, 티어, 확장성, 가용성 / 목적: 단위복합성능 |
+| BMT (Benchmark Test) | 벤치오오 오공오일 일억조사 / 발수심참 발수상설 신계수결 |
 | ISO 29119 | 개프독테키 조관동(프독) 명구경(테) / ISO 33063 |
-| 키워드기반 테스트 | 생실결, SUT |
-| Test Coverage | 구문 조건 결정 조결 엠조결 멀조결 |
+| 키워드기반 테스트 | 생실결, SUT, ISO29119 |
+| Test Coverage | 구문 조건 결정 조결 엠조결 멀조결 / 1100 1110 1010 문장, 조건 결정 커버리지율 |
 | 몽키테스트 | 스크립트→실행→검증, 초기 설계, 프로토타입 |
-| 회귀테스트 | 수정영실 리파사부 리셀프 |
-| V모델 | Verification Validation / 화이트→그레이→블랙 / 인수(알파 베타 감마) |
-| 임베디드 테스트 | Dess V, Multiple V |
-| 테스트케이스 | 목방개 예실피 / 식테입출 환특의 |
+| 회귀테스트 | 수정영실 리파사부 리셀프 / 수정→영향도파악→실행 / Ripple Effect(파급), Side Effect(부작용), Retest all, Selective Test, Priority Test |
+| V모델 | verification Validation / 개발자와 테스트의 영역구분 확인과 검증의 절차 / 화이트→그레이→블랙 / 인수(알파 베타 감마) |
+| 임베디드 테스트 | Dess V(상위,하위), Multiple V(모델,프로토타입,finalProduct), SW(상태,위험,명세,멀티v), HW(그레이,블랙,경계스캔,연기테스트) |
+| 테스트케이스 | 목방개 예실피 / 테스트목적, 테스트방법 및 절차, 테스트케이스개발 테스트예측결과작성, 테스트실행, 결과피드백 / 식테입출 환특의 / 식별자, 테스트항목 입력명세, 출력명세 테스트환경 특수요구사항, 의존성 |
 
 ---
 
@@ -375,14 +376,14 @@ window.addEventListener('scroll', function() {
 
 | 토픽 | 암기법 |
 |:-----|:-------|
-| 모듈화 | 응집도: 우논시절통순기 / 결합도: 내공외제스자메 |
-| SW 리팩토링 | 중긴큰긴발분 / 결이분 응올내통 가리 |
-| Lehman SW 변화 | 계자조친 피지증감 / SPE |
-| 유지보수 | 시대원 / 응계예지 / 수완예적 |
-| 3R | 재공학, 역공학, 재사용 |
-| 역공학 | 논리적역공학, 자료역공학 / 추분문 |
-| 재공학 | 재구조화, 재모듈화, 의미론적 정보추출 |
-| Reuse | 분류, 디자인패턴, 모듈화, 객체지향, CBD, PL |
+| 모듈화 | 우연적 논리적 시간적 절차적 통신적 순차적 기능적 / 내부적 공통적 외부적 제어 스탬프 자료 메시지 |
+| 소프트웨어 리팩토링 (SW Refactoring) | 중긴큰긴발분 중복소스 긴메소드 큰클래스 긴파라미터 변경의 발산, 변경의분산 / 결이분 응올내통 가리 / 결합도 이동 분리, 응집도 올림 내림 통합(inline), 가독성 rename |
+| Lehman 소프트웨어 변화 | 계자조친 피지증감 / 계속적변경 자가규제 조직적 안정화 친근함유지 피드백 시스템, 지속적 성장, 복잡도증가, 품질감소 / SPE Specification Procedure Environment |
+| 유지보수 | 시대원 시점 응계예지 응급계획예방지연 / 대상 시스템, 데이터, 프로그램, 문서 / 원인 수완예적 수정정 완전적 예방적 적응적 |
+| 3R | 재공학 역공학 재사용 |
+| 역공학 (Reverse Engineering) | 논리적역공학(물리설계), 자료역공학(DB) / 추분문 코드추출 코드분석 역공학문서화 |
+| 재공학 (Re-Engineering) | 재구조화, 재모듈화, 의미론적 정보추출 / 역공학 재구조화 구현 |
+| Reuse | 분류, 디자인패턴, 모듈화, 객체지향, CBD, PL / 순공학 재사용 역공학 순공학 재사용 |
 
 ---
 
@@ -392,15 +393,15 @@ window.addEventListener('scroll', function() {
 
 | 토픽 | 암기법 |
 |:-----|:-------|
-| ISO 25000 (SQuaRE) | 요모관측평 31024 / 품질특성 기~ |
-| ISO/IEC 25041 | 품질평가프로세스 / 개관 개구평모 / 요명설수결 |
-| ISO/IEC 25051 | 품질 요구사항, 테스트 / 제사실 / 제사실기보 |
-| 형상관리 | 식통감기 기물목정 / 계요설구통운 / 기분설시제운 |
-| CMMI 3.0 | 카캐프레 4 9 20 / 초관정량체 |
+| ISO 25000 (SQuaRE, Systems and software Quality Requirements and Evaluation) | 요모관측평 31024 / 품질특성 기~ |
+| ISO/IEC 25041 (ISO 14598) | 품질평가프로세스 표준 / 개관 개구평모 / 요명설수결 |
+| ISO/IEC 25051 (ISO 12119) | 품질 요구사항, 테스트 / 제사실 / 제사실기보 |
+| 프로젝트 형상관리 | 식통감기 기물목정 / 계요설구통운 / 기분설시제운 |
+| CMMI / CMMI 2.0 | 카캐프레 4 9 20 두메인임 / 초관정량체 |
 | SPICE | 기지조 고공지관조 / 불수관확예최 |
-| ASPICE | 기지조 획공소시지 관재프 / 불수관확예혁 |
-| GS인증 | 235141 / 기신사효유이호보일 |
-| SP인증 | 프개지 프조프개지 |
+| ASPICE (Automotive SPICE) (ISO/IEC 33020) | 기지조 획공소시지 관재프 / 불수관확예혁 |
+| GS(Good SW)인증 | 235141 / 기신사효유이호보일 |
+| SP(SW Process)인증 | 프개지 프조프개지 |
 
 ---
 
