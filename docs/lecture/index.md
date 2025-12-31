@@ -7,11 +7,8 @@ has_toc: false
 permalink: /docs/lecture
 ---
 
-# 📚 특강
+# 특강
 {: .fs-9 }
-
-기술사 시험 준비를 위한 특강 자료 모음입니다.
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -24,20 +21,10 @@ permalink: /docs/lecture
   <div class="lecture-card">
     <a href="{{ lecture.url | relative_url }}">
       <h3>{{ lecture.title }}</h3>
-      {% if lecture.description %}
-      <p>{{ lecture.description }}</p>
-      {% endif %}
     </a>
   </div>
 {% endfor %}
 </div>
-
-{% if lectures.size == 0 %}
-<div class="empty-state">
-  <p>📝 아직 등록된 특강이 없습니다.</p>
-  <p>특강 페이지를 추가하려면 <code>docs/lecture/</code> 폴더에 마크다운 파일을 생성하세요.</p>
-</div>
-{% endif %}
 
 <style>
 .lecture-grid {
