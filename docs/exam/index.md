@@ -292,21 +292,6 @@ tr.has-page {
 </tbody>
 </table>
 
----
-
-## 📊 영역별 기출문제 바로가기
-
-| 영역 | 페이지 |
-|:-----|:------|
-| **SW** | [SW 기출문제]({{ site.baseurl }}/docs/sw/exam) |
-| **AI** | [AI 기출문제]({{ site.baseurl }}/docs/ai/exam) |
-| **SEC** | [SEC 기출문제]({{ site.baseurl }}/docs/sec/exam) |
-| **DS** | [DS 기출문제]({{ site.baseurl }}/docs/ds/exam) |
-| **NW** | [NW 기출문제]({{ site.baseurl }}/docs/nw/exam) |
-| **DB** | [DB 기출문제]({{ site.baseurl }}/docs/db/exam) |
-| **CAOS** | [CAOS 기출문제]({{ site.baseurl }}/docs/caos/exam) |
-| **BIZ** | [BIZ 기출문제]({{ site.baseurl }}/docs/biz/exam) |
-
 <!-- DataTables JS -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
