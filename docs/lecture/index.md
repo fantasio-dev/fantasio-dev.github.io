@@ -2,80 +2,96 @@
 layout: default
 title: 특강
 nav_order: 99
-has_children: true
+has_children: false
 has_toc: false
 permalink: /docs/lecture
 ---
 
-# 특강
+# 138회 대비 법인가출 특강
 {: .fs-9 }
 
 ---
 
-{% assign lectures = site.pages | where: "parent", "특강" | sort: "nav_order" %}
+## #1. 인증 / 표준 / 원칙 / 기타 (32개)
 
-<div class="lecture-grid">
-{% for lecture in lectures %}
-  <div class="lecture-card">
-    <a href="{{ lecture.url | relative_url }}">
-      <h3>{{ lecture.title }}</h3>
-    </a>
-  </div>
-{% endfor %}
-</div>
+| No | 토픽 | 핵심 키워드 | 출제예상 |
+|:--:|:-----|:-----------|:--------:|
+| 1 | ISO/IEC 20000 | ISO 42001:2023과 동일, 성과와 개선 | |
+| 2 | ISO 22301 | 조리계지/운수개로, 경영 토픽 | |
+| 3 | ISO 42001:2023 | AI 국제표준 | ⭐ |
+| 4 | ISO 11179 | 메타데이터 프레임워크, 20547 | |
+| 5 | ISO 15408 | CC인증, 정보보안 평가 국제표준 | |
+| 6 | ISO 27017 | 클라우드 14개 도메인 37개 항목 | |
+| 7 | ISO 27018 | 클라우드 개인정보 11개 도메인 28개 항목 | ⭐ |
+| 8 | ISO 29100 | 프라이버시 보호 국제표준 | ⭐ |
+| 9 | 개인정보보호 중심 설계 | AI 등장하면서 계속 출제 | |
+| 10 | CMMC 2.0 | 방위산업 공급망 사이버 보안 | |
+| 11 | ISA/IEC 62443 | IEC 산업 관련 표준 | |
+| 12 | IoT 공통보안 7원칙 | 온디바이스AI, 보안 프로토콜 | |
+| 13 | OWASP Top 10 LLM 2025 | 인민공/데출과/프벡정무, 벡터 취약점 | ⭐ |
+| 14 | OWASP Top 10: 2025 | SSRF 1번, 보안설정오류, 공급망 취약점 | ⭐ |
+| 15 | 인공지능 윤리기준 | 존공합 / 인프다침 공연대 책안투 | ⭐ |
+| 16 | AI 신뢰성 검인증 제도 | AI 거버넌스, CAT | ⭐ |
+| 17 | ISO 42010:2022 | SW 아키텍처 국제표준 | |
+| 18 | ISO 21500 | 프로젝트 관리, PMBOK, 착기실통종 | |
+| 19 | ISO 31000 | 리스크 관리, 식분평처검 | |
+| 20 | ISO 29119 | SW 테스트 국제표준 | |
+| 21 | IEEE 829 | 식항입출 환특의 | ⭐ |
+| 22 | ISO 33063 | 범참용 모성능, 수관수예혁 | ⭐ |
+| 23 | ISO 29148 | 요구공학, 프산품명/추관검 | ⭐ |
+| 24 | ISO 25000 | SW 품질관리 시리즈 | |
+| 25 | ISO 25010:2023 | SW 품질 국제표준, 기신상효 | |
+| 26 | CMMI 3.0 | 프로세스 성숙도, 8개 도메인 | |
+| 27 | IEC 61508 | 산업 기능안전 | |
+| 28 | ISO 26262 | 자동차 안전 국제표준 | |
+| 29 | ASIL | 차량 안전성 보전 등급, SEC | |
+| 30 | ISO 21448 (SOTIF) | 의도한 기능 성능 한계 리스크 | ⭐ |
+| 31 | ISO 21434 | 자동차 사이버 보안 | ⭐ |
+| 32 | ISO 26000 | ESG, 7대 주제 | |
 
-<style>
-.lecture-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
+---
 
-.lecture-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1.25rem;
-  transition: all 0.2s;
-  background: #fafafa;
-}
+## #2. 가이드 (6개) - 전부 출제 예상
 
-.lecture-card:hover {
-  border-color: #3b82f6;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
-  transform: translateY(-2px);
-}
+| No | 토픽 | 핵심 키워드 | 중요도 |
+|:--:|:-----|:-----------|:------:|
+| 1 | ISP, ISMP (9판) | 26년 무조건 출제! 사실기규, 환형정목통 | ★★★ |
+| 2 | AI데이터 품질관리 가이드 | v.3.5 + 생성형AI v2.0, LLM/LMM/합성데이터 | ★★★ |
+| 3 | 개인정보 전송요구권 제도 | 마이데이터, 제35조의2~4, 중계전문기관 | ★★ |
+| 4 | ISMS-P 인증제도 | 쿠팡사태, 관보개 | ★★ |
+| 5 | CSAP (클라우드 보안인증제) | v5.3, 27017과 유사, CCE/CVE | ★★ |
+| 6 | 정보보호 공시제도 | ISMS-P와 유사 | ★ |
 
-.lecture-card a {
-  text-decoration: none;
-  color: inherit;
-}
+---
 
-.lecture-card h3 {
-  margin: 0 0 0.5rem 0;
-  color: #1e40af;
-  font-size: 1.1rem;
-}
+## #3. 법 - 소프트웨어 진흥법 (7개)
 
-.lecture-card p {
-  margin: 0;
-  color: #6b7280;
-  font-size: 0.9rem;
-}
+| No | 조항 | 토픽 | 핵심 키워드 | 출제예상 |
+|:--:|:----:|:-----|:-----------|:--------:|
+| 1 | 제20,21조 | 소프트웨어 품질인증 | GS인증, SP인증, ISO 25000 | ⭐ |
+| 2 | 제29조 | 소프트웨어 개발보안 가이드 | SSRF, TOCTOU, SQL삽입 | |
+| 3 | 제30조 | 소프트웨어 안전 | FTA, FMEA, HAZOP, ETA, STPA | ⭐ |
+| 4 | 제40조 | 민간투자형 소프트웨어사업 | 추진가이드2.0, 임대형/수익형/구입형 | ⭐ |
+| 5 | 제43조 | 소프트웨어사업 영향평가 | 민간SW 시장 침해 검토 | ⭐ |
+| 6 | 제54조 | 상용SW 직접 구매 제도 | 구 분리발주제도 | |
+| 7 | 제55조 | 상용SW 품질성능 평가시험 | 품질성능 평가 | |
 
-.empty-state {
-  text-align: center;
-  padding: 3rem;
-  background: #f9fafb;
-  border-radius: 12px;
-  color: #6b7280;
-}
+---
 
-.empty-state code {
-  background: #e5e7eb;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-}
-</style>
+## 출제 예상 핵심 토픽
+
+```
+#1 표준: 3, 7, 13(벡터), 14, 15, 16(AI거버넌스), 21, 23, 30, 31
+#2 가이드: 전부 출제 예상! (특히 ISP/ISMP, AI데이터 품질관리)
+#3 법: 소프트웨어 안전, 민간투자형, 영향평가
+```
+
+---
+
+## 추가 공부 토픽
+
+- ISO 25000 시리즈
+- 퍼징테스트
+- AI 기능안전
+- AI 안정성, 신뢰성, 검인증
 
