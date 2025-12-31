@@ -7,7 +7,7 @@ has_toc: false
 permalink: /docs/ds
 ---
 
-# DS (Digital Service) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제</a></span>
+# DS (Digital Service) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제</a> <a class="exam-top-cta exam-top-cta--green" href="{{ site.baseurl }}/docs/ds/notes">📚 학습노트</a></span>
 {: .fs-9 .page-title-with-cta }
 
 
@@ -344,9 +344,9 @@ permalink: /docs/ds
       </div>
     </section>
 
-    <!-- ⑪ 전략/학습 -->
+    <!-- ⑪ 전략 -->
     <section class="ds-card">
-      <div class="ds-card__header">⑪ 전략/학습</div>
+      <div class="ds-card__header">⑪ 전략</div>
       <div class="ds-card__body">
         <div class="nw-sub">
           <div class="nw-sub__title"><a href="{{ site.baseurl }}/docs/ds/17-gartner">가트너 전략</a></div>
@@ -355,14 +355,6 @@ permalink: /docs/ds
               {% for item in gartner_all %}
                 <a class="nw-link nw-link--strong" href="{{ site.baseurl }}{{ item.url }}">{{ item.title | split: "(" | first | strip }}</a>
               {% endfor %}
-            </div>
-          </div>
-        </div>
-        <div class="nw-sub">
-          <div class="nw-sub__title">학습</div>
-          <div class="nw-sub__content">
-            <div class="nw-links">
-              <a class="nw-link nw-link--blue" href="{{ site.baseurl }}/docs/ds/notes">📚 학습노트</a>
             </div>
           </div>
         </div>
