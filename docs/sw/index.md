@@ -18,7 +18,7 @@ permalink: /docs/sw
   left: 0;
   width: 0%;
   height: 4px;
-  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6, #ec4899);
+  background: linear-gradient(90deg, #1e3a5f, #2563eb, #4f46e5);
   z-index: 9999;
   transition: width 0.1s;
 }
@@ -32,16 +32,16 @@ permalink: /docs/sw
   flex-wrap: wrap;
   margin: 1.5rem 0 2rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
 }
 .sdlc-flow__title {
   width: 100%;
   text-align: center;
   font-weight: 700;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #475569;
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
 }
@@ -75,16 +75,16 @@ permalink: /docs/sw
 }
 .sdlc-arrow {
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: #64748b;
   margin: 0 0.15rem;
 }
-.sdlc-step--req { background: linear-gradient(135deg, #10b981 0%, #34d399 100%); }
-.sdlc-step--analysis { background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); }
-.sdlc-step--design { background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%); }
-.sdlc-step--impl { background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); }
-.sdlc-step--test { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); }
-.sdlc-step--deploy { background: linear-gradient(135deg, #f97316 0%, #fb923c 100%); }
-.sdlc-step--maint { background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%); }
+.sdlc-step--req { background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); }
+.sdlc-step--analysis { background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%); }
+.sdlc-step--design { background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%); }
+.sdlc-step--impl { background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%); }
+.sdlc-step--test { background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%); }
+.sdlc-step--deploy { background: linear-gradient(135deg, #475569 0%, #64748b 100%); }
+.sdlc-step--maint { background: linear-gradient(135deg, #334155 0%, #475569 100%); }
 
 /* Sticky 섹션 헤더 */
 .sticky-header {
@@ -98,22 +98,22 @@ permalink: /docs/sw
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .sticky-header-sdlc {
-  background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0f766e 0%, #0369a1 100%);
   color: #fff;
   border-bottom: none;
 }
 .sticky-header-quality {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%);
   color: #fff;
   border-bottom: none;
 }
 .sticky-header-mgmt {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
   color: #fff;
   border-bottom: none;
 }
 .sticky-header-advanced {
-  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #fff;
   border-bottom: none;
 }
