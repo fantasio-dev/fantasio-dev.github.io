@@ -188,7 +188,7 @@ permalink: /docs/sw/exam
 <!-- 135회 -->
 <tr><td>135</td><td>관리</td><td>1</td><td>3</td><td>요구사항 추적표(Requirement Traceability Matrix)</td><td>요구사항 추적표</td><td>-</td></tr>
 <tr><td>135</td><td>관리</td><td>1</td><td>9</td><td>소프트웨어 기술 부채의 유형과 관리 방법</td><td>기술 부채</td><td>-</td></tr>
-<tr><td>135</td><td>관리</td><td>2</td><td>2</td><td>CI/CD(Continuous Integration/Continuous Delivery or Continuous Deployment) 파이프라인에서 DevSecOps 적용방안에 대하여 설명하시오.</td><td>CI/CD, DevSecOps</td><td>-</td></tr>
+<tr class="has-page"><td>135</td><td>관리</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-2-2-cicd-devsecops">CI/CD(Continuous Integration/Continuous Delivery or Continuous Deployment) 파이프라인에서 DevSecOps 적용방안에 대하여 설명하시오.</a></td><td>CI/CD, DevSecOps</td><td><code>(구성) 버CI빌테코배모</code> <code>(적용) 초자컨배피문</code></td></tr>
 <tr><td>135</td><td>관리</td><td>3</td><td>1</td><td>프로젝트 관리에 대하여 다음을 설명하시오. 가. IT 프로젝트 관리의 개념 나. IT 프로젝트 관리 프로그램 다. IT 프로젝트 관리, 프로그램 관리, 포트폴리오 관리의 비교</td><td>프로젝트 관리</td><td>-</td></tr>
 <tr><td>135</td><td>컴시응</td><td>1</td><td>5</td><td>모놀리식 아키텍처(Monolithic Architecture)와 마이크로서비스 아키텍처(MicroService Architecture)를 비교 설명하시오.</td><td>MSA, 모놀리식</td><td>-</td></tr>
 <tr><td>135</td><td>컴시응</td><td>1</td><td>8</td><td>정보시스템 하드웨어 규모산정 지침 (TTAK.KO-10.0292/R3)에 따른 하드웨어 규모산정 방법 3가지</td><td>규모산정</td><td>-</td></tr>
