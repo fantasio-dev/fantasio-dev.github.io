@@ -10,6 +10,17 @@ permalink: /docs/lecture
 # 138회 대비 법인가출 특강
 {: .fs-9 }
 
+<a href="{{ site.baseurl }}/assets/pdf/138-law-standards.pdf" class="btn btn-primary" target="_blank">📄 PDF 원본 보기/다운로드</a>
+
+---
+
+<details>
+<summary><strong>📖 PDF 미리보기 (클릭하여 펼치기)</strong></summary>
+
+<iframe src="{{ site.baseurl }}/assets/pdf/138-law-standards.pdf" width="100%" height="800px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
+
+</details>
+
 ---
 
 ## #1. 인증 / 표준 / 원칙 / 기타 (32개)
