@@ -8,7 +8,6 @@ permalink: /docs/exam
 
 <!-- DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css">
 
 <style>
 /* 페이지 전체 너비 확장 */
@@ -136,25 +135,6 @@ permalink: /docs/exam
 .domain-btn[data-domain="BIZ"] { border-color: #ffc107; color: #856404; }
 .domain-btn[data-domain="BIZ"].active { background: #ffc107; border-color: #ffc107; color: #856404; }
 
-/* 통계 */
-.stats-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: 0.8rem 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.stats-bar .count {
-  font-size: 1rem;
-}
-.stats-bar .count strong {
-  color: #4A90D9;
-  font-size: 1.2rem;
-}
-
 /* 테이블 스타일 */
 #examTable {
   width: 100% !important;
@@ -168,45 +148,39 @@ permalink: /docs/exam
 #examTable td {
   vertical-align: middle;
 }
-/* 회차, 영역, 정/컴, 교시, 번호 컬럼 */
+/* 회차, 정/컴, 교시, 번호 컬럼 - 최소폭 */
 #examTable td:nth-child(1),
 #examTable td:nth-child(2),
 #examTable td:nth-child(3),
 #examTable td:nth-child(4),
-#examTable td:nth-child(5),
 #examTable th:nth-child(1),
 #examTable th:nth-child(2),
 #examTable th:nth-child(3),
-#examTable th:nth-child(4),
-#examTable th:nth-child(5) {
-  width: 1%;
+#examTable th:nth-child(4) {
+  width: 40px;
+  max-width: 50px;
   white-space: nowrap;
   text-align: center;
-  padding: 0.2rem 0.4rem;
+  padding: 0.3rem 0.4rem;
   font-size: 0.8rem;
 }
 /* 문제 컬럼 */
-#examTable td:nth-child(6) {
+#examTable td:nth-child(5) {
   white-space: normal;
   min-width: 300px;
 }
-/* 관련토픽 컬럼 */
-#examTable td:nth-child(7) {
-  white-space: nowrap;
-  width: 1%;
-}
 /* 암기법 컬럼 */
-#examTable td:nth-child(8),
-#examTable th:nth-child(8) {
+#examTable td:nth-child(6),
+#examTable th:nth-child(6) {
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 0.8rem;
   color: #d63384;
-  min-width: 180px;
+  min-width: 150px;
   white-space: nowrap;
 }
 
 /* 페이지 있는 행 */
-tr.has-page td:nth-child(6) a {
+tr.has-page td:nth-child(5) a {
   color: #0d6efd;
   font-weight: 500;
 }
@@ -214,14 +188,15 @@ tr.has-page {
   background-color: #f0f7ff !important;
 }
 
-/* 영역 뱃지 */
+/* 영역 뱃지 (회차 옆에 작게) */
 .domain-badge {
   display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.65rem;
   font-weight: 600;
   color: #fff;
+  margin-left: 4px;
 }
 .domain-badge.sw { background: #28a745; }
 .domain-badge.ai { background: #6f42c1; }
@@ -285,43 +260,34 @@ tr.has-page {
   </div>
 </div>
 
-<div class="stats-bar">
-  <div class="count">총 <strong id="totalCount">0</strong>개의 문제가 검색되었습니다</div>
-  <div class="sort">정렬: 최신순</div>
-</div>
-
----
-
-<table id="examTable" class="display" style="width:100%">
+<table id="examTable" class="display compact" style="width:100%">
 <thead>
 <tr>
 <th>회차</th>
-<th>영역</th>
 <th>정/컴</th>
 <th>교시</th>
 <th>번호</th>
 <th>문제</th>
-<th>관련토픽</th>
 <th>암기법</th>
 </tr>
 </thead>
 <tbody>
 <!-- SW 영역 기출문제 -->
-<tr class="has-page"><td>137</td><td><span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-1-11-reverse-reengineering">소프트웨어 역공학과 재공학을 설명하시오.</a></td><td>역공학, 재공학</td><td><code>(역공학) 추분문논</code> <code>(재공학) 역재구모</code></td></tr>
-<tr class="has-page"><td>137</td><td><span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-3-2-is-om-audit">정보시스템 감리의 시스템 운영 및 유지보수 감리에 대하여 다음을 설명하시오.</a></td><td>감리, 유지보수</td><td><code>(운영감리) 릴테장/신서서</code> <code>(유지보수) 개상인</code></td></tr>
-<tr class="has-page"><td>136</td><td><span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>3</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-4-3-sw-expert-evaluation">대규모 중요 소프트웨어 사업 평가의 전문성을 높이고 수요기관의 전문성을 보완해 공정한 경쟁을 유도하기 위하여 '조달청 협상에 의한 계약 제안서평가 세부기준'이 2024년 9월 개정 시행되었다.</a></td><td>제안서평가, 전문평가제도</td><td><code>(개정내용) 전평확평</code> <code>(전문평가) 목대대평</code></td></tr>
-<tr class="has-page"><td>135</td><td><span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-2-2-cicd-devsecops">CI/CD 파이프라인에서 DevSecOps 적용방안에 대하여 설명하시오.</a></td><td>CI/CD, DevSecOps</td><td><code>(구성) 버CI빌테코배모</code> <code>(적용) 초자컨배피문</code></td></tr>
-<tr class="has-page"><td>135</td><td><span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-3-1-project-management">프로젝트 관리에 대하여 다음을 설명하시오.</a></td><td>프로젝트 관리</td><td><code>(프로세스) 착계실감종</code> <code>(지식영역) 통이범자시원리품조의</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-1-11-reverse-reengineering">소프트웨어 역공학과 재공학을 설명하시오.</a></td><td><code>(역공학) 추분문논</code> <code>(재공학) 역재구모</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-3-2-is-om-audit">정보시스템 감리의 시스템 운영 및 유지보수 감리</a></td><td><code>(운영) 릴테장/신서서</code> <code>(유지보수) 개상인</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>3</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-4-3-sw-expert-evaluation">조달청 협상에 의한 계약 제안서평가 세부기준 개정</a></td><td><code>(개정) 전평확평</code> <code>(전문평가) 목대대평</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-2-2-cicd-devsecops">CI/CD 파이프라인에서 DevSecOps 적용방안</a></td><td><code>(구성) 버CI빌테코배모</code> <code>(적용) 초자컨배피문</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-3-1-project-management">프로젝트 관리에 대하여 다음을 설명하시오.</a></td><td><code>(프로세스) 착계실감종</code> <code>(지식영역) 통이범자시원리품조의</code></td></tr>
 
-<!-- AI 영역 기출문제 (샘플) -->
-<tr><td>137</td><td><span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>1</td><td>PR(Precision Recall) 곡선과 ROC 곡선 비교</td><td>PR곡선, ROC</td><td>-</td></tr>
-<tr><td>137</td><td><span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>2</td><td>Multimodal LLM(Large Language Model)</td><td>LLM, Multimodal</td><td>-</td></tr>
+<!-- AI 영역 기출문제 -->
+<tr data-domain="AI"><td>137<span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>1</td><td>PR(Precision Recall) 곡선과 ROC 곡선 비교</td><td>-</td></tr>
+<tr data-domain="AI"><td>137<span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>2</td><td>Multimodal LLM(Large Language Model)</td><td>-</td></tr>
 
-<!-- SEC 영역 기출문제 (샘플) -->
-<tr><td>137</td><td><span class="domain-badge sec">SEC</span></td><td>관리</td><td>1</td><td>5</td><td>SIEM(Security Information & Event Management) & SOAR 비교</td><td>SIEM, SOAR</td><td>-</td></tr>
+<!-- SEC 영역 기출문제 -->
+<tr data-domain="SEC"><td>137<span class="domain-badge sec">SEC</span></td><td>관리</td><td>1</td><td>5</td><td>SIEM(Security Information & Event Management) & SOAR 비교</td><td>-</td></tr>
 
-<!-- DS 영역 기출문제 (샘플) -->
-<tr><td>137</td><td><span class="domain-badge ds">DS</span></td><td>관리</td><td>1</td><td>4</td><td>IBN(Intent-Based Networking)</td><td>IBN, SDN</td><td>-</td></tr>
+<!-- DS 영역 기출문제 -->
+<tr data-domain="DS"><td>137<span class="domain-badge ds">DS</span></td><td>관리</td><td>1</td><td>4</td><td>IBN(Intent-Based Networking)</td><td>-</td></tr>
 
 </tbody>
 </table>
@@ -330,16 +296,16 @@ tr.has-page {
 
 ## 📊 영역별 기출문제 바로가기
 
-| 영역 | 페이지 | 문제 수 |
-|:-----|:------|:--------|
-| **SW** | [SW 기출문제]({{ site.baseurl }}/docs/sw/exam) | - |
-| **AI** | [AI 기출문제]({{ site.baseurl }}/docs/ai/exam) | - |
-| **SEC** | [SEC 기출문제]({{ site.baseurl }}/docs/sec/exam) | - |
-| **DS** | [DS 기출문제]({{ site.baseurl }}/docs/ds/exam) | - |
-| **NW** | [NW 기출문제]({{ site.baseurl }}/docs/nw/exam) | - |
-| **DB** | [DB 기출문제]({{ site.baseurl }}/docs/db/exam) | - |
-| **CAOS** | [CAOS 기출문제]({{ site.baseurl }}/docs/caos/exam) | - |
-| **BIZ** | [BIZ 기출문제]({{ site.baseurl }}/docs/biz/exam) | - |
+| 영역 | 페이지 |
+|:-----|:------|
+| **SW** | [SW 기출문제]({{ site.baseurl }}/docs/sw/exam) |
+| **AI** | [AI 기출문제]({{ site.baseurl }}/docs/ai/exam) |
+| **SEC** | [SEC 기출문제]({{ site.baseurl }}/docs/sec/exam) |
+| **DS** | [DS 기출문제]({{ site.baseurl }}/docs/ds/exam) |
+| **NW** | [NW 기출문제]({{ site.baseurl }}/docs/nw/exam) |
+| **DB** | [DB 기출문제]({{ site.baseurl }}/docs/db/exam) |
+| **CAOS** | [CAOS 기출문제]({{ site.baseurl }}/docs/caos/exam) |
+| **BIZ** | [BIZ 기출문제]({{ site.baseurl }}/docs/biz/exam) |
 
 <!-- DataTables JS -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -351,7 +317,7 @@ var currentDomain = 'all';
 
 $(document).ready(function() {
   table = $('#examTable').DataTable({
-    order: [[0, 'desc'], [3, 'asc'], [4, 'asc']],
+    order: [[0, 'desc'], [2, 'asc'], [3, 'asc']],
     pageLength: 25,
     lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "전체"]],
     language: {
@@ -364,11 +330,8 @@ $(document).ready(function() {
       zeroRecords: "검색 결과가 없습니다"
     },
     columnDefs: [
-      { targets: [0, 2, 3, 4], className: 'dt-center' }
-    ],
-    initComplete: function() {
-      updateCount();
-    }
+      { targets: [0, 1, 2, 3], className: 'dt-center' }
+    ]
   });
   
   // 영역 버튼 클릭
@@ -395,24 +358,39 @@ function applyFilters() {
   var roundVal = $('#filterRound').val();
   var keyword = $('#filterKeyword').val();
   
-  // 영역 필터
-  if (currentDomain === 'all') {
-    table.column(1).search('');
-  } else {
-    table.column(1).search(currentDomain);
-  }
-  
-  // 교시 필터
-  table.column(3).search(classVal);
-  
-  // 회차 필터
-  table.column(0).search(roundVal);
-  
-  // 키워드 검색 (문제 컬럼)
-  table.column(5).search(keyword);
+  // 커스텀 필터링 함수
+  $.fn.dataTable.ext.search.pop(); // 기존 필터 제거
+  $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+    var row = table.row(dataIndex).node();
+    var rowDomain = $(row).data('domain');
+    
+    // 영역 필터
+    if (currentDomain !== 'all' && rowDomain !== currentDomain) {
+      return false;
+    }
+    
+    // 교시 필터
+    if (classVal && data[2] !== classVal) {
+      return false;
+    }
+    
+    // 회차 필터
+    if (roundVal && !data[0].includes(roundVal)) {
+      return false;
+    }
+    
+    // 키워드 검색
+    if (keyword) {
+      var searchText = data[4].toLowerCase();
+      if (!searchText.includes(keyword.toLowerCase())) {
+        return false;
+      }
+    }
+    
+    return true;
+  });
   
   table.draw();
-  updateCount();
 }
 
 function resetFilters() {
@@ -423,13 +401,7 @@ function resetFilters() {
   $('.domain-btn[data-domain="all"]').addClass('active');
   currentDomain = 'all';
   
-  table.search('').columns().search('').draw();
-  updateCount();
-}
-
-function updateCount() {
-  var count = table.rows({ filter: 'applied' }).count();
-  $('#totalCount').text(count.toLocaleString());
+  $.fn.dataTable.ext.search.pop();
+  table.draw();
 }
 </script>
-
