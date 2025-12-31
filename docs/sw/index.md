@@ -10,11 +10,221 @@ permalink: /docs/sw
 # SW (소프트웨어공학) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/exam">📝 기출문제</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/legacy">🗂️ 레거시</a></span>
 {: .fs-9 .page-title-with-cta }
 
+<style>
+/* 진행률 바 */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6, #ec4899);
+  z-index: 9999;
+  transition: width 0.1s;
+}
+
+/* SDLC 흐름도 */
+.sdlc-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+.sdlc-flow__title {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.sdlc-step {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.65rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.sdlc-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+.sdlc-step__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-right: 0.3rem;
+}
+.sdlc-arrow {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin: 0 0.15rem;
+}
+.sdlc-step--req { background: linear-gradient(135deg, #10b981 0%, #34d399 100%); }
+.sdlc-step--analysis { background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%); }
+.sdlc-step--design { background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%); }
+.sdlc-step--impl { background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); }
+.sdlc-step--test { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); }
+.sdlc-step--deploy { background: linear-gradient(135deg, #f97316 0%, #fb923c 100%); }
+.sdlc-step--maint { background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%); }
+
+/* Sticky 섹션 헤더 */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 0.8rem 1rem;
+  margin: 0 -1rem;
+  z-index: 100;
+  border-bottom: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.sticky-header-sdlc {
+  background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+  color: #fff;
+  border-bottom: none;
+}
+.sticky-header-quality {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #fff;
+  border-bottom: none;
+}
+.sticky-header-mgmt {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: #fff;
+  border-bottom: none;
+}
+.sticky-header-advanced {
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  color: #fff;
+  border-bottom: none;
+}
+
+/* 암기법 코드 스타일 */
+.mnemonic-code {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #fcd34d;
+  border-radius: 6px;
+  font-family: 'D2Coding', monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #92400e;
+}
+
+/* 토픽 테이블 스타일 */
+.topic-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+.topic-table thead th {
+  text-align: left;
+  font-size: 0.85rem;
+  color: #0f172a;
+  background: #f8fafc;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.topic-table tbody td {
+  vertical-align: top;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #eef2f7;
+  color: #0f172a;
+}
+.topic-table tbody tr:last-child td { border-bottom: none; }
+</style>
+
+<!-- 진행률 바 -->
+<div class="progress-bar" id="progressBar"></div>
+<script>
+window.addEventListener('scroll', function() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+
+<details open markdown="1">
+<summary><strong>📋 목차 (주요 섹션)</strong></summary>
+
+- **SDLC (개발 생명주기)**
+  - [개발 모델 / 방법론](#s-sdlc)
+  - [요구사항 / 아키텍처](#s-req-arch)
+  - [UML / 디자인패턴](#s-uml-pattern)
+  - [테스트 / 유지보수](#s-test-maint)
+- **소프트웨어 품질관리**
+  - [품질 표준 / 안전성](#s-quality)
+- **소프트웨어 사업 관리**
+  - [발주 / 비용 / 감리](#s-mgmt)
+- **심화 토픽**
+  - [고급 개념](#s-advanced)
+
+</details>
+
 ---
 
-## Software Development Life Cycle
+## SDLC (Software Development Life Cycle)
+{: #s-sdlc }
 
-`요분설구테배유`
+<div class="sdlc-flow">
+  <div class="sdlc-flow__title">소프트웨어 개발 생명주기</div>
+  <div class="sdlc-step sdlc-step--req">
+    <span class="sdlc-step__icon">C</span>요구사항 정의
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--analysis">
+    <span class="sdlc-step__icon">C</span>분석
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--design">
+    <span class="sdlc-step__icon">C</span>설계
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--impl">
+    <span class="sdlc-step__icon">C</span>구현
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--test">
+    <span class="sdlc-step__icon">C</span>테스트
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--deploy">
+    <span class="sdlc-step__icon">C</span>배포
+  </div>
+  <span class="sdlc-arrow">→</span>
+  <div class="sdlc-step sdlc-step--maint">
+    <span class="sdlc-step__icon">C</span>유지보수
+  </div>
+</div>
+
+<p style="text-align: center; margin-top: -0.5rem;"><span class="mnemonic-code">요분설구테배유</span></p>
 
 ---
 
