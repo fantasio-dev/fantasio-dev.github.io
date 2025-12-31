@@ -12,21 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
   nav.className = 'site-top-nav';
   nav.setAttribute('aria-label', '상단 네비게이션');
   nav.innerHTML = `
-    <div class="top-nav-bar">
-      <a href="/" class="top-nav-btn top-nav-btn--home">🏠 Home</a>
-      <a href="/bookmark" class="top-nav-btn top-nav-btn--bookmark">⭐ Bookmark</a>
-      <span class="top-nav-divider"></span>
-      <a href="/docs/ds" class="domain-chip domain-chip--ds">DS</a>
-      <a href="/docs/sw" class="domain-chip domain-chip--sw">SW</a>
-      <a href="/docs/ai" class="domain-chip domain-chip--ai">AI</a>
-      <a href="/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
-      <a href="/docs/nw" class="domain-chip domain-chip--nw">NW</a>
-      <a href="/docs/db" class="domain-chip domain-chip--db">DB</a>
-      <a href="/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
-      <a href="/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
-      <span class="top-nav-divider"></span>
-      <a href="/docs/exam" class="top-nav-btn top-nav-btn--exam">📝 기출문제</a>
-      <a href="/docs/lecture" class="top-nav-btn top-nav-btn--lecture">🎓 특강</a>
+    <div class="top-nav-inner">
+      <a href="/" class="top-nav-logo">PE-Study</a>
+      <nav class="top-nav-links">
+        <a href="/docs/ds">DS</a>
+        <a href="/docs/sw">SW</a>
+        <a href="/docs/ai">AI</a>
+        <a href="/docs/sec">SEC</a>
+        <a href="/docs/nw">NW</a>
+        <a href="/docs/db">DB</a>
+        <a href="/docs/caos">CAOS</a>
+        <a href="/docs/biz">BIZ</a>
+      </nav>
+      <div class="top-nav-actions">
+        <a href="/docs/exam" class="top-nav-btn top-nav-btn--outline">기출문제</a>
+        <a href="/docs/lecture" class="top-nav-btn top-nav-btn--primary">특강</a>
+      </div>
     </div>
   `;
 
@@ -83,90 +84,119 @@ main.main-content-wrap,
   }
 }
 
-/* 상단 네비게이션 바 컨테이너 (body 최상단 고정) */
+/* ====================================
+   상단 네비게이션 바 (미니멀 디자인)
+   ==================================== */
+
 .site-top-nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(248, 250, 252, 0.98);
+  background: #fff;
   border-bottom: 1px solid #e5e7eb;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
-/* 상단 네비게이션 바 스타일 */
-.top-nav-bar {
+.top-nav-inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  max-width: 1400px;
+  justify-content: space-between;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+  height: 60px;
+}
+
+/* 로고 */
+.top-nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4f46e5;
+  text-decoration: none !important;
+  letter-spacing: -0.5px;
+}
+
+.top-nav-logo:hover {
+  color: #4338ca;
+}
+
+/* 중앙 네비게이션 링크 */
+.top-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none !important;
+  transition: color 0.15s;
+}
+
+.top-nav-links a:hover {
+  color: #4f46e5;
+}
+
+/* 오른쪽 액션 버튼 */
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .top-nav-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: center;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: all 0.15s;
 }
 
-.top-nav-btn--home {
-  background: #f0f9ff;
-  color: #0369a1;
-  border: 1px solid #bae6fd;
+.top-nav-btn--outline {
+  color: #4f46e5;
+  background: #fff;
+  border: 1px solid #4f46e5;
 }
 
-.top-nav-btn--home:hover {
-  background: #e0f2fe;
-  border-color: #7dd3fc;
+.top-nav-btn--outline:hover {
+  background: #eef2ff;
 }
 
-.top-nav-btn--bookmark {
-  background: #fffbeb;
-  color: #b45309;
-  border: 1px solid #fde68a;
+.top-nav-btn--primary {
+  color: #fff;
+  background: #4f46e5;
+  border: 1px solid #4f46e5;
 }
 
-.top-nav-btn--bookmark:hover {
-  background: #fef3c7;
-  border-color: #fcd34d;
+.top-nav-btn--primary:hover {
+  background: #4338ca;
+  border-color: #4338ca;
 }
 
-.top-nav-btn--exam {
-  background: #faf5ff;
-  color: #7c3aed;
-  border: 1px solid #e9d5ff;
-}
-
-.top-nav-btn--exam:hover {
-  background: #f3e8ff;
-  border-color: #d8b4fe;
-}
-
-.top-nav-btn--lecture {
-  background: #f0fdf4;
-  color: #166534;
-  border: 1px solid #bbf7d0;
-}
-
-.top-nav-btn--lecture:hover {
-  background: #dcfce7;
-  border-color: #86efac;
-}
-
-.top-nav-divider {
-  width: 1px;
-  height: 24px;
-  background: #d1d5db;
-  margin: 0 0.5rem;
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .top-nav-inner {
+    padding: 0 1rem;
+    height: 56px;
+  }
+  
+  .top-nav-links {
+    display: none;
+  }
+  
+  .top-nav-logo {
+    font-size: 1.1rem;
+  }
+  
+  .top-nav-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* ====================================
