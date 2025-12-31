@@ -9,7 +9,6 @@ permalink: /docs/db/06-recovery
 
 # 데이터 회복 (Recovery)
 
-장애 발생 시 데이터베이스 복구 기법에 관한 학습 자료입니다.
 
 ---
 

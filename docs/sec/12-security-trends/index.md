@@ -9,8 +9,6 @@ permalink: /docs/sec/12-security-trends
 
 # 보안 신기술 / 트렌드
 
-최신 보안 기술 및 동향
-{: .fs-6 .fw-300 }
 
 ---
 

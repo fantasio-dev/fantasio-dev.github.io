@@ -9,7 +9,6 @@ permalink: /docs/db/04-transaction
 
 # 트랜잭션 (Transaction)
 
-트랜잭션의 개념, 속성 및 격리 수준에 관한 학습 자료입니다.
 
 ---
 

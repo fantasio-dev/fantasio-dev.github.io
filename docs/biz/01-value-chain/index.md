@@ -9,8 +9,6 @@ permalink: /docs/biz/01-value-chain
 
 # 가치사슬 (Value Chain)
 
-SCM, MES, AHP 등 가치사슬 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

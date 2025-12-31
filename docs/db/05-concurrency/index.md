@@ -9,7 +9,6 @@ permalink: /docs/db/05-concurrency
 
 # 동시성 제어 (Concurrency Control)
 
-다중 트랜잭션의 동시 실행을 관리하는 기법에 관한 학습 자료입니다.
 
 ---
 

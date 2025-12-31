@@ -9,8 +9,6 @@ permalink: /docs/biz/05-data-mining
 
 # 데이터마이닝 / AI 분석
 
-데이터 마이닝 및 BI 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

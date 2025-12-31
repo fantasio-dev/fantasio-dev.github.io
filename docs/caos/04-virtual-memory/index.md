@@ -9,7 +9,6 @@ permalink: /docs/caos/04-virtual-memory
 
 # 가상메모리
 
-가상메모리 개념과 관리 기법에 대한 학습 자료입니다.
 
 ---
 

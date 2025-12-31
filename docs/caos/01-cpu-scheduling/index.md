@@ -9,7 +9,6 @@ permalink: /docs/caos/01-cpu-scheduling
 
 # CPU 스케줄링
 
-CPU 스케줄링 알고리즘과 관련 문제에 대한 학습 자료입니다.
 
 ---
 

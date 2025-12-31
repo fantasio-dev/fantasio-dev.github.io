@@ -9,8 +9,6 @@ permalink: /docs/sec/07-security-operations
 
 # 보안 운영 · 대응 (Detection & Response)
 
-보안 모니터링, 탐지, 대응 기술
-{: .fs-6 .fw-300 }
 
 ---
 

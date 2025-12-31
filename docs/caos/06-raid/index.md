@@ -9,7 +9,6 @@ permalink: /docs/caos/06-raid
 
 # RAID
 
-RAID(Redundant Array of Independent Disks)에 대한 학습 자료입니다.
 
 ---
 

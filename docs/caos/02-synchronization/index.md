@@ -9,7 +9,6 @@ permalink: /docs/caos/02-synchronization
 
 # 동기화
 
-프로세스/스레드 동기화 기법에 대한 학습 자료입니다.
 
 ---
 

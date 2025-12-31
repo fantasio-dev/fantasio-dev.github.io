@@ -9,7 +9,6 @@ permalink: /docs/caos/03-deadlock
 
 # 교착상태
 
-교착상태(Deadlock) 개념과 해결 방법에 대한 학습 자료입니다.
 
 ---
 

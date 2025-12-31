@@ -9,7 +9,6 @@ permalink: /docs/sw/13-audit
 
 # 감리
 
-정보시스템 감리 관련 학습 자료입니다.
 
 ---
 

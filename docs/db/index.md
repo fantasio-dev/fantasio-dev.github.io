@@ -10,8 +10,6 @@ permalink: /docs/db
 # DB (데이터베이스) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/db/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/db/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
-데이터베이스 관련 학습 자료입니다. 총 **73개** 항목
-{: .fs-6 .fw-300 }
 
 ---
 

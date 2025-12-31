@@ -9,8 +9,6 @@ permalink: /docs/sec/09-privacy
 
 # 개인정보 보호 (Personal Data Security)
 
-개인정보 보호 법률, 제도 및 기술
-{: .fs-6 .fw-300 }
 
 ---
 

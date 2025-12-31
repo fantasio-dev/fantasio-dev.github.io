@@ -10,8 +10,6 @@ permalink: /docs/ai
 # AI 학습 가이드 <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/map">🧭 레거시 MAP</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/legacy">🗂️ 레거시 메인</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
-`수저처-선학평-배모튜`를 중심축으로, **AI 백엔드/AI 거버넌스(위험관리·보안 분리)**까지 한 페이지로 조망합니다.
-{: .fs-6 .fw-300 }
 
 ---
 

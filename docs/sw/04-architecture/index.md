@@ -9,7 +9,6 @@ permalink: /docs/sw/04-architecture
 
 # 소프트웨어 아키텍처
 
-소프트웨어 아키텍처 관련 학습 자료입니다.
 
 ---
 

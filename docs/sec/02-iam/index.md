@@ -9,8 +9,6 @@ permalink: /docs/sec/02-iam
 
 # 인증·접근통제·식별 (IAM)
 
-Identity and Access Management 핵심 기술
-{: .fs-6 .fw-300 }
 
 ---
 

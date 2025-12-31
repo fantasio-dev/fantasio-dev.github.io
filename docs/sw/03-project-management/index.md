@@ -9,7 +9,6 @@ permalink: /docs/sw/03-project-management
 
 # 프로젝트 관리
 
-프로젝트 관리 관련 학습 자료입니다.
 
 ---
 

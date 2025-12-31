@@ -9,7 +9,6 @@ permalink: /docs/db/07-data-quality
 
 # 데이터 품질 (Data Quality)
 
-데이터 품질 관리 및 데이터 거버넌스에 관한 학습 자료입니다.
 
 ---
 

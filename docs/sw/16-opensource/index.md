@@ -9,7 +9,6 @@ permalink: /docs/sw/16-opensource
 
 # 오픈소스
 
-오픈소스 SW 관련 학습 자료입니다.
 
 ---
 

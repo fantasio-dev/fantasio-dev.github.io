@@ -9,7 +9,6 @@ permalink: /docs/sw/15-devops
 
 # DevOps / TDD / SRE
 
-DevOps, TDD, SRE 관련 학습 자료입니다.
 
 ---
 

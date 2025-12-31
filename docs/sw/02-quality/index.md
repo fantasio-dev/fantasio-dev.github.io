@@ -9,7 +9,6 @@ permalink: /docs/sw/02-quality
 
 # 소프트웨어 품질
 
-소프트웨어 품질 관련 학습 자료입니다.
 
 ---
 

@@ -9,7 +9,6 @@ permalink: /docs/db/03-modeling-design
 
 # 데이터 모델링 & 설계
 
-정규화, 무결성, 키에 관한 학습 자료입니다.
 
 ---
 

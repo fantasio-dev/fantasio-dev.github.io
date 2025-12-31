@@ -9,8 +9,6 @@ permalink: /docs/nw/01-iot
 
 # IoT (Internet of Things)
 
-IoT 기본 개념 및 네트워크 기술
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -38,4 +36,3 @@ IoT 기본 개념 및 네트워크 기술
 
 ## 참고자료
 
-- 정보관리기술사 네트워크 학습자료

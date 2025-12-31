@@ -9,8 +9,6 @@ permalink: /docs/nw/04-infrastructure
 
 # 네트워크 구축
 
-무선 이동통신, 서버/네트워크 구성, 무선랜
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -49,4 +47,3 @@ permalink: /docs/nw/04-infrastructure
 
 ## 참고자료
 
-- 정보관리기술사 네트워크 학습자료

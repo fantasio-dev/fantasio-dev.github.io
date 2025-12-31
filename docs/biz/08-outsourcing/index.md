@@ -9,8 +9,6 @@ permalink: /docs/biz/08-outsourcing
 
 # IT 아웃소싱 & 컴플라이언스
 
-아웃소싱 및 IT 컴플라이언스 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

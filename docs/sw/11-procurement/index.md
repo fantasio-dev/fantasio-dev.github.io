@@ -9,7 +9,6 @@ permalink: /docs/sw/11-procurement
 
 # 발주 프로세스 & 공공SW
 
-SW 발주 및 공공SW 사업 관련 학습 자료입니다.
 
 ---
 

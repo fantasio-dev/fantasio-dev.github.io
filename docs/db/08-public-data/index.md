@@ -9,7 +9,6 @@ permalink: /docs/db/08-public-data
 
 # 공공데이터 (Public Data)
 
-공공데이터 활용 및 개방에 관한 학습 자료입니다.
 
 ---
 

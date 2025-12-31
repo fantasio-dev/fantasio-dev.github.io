@@ -9,7 +9,6 @@ permalink: /docs/caos/10-interrupt
 
 # 인터럽트
 
-인터럽트 개념에 대한 학습 자료입니다.
 
 ---
 

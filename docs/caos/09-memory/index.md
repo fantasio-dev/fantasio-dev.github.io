@@ -9,7 +9,6 @@ permalink: /docs/caos/09-memory
 
 # 메모리
 
-메모리 신기술에 대한 학습 자료입니다.
 
 ---
 

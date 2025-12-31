@@ -9,8 +9,6 @@ permalink: /docs/nw/07-osi-layer
 
 # OSI 7 Layer
 
-OSI 참조 모델 및 프로토콜
-{: .fs-6 .fw-300 }
 
 ---
 

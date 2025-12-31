@@ -137,8 +137,6 @@ permalink: /docs/ds/exam
 # DS 기출문제
 {: .fs-9 }
 
-DS(Digital Service) 관련 기출문제 모음입니다. **검색, 정렬, 필터링**이 가능합니다.
-{: .fs-6 .fw-300 }
 
 ---
 

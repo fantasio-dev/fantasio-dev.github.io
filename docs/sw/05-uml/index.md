@@ -9,7 +9,6 @@ permalink: /docs/sw/05-uml
 
 # UML
 
-UML(Unified Modeling Language) 관련 학습 자료입니다.
 
 ---
 

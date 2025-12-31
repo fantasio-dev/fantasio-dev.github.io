@@ -9,7 +9,6 @@ permalink: /docs/sw/14-function-point
 
 # FP(Function Point)
 
-기능점수 관련 학습 자료입니다.
 
 ---
 

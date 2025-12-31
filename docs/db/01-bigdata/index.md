@@ -9,7 +9,6 @@ permalink: /docs/db/01-bigdata
 
 # 빅데이터 (Big Data)
 
-빅데이터의 개념, 처리 플랫폼, 분석 기법 및 보안에 관한 학습 자료입니다.
 
 ---
 

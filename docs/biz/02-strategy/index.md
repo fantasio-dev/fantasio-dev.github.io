@@ -9,8 +9,6 @@ permalink: /docs/biz/02-strategy
 
 # 경영전략 (Strategy)
 
-전략수립, 성과관리, IT 투자평가 등
-{: .fs-6 .fw-300 }
 
 ---
 

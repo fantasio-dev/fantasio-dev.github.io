@@ -9,7 +9,6 @@ permalink: /docs/db/10-data-policy
 
 # 정책·데이터 활용
 
-데이터 관련 정책 및 활용 방안에 관한 학습 자료입니다.
 
 ---
 

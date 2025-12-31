@@ -9,7 +9,6 @@ permalink: /docs/db/02-db-basics
 
 # 데이터베이스 기본 (DB Basics)
 
-데이터베이스의 유형, 구조 및 기본 개념에 관한 학습 자료입니다.
 
 ---
 

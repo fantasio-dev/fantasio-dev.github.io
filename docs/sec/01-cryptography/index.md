@@ -9,8 +9,6 @@ permalink: /docs/sec/01-cryptography
 
 # 암호 기술 (Cryptography)
 
-암호화 관련 핵심 기술 및 최신 동향
-{: .fs-6 .fw-300 }
 
 ---
 

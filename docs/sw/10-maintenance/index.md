@@ -9,7 +9,6 @@ permalink: /docs/sw/10-maintenance
 
 # 유지보수(Maintenance)
 
-소프트웨어 유지보수 관련 학습 자료입니다.
 
 ---
 

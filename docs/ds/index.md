@@ -10,8 +10,6 @@ permalink: /docs/ds
 # DS (Digital Service) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
-디지털 서비스 기술 관련 학습 자료입니다. 총 **135개** 항목
-{: .fs-6 .fw-300 }
 
 ---
 

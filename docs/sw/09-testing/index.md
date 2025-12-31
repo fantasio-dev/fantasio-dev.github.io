@@ -9,7 +9,6 @@ permalink: /docs/sw/09-testing
 
 # 소프트웨어 테스트
 
-소프트웨어 테스트 관련 학습 자료입니다.
 
 ---
 

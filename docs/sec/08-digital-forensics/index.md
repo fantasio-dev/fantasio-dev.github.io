@@ -9,8 +9,6 @@ permalink: /docs/sec/08-digital-forensics
 
 # 디지털 포렌식
 
-디지털 증거 수집, 분석, 보존 기술
-{: .fs-6 .fw-300 }
 
 ---
 

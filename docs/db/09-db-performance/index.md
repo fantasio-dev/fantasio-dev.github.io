@@ -9,7 +9,6 @@ permalink: /docs/db/09-db-performance
 
 # DB 성능 (Database Performance)
 
-데이터베이스 성능 최적화에 관한 학습 자료입니다.
 
 ---
 

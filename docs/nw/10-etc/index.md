@@ -9,8 +9,6 @@ permalink: /docs/nw/10-etc
 
 # 기타
 
-기타 네트워크 토픽
-{: .fs-6 .fw-300 }
 
 ---
 

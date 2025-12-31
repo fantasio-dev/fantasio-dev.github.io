@@ -9,7 +9,6 @@ permalink: /docs/sw/17-etc
 
 # 기타 SW 일반
 
-기타 소프트웨어 관련 학습 자료입니다.
 
 ---
 

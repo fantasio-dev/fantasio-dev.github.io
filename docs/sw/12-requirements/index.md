@@ -9,7 +9,6 @@ permalink: /docs/sw/12-requirements
 
 # 요구사항 공학
 
-요구사항 공학 관련 학습 자료입니다.
 
 ---
 

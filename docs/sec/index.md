@@ -10,8 +10,6 @@ permalink: /docs/sec
 # SEC (정보보안) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sec/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/sec/exam">📝 기출문제</a></span>
 {: .fs-9 .page-title-with-cta }
 
-정보보안 관련 학습 자료입니다. 총 **106개** 항목
-{: .fs-6 .fw-300 }
 
 {% assign sec_root = page.title %}
 {% assign sec_topics = site.pages | where: "grand_parent", sec_root %}

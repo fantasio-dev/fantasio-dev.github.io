@@ -9,8 +9,6 @@ permalink: /docs/nw/02-adhoc
 
 # 드론 (Ad-hoc Network)
 
-Ad-hoc 네트워크 기술
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -24,4 +22,3 @@ Ad-hoc 네트워크 기술
 
 ## 참고자료
 
-- 정보관리기술사 네트워크 학습자료

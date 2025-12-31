@@ -9,8 +9,6 @@ permalink: /docs/sec/11-devsecops
 
 # 개발 보안 / 운영 보안
 
-시큐어 코딩, DevSecOps, 보안 운영
-{: .fs-6 .fw-300 }
 
 ---
 

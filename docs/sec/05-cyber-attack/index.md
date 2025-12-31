@@ -9,8 +9,6 @@ permalink: /docs/sec/05-cyber-attack
 
 # 사이버 공격 · 위협 분석
 
-사이버 공격 기법 및 위협 분석 프레임워크
-{: .fs-6 .fw-300 }
 
 ---
 

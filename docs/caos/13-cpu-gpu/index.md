@@ -9,7 +9,6 @@ permalink: /docs/caos/13-cpu-gpu
 
 # CPU/GPU
 
-CPU, GPU 및 다양한 프로세서 아키텍처에 대한 학습 자료입니다.
 
 ---
 

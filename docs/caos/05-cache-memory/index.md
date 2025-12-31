@@ -9,7 +9,6 @@ permalink: /docs/caos/05-cache-memory
 
 # 캐시메모리
 
-캐시 메모리 개념과 일관성 프로토콜에 대한 학습 자료입니다.
 
 ---
 

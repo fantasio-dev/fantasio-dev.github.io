@@ -9,7 +9,6 @@ permalink: /docs/caos/00-computer
 
 # Computer
 
-컴퓨터의 기본 개념과 구조에 대한 학습 자료입니다.
 
 ---
 

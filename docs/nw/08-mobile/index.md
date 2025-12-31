@@ -9,8 +9,6 @@ permalink: /docs/nw/08-mobile
 
 # 이동통신
 
-4G/5G/6G 이동통신 기술
-{: .fs-6 .fw-300 }
 
 ---
 

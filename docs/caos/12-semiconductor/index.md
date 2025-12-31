@@ -9,7 +9,6 @@ permalink: /docs/caos/12-semiconductor
 
 # 반도체
 
-반도체 및 프로세서에 대한 학습 자료입니다.
 
 ---
 

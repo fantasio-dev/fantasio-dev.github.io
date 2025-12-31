@@ -9,8 +9,6 @@ permalink: /docs/sec/10-policy-standard
 
 # 보안 정책 · 표준
 
-정보보안 정책, 인증, 국제 표준
-{: .fs-6 .fw-300 }
 
 ---
 

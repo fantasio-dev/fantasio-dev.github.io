@@ -9,8 +9,6 @@ permalink: /docs/sec/03-network-security
 
 # 네트워크 보안
 
-네트워크 계층의 보안 기술 및 아키텍처
-{: .fs-6 .fw-300 }
 
 ---
 

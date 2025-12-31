@@ -9,8 +9,6 @@ permalink: /docs/biz/04-itsm
 
 # ITSM (IT Service Management)
 
-IT 서비스 관리 및 SLA 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

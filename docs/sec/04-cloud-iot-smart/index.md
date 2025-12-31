@@ -9,8 +9,6 @@ permalink: /docs/sec/04-cloud-iot-smart
 
 # 클라우드 / IoT / 스마트 보안
 
-클라우드, IoT, 스마트 시스템 보안 기술
-{: .fs-6 .fw-300 }
 
 ---
 

@@ -9,8 +9,6 @@ permalink: /docs/nw/09-location
 
 # 위치 측위
 
-위치 측위 기술
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -24,4 +22,3 @@ permalink: /docs/nw/09-location
 
 ## 참고자료
 
-- 정보관리기술사 네트워크 학습자료

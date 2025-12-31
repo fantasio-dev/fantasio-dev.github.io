@@ -9,7 +9,6 @@ permalink: /docs/caos/14-ca-etc
 
 # CA 기타
 
-컴퓨터 구조 관련 기타 토픽에 대한 학습 자료입니다.
 
 ---
 

@@ -9,8 +9,6 @@ permalink: /docs/nw/03-fundamentals
 
 # 네트워크 기본
 
-네트워크 기초 개념 및 기술
-{: .fs-6 .fw-300 }
 
 ---
 
@@ -52,4 +50,3 @@ permalink: /docs/nw/03-fundamentals
 
 ## 참고자료
 
-- 정보관리기술사 네트워크 학습자료

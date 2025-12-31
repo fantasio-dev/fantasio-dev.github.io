@@ -9,8 +9,6 @@ permalink: /docs/biz/06-it-governance
 
 # IT 거버넌스
 
-IT 거버넌스 모델 및 프레임워크
-{: .fs-6 .fw-300 }
 
 ---
 

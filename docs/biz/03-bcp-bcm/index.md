@@ -9,8 +9,6 @@ permalink: /docs/biz/03-bcp-bcm
 
 # BCP/BCM (Business Continuity)
 
-업무 연속성 및 재해복구 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

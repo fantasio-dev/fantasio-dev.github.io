@@ -9,8 +9,6 @@ permalink: /docs/biz/07-esg-society
 
 # 경영·경제·사회·정책
 
-ESG, 경제 트렌드, 정책 관련 개념
-{: .fs-6 .fw-300 }
 
 ---
 

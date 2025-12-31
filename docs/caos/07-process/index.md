@@ -9,7 +9,6 @@ permalink: /docs/caos/07-process
 
 # 프로세스
 
-프로세스와 스레드 개념에 대한 학습 자료입니다.
 
 ---
 

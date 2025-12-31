@@ -9,7 +9,6 @@ permalink: /docs/caos/08-pipeline
 
 # 파이프라인
 
-CPU 파이프라인 기법에 대한 학습 자료입니다.
 
 ---
 

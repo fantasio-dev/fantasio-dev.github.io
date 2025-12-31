@@ -9,7 +9,6 @@ permalink: /docs/sw/06-methodology
 
 # 개발방법론
 
-소프트웨어 개발방법론 관련 학습 자료입니다.
 
 ---
 
