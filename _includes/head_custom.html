@@ -2,44 +2,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
 
-<!-- 상단 네비게이션 바 (사이드바 없이 전체 화면 사용) -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // ================================
-  // 상단 네비게이션 바 삽입
-  // ================================
-  function ensureTopNavBar() {
-    var mainContent = document.querySelector('.main-content');
-    if (!mainContent) return;
-    if (document.querySelector('.main-quick-btns')) return;
-
-    var bar = document.createElement('div');
-    bar.className = 'main-quick-btns';
-    bar.innerHTML = `
-      <div class="top-nav-bar" aria-label="상단 네비게이션">
-        <a href="{{ site.baseurl }}/" class="top-nav-btn top-nav-btn--home">🏠 Home</a>
-        <a href="{{ site.baseurl }}/bookmark" class="top-nav-btn top-nav-btn--bookmark">⭐ Bookmark</a>
-        <span class="top-nav-divider"></span>
-        <a href="{{ site.baseurl }}/docs/ds" class="domain-chip domain-chip--ds">DS</a>
-        <a href="{{ site.baseurl }}/docs/sw" class="domain-chip domain-chip--sw">SW</a>
-        <a href="{{ site.baseurl }}/docs/ai" class="domain-chip domain-chip--ai">AI</a>
-        <a href="{{ site.baseurl }}/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
-        <a href="{{ site.baseurl }}/docs/nw" class="domain-chip domain-chip--nw">NW</a>
-        <a href="{{ site.baseurl }}/docs/db" class="domain-chip domain-chip--db">DB</a>
-        <a href="{{ site.baseurl }}/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
-        <a href="{{ site.baseurl }}/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
-        <span class="top-nav-divider"></span>
-        <a href="{{ site.baseurl }}/docs/exam" class="top-nav-btn top-nav-btn--exam">📝 기출문제</a>
-        <a href="{{ site.baseurl }}/docs/lecture" class="top-nav-btn top-nav-btn--lecture">🎓 특강</a>
-      </div>
-    `;
-
-    // Insert at the top of main content
-    mainContent.insertBefore(bar, mainContent.firstChild);
-  }
-  ensureTopNavBar();
-});
-</script>
+<!-- 상단 네비게이션 바는 _includes/header_custom.html에서 제공 -->
 
 <!-- 커스텀 스타일: 풀 와이드 레이아웃 -->
 <style>
@@ -89,14 +52,15 @@ main.main-content-wrap,
   }
 }
 
-/* 상단 네비게이션 바 스타일 */
+/* 상단 네비게이션 바 스타일 (헤더 영역 - 검색창 대체) */
 .top-nav-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 0;
-  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(248, 250, 252, 0.95);
   border-bottom: 1px solid #e5e7eb;
 }
 
