@@ -233,6 +233,7 @@ tr.has-page {
       <label>교시</label>
       <select id="filterClass">
         <option value="">전체</option>
+        <option value="not1">1교시형 외</option>
         <option value="1">1교시</option>
         <option value="2">2교시</option>
         <option value="3">3교시</option>
@@ -607,6 +608,81 @@ tr.has-page {
 <tr data-domain="DS" data-full="앰비언트 컴퓨팅(Ambient Computing)에 대하여 설명하시오"><td>132<span class="domain-badge ds">DS</span></td><td>컴시응</td><td>3</td><td>1</td><td class="question-cell">앰비언트 컴퓨팅</td><td>-</td></tr>
 <tr data-domain="DS" data-full="가상머신과 컨테이너에 대하여 설명하시오"><td>132<span class="domain-badge ds">DS</span></td><td>컴시응</td><td>3</td><td>2</td><td class="question-cell">가상머신과 컨테이너 비교</td><td>-</td></tr>
 <tr data-domain="DS" data-full="디지털 트윈 기술을 이용한 제조에 대하여 설명하시오"><td>132<span class="domain-badge ds">DS</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">디지털 트윈 제조</td><td>-</td></tr>
+<!-- NW 영역 기출문제 -->
+<!-- 137회 -->
+<tr class="has-page" data-domain="NW" data-full="동적 라우팅 프로토콜인 IGP와 EGP를 설명하시오"><td>137<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>1</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/137-1-1-igp-egp">IGP와 EGP</a></td><td><code>RIP-OSPF-EIGRP</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="통신 프로토콜에 대하여 설명하시오 (오류제어, 혼잡제어, 슬라이딩윈도우, 설계시 고려사항)"><td>137<span class="domain-badge nw">NW</span></td><td>관리</td><td>3</td><td>5</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/137-3-5-communication-protocol">통신 프로토콜</a></td><td><code>(오류제어) FB</code> <code>(혼잡제어) SCFR</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="DNS(Domain Name System) 개요, 구성요소, 보안 취약점 및 대응 방안"><td>137<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>4</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/137-4-4-dns">DNS</a></td><td><code>도리존네리</code> <code>DNSSEC</code></td></tr>
+<!-- 135회 -->
+<tr class="has-page" data-domain="NW" data-full="IBN(Intent-Based Networking)"><td>135<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>4</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-1-4-ibn">IBN(Intent-Based Networking)</a></td><td><code>5N</code> <code>명번적모검</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="IEEE 802.11bn (Wi-Fi 8)"><td>135<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>10</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-1-10-ieee-802-11bn">IEEE 802.11bn (Wi-Fi 8)</a></td><td><code>(특징) 적연전</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="6G이동통신기술 서비스 특징, 성능 요구사항, 주파수 동향"><td>135<span class="domain-badge nw">NW</span></td><td>관리</td><td>2</td><td>4</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-2-4-6g">6G이동통신기술</a></td><td><code>지에프신</code> <code>초6</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="채널용량(샤논 제3정리, Information Capacity Theorem)"><td>135<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>7</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-1-7-shannon-capacity">샤논 채널용량</a></td><td><code>C=Blog₂(1+S/N)</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="ETSI의 Zero-touch network and Service Management(ZSM)"><td>135<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>13</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-1-13-zsm">ETSI ZSM</a></td><td><code>(구성요소) 완E2AI</code></td></tr>
+<tr class="has-page" data-domain="NW" data-full="트래픽 폴리싱과 트래픽 쉐이핑에 대하여 설명하시오"><td>135<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>5</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/nw/exam/135-2-5-traffic-policing-shaping">트래픽 폴리싱과 쉐이핑</a></td><td><code>MMD</code></td></tr>
+<tr data-domain="NW" data-full="서버 이중화 구성 방안에 대하여 설명하시오"><td>135<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">서버 이중화 구성 방안</td><td>-</td></tr>
+<!-- 134회 -->
+<tr data-domain="NW" data-full="RIP와 OSPF 비교"><td>134<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>8</td><td class="question-cell">RIP와 OSPF 비교</td><td>-</td></tr>
+<tr data-domain="NW" data-full="Wi-Fi 7"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>1</td><td class="question-cell">Wi-Fi 7</td><td>-</td></tr>
+<tr data-domain="NW" data-full="PoE(Power of Ethernet)에 관하여 설명하시오"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>1</td><td class="question-cell">PoE(Power of Ethernet)</td><td>-</td></tr>
+<tr data-domain="NW" data-full="OSI 7 계층에 대하여 계층별 기능, 프로토콜 종류를 설명하시오"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>6</td><td class="question-cell">OSI 7 계층</td><td>-</td></tr>
+<tr data-domain="NW" data-full="디지털 계위에 관하여 PDH, SDH, SONET을 설명하시오"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>3</td><td class="question-cell">디지털 계위(PDH, SDH, SONET)</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 프로토콜에 대하여 개념, 3가지 요소, 기능을 설명하시오"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>5</td><td class="question-cell">네트워크 프로토콜</td><td>-</td></tr>
+<tr data-domain="NW" data-full="HDLC 프로토콜의 기능, 프레임 구조, 동작모드를 설명하시오"><td>134<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>5</td><td class="question-cell">HDLC 프로토콜</td><td>-</td></tr>
+<!-- 133회 -->
+<tr data-domain="NW" data-full="TCP 프로토콜의 3-way handshake와 4-way handshake를 설명하시오"><td>133<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>13</td><td class="question-cell">TCP 3-way/4-way handshake</td><td>-</td></tr>
+<tr data-domain="NW" data-full="5G특화망을 위한 네트워크 구축 시 고려사항"><td>133<span class="domain-badge nw">NW</span></td><td>관리</td><td>4</td><td>5</td><td class="question-cell">5G특화망 구축 고려사항</td><td>-</td></tr>
+<!-- 132회 -->
+<tr data-domain="NW" data-full="SCTP와 관련하여 개요와 특징, 프로토콜 구조를 설명하시오"><td>132<span class="domain-badge nw">NW</span></td><td>관리</td><td>3</td><td>4</td><td class="question-cell">SCTP</td><td>-</td></tr>
+<tr data-domain="NW" data-full="전송 제어 프로토콜(TCP)의 4-way handshake"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>5</td><td class="question-cell">TCP 4-way handshake</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 실시간 측위(NRTK)"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>9</td><td class="question-cell">NRTK</td><td>-</td></tr>
+<tr data-domain="NW" data-full="ICMP와 IGMP를 비교하여 설명하시오"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>3</td><td class="question-cell">ICMP와 IGMP</td><td>-</td></tr>
+<tr data-domain="NW" data-full="Open RAN에 대하여 개념, 구성요소를 설명하시오"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>6</td><td class="question-cell">Open RAN</td><td>-</td></tr>
+<tr data-domain="NW" data-full="맨체스터 코딩에 대하여 설명하시오"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>3</td><td class="question-cell">맨체스터 코딩</td><td>-</td></tr>
+<tr data-domain="NW" data-full="모바일 엣지 컴퓨팅에 대하여 개념을 설명하시오"><td>132<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>6</td><td class="question-cell">모바일 엣지 컴퓨팅</td><td>-</td></tr>
+<!-- 131회 -->
+<tr data-domain="NW" data-full="소켓 통신과 관련하여 정의, 개념도 및 유형을 설명하시오"><td>131<span class="domain-badge nw">NW</span></td><td>관리</td><td>2</td><td>5</td><td class="question-cell">소켓 통신</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 인프라에 SDN을 이용하여 머신러닝을 적용하는 방안"><td>131<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>4</td><td class="question-cell">SDN + 머신러닝</td><td>-</td></tr>
+<!-- 130회 -->
+<tr data-domain="NW" data-full="6G 이동통신"><td>130<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>7</td><td class="question-cell">6G 이동통신</td><td>-</td></tr>
+<tr data-domain="NW" data-full="VXLAN(Virtual eXtensible LAN)"><td>130<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>8</td><td class="question-cell">VXLAN</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 서브네팅과 관련하여 수퍼네팅/서브네팅 개념을 설명하시오"><td>130<span class="domain-badge nw">NW</span></td><td>관리</td><td>2</td><td>3</td><td class="question-cell">서브네팅/수퍼네팅</td><td>-</td></tr>
+<tr data-domain="NW" data-full="TCP 혼잡제어 메커니즘의 구성요소를 설명하시오"><td>130<span class="domain-badge nw">NW</span></td><td>관리</td><td>3</td><td>3</td><td class="question-cell">TCP 혼잡제어</td><td>-</td></tr>
+<!-- 129회 -->
+<tr data-domain="NW" data-full="비직교 다중접속(NOMA)"><td>129<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>12</td><td class="question-cell">비직교 다중접속(NOMA)</td><td>-</td></tr>
+<tr data-domain="NW" data-full="전송 부호화 기법의 소스코딩과 채널코딩을 비교하여 설명하시오"><td>129<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>8</td><td class="question-cell">소스코딩과 채널코딩</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 스위치와 관련하여 OSI 레이어에 따른 스위치 유형을 설명하시오"><td>129<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>2</td><td class="question-cell">네트워크 스위치 유형</td><td>-</td></tr>
+<tr data-domain="NW" data-full="이더넷 표준에 대하여 정의 및 특징을 설명하시오"><td>129<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>5</td><td class="question-cell">이더넷 표준</td><td>-</td></tr>
+<tr data-domain="NW" data-full="TCP, UDP, SCTP에 대하여 설명하시오"><td>129<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>1</td><td class="question-cell">TCP, UDP, SCTP</td><td>-</td></tr>
+<tr data-domain="NW" data-full="Ad-hoc 라우팅 프로토콜에 대하여 설명하시오"><td>129<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">Ad-hoc 라우팅</td><td>-</td></tr>
+<!-- 128회 -->
+<tr data-domain="NW" data-full="6G 이동통신을 위한 위성-상공-지상 통합형 무선 네트워크(SATIN)"><td>128<span class="domain-badge nw">NW</span></td><td>관리</td><td>4</td><td>3</td><td class="question-cell">SATIN</td><td>-</td></tr>
+<tr data-domain="NW" data-full="IP 주소, MAC 주소, Port 주소, 전자메일 주소의 개념과 구조"><td>128<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>1</td><td class="question-cell">IP/MAC/Port/Email 주소</td><td>-</td></tr>
+<tr data-domain="NW" data-full="계층구조의 통신 프로토콜 설계 시 오류 제어를 설명하시오"><td>128<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>1</td><td class="question-cell">통신 프로토콜 오류/흐름 제어</td><td>-</td></tr>
+<tr data-domain="NW" data-full="TCP에 대하여 헤더, 제어 플래그의 종류를 설명하시오"><td>128<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>2</td><td class="question-cell">TCP 헤더와 제어 플래그</td><td>-</td></tr>
+<tr data-domain="NW" data-full="5G와 6G 이동통신에 대한 특징과 발전 동향"><td>128<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">5G와 6G 비교</td><td>-</td></tr>
+<!-- 127회 -->
+<tr data-domain="NW" data-full="SDN에 대하여 SDN 제어 평면의 개요 및 구조의 특징을 설명하시오"><td>127<span class="domain-badge nw">NW</span></td><td>관리</td><td>3</td><td>5</td><td class="question-cell">SDN 제어 평면</td><td>-</td></tr>
+<!-- 126회 -->
+<tr data-domain="NW" data-full="빅 엔디언과 리틀 엔디언"><td>126<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>11</td><td class="question-cell">빅 엔디언과 리틀 엔디언</td><td>-</td></tr>
+<tr data-domain="NW" data-full="네트워크 스캐닝(Network Scanning)"><td>126<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>12</td><td class="question-cell">네트워크 스캐닝</td><td>-</td></tr>
+<tr data-domain="NW" data-full="FANET (Flying Ad-Hoc Network)"><td>126<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>1</td><td class="question-cell">FANET</td><td>-</td></tr>
+<tr data-domain="NW" data-full="5G 특화망에 대하여 네트워크 슬라이싱 기술을 설명하시오"><td>126<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>6</td><td class="question-cell">5G 특화망 네트워크 슬라이싱</td><td>-</td></tr>
+<tr data-domain="NW" data-full="5G특화망 구축에 있어 MPLS-TP 및 IP-MPLS 기술을 설명하시오"><td>126<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>6</td><td class="question-cell">MPLS-TP 및 IP-MPLS</td><td>-</td></tr>
+<!-- 125회 -->
+<tr data-domain="NW" data-full="WFQ(Weighted Fair Queuing)"><td>125<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>10</td><td class="question-cell">WFQ</td><td>-</td></tr>
+<tr data-domain="NW" data-full="5G 특화망(지역 5G)"><td>125<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>11</td><td class="question-cell">5G 특화망</td><td>-</td></tr>
+<tr data-domain="NW" data-full="SDR(Software Defined Radio)"><td>125<span class="domain-badge nw">NW</span></td><td>관리</td><td>1</td><td>12</td><td class="question-cell">SDR</td><td>-</td></tr>
+<tr data-domain="NW" data-full="QoS 방식인 DiffServ와 IntServ를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>관리</td><td>3</td><td>3</td><td class="question-cell">DiffServ와 IntServ</td><td>-</td></tr>
+<tr data-domain="NW" data-full="정보이론과 샤논의 정리에 대하여 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">정보이론과 샤논의 정리</td><td>-</td></tr>
+<tr data-domain="NW" data-full="IEEE 802.11ax와 IEEE 802.11be 비교"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>1</td><td class="question-cell">IEEE 802.11ax vs 802.11be</td><td>-</td></tr>
+<tr data-domain="NW" data-full="TCP wrapper"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>1</td><td>9</td><td class="question-cell">TCP wrapper</td><td>-</td></tr>
+<tr data-domain="NW" data-full="해밍코드에 대하여 구성, 정정과정을 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>2</td><td>2</td><td class="question-cell">해밍코드</td><td>-</td></tr>
+<tr data-domain="NW" data-full="전송계층 흐름제어에 대하여 Sliding Windows와 Slow Start를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>1</td><td class="question-cell">전송계층 흐름제어</td><td>-</td></tr>
+<tr data-domain="NW" data-full="TCP 전송계층 프로토콜에 대하여 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>3</td><td>2</td><td class="question-cell">TCP 전송계층 프로토콜</td><td>-</td></tr>
+<tr data-domain="NW" data-full="CSMA/CD 개념과 동작원리를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>1</td><td class="question-cell">CSMA/CD</td><td>-</td></tr>
+<tr data-domain="NW" data-full="단말 간 직접통신(D2D)의 운용 시나리오를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">D2D 직접통신</td><td>-</td></tr>
+<tr data-domain="NW" data-full="데이터링크 계층 오류제어에 대하여 FEC와 ARQ를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">FEC와 ARQ</td><td>-</td></tr>
 </tbody>
 </table>
 
@@ -673,8 +749,15 @@ function applyFilters() {
     }
     
     // 교시 필터
-    if (classVal && data[2] !== classVal) {
-      return false;
+    if (classVal) {
+      if (classVal === 'not1') {
+        // 1교시형 외: 2, 3, 4교시만 표시
+        if (data[2] === '1') {
+          return false;
+        }
+      } else if (data[2] !== classVal) {
+        return false;
+      }
     }
     
     // 회차 필터
