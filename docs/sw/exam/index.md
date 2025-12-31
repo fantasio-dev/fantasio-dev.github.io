@@ -226,7 +226,7 @@ permalink: /docs/sw/exam
 <tr><td>132</td><td>컴시응</td><td>2</td><td>4</td><td>이동형 로봇의 대인 충돌 안전성 평가 방법(정보통신단체표준, TTAK.KO-10.1223)에 대하여 아래 사항을 설명하시오. 가. 충돌 시험에서의 충격 속도 추정방법 나. 충돌 시험용 인체모형(더미, dummy) 다. 인체모형 측정 데이터</td><td>로봇 안전성</td><td>-</td></tr>
 <tr><td>132</td><td>컴시응</td><td>2</td><td>5</td><td>정보시스템 마스터플랜(ISMP, Information System Master Plan)에 대하여 아래 설명하시오. 가. ISMP와 EA(Enterprise Architecture), ISP(Information System Planning)에 대해 각각 설명하고 상호 비교 나. 투입공수에 의한 사업대가 산정방식을 적용한 ISMP수립비 산정 절차, 주요내용, 산출물</td><td>ISMP, EA, ISP</td><td>-</td></tr>
 <tr><td>132</td><td>컴시응</td><td>3</td><td>5</td><td>객체 지향 프로그래밍 기법을 활용한 소프트웨어 설계 시 고려해야 할 원칙(일명 SOLID 원칙) 5가지를 제시하고 설명하시오.</td><td>SOLID, OOP</td><td>-</td></tr>
-<tr><td>132</td><td>컴시응</td><td>3</td><td>6</td><td>정보통신산업진흥원에서 제시한 소프트웨어사업 영향평가에 대하여 아래 사항을 설명하시오. 가. 영향평가 대상기관 나. 소프트웨어사업 영향평가 체계 다. 평가항목</td><td>영향평가</td><td>-</td></tr>
+<tr><td>132</td><td>컴시응</td><td>3</td><td>6</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">정보통신산업진흥원에서 제시한 소프트웨어사업 영향평가에 대하여 아래 사항을 설명하시오. 가. 영향평가 대상기관 나. 소프트웨어사업 영향평가 체계 다. 평가항목</a></td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
 <tr><td>132</td><td>컴시응</td><td>4</td><td>2</td><td>한국지능정보사회진흥원에서 제시한 클라우드 서비스 활용사업 감리 점검에 대하여 아래 사항을 설명하시오. 가. 공공부문의 클라우드 사업 유형 나. 클라우드 서비스 활용사업의 점검 단계, 활동, 검토항목</td><td>클라우드 감리</td><td>-</td></tr>
 <!-- 131회 -->
 <tr><td>131</td><td>관리</td><td>1</td><td>3</td><td>폭포수 개발 방법론과 애자일 개발 방법론의 특징 및 장단점 비교</td><td>폭포수, 애자일</td><td>-</td></tr>
