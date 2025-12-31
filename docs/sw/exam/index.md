@@ -174,7 +174,7 @@ permalink: /docs/sw/exam
 <tr class="has-page"><td>137</td><td>관리</td><td>4</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-4-4-uml-behavior-diagram">UML(Unified Modeling Language)에서 사용하는 행위 다이어그램(Behavior Diagram)인 활동 다이어그램(Activity Diagram), 상태 다이어그램(State Diagram), 그리고 유스케이스 다이어그램(Use-Case Diagram)에 대하여 각각 설명하시오.</a></td><td>UML, 행위 다이어그램</td><td>(Activity) 시종활선전구 (State) 시종상전 (Use-Case) 액유시-연확포일그</td></tr>
 <tr><td>137</td><td>관리</td><td>4</td><td>6</td><td>소프트웨어 사업 대가산정에 대하여 다음을 설명하시오 (단, "소프트웨어 사업 대가산정 가이드 2025년 개정판"을 기준으로 한다.) 가. 소프트웨어 대가산정 가이드 목적 나. 인공지능(AI) 서비스 도입 사업유형과 사업비 산정 절차</td><td>대가산정</td><td>-</td></tr>
 <tr><td>137</td><td>컴시응</td><td>1</td><td>6</td><td>SIL(Software-in-the-Loop)과 HIL(Hardware-in-the-Loop) 테스팅</td><td>SIL, HIL</td><td>-</td></tr>
-<tr><td>137</td><td>컴시응</td><td>2</td><td>2</td><td>소프트웨어 프로세스(SP, Software Process), 품질인증 제도에 대하여 다음 사항을 설명하시오. 가. 소프트웨어 프로세스 품질인증의 개념 나. 소프트웨어 프로세스 품질인증의 인증 기준 및 인증 등급</td><td>SP 품질인증</td><td>-</td></tr>
+<tr class="has-page"><td>137</td><td>컴시응</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-2-sp-certification">소프트웨어 프로세스(SP, Software Process), 품질인증 제도에 대하여 다음 사항을 설명하시오. 가. 소프트웨어 프로세스 품질인증의 개념 나. 소프트웨어 프로세스 품질인증의 인증 기준 및 인증 등급</a></td><td>SP 품질인증</td><td><code>(체계) 과NIPA기</code> <code>(영역) 프개지조프</code> <code>(등급) 1개2지프3조프</code></td></tr>
 <tr><td>137</td><td>컴시응</td><td>2</td><td>5</td><td>소프트웨어 영향평가에 대하여 다음 사항을 설명하시오. 가. 영향평가 대상 기관 나. 소프트웨어사업 영향평가 체계</td><td>영향평가</td><td>-</td></tr>
 <tr><td>137</td><td>컴시응</td><td>4</td><td>6</td><td>디지털서비스 전문계약제도에 대하여 주요 특징, 디지털서비스 종류 및 기대효과를 설명하시오.</td><td>디지털서비스 전문계약</td><td>-</td></tr>
 <!-- 136회 -->
