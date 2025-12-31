@@ -2,7 +2,38 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
 
-<!-- 상단 네비게이션 바는 _includes/header_custom.html에서 제공 -->
+<!-- 상단 네비게이션 바 (모든 페이지에 동적 삽입) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 이미 존재하면 스킵
+  if (document.querySelector('.site-top-nav')) return;
+
+  var nav = document.createElement('div');
+  nav.className = 'site-top-nav';
+  nav.setAttribute('aria-label', '상단 네비게이션');
+  nav.innerHTML = `
+    <div class="top-nav-bar">
+      <a href="/" class="top-nav-btn top-nav-btn--home">🏠 Home</a>
+      <a href="/bookmark" class="top-nav-btn top-nav-btn--bookmark">⭐ Bookmark</a>
+      <span class="top-nav-divider"></span>
+      <a href="/docs/ds" class="domain-chip domain-chip--ds">DS</a>
+      <a href="/docs/sw" class="domain-chip domain-chip--sw">SW</a>
+      <a href="/docs/ai" class="domain-chip domain-chip--ai">AI</a>
+      <a href="/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
+      <a href="/docs/nw" class="domain-chip domain-chip--nw">NW</a>
+      <a href="/docs/db" class="domain-chip domain-chip--db">DB</a>
+      <a href="/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
+      <a href="/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
+      <span class="top-nav-divider"></span>
+      <a href="/docs/exam" class="top-nav-btn top-nav-btn--exam">📝 기출문제</a>
+      <a href="/docs/lecture" class="top-nav-btn top-nav-btn--lecture">🎓 특강</a>
+    </div>
+  `;
+
+  // body의 맨 위에 삽입
+  document.body.insertBefore(nav, document.body.firstChild);
+});
+</script>
 
 <!-- 커스텀 스타일: 풀 와이드 레이아웃 -->
 <style>
@@ -52,7 +83,18 @@ main.main-content-wrap,
   }
 }
 
-/* 상단 네비게이션 바 스타일 (헤더 영역 - 검색창 대체) */
+/* 상단 네비게이션 바 컨테이너 (body 최상단 고정) */
+.site-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(248, 250, 252, 0.98);
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 상단 네비게이션 바 스타일 */
 .top-nav-bar {
   display: flex;
   flex-wrap: wrap;
@@ -60,8 +102,8 @@ main.main-content-wrap,
   justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(248, 250, 252, 0.95);
-  border-bottom: 1px solid #e5e7eb;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .top-nav-btn {
