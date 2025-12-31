@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bookmark
-permalink: /work/bookmark/
+permalink: /bookmark/
 ---
 
 # Bookmark
