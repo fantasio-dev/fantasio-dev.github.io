@@ -206,9 +206,112 @@ tr.has-page {
 .domain-badge.db { background: #20c997; }
 .domain-badge.caos { background: #e83e8c; }
 .domain-badge.biz { background: #ffc107; color: #856404; }
+
+/* 모달 스타일 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay.show {
+  display: flex;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.modal-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #495057;
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  line-height: 1;
+}
+.modal-close:hover {
+  color: #dc3545;
+}
+.modal-body {
+  padding: 1.5rem;
+}
+.modal-body .question-full {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #212529;
+}
+.modal-body .question-meta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+.modal-body .btn-go {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #4A90D9;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.modal-body .btn-go:hover {
+  background: #3A7BC8;
+}
+
+/* 문제 클릭 가능 스타일 */
+.question-cell {
+  cursor: pointer;
+}
+.question-cell:hover {
+  text-decoration: underline;
+  color: #4A90D9;
+}
 </style>
 
 # 📝 통합 기출문제
+
+<!-- 모달 -->
+<div class="modal-overlay" id="questionModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitle">문제 상세</h3>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="question-full" id="modalQuestion"></div>
+      <div class="question-meta" id="modalMeta"></div>
+      <a href="#" class="btn-go" id="modalLink" style="display:none;">📄 학습 페이지로 이동</a>
+    </div>
+  </div>
+</div>
 
 <div class="filter-section">
   <div class="domain-buttons">
@@ -448,4 +551,59 @@ function resetFilters() {
   $.fn.dataTable.ext.search.pop();
   table.draw();
 }
+
+// 모달 기능
+$('#examTable tbody').on('click', 'td:nth-child(5)', function() {
+  var row = $(this).closest('tr');
+  var data = table.row(row).data();
+  
+  // 메타 정보 추출
+  var round = data[0].replace(/<[^>]+>/g, '').trim();
+  var type = data[1];
+  var period = data[2];
+  var num = data[3];
+  var question = $(this).text();
+  var mnemonic = data[5];
+  
+  // 링크가 있는지 확인
+  var link = $(this).find('a').attr('href');
+  
+  // 모달 제목
+  $('#modalTitle').text(round + '회 ' + type + ' ' + period + '교시 ' + num + '번');
+  
+  // 문제 내용
+  $('#modalQuestion').text(question);
+  
+  // 메타 정보
+  var metaHtml = '<strong>암기법:</strong> ' + (mnemonic !== '-' ? mnemonic : '없음');
+  $('#modalMeta').html(metaHtml);
+  
+  // 학습 페이지 링크
+  if (link) {
+    $('#modalLink').attr('href', link).show();
+  } else {
+    $('#modalLink').hide();
+  }
+  
+  // 모달 표시
+  $('#questionModal').addClass('show');
+});
+
+function closeModal() {
+  $('#questionModal').removeClass('show');
+}
+
+// 모달 외부 클릭 시 닫기
+$('#questionModal').on('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+// ESC 키로 모달 닫기
+$(document).keyup(function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
 </script>
