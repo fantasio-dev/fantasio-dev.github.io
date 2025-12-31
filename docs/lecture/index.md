@@ -12,8 +12,6 @@ permalink: /docs/lecture
 
 ---
 
-## 특강 목록
-
 {% assign lectures = site.pages | where: "parent", "특강" | sort: "nav_order" %}
 
 <div class="lecture-grid">
