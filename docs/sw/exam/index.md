@@ -176,7 +176,7 @@ permalink: /docs/sw/exam
 <tr><td>137</td><td>컴시응</td><td>1</td><td>6</td><td>SIL(Software-in-the-Loop)과 HIL(Hardware-in-the-Loop) 테스팅</td><td>SIL, HIL</td><td>-</td></tr>
 <tr class="has-page"><td>137</td><td>컴시응</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-2-sp-certification">소프트웨어 프로세스(SP, Software Process), 품질인증 제도에 대하여 다음 사항을 설명하시오. 가. 소프트웨어 프로세스 품질인증의 개념 나. 소프트웨어 프로세스 품질인증의 인증 기준 및 인증 등급</a></td><td>SP 품질인증</td><td><code>(체계) 과NIPA기</code> <code>(영역) 프개지조프</code> <code>(등급) 1개2지프3조프</code></td></tr>
 <tr><td>137</td><td>컴시응</td><td>2</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">소프트웨어 영향평가에 대하여 다음 사항을 설명하시오. 가. 영향평가 대상 기관 나. 소프트웨어사업 영향평가 체계</a></td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
-<tr><td>137</td><td>컴시응</td><td>4</td><td>6</td><td>디지털서비스 전문계약제도에 대하여 주요 특징, 디지털서비스 종류 및 기대효과를 설명하시오.</td><td>디지털서비스 전문계약</td><td>-</td></tr>
+<tr class="has-page"><td>137</td><td>컴시응</td><td>4</td><td>6</td><td><a href="{{ site.baseurl }}/docs/ds/exam/136-2-6-digital-service-contract">디지털서비스 전문계약제도에 대하여 주요 특징, 디지털서비스 종류 및 기대효과를 설명하시오.</a></td><td>디지털서비스 전문계약</td><td><code>(특징) 간약사공표</code> <code>(종류) 클지융-I-S-P</code> <code>(효과) 소행사혁산</code></td></tr>
 <!-- 136회 -->
 <tr><td>136</td><td>관리</td><td>1</td><td>5</td><td>프록시 디자인 패턴</td><td>디자인 패턴, Proxy</td><td>-</td></tr>
 <tr><td>136</td><td>관리</td><td>1</td><td>6</td><td>DevOps 장점과 단점</td><td>DevOps</td><td>-</td></tr>
