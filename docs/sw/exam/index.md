@@ -192,7 +192,7 @@ permalink: /docs/sw/exam
 <tr class="has-page"><td>135</td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-3-1-project-management">프로젝트 관리에 대하여 다음을 설명하시오. 가. IT 프로젝트 관리의 개념 나. IT 프로젝트 관리 프로그램 다. IT 프로젝트 관리, 프로그램 관리, 포트폴리오 관리의 비교</a></td><td>프로젝트 관리</td><td><code>(프로세스) 착계실감종</code> <code>(지식영역) 통이범자시원리품조의</code> <code>(비교) 프&lt;프&lt;포</code></td></tr>
 <tr><td>135</td><td>컴시응</td><td>1</td><td>5</td><td>모놀리식 아키텍처(Monolithic Architecture)와 마이크로서비스 아키텍처(MicroService Architecture)를 비교 설명하시오.</td><td>MSA, 모놀리식</td><td>-</td></tr>
 <tr><td>135</td><td>컴시응</td><td>1</td><td>8</td><td>정보시스템 하드웨어 규모산정 지침 (TTAK.KO-10.0292/R3)에 따른 하드웨어 규모산정 방법 3가지</td><td>규모산정</td><td>-</td></tr>
-<tr><td>135</td><td>컴시응</td><td>4</td><td>4</td><td>소프트웨어 무중단 배포(Zero Downtime Deployment) 방식에 대하여 설명하시오.</td><td>무중단 배포</td><td>-</td></tr>
+<tr class="has-page"><td>135</td><td>컴시응</td><td>4</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-4-4-zero-downtime-deployment">소프트웨어 무중단 배포(Zero Downtime Deployment) 방식에 대하여 설명하시오.</a></td><td>무중단 배포</td><td><code>(문제점) 다유롤</code> <code>(종류) 롤블카</code> <code>(기술) 리로</code></td></tr>
 <!-- 134회 -->
 <tr><td>134</td><td>관리</td><td>1</td><td>1</td><td>프로젝트관리 터크만 사다리 모델(Tuckman Ladder Model)의 팀 발달 단계별 특징</td><td>터크만, PM</td><td>-</td></tr>
 <tr><td>134</td><td>관리</td><td>1</td><td>4</td><td>형상관리의 개념과 형상관리 기준선(Baseline)</td><td>형상관리</td><td>-</td></tr>
