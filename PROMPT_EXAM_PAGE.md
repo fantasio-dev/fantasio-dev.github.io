@@ -13,6 +13,13 @@
 ### 파일 생성 규칙:
 1. **파일 위치**: `docs/{카테고리}/exam/{회차}-{교시}-{번호}-{영문주제}.md`
 2. **기출문제 목록 링크 추가**: `docs/{카테고리}/exam/index.md` 에 해당 문제 링크 + **암기법 컬럼** 연결
+3. **영역 index 페이지에 기출문제 링크 추가** (신규 영역인 경우): `docs/{카테고리}/index.md` 상단 제목에 기출문제 링크 버튼 추가
+
+### 영역 index 페이지 기출문제 링크 형식:
+```markdown
+# {영역명} <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/{카테고리}/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/{카테고리}/exam">📝 기출문제</a></span>
+{: .fs-9 .page-title-with-cta }
+```
 
 ### ⚠️ 구성요소/기술요소 작성 필수 규칙:
 - **기술요소 또는 구성요소는 반드시 2그룹으로 분류**
