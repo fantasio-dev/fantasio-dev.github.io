@@ -175,7 +175,7 @@ permalink: /docs/sw/exam
 <tr><td>137</td><td>관리</td><td>4</td><td>6</td><td><a href="{{ site.baseurl }}/docs/sw/exam/138-2-6-sw-cost-estimation">소프트웨어 사업 대가산정에 대하여 다음을 설명하시오 (단, "소프트웨어 사업 대가산정 가이드 2025년 개정판"을 기준으로 한다.) 가. 소프트웨어 대가산정 가이드 목적 나. 인공지능(AI) 서비스 도입 사업유형과 사업비 산정 절차</a></td><td>대가산정</td><td><code>(목적) 적기절일 산품제투</code> <code>(유형) 단커시</code> <code>(절차) 사서커구AI</code></td></tr>
 <tr><td>137</td><td>컴시응</td><td>1</td><td>6</td><td>SIL(Software-in-the-Loop)과 HIL(Hardware-in-the-Loop) 테스팅</td><td>SIL, HIL</td><td>-</td></tr>
 <tr class="has-page"><td>137</td><td>컴시응</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-2-sp-certification">소프트웨어 프로세스(SP, Software Process), 품질인증 제도에 대하여 다음 사항을 설명하시오. 가. 소프트웨어 프로세스 품질인증의 개념 나. 소프트웨어 프로세스 품질인증의 인증 기준 및 인증 등급</a></td><td>SP 품질인증</td><td><code>(체계) 과NIPA기</code> <code>(영역) 프개지조프</code> <code>(등급) 1개2지프3조프</code></td></tr>
-<tr><td>137</td><td>컴시응</td><td>2</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">소프트웨어 영향평가에 대하여 다음 사항을 설명하시오. 가. 영향평가 대상 기관 나. 소프트웨어사업 영향평가 체계</a></td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
+<tr class="has-page"><td>137</td><td>컴시응</td><td>2</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-2-5-sw-impact-assessment">소프트웨어 영향평가에 대하여 다음 사항을 설명하시오. 가. 영향평가 대상 기관 나. 소프트웨어사업 영향평가 체계</a></td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
 <tr class="has-page"><td>137</td><td>컴시응</td><td>4</td><td>6</td><td><a href="{{ site.baseurl }}/docs/ds/exam/136-2-6-digital-service-contract">디지털서비스 전문계약제도에 대하여 주요 특징, 디지털서비스 종류 및 기대효과를 설명하시오.</a></td><td>디지털서비스 전문계약</td><td><code>(특징) 간약사공표</code> <code>(종류) 클지융-I-S-P</code> <code>(효과) 소행사혁산</code></td></tr>
 <!-- 136회 -->
 <tr><td>136</td><td>관리</td><td>1</td><td>5</td><td>프록시 디자인 패턴</td><td>디자인 패턴, Proxy</td><td>-</td></tr>
@@ -227,7 +227,7 @@ permalink: /docs/sw/exam
 <tr><td>132</td><td>컴시응</td><td>2</td><td>4</td><td>이동형 로봇의 대인 충돌 안전성 평가 방법(정보통신단체표준, TTAK.KO-10.1223)에 대하여 아래 사항을 설명하시오. 가. 충돌 시험에서의 충격 속도 추정방법 나. 충돌 시험용 인체모형(더미, dummy) 다. 인체모형 측정 데이터</td><td>로봇 안전성</td><td>-</td></tr>
 <tr><td>132</td><td>컴시응</td><td>2</td><td>5</td><td>정보시스템 마스터플랜(ISMP, Information System Master Plan)에 대하여 아래 설명하시오. 가. ISMP와 EA(Enterprise Architecture), ISP(Information System Planning)에 대해 각각 설명하고 상호 비교 나. 투입공수에 의한 사업대가 산정방식을 적용한 ISMP수립비 산정 절차, 주요내용, 산출물</td><td>ISMP, EA, ISP</td><td>-</td></tr>
 <tr><td>132</td><td>컴시응</td><td>3</td><td>5</td><td>객체 지향 프로그래밍 기법을 활용한 소프트웨어 설계 시 고려해야 할 원칙(일명 SOLID 원칙) 5가지를 제시하고 설명하시오.</td><td>SOLID, OOP</td><td>-</td></tr>
-<tr><td>132</td><td>컴시응</td><td>3</td><td>6</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">정보통신산업진흥원에서 제시한 소프트웨어사업 영향평가에 대하여 아래 사항을 설명하시오. 가. 영향평가 대상기관 나. 소프트웨어사업 영향평가 체계 다. 평가항목</a></td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
+<tr><td>132</td><td>컴시응</td><td>3</td><td>6</td><td>정보통신산업진흥원에서 제시한 소프트웨어사업 영향평가에 대하여 아래 사항을 설명하시오. 가. 영향평가 대상기관 나. 소프트웨어사업 영향평가 체계 다. 평가항목</td><td>영향평가</td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code> <code>(항목) 침필공</code></td></tr>
 <tr><td>132</td><td>컴시응</td><td>4</td><td>2</td><td>한국지능정보사회진흥원에서 제시한 클라우드 서비스 활용사업 감리 점검에 대하여 아래 사항을 설명하시오. 가. 공공부문의 클라우드 사업 유형 나. 클라우드 서비스 활용사업의 점검 단계, 활동, 검토항목</td><td>클라우드 감리</td><td>-</td></tr>
 <!-- 131회 -->
 <tr><td>131</td><td>관리</td><td>1</td><td>3</td><td>폭포수 개발 방법론과 애자일 개발 방법론의 특징 및 장단점 비교</td><td>폭포수, 애자일</td><td>-</td></tr>
