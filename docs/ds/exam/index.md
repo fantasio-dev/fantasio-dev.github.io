@@ -182,6 +182,7 @@ permalink: /docs/ds/exam
 
 <!-- 136회 -->
 <tr class="has-page"><td>136</td><td>관리</td><td>1</td><td>9</td><td><a href="{{ site.baseurl }}/docs/ds/exam/136-1-9-serverless-computing">서버리스 컴퓨팅(Serverless Computing)</a></td><td>XaaS</td><td>S-W-A-R B-C-F-E</td></tr>
+<tr class="has-page"><td>136</td><td>관리</td><td>2</td><td>6</td><td><a href="{{ site.baseurl }}/docs/ds/exam/136-2-6-digital-service-contract">디지털서비스 전문계약제도에 대하여 주요 특징, 디지털서비스 종류 및 기대효과</a></td><td>공공조달</td><td>(특징) 간약사공표 (종류) 클지융-I-S-P (효과) 소행사혁산</td></tr>
 
 <!-- 135회 -->
 <tr><td>135</td><td>관리</td><td>2</td><td>6</td><td>AI디지털교과서에 대하여 다음을 설명하시오. 가. 개념 및 특징 나. 플랫폼 구조 다. 기능 및 핵심 서비스</td><td>e-pub</td><td>-</td></tr>
