@@ -234,14 +234,6 @@ tr.has-page {
 </style>
 
 # 📝 통합 기출문제
-{: .fs-9 }
-
-모든 영역의 기출문제를 한 곳에서 검색하고 학습하세요.
-{: .fs-6 .fw-300 }
-
----
-
-## 🔍 검색 필터
 
 <div class="filter-section">
   <div class="domain-buttons">
