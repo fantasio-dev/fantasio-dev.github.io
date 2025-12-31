@@ -22,11 +22,11 @@ permalink: /docs/exam
 
 /* 필터 섹션 */
 .filter-section {
-  background: #f8f9fa;
+  background: #fff;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #dee2e6;
 }
 .filter-row {
   display: flex;
@@ -362,8 +362,8 @@ var currentDomain = 'all';
 $(document).ready(function() {
   table = $('#examTable').DataTable({
     order: [[0, 'desc'], [2, 'asc'], [3, 'asc']],
-    pageLength: 25,
-    lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "전체"]],
+    pageLength: -1,
+    lengthMenu: [[-1, 25, 50, 100], ["전체", 25, 50, 100]],
     language: {
       search: "검색:",
       lengthMenu: "_MENU_ 개씩 보기",
