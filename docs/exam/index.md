@@ -207,111 +207,13 @@ tr.has-page {
 .domain-badge.caos { background: #e83e8c; }
 .domain-badge.biz { background: #ffc107; color: #856404; }
 
-/* 모달 스타일 */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-}
-.modal-overlay.show {
-  display: flex;
-}
-.modal-content {
-  background: #fff;
-  border-radius: 12px;
-  max-width: 700px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-.modal-header {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #dee2e6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f8f9fa;
-  border-radius: 12px 12px 0 0;
-}
-.modal-header h3 {
-  margin: 0;
-  font-size: 1rem;
-  color: #495057;
-}
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #6c757d;
-  line-height: 1;
-}
-.modal-close:hover {
-  color: #dc3545;
-}
-.modal-body {
-  padding: 1.5rem;
-}
-.modal-body .question-full {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #212529;
-}
-.modal-body .question-meta {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #dee2e6;
-  font-size: 0.85rem;
-  color: #6c757d;
-}
-.modal-body .btn-go {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #4A90D9;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-.modal-body .btn-go:hover {
-  background: #3A7BC8;
-}
-
-/* 문제 클릭 가능 스타일 */
+/* 문제 컬럼 - 전체 표시 */
 .question-cell {
-  cursor: pointer;
-}
-.question-cell:hover {
-  text-decoration: underline;
-  color: #4A90D9;
+  line-height: 1.6;
 }
 </style>
 
 # 📝 통합 기출문제
-
-<!-- 모달 -->
-<div class="modal-overlay" id="questionModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="modalTitle">문제 상세</h3>
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="question-full" id="modalQuestion"></div>
-      <div class="question-meta" id="modalMeta"></div>
-      <a href="#" class="btn-go" id="modalLink" style="display:none;">📄 학습 페이지로 이동</a>
-    </div>
-  </div>
-</div>
 
 <div class="filter-section">
   <div class="domain-buttons">
@@ -438,7 +340,6 @@ tr.has-page {
 <tr data-domain="SW" data-full="이동형 로봇의 대인 충돌 안전성 평가 방법(정보통신단체표준, TTAK.KO-10.1223)에 대하여 아래 사항을 설명하시오. 가. 충돌 시험에서의 충격 속도 추정방법 나. 충돌 시험용 인체모형(더미, dummy) 다. 인체모형 측정 데이터"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>4</td><td class="question-cell">이동형 로봇 대인 충돌 안전성 평가 방법</td><td>-</td></tr>
 <tr data-domain="SW" data-full="정보시스템 마스터플랜(ISMP, Information System Master Plan)에 대하여 아래 설명하시오. 가. ISMP와 EA(Enterprise Architecture), ISP(Information System Planning)에 대해 각각 설명하고 상호 비교 나. 투입공수에 의한 사업대가 산정방식을 적용한 ISMP수립비 산정 절차, 주요내용, 산출물"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>5</td><td class="question-cell">ISMP, EA, ISP 비교</td><td>-</td></tr>
 <tr data-domain="SW" data-full="객체 지향 프로그래밍 기법을 활용한 소프트웨어 설계 시 고려해야 할 원칙(일명 SOLID 원칙) 5가지를 제시하고 설명하시오."><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>5</td><td class="question-cell">객체 지향 SOLID 원칙 5가지</td><td>-</td></tr>
-<tr data-domain="SW" data-full="정보통신산업진흥원에서 제시한 소프트웨어사업 영향평가에 대하여 아래 사항을 설명하시오. 가. 영향평가 대상기관 나. 소프트웨어사업 영향평가 체계 다. 평가항목"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>6</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">소프트웨어사업 영향평가</a></td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code></td></tr>
 <tr data-domain="SW" data-full="한국지능정보사회진흥원에서 제시한 클라우드 서비스 활용사업 감리 점검에 대하여 아래 사항을 설명하시오. 가. 공공부문의 클라우드 사업 유형 나. 클라우드 서비스 활용사업의 점검 단계, 활동, 검토항목"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">클라우드 서비스 활용사업 감리 점검</td><td>-</td></tr>
 <!-- 131회 -->
 <tr data-domain="SW" data-full="폭포수 개발 방법론과 애자일 개발 방법론의 특징 및 장단점 비교"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>3</td><td class="question-cell">폭포수 vs 애자일 개발 방법론 특징 및 장단점 비교</td><td>-</td></tr>
@@ -552,60 +453,17 @@ function resetFilters() {
   table.draw();
 }
 
-// 모달 기능
-$('#examTable tbody').on('click', '.question-cell', function() {
-  var row = $(this).closest('tr');
-  var data = table.row(row).data();
-  
-  // 메타 정보 추출
-  var round = data[0].replace(/<[^>]+>/g, '').trim();
-  var type = data[1];
-  var period = data[2];
-  var num = data[3];
-  var mnemonic = data[5];
-  
-  // 전체 문제 (data-full 속성에서 가져오기)
-  var fullQuestion = row.attr('data-full') || $(this).text();
-  
-  // 링크가 있는지 확인
-  var link = $(this).find('a').attr('href');
-  
-  // 모달 제목
-  $('#modalTitle').text(round + '회 ' + type + ' ' + period + '교시 ' + num + '번');
-  
-  // 전체 문제 내용
-  $('#modalQuestion').text(fullQuestion);
-  
-  // 메타 정보
-  var metaHtml = '<strong>암기법:</strong> ' + (mnemonic !== '-' ? mnemonic : '없음');
-  $('#modalMeta').html(metaHtml);
-  
-  // 학습 페이지 링크
-  if (link) {
-    $('#modalLink').attr('href', link).show();
-  } else {
-    $('#modalLink').hide();
-  }
-  
-  // 모달 표시
-  $('#questionModal').addClass('show');
-});
-
-function closeModal() {
-  $('#questionModal').removeClass('show');
-}
-
-// 모달 외부 클릭 시 닫기
-$('#questionModal').on('click', function(e) {
-  if (e.target === this) {
-    closeModal();
-  }
-});
-
-// ESC 키로 모달 닫기
-$(document).keyup(function(e) {
-  if (e.key === 'Escape') {
-    closeModal();
+// 테이블 로드 후 data-full 값을 문제 컬럼에 표시
+$('#examTable tbody tr').each(function() {
+  var fullQuestion = $(this).attr('data-full');
+  if (fullQuestion) {
+    var questionCell = $(this).find('.question-cell');
+    var link = questionCell.find('a');
+    if (link.length) {
+      link.text(fullQuestion);
+    } else {
+      questionCell.text(fullQuestion);
+    }
   }
 });
 </script>
