@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="{{ site.baseurl }}/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
         <a href="{{ site.baseurl }}/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
         <span class="top-nav-divider"></span>
+        <a href="{{ site.baseurl }}/docs/exam" class="top-nav-btn top-nav-btn--exam">📝 기출문제</a>
         <a href="{{ site.baseurl }}/docs/lecture" class="top-nav-btn top-nav-btn--lecture">🎓 특강</a>
       </div>
     `;
@@ -131,6 +132,17 @@ main.main-content-wrap,
 .top-nav-btn--bookmark:hover {
   background: #fef3c7;
   border-color: #fcd34d;
+}
+
+.top-nav-btn--exam {
+  background: #faf5ff;
+  color: #7c3aed;
+  border: 1px solid #e9d5ff;
+}
+
+.top-nav-btn--exam:hover {
+  background: #f3e8ff;
+  border-color: #d8b4fe;
 }
 
 .top-nav-btn--lecture {
