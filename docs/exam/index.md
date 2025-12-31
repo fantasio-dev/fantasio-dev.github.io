@@ -683,6 +683,116 @@ tr.has-page {
 <tr data-domain="NW" data-full="CSMA/CD 개념과 동작원리를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>1</td><td class="question-cell">CSMA/CD</td><td>-</td></tr>
 <tr data-domain="NW" data-full="단말 간 직접통신(D2D)의 운용 시나리오를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">D2D 직접통신</td><td>-</td></tr>
 <tr data-domain="NW" data-full="데이터링크 계층 오류제어에 대하여 FEC와 ARQ를 설명하시오"><td>125<span class="domain-badge nw">NW</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">FEC와 ARQ</td><td>-</td></tr>
+<!-- DB 영역 기출문제 -->
+<!-- 137회 -->
+<tr data-domain="DB" data-full="데이터 늪(Data Swamp)을 설명하시오."><td>137<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>10</td><td class="question-cell">데이터 늪(Data Swamp)</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오."><td>137<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>13</td><td class="question-cell">연관 규칙 분석 지표</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터베이스 트랜잭션 격리 수준(Transactional Isolation Level)에 대하여 설명하시오."><td>137<span class="domain-badge db">DB</span></td><td>관리</td><td>3</td><td>4</td><td class="question-cell">트랜잭션 격리 수준</td><td>-</td></tr>
+<tr data-domain="DB" data-full="벡터 데이터베이스(Vector Database)의 HNSW와 IVF에 대하여 설명하시오."><td>137<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">벡터DB HNSW와 IVF</td><td>-</td></tr>
+<!-- 136회 -->
+<tr data-domain="DB" data-full="제 4 정규형"><td>136<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>4</td><td class="question-cell">제 4 정규형</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터베이스 인덱스(Index)를 설명하시오."><td>136<span class="domain-badge db">DB</span></td><td>관리</td><td>2</td><td>5</td><td class="question-cell">클러스터드/논클러스터드 인덱스</td><td>-</td></tr>
+<!-- 135회 -->
+<tr data-domain="DB" data-full="팬텀 충돌(Phantom Conflict)"><td>135<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>11</td><td class="question-cell">팬텀 충돌</td><td>-</td></tr>
+<tr data-domain="DB" data-full="물리 데이터 모델링 중 반정규화에 대하여 설명하시오."><td>135<span class="domain-badge db">DB</span></td><td>관리</td><td>2</td><td>1</td><td class="question-cell">반정규화</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터 거래를 위한 데이터 가치평가에 대하여 설명하시오."><td>135<span class="domain-badge db">DB</span></td><td>관리</td><td>3</td><td>5</td><td class="question-cell">데이터 가치평가</td><td>-</td></tr>
+<tr data-domain="DB" data-full="릴레이션 무결성 제약의 유형과 사례를 제시하고, 구현 방법에 대하여 설명하시오."><td>135<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">릴레이션 무결성 제약</td><td>-</td></tr>
+<tr data-domain="DB" data-full="빅데이터 시각화(Visualization)에 대하여 설명하시오."><td>135<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>4</td><td class="question-cell">빅데이터 시각화</td><td>-</td></tr>
+<tr data-domain="DB" data-full="공공데이터 품질인증"><td>135<span class="domain-badge db">DB</span></td><td>컴시응</td><td>1</td><td>10</td><td class="question-cell">공공데이터 품질인증</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터베이스 트랜잭션 회복(Recovery) 기법에 대하여 설명하시오."><td>135<span class="domain-badge db">DB</span></td><td>컴시응</td><td>2</td><td>6</td><td class="question-cell">트랜잭션 회복 기법</td><td>-</td></tr>
+<!-- 134회 -->
+<tr data-domain="DB" data-full="정적 SQL(Static SQL)과 동적 SQL(Dynamic SQL) 비교"><td>134<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>7</td><td class="question-cell">정적 SQL vs 동적 SQL</td><td>-</td></tr>
+<tr data-domain="DB" data-full="트랜잭션 격리 수준(Transaction Isolation Level) 4가지를 사례 중심으로 설명하시오."><td>134<span class="domain-badge db">DB</span></td><td>관리</td><td>2</td><td>6</td><td class="question-cell">트랜잭션 격리 수준 4가지</td><td>-</td></tr>
+<tr data-domain="DB" data-full="다차원 색인구조(Multidimensional Index Structure)의 개념, 유형을 설명하시오."><td>134<span class="domain-badge db">DB</span></td><td>관리</td><td>3</td><td>5</td><td class="question-cell">다차원 색인구조</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터베이스 무결성 제약 조건에 대하여 설명하시오."><td>134<span class="domain-badge db">DB</span></td><td>컴시응</td><td>3</td><td>4</td><td class="question-cell">데이터베이스 무결성 제약 조건</td><td>-</td></tr>
+<!-- 133회 -->
+<tr data-domain="DB" data-full="NoSQL 유형과 모델링 절차를 설명하시오."><td>133<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>3</td><td class="question-cell">NoSQL 유형과 모델링</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터모델링에서 CRUD 매트릭스(Matrix)를 사용하는 목적을 설명하시오."><td>133<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>7</td><td class="question-cell">CRUD 매트릭스</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터 안심구역의 정의, 기능, 지정요건에 대하여 설명하시오."><td>133<span class="domain-badge db">DB</span></td><td>관리</td><td>2</td><td>6</td><td class="question-cell">데이터 안심구역</td><td>-</td></tr>
+<tr data-domain="DB" data-full="DBMS를 적용하기 위한 데이터 모델링에 대하여 설명하시오."><td>133<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>4</td><td class="question-cell">데이터 모델링</td><td>-</td></tr>
+<!-- 132회 -->
+<tr data-domain="DB" data-full="데이터 거래소"><td>132<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>2</td><td class="question-cell">데이터 거래소</td><td>-</td></tr>
+<tr data-domain="DB" data-full="ELK(Elasticsearch/Logstash/Kibana) 스택"><td>132<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>7</td><td class="question-cell">ELK 스택</td><td>-</td></tr>
+<tr data-domain="DB" data-full="분산 데이터베이스 5가지 투명성"><td>132<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>13</td><td class="question-cell">분산 DB 5가지 투명성</td><td>-</td></tr>
+<tr data-domain="DB" data-full="공공데이터베이스 표준화 관리 매뉴얼에 대하여 설명하시오."><td>132<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">공공DB 표준화 관리</td><td>-</td></tr>
+<!-- 131회 -->
+<tr data-domain="DB" data-full="데이터 표준화의 필요성과 기대효과"><td>131<span class="domain-badge db">DB</span></td><td>관리</td><td>1</td><td>11</td><td class="question-cell">데이터 표준화</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터 시각화(Data Visualization)에 대하여 설명하시오."><td>131<span class="domain-badge db">DB</span></td><td>관리</td><td>2</td><td>2</td><td class="question-cell">데이터 시각화</td><td>-</td></tr>
+<tr data-domain="DB" data-full="데이터 품질관리에 대하여 설명하시오."><td>131<span class="domain-badge db">DB</span></td><td>관리</td><td>4</td><td>3</td><td class="question-cell">데이터 품질관리</td><td>-</td></tr>
+<tr data-domain="DB" data-full="NoSQL의 CAP(Consistency, Availability, Partition Tolerance)"><td>131<span class="domain-badge db">DB</span></td><td>컴시응</td><td>1</td><td>7</td><td class="question-cell">NoSQL CAP</td><td>-</td></tr>
+<tr data-domain="DB" data-full="트랜잭션의 개념과 ACID의 각 요소에 대하여 설명하시오."><td>131<span class="domain-badge db">DB</span></td><td>컴시응</td><td>3</td><td>4</td><td class="question-cell">트랜잭션 ACID</td><td>-</td></tr>
+<tr data-domain="DB" data-full="추천시스템에 대하여 설명하시오."><td>131<span class="domain-badge db">DB</span></td><td>컴시응</td><td>4</td><td>2</td><td class="question-cell">추천시스템(협업필터링)</td><td>-</td></tr>
+<!-- CAOS 영역 기출문제 -->
+<!-- 137회 -->
+<tr data-domain="CAOS" data-full="캐시 메모리(Cache Memory)에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>2</td><td>1</td><td class="question-cell">캐시 메모리(Write Policy, Coherence)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="운영체제 스케줄링 기법에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>3</td><td>1</td><td class="question-cell">CPU/디스크 스케줄링</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="클라우드 AI와 온디바이스 AI의 개념 비교"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>2</td><td class="question-cell">클라우드 AI vs 온디바이스 AI</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="보안 운영체제(Secure OS)"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>5</td><td class="question-cell">Secure OS</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="HBM(High Bandwidth Memory)"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>7</td><td class="question-cell">HBM</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="GPU(Graphics Processing Unit)의 역할, 구조, 주요장점 및 활용분야"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>10</td><td class="question-cell">GPU</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="RISC-V"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>13</td><td class="question-cell">RISC-V</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="운영체제의 기아현상(Starvation)에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>3</td><td class="question-cell">기아현상(Starvation)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="DMA(Direct Memory Access)에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>6</td><td class="question-cell">DMA</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="MMU(Memory Management Unit)에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>2</td><td class="question-cell">MMU, TLB, IOMMU</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="우선순위 역전(Priority Inversion) 현상에 대하여 설명하시오."><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>4</td><td class="question-cell">우선순위 역전(PIP, PCP)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="시스템 버스(System Bus)와 버스 중재(Bus Arbitration) 방식"><td>137<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>6</td><td class="question-cell">시스템 버스와 버스 중재</td><td>-</td></tr>
+<!-- 136회 -->
+<tr data-domain="CAOS" data-full="세그먼테이션 오류(Segmentation Fault)"><td>136<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>1</td><td>7</td><td class="question-cell">세그먼테이션 오류</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="CXL(Compute Express Link)"><td>136<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>1</td><td>8</td><td class="question-cell">CXL</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="동적 메모리 할당과 메모리 누수에 대하여 설명하시오."><td>136<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>3</td><td>6</td><td class="question-cell">동적 메모리 할당, 메모리 누수</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="IPC(Inter Process Communication)에 대하여 설명하시오."><td>136<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">IPC</td><td>-</td></tr>
+<!-- 135회 -->
+<tr data-domain="CAOS" data-full="MMU(Memory Management Unit)"><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>3</td><td class="question-cell">MMU</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="태스크 우선순위 상속(Priority Inheritance)"><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>11</td><td class="question-cell">우선순위 상속</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="캐쉬 메모리(Cache Memory)에 대하여 설명하시오."><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>4</td><td class="question-cell">캐시 메모리(교체기법, MESI)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="운영체제의 스케줄링 알고리즘에 대하여 설명하시오."><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>4</td><td class="question-cell">스케줄링(RM, MLQ, SQMS, MQMS)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="고장허용(Fault Tolerant) 시스템과 고가용성(High Availability) 시스템에 대하여 설명하시오."><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>5</td><td class="question-cell">FT와 HA 시스템</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="파이프라인 해저드(Pipeline Hazard)에 대하여 설명하시오."><td>135<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>6</td><td class="question-cell">파이프라인 해저드</td><td>-</td></tr>
+<!-- 134회 -->
+<tr data-domain="CAOS" data-full="고대역 초고속 메모리(High Bandwidth Memory)"><td>134<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>1</td><td>12</td><td class="question-cell">HBM</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="딥러닝에서 멀티 GPU 기술에 대하여 설명하시오."><td>134<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>4</td><td>2</td><td class="question-cell">멀티 GPU</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="온디바이스 AI"><td>134<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>3</td><td class="question-cell">온디바이스 AI</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="신경망 처리장치(NPU: Neural Processing Unit)"><td>134<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>8</td><td class="question-cell">NPU</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="교착 상태(Deadlock)에 대하여 설명하시오."><td>134<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>5</td><td class="question-cell">Deadlock</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="병렬 컴퓨팅에 대하여 설명하시오."><td>134<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">병렬 컴퓨팅</td><td>-</td></tr>
+<!-- 132회 -->
+<tr data-domain="CAOS" data-full="TCAM(Ternary Content Addressable Memory)"><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>1</td><td class="question-cell">TCAM</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="폴락의 법칙(Pollack's Rule)"><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>2</td><td class="question-cell">폴락의 법칙</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="세마포어(Semaphore)"><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>4</td><td class="question-cell">세마포어</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="인터럽트(interrupt) 체계에 대하여 설명하시오."><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>1</td><td class="question-cell">인터럽트(Polling, Daisy-Chain, Vector)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="제어장치(Control Unit)의 구현 방법에 대하여 설명하시오."><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>4</td><td class="question-cell">제어장치(micro-programmed, hard-wired)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="캐시(Cache) 메모리에 대하여 설명하시오."><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>1</td><td class="question-cell">캐시 메모리(매핑, 쓰기정책, Coherence)</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="deadlock 현상에 대하여 설명하시오."><td>132<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>4</td><td class="question-cell">Deadlock</td><td>-</td></tr>
+<!-- 131회 -->
+<tr data-domain="CAOS" data-full="페이징 기법과 세그멘테이션 기법에 대하여 설명하시오."><td>131<span class="domain-badge caos">CAOS</span></td><td>관리</td><td>3</td><td>5</td><td class="question-cell">페이징 vs 세그멘테이션</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="PNM(Processing Near Memory)"><td>131<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>1</td><td>6</td><td class="question-cell">PNM</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="프로세스 스레싱(Thrashing)에 대하여 설명하시오."><td>131<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>2</td><td class="question-cell">스레싱</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="칩렛(Chiplet)에 대하여 설명하시오."><td>131<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>2</td><td>5</td><td class="question-cell">칩렛</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="RAID5와 RAID6에 대하여 설명하시오."><td>131<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>3</td><td>3</td><td class="question-cell">RAID5와 RAID6</td><td>-</td></tr>
+<tr data-domain="CAOS" data-full="캐쉬 메모리(Cache Memory)에 대하여 설명하시오."><td>131<span class="domain-badge caos">CAOS</span></td><td>컴시응</td><td>4</td><td>3</td><td class="question-cell">캐시 메모리(지역성, Coherence)</td><td>-</td></tr>
+<!-- BIZ 영역 기출문제 -->
+<!-- 137회 -->
+<tr data-domain="BIZ" data-full="SLA(Service Level Agreement) 구성요소와 절차에 대하여 설명하시오."><td>137<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>2</td><td class="question-cell">SLA</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="다중지역 동시 가동방식 (Multi-Region Active-Active) 재해복구시스템에 대하여 설명하시오."><td>137<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>3</td><td>3</td><td class="question-cell">Multi-Region Active-Active DRS</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="IEEE 표준과 IEC 국제표준의 비교"><td>137<span class="domain-badge biz">BIZ</span></td><td>컴시응</td><td>1</td><td>4</td><td class="question-cell">IEEE vs IEC</td><td>-</td></tr>
+<!-- 136회 -->
+<tr data-domain="BIZ" data-full="화이트 레이블 마케팅(White Label Marketing)"><td>136<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>1</td><td>1</td><td class="question-cell">화이트 레이블 마케팅</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="공급망관리(SCM, Supply Chain Management)에 대하여 설명하시오."><td>136<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>1</td><td class="question-cell">SCM</td><td>-</td></tr>
+<!-- 134회 -->
+<tr data-domain="BIZ" data-full="시장 규모 추정 방법인 TAM-SAM-SOM 프레임워크"><td>134<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>1</td><td>2</td><td class="question-cell">TAM-SAM-SOM</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="IT 거버넌스에 대하여 설명하시오."><td>134<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>3</td><td class="question-cell">IT 거버넌스</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="ESG(Environment, Social, Governance) 경영에 대하여 설명하시오."><td>134<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>5</td><td class="question-cell">ESG 경영</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="군집분석 기법인 SOM(Self Organizing Map)에 대하여 설명하시오."><td>134<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>4</td><td>6</td><td class="question-cell">SOM</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="전자정부 정보시스템 성과 측정지표"><td>134<span class="domain-badge biz">BIZ</span></td><td>컴시응</td><td>1</td><td>12</td><td class="question-cell">전자정부 성과 측정지표</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="정보기술 아키텍처(EA: Enterprise Architecture) 도입·운영 지침에 대하여 설명하시오."><td>134<span class="domain-badge biz">BIZ</span></td><td>컴시응</td><td>3</td><td>1</td><td class="question-cell">EA 도입·운영 지침</td><td>-</td></tr>
+<!-- 133회 -->
+<tr data-domain="BIZ" data-full="기술수용모델(Technology Acceptance Model: TAM)에 대하여 설명하시오."><td>133<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>1</td><td>6</td><td class="question-cell">TAM</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="BCP(Business Continuity Planning) 수립 시의 주요 지표와 DRS 구축 시의 핵심 고려사항"><td>133<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>1</td><td>9</td><td class="question-cell">BCP와 DRS</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="정보기술 서비스 관리체계(ITSM)에 대하여 설명하시오."><td>133<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>3</td><td class="question-cell">ITSM(ISO/IEC 20000)</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="경영환경 분석 방법인 SWOT, 3C, PEST 분석에 대하여 설명하시오."><td>133<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>3</td><td>4</td><td class="question-cell">SWOT, 3C, PEST</td><td>-</td></tr>
+<!-- 132회 -->
+<tr data-domain="BIZ" data-full="서포트 벡터 머신(Support Vector Machine)에 대하여 설명하시오."><td>132<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>2</td><td class="question-cell">SVM</td><td>-</td></tr>
+<tr data-domain="BIZ" data-full="ISO 14000 인증의 개념과 필요성에 대하여 설명하시오."><td>132<span class="domain-badge biz">BIZ</span></td><td>관리</td><td>2</td><td>5</td><td class="question-cell">ISO 14000</td><td>-</td></tr>
 </tbody>
 </table>
 
