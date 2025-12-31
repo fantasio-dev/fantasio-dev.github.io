@@ -2,129 +2,13 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
 
-<!-- 사이드바 상단 퀵 버튼 -->
+<!-- 상단 네비게이션 바 (사이드바 없이 전체 화면 사용) -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // ================================
-  // Sidebar collapse (desktop)
+  // 상단 네비게이션 바 삽입
   // ================================
-  var COLLAPSE_KEY = 'peSidebarCollapsed';
-  var rootEl = document.documentElement;
-  var btn = null;
-  var mainBtn = null;
-
-  function isCollapsed() {
-    try { return localStorage.getItem(COLLAPSE_KEY) === '1'; } catch (e) { return false; }
-  }
-  function setCollapsed(next) {
-    if (next) rootEl.classList.add('sidebar-collapsed');
-    else rootEl.classList.remove('sidebar-collapsed');
-    try { localStorage.setItem(COLLAPSE_KEY, next ? '1' : '0'); } catch (e) {}
-  }
-
-  function syncBtn() {
-    var collapsed = rootEl.classList.contains('sidebar-collapsed');
-    if (btn) {
-      btn.textContent = collapsed ? '»' : '«';
-      btn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-      btn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-    }
-    if (mainBtn) {
-      mainBtn.textContent = collapsed ? '사이드바 펼치기' : '사이드바 접기';
-      mainBtn.setAttribute('aria-label', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-      mainBtn.setAttribute('title', collapsed ? '사이드바 펼치기' : '사이드바 접기');
-    }
-  }
-
-  // init from storage
-  setCollapsed(isCollapsed());
-
-  // Add a toggle button (visible on desktop only via CSS)
-  if (!document.querySelector('.sidebar-collapse-toggle')) {
-    btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'sidebar-collapse-toggle';
-    btn.setAttribute('aria-controls', 'site-nav');
-    btn.addEventListener('click', function() {
-      setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
-      syncBtn();
-    });
-    syncBtn();
-    document.body.appendChild(btn);
-  } else {
-    btn = document.querySelector('.sidebar-collapse-toggle');
-    syncBtn();
-  }
-
-  // Add an inline toggle button inside main content header (always reachable)
-  // This helps when the floating toggle is hard to click due to overlays / layout.
-  var mainHeader = document.querySelector('.main-header');
-  if (mainHeader && !document.querySelector('.main-collapse-toggle')) {
-    mainBtn = document.createElement('button');
-    mainBtn.type = 'button';
-    mainBtn.className = 'main-collapse-toggle';
-    mainBtn.addEventListener('click', function() {
-      setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
-      syncBtn();
-    });
-    syncBtn();
-    mainHeader.appendChild(mainBtn);
-  } else {
-    mainBtn = document.querySelector('.main-collapse-toggle');
-    syncBtn();
-  }
-
-  // Keyboard shortcut (desktop): '[' toggles sidebar
-  // - ignore when typing in inputs / contenteditable
-  // - ignore when modifier keys are pressed
-  window.addEventListener('keydown', function(e) {
-    if (e.defaultPrevented) return;
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
-    if (e.key !== '[') return;
-
-    // desktop only (same breakpoint as CSS)
-    if (!window.matchMedia || !window.matchMedia('(min-width: 66.5rem)').matches) return;
-
-    var ae = document.activeElement;
-    if (ae) {
-      var tag = (ae.tagName || '').toLowerCase();
-      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
-      if (ae.isContentEditable) return;
-    }
-
-    e.preventDefault();
-    setCollapsed(!rootEl.classList.contains('sidebar-collapsed'));
-    syncBtn();
-  });
-
-  // 사이드바의 네비게이션 영역 찾기 (.site-nav 앞에 삽입)
-  var siteNav = document.querySelector('.site-nav');
-  if (siteNav) {
-    // 퀵 버튼 컨테이너 생성
-    var quickBtns = document.createElement('div');
-    quickBtns.className = 'sidebar-quick-btns';
-    quickBtns.innerHTML = `
-      <div class="domain-chips domain-chips--sidebar" aria-label="도메인 빠른 이동">
-        <a href="{{ site.baseurl }}/docs/ds" class="domain-chip domain-chip--ds">DS</a>
-        <a href="{{ site.baseurl }}/docs/sw" class="domain-chip domain-chip--sw">SW</a>
-        <a href="{{ site.baseurl }}/docs/ai" class="domain-chip domain-chip--ai">AI</a>
-        <a href="{{ site.baseurl }}/docs/sec" class="domain-chip domain-chip--sec">SEC</a>
-        <a href="{{ site.baseurl }}/docs/nw" class="domain-chip domain-chip--nw">NW</a>
-        <a href="{{ site.baseurl }}/docs/db" class="domain-chip domain-chip--db">DB</a>
-        <a href="{{ site.baseurl }}/docs/biz" class="domain-chip domain-chip--biz">BIZ</a>
-        <a href="{{ site.baseurl }}/docs/caos" class="domain-chip domain-chip--caos">CAOS</a>
-      </div>
-    `;
-    // site-nav 바로 앞에 삽입 (제목 아래, Home 위)
-    siteNav.parentNode.insertBefore(quickBtns, siteNav);
-  }
-
-  // ================================
-  // Main content quick buttons (shown when sidebar collapsed)
-  // ================================
-  // When sidebar is collapsed, the sidebar quick buttons disappear.
-  // Provide the same domain buttons at the top of the main content for quick navigation.
-  function ensureMainQuickBtns() {
+  function ensureTopNavBar() {
     var mainContent = document.querySelector('.main-content');
     if (!mainContent) return;
     if (document.querySelector('.main-quick-btns')) return;
@@ -132,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var bar = document.createElement('div');
     bar.className = 'main-quick-btns';
     bar.innerHTML = `
-      <div class="domain-chips domain-chips--main" aria-label="도메인 빠른 이동">
+      <div class="top-nav-bar" aria-label="상단 네비게이션">
+        <a href="{{ site.baseurl }}/" class="top-nav-btn top-nav-btn--home">🏠 Home</a>
+        <a href="{{ site.baseurl }}/bookmark" class="top-nav-btn top-nav-btn--bookmark">⭐ Bookmark</a>
+        <span class="top-nav-divider"></span>
         <a href="{{ site.baseurl }}/docs/ds" class="domain-chip domain-chip--ds">DS</a>
         <a href="{{ site.baseurl }}/docs/sw" class="domain-chip domain-chip--sw">SW</a>
         <a href="{{ site.baseurl }}/docs/ai" class="domain-chip domain-chip--ai">AI</a>
@@ -144,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
 
-    // Insert near the top of content (before title content)
+    // Insert at the top of main content
     mainContent.insertBefore(bar, mainContent.firstChild);
   }
-  ensureMainQuickBtns();
+  ensureTopNavBar();
 });
 </script>
 
@@ -155,8 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 /* ====================================
    Just the Docs 풀 와이드 레이아웃
-   모든 컨테이너 너비 제한 제거
+   사이드바 완전 숨김 + 본문 전체 화면
    ==================================== */
+
+/* 사이드바 완전 숨김 */
+.side-bar {
+  display: none !important;
+}
+
+/* 사이드바 토글 버튼도 숨김 */
+.sidebar-collapse-toggle {
+  display: none !important;
+}
 
 /* 모든 컨텐츠 컨테이너 너비 제한 제거 */
 .main-content,
@@ -168,131 +65,84 @@ main.main-content-wrap,
   width: 100% !important;
 }
 
-/* 메인 영역 전체 */
+/* 메인 영역 전체 - 사이드바 없이 전체 화면 */
 .main {
   max-width: none !important;
+  margin-left: 0 !important;
+  width: 100% !important;
 }
 
-/* 사이드바 고정 */
+/* 본문 여백 조정 */
 @media (min-width: 66.5rem) {
-  :root {
-    /* 사이드바/본문 간격 체감은 거의 이 값으로 결정됨 */
-    /* 원복 원하면 280px로만 바꾸면 됨 */
-    --pe-sidebar-width: 280px;
-  }
-
-  .side-bar {
-    width: var(--pe-sidebar-width);
-    min-width: var(--pe-sidebar-width);
-    flex-shrink: 0;
-  }
-  
-  .main {
-    margin-left: var(--pe-sidebar-width);
-    width: calc(100% - var(--pe-sidebar-width)) !important;
-    max-width: none !important;
-    padding-left: 0 !important;
-  }
-  
-  /* 사이드바-메인 컨텐츠 간격 완전 제거 */
   .main-content-wrap,
   main.main-content-wrap {
-    padding: 2rem 2rem 2rem 0 !important;
+    padding: 2rem !important;
     margin: 0 !important;
   }
   
   .main-content {
-    padding: 0 1rem 0 0 !important;
+    padding: 0 1rem !important;
     margin: 0 !important;
   }
 }
 
+/* 상단 네비게이션 바 스타일 */
+.top-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.top-nav-btn--home {
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.top-nav-btn--home:hover {
+  background: #e0f2fe;
+  border-color: #7dd3fc;
+}
+
+.top-nav-btn--bookmark {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.top-nav-btn--bookmark:hover {
+  background: #fef3c7;
+  border-color: #fcd34d;
+}
+
+.top-nav-divider {
+  width: 1px;
+  height: 24px;
+  background: #d1d5db;
+  margin: 0 0.5rem;
+}
+
 /* ====================================
-   사이드바 접기/펼치기 (Desktop)
-   - html.sidebar-collapsed 클래스 기반
+   사이드바 완전 숨김 모드 - 토글 버튼 불필요
    ==================================== */
-@media (min-width: 66.5rem) {
-  html.sidebar-collapsed .side-bar {
-    width: 0 !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-    border-right: 0 !important;
-  }
-
-  html.sidebar-collapsed .sidebar-quick-btns,
-  html.sidebar-collapsed .site-header,
-  html.sidebar-collapsed .site-nav {
-    display: none !important;
-  }
-
-  html.sidebar-collapsed .main {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
-
-  /* 사이드바가 없을 때 본문이 화면 좌측에 너무 붙지 않도록 여백 복구 */
-  html.sidebar-collapsed .main-content-wrap,
-  html.sidebar-collapsed main.main-content-wrap {
-    padding-left: 2rem !important;
-  }
-
-  html.sidebar-collapsed .main-content {
-    padding-left: 1rem !important;
-  }
-
-  .sidebar-collapse-toggle {
-    position: fixed;
-    top: 0.85rem;
-    left: 0.9rem;
-    z-index: 100000;
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    font-size: 18px;
-    line-height: 1;
-    font-weight: 700;
-    color: #334155;
-    cursor: pointer;
-    pointer-events: auto;
-  }
-
-  .sidebar-collapse-toggle:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  }
-
-  /* 사이드바가 펼쳐진 상태에서는 버튼을 사이드바 안쪽 상단에 배치 */
-  html:not(.sidebar-collapsed) .sidebar-collapse-toggle {
-    /* 사이드바 우측 상단에 붙여서 헤더/타이틀과 겹치지 않게 */
-    left: calc(var(--pe-sidebar-width) - 42px);
-    top: 0.85rem;
-  }
-
-  /* Main header inline toggle - 사용하지 않음 */
-  .main-collapse-toggle {
-    display: none !important;
-  }
-}
-
-/* 모바일에서는 기존 Just the Docs 메뉴 버튼 사용 */
-@media (max-width: 66.49rem) {
-  .sidebar-collapse-toggle {
-    display: none !important;
-  }
-  .main-collapse-toggle {
-    display: none !important;
-  }
-}
-
-/* 어떤 화면 크기에서도 좌측 여백이 다시 생기지 않도록 고정 */
-.main-content-wrap,
-main.main-content-wrap {
-  padding-left: 0 !important;
+.main-collapse-toggle {
+  display: none !important;
 }
 
 /* ====================================
@@ -453,7 +303,7 @@ div.dataTables_wrapper div.dataTables_length {
 }
 
 /* ====================================
-   본문 상단 미니 도메인 버튼 (사이드바 접힘 상태에서만 노출)
+   본문 상단 네비게이션 바 (항상 표시)
    ==================================== */
 
 .main-quick-btns {
@@ -464,19 +314,24 @@ div.dataTables_wrapper div.dataTables_length {
   background: rgba(248, 250, 252, 0.70);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  display: block;
 }
 
-/* 데스크탑에서는 항상 보이게 */
-@media (min-width: 66.5rem) {
-  .main-quick-btns {
-    display: block;
-  }
-}
-
-/* 모바일에서는 숨김 (작은 화면) */
+/* 모바일에서 더 작은 여백 */
 @media (max-width: 66.49rem) {
   .main-quick-btns {
-    display: none;
+    margin: 0.25rem 0 0.75rem 0;
+    padding: 8px;
+  }
+  
+  .top-nav-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .domain-chip {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
   }
 }
 
