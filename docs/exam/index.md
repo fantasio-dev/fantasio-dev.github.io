@@ -272,23 +272,82 @@ tr.has-page {
 </tr>
 </thead>
 <tbody>
-<!-- SW 영역 기출문제 -->
-<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-1-11-reverse-reengineering">소프트웨어 역공학과 재공학을 설명하시오.</a></td><td><code>(역공학) 추분문논</code> <code>(재공학) 역재구모</code></td></tr>
-<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-3-2-is-om-audit">정보시스템 감리의 시스템 운영 및 유지보수 감리</a></td><td><code>(운영) 릴테장/신서서</code> <code>(유지보수) 개상인</code></td></tr>
-<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>3</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-4-3-sw-expert-evaluation">조달청 협상에 의한 계약 제안서평가 세부기준 개정</a></td><td><code>(개정) 전평확평</code> <code>(전문평가) 목대대평</code></td></tr>
+<!-- SW 영역 기출문제 (68개) -->
+<!-- 138회 -->
+<tr data-domain="SW"><td>138<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>6</td><td><a href="{{ site.baseurl }}/docs/sw/exam/138-2-6-sw-cost-estimation">소프트웨어 사업 대가산정 (2025년 개정판)</a></td><td><code>(목적) 적기절일 산품제투</code> <code>(유형) 단커시</code> <code>(절차) 사서커구AI</code></td></tr>
+<!-- 137회 -->
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-1-11-reverse-reengineering">소프트웨어 역공학과 재공학</a></td><td><code>(역공학) 추분문</code> <code>(재공학) 역재구</code></td></tr>
+<tr data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-2-5-dynamic-testing">동적 테스트 (명세기반/구조기반)</a></td><td><code>(명세) 동분경의상유페</code> <code>(구조) 구분조경</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-3-2-is-om-audit">정보시스템 운영 및 유지보수 감리</a></td><td><code>(운영) 릴테장/신서서</code> <code>(유지보수) 개상인</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/137-4-4-uml-behavior-diagram">UML 행위 다이어그램</a></td><td>(Activity) 시종활선전구 (State) 시종상전 (Use-Case) 액유시-연확포일그</td></tr>
+<tr data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>6</td><td>소프트웨어 사업 대가산정 (2025년 개정판)</td><td><code>(목적) 적기절일 산품제투</code> <code>(유형) 단커시</code></td></tr>
+<tr data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>6</td><td>SIL과 HIL 테스팅</td><td>-</td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-2-sp-certification">소프트웨어 프로세스(SP) 품질인증 제도</a></td><td><code>(체계) 과NIPA기</code> <code>(영역) 프개지조프</code></td></tr>
+<tr data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">소프트웨어 영향평가</a></td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>137<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>6</td><td><a href="{{ site.baseurl }}/docs/ds/exam/136-2-6-digital-service-contract">디지털서비스 전문계약제도</a></td><td><code>(특징) 간약사공표</code> <code>(종류) 클지융-I-S-P</code></td></tr>
+<!-- 136회 -->
+<tr data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>5</td><td>프록시 디자인 패턴</td><td>-</td></tr>
+<tr data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>6</td><td>DevOps 장점과 단점</td><td>-</td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-2-pmo-audit">정보시스템 감리와 PMO</a></td><td><code>(법근) 전전전정-감</code> <code>(역할) 요분설구</code> <code>(비교) 개추법책관자투역제산</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-2-4-product-line">제품계열(Product Line) 방법론</a></td><td><code>(특징) 핵품생초</code> <code>(기술) 도응관</code> <code>(고려) 비기조투</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-3-1-conflict-tuckman">갈등관리와 터크만 팀 발달 모델</a></td><td><code>(관계) 부적극</code> <code>(요인) 구인업환</code> <code>(터크만) FSNPA</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>3</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-3-3-software-quality-assurance">소프트웨어 품질보증과 인스펙션</a></td><td><code>(품질특성) 기신사성유보호안</code> <code>(인스펙션) 동사개검재후</code></td></tr>
+<tr class="has-page" data-domain="SW"><td>136<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>3</td><td><a href="{{ site.baseurl }}/docs/sw/exam/136-4-3-sw-expert-evaluation">대형SW사업 전문평가제도</a></td><td><code>(개정) 전공중기</code> <code>(영역) 정정데디</code> <code>(배점) 공60전40</code></td></tr>
+<!-- 135회 -->
+<tr data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>3</td><td>요구사항 추적표(RTM)</td><td>-</td></tr>
+<tr data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>9</td><td>소프트웨어 기술 부채의 유형과 관리 방법</td><td>-</td></tr>
 <tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>2</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-2-2-cicd-devsecops">CI/CD 파이프라인에서 DevSecOps 적용방안</a></td><td><code>(구성) 버CI빌테코배모</code> <code>(적용) 초자컨배피문</code></td></tr>
-<tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-3-1-project-management">프로젝트 관리에 대하여 다음을 설명하시오.</a></td><td><code>(프로세스) 착계실감종</code> <code>(지식영역) 통이범자시원리품조의</code></td></tr>
-
-<!-- AI 영역 기출문제 -->
-<tr data-domain="AI"><td>137<span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>1</td><td>PR(Precision Recall) 곡선과 ROC 곡선 비교</td><td>-</td></tr>
-<tr data-domain="AI"><td>137<span class="domain-badge ai">AI</span></td><td>관리</td><td>1</td><td>2</td><td>Multimodal LLM(Large Language Model)</td><td>-</td></tr>
-
-<!-- SEC 영역 기출문제 -->
-<tr data-domain="SEC"><td>137<span class="domain-badge sec">SEC</span></td><td>관리</td><td>1</td><td>5</td><td>SIEM(Security Information & Event Management) & SOAR 비교</td><td>-</td></tr>
-
-<!-- DS 영역 기출문제 -->
-<tr data-domain="DS"><td>137<span class="domain-badge ds">DS</span></td><td>관리</td><td>1</td><td>4</td><td>IBN(Intent-Based Networking)</td><td>-</td></tr>
-
+<tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-3-1-project-management">프로젝트 관리</a></td><td><code>(프로세스) 착계실감종</code> <code>(지식영역) 통이범자시원리품조의</code></td></tr>
+<tr data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>5</td><td>모놀리식 vs 마이크로서비스 아키텍처</td><td>-</td></tr>
+<tr data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>8</td><td>하드웨어 규모산정 방법 3가지</td><td>-</td></tr>
+<tr class="has-page" data-domain="SW"><td>135<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-4-4-zero-downtime-deployment">무중단 배포(Zero Downtime Deployment)</a></td><td><code>(문제점) 다유롤</code> <code>(종류) 롤블카</code></td></tr>
+<!-- 134회 -->
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>1</td><td>터크만 사다리 모델(Tuckman Ladder Model)</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>4</td><td>형상관리 개념과 기준선(Baseline)</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>5</td><td>정보은닉(Information Hiding)</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td>배포 전략 및 테스트 전략</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>2</td><td>소프트웨어 테스트 원리/블랙박스/화이트박스</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>1</td><td>리스크 대응 계획 수립</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>5</td><td>클라우드 전환 사업 감리 방법</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>9</td><td>플랫폼 엔지니어링(Platform Engineering)</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>11</td><td>애자일(Agile) 장점 및 단점</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>13</td><td>소프트웨어 품질성능 평가시험</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>2</td><td>지능정보기술 감리 실무 가이드</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>1</td><td>소프트웨어 프로세스(SP) 품질인증 운영 지침</td><td>-</td></tr>
+<tr data-domain="SW"><td>134<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>2</td><td>ISO 26262와 ASIL</td><td>-</td></tr>
+<!-- 133회 -->
+<tr data-domain="SW"><td>133<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>2</td><td>뮤테이션 테스트(Mutation Test)</td><td>-</td></tr>
+<tr data-domain="SW"><td>133<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td>유지보수 향상 및 비용절감을 위한 3R</td><td>-</td></tr>
+<tr data-domain="SW"><td>133<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>1</td><td>정보시스템 하드웨어 규모산정 지침</td><td>-</td></tr>
+<tr data-domain="SW"><td>133<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>5</td><td>요구공학(Requirement Engineering)</td><td>-</td></tr>
+<tr data-domain="SW"><td>133<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>2</td><td>신뢰성 테스트와 이식성 테스트</td><td>-</td></tr>
+<!-- 132회 -->
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>1</td><td>ISO 31000</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>9</td><td>좋은 소프트웨어가 갖추어야 할 4가지 특징</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>3</td><td>소프트웨어 기술자 등급제와 IT직무제</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>1</td><td>SW 운영단계 대가산정</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>6</td><td>정보시스템 성능 요구사항 주요 성능지표</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>4</td><td>소프트웨어 진흥법</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>5</td><td>소프트웨어 규모 산정 방식 종류와 개선 방안</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>3</td><td>Canary Test</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>6</td><td>소프트웨어 기술성 평가기준 지침</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>7</td><td>전자정부사업관리 위탁(PMO)</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>4</td><td>이동형 로봇 대인 충돌 안전성 평가</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>5</td><td>ISMP, EA, ISP 비교</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>5</td><td>객체 지향 SOLID 원칙</td><td>-</td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>6</td><td><a href="{{ site.baseurl }}/docs/sw/exam/132-3-6-sw-impact-assessment">소프트웨어 영향평가</a></td><td><code>(대상) 국지공정과정출지</code> <code>(체계) 목기방절</code></td></tr>
+<tr data-domain="SW"><td>132<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>4</td><td>2</td><td>클라우드 서비스 활용사업 감리 점검</td><td>-</td></tr>
+<!-- 131회 -->
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>3</td><td>폭포수 vs 애자일 개발 방법론</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>6</td><td>정보시스템 감리와 PMO 비교</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>12</td><td>캡슐화(Encapsulation)와 정보은닉</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>6</td><td>아키텍처 스타일과 디자인 패턴</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>3</td><td>통합테스트(Integration Test)</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>3</td><td>4</td><td>안전성 분석 FTA, FMEA, HAZOP</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>관리</td><td>4</td><td>5</td><td>소프트웨어 규모산정</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>1</td><td>5</td><td>ATAM과 CBAM</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>2</td><td>3</td><td>데이터베이스 용량산정</td><td>-</td></tr>
+<tr data-domain="SW"><td>131<span class="domain-badge sw">SW</span></td><td>컴시응</td><td>3</td><td>6</td><td>DataOps와 DevOps 비교</td><td>-</td></tr>
 </tbody>
 </table>
 
