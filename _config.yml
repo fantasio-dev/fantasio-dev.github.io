@@ -27,12 +27,11 @@ heading_anchors: true
 mermaid:
   version: "10.6.0"
 
-# 외부 링크 설정
-aux_links:
-  "GitHub":
-    - "https://github.com/fantasio-dev/fantasio-dev.github.io"
-
-aux_links_new_tab: true
+# 외부 링크 설정 (상단 네비에서 제거됨)
+# aux_links:
+#   "GitHub":
+#     - "https://github.com/fantasio-dev/fantasio-dev.github.io"
+# aux_links_new_tab: true
 
 # 푸터
 footer_content: "PE-Study"
