@@ -9,6 +9,7 @@ permalink: /docs/sec
 
 # SEC (정보보안)
 
+---
 
 {% assign sec_root = page.title %}
 {% assign sec_topics = site.pages | where: "grand_parent", sec_root %}
