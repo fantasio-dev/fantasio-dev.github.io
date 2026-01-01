@@ -7,8 +7,7 @@ has_toc: false
 permalink: /docs/nw
 ---
 
-# NW (네트워크) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/nw/exam">📝 기출문제</a></span>
-{: .fs-9 }
+# NW (네트워크)
 
 
 {% assign nw_root = page.title %}

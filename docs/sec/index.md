@@ -7,8 +7,7 @@ has_toc: false
 permalink: /docs/sec
 ---
 
-# SEC (정보보안) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sec/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/sec/exam">📝 기출문제</a></span>
-{: .fs-9 }
+# SEC (정보보안)
 
 
 {% assign sec_root = page.title %}
