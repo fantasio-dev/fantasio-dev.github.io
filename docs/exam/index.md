@@ -239,7 +239,6 @@ tr.has-page {
       <label>회차</label>
       <select id="filterRound">
         <option value="">전체</option>
-        <option value="138">138회</option>
         <option value="137">137회</option>
         <option value="136">136회</option>
         <option value="135">135회</option>
@@ -299,8 +298,6 @@ tr.has-page {
 </thead>
 <tbody>
 <!-- SW 영역 기출문제 (68개) - 전체 문제 포함 -->
-<!-- 138회 -->
-<tr data-domain="SW" data-full="소프트웨어 사업 대가산정에 대하여 다음을 설명하시오. (단, '소프트웨어 사업 대가산정 가이드 2025년 개정판'을 기준으로 한다.) 가. 소프트웨어 대가산정 가이드 목적 나. 인공지능(AI) 서비스 도입 사업유형과 사업비 산정 절차"><td>138<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>6</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/sw/exam/138-2-6-sw-cost-estimation">소프트웨어 사업 대가산정 (2025년 개정판)</a></td><td><code>(목적) 적기절일 산품제투</code> <code>(유형) 단커시</code></td></tr>
 <!-- 137회 -->
 <tr class="has-page" data-domain="SW" data-full="소프트웨어 역공학과 재공학을 설명하시오."><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>1</td><td>11</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/sw/exam/137-1-11-reverse-reengineering">소프트웨어 역공학과 재공학</a></td><td><code>(역공학) 추분문</code> <code>(재공학) 역재구</code></td></tr>
 <tr data-domain="SW" data-full="소프트웨어 테스트 중 동적 테스트에 대하여 설명하시오. 가. 동적 테스트의 명세 기반 테스트와 구조 기반 테스트 비교 나. 아래의 [프로그램 명세]로 명세 기반 테스트 기법의 동등 분할과 분류 트리 기법의 테스트 케이스 작성"><td>137<span class="domain-badge sw">SW</span></td><td>관리</td><td>2</td><td>5</td><td class="question-cell"><a href="{{ site.baseurl }}/docs/sw/exam/137-2-5-dynamic-testing">동적 테스트 (명세기반/구조기반)</a></td><td><code>(명세) 동분경의상유페</code> <code>(구조) 구분조경</code></td></tr>
