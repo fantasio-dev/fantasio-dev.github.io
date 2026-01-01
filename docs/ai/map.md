@@ -54,13 +54,18 @@ permalink: /docs/ai/map
 /* Sticky 섹션 헤더 */
 .sticky-header {
   position: sticky;
-  top: 0;
+  top: 60px; /* 상단 네비게이션 바 높이 */
   background: white;
   padding: 0.8rem 1rem;
   margin: 0 -1rem;
   z-index: 100;
   border-bottom: 2px solid #e2e8f0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+  .sticky-header {
+    top: 56px; /* 모바일 네비게이션 바 높이 */
+  }
 }
 .sticky-header-data {
   background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
