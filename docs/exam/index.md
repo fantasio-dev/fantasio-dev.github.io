@@ -4,12 +4,18 @@ title: 📝 통합 기출문제
 nav_order: 97
 has_toc: false
 permalink: /docs/exam
+page_no_title: true
 ---
 
 <!-- DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
 <style>
+/* 페이지 제목 숨김 */
+.main-content h1:first-child {
+  display: none;
+}
+
 /* 페이지 전체 너비 확장 */
 .main-content {
   max-width: 100% !important;
@@ -156,7 +162,7 @@ permalink: /docs/exam
 #examTable td:nth-child(6),
 #examTable th:nth-child(6) {
   font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #d63384;
   min-width: 150px;
   white-space: nowrap;
@@ -200,15 +206,6 @@ tr.has-page {
   display: none !important;
 }
 </style>
-
-# 📝 통합 기출문제
-
-<details style="margin-bottom: 1rem; padding: 0.5rem 1rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
-<summary style="cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #475569;">📘 기출문제 페이지 생성 가이드 (AI 명령 예시)</summary>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; color: #334155;">
-<code style="display: block; padding: 0.5rem; background: #fff; border-radius: 4px; white-space: pre-wrap;">{회차}회 {정/컴} {교시}교시 {번호}번 {문제제목} pdf 가 있으면 만들어주고 못찾으면 다시 말해줘 {1교시형/2교시형}이야</code>
-</div>
-</details>
 
 <div class="filter-section">
   <div class="domain-buttons">
