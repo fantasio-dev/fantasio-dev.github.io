@@ -35,6 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // body의 맨 위에 삽입
   document.body.insertBefore(nav, document.body.firstChild);
+
+  // 테마 기본 헤더 영역 제거 (GitHub 링크 포함)
+  var elementsToRemove = document.querySelectorAll('.site-header, .main-header, .aux-nav, [class*="aux-link"]');
+  elementsToRemove.forEach(function(el) {
+    el.remove();
+  });
+  
+  // GitHub 텍스트가 있는 링크 제거
+  document.querySelectorAll('a').forEach(function(a) {
+    if (a.textContent.trim() === 'GitHub') {
+      var parent = a.closest('nav, div, header');
+      if (parent && parent.children.length <= 1) {
+        parent.remove();
+      } else {
+        a.remove();
+      }
+    }
+  });
 });
 </script>
 
