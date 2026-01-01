@@ -194,9 +194,21 @@ tr.has-page {
 .question-cell {
   line-height: 1.6;
 }
+
+/* DataTables 기본 검색창 숨김 (커스텀 필터 사용) */
+.dataTables_filter {
+  display: none !important;
+}
 </style>
 
 # 📝 통합 기출문제
+
+<details style="margin-bottom: 1rem; padding: 0.5rem 1rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+<summary style="cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #475569;">📘 기출문제 페이지 생성 가이드 (AI 명령 예시)</summary>
+<div style="margin-top: 0.5rem; font-size: 0.85rem; color: #334155;">
+<code style="display: block; padding: 0.5rem; background: #fff; border-radius: 4px; white-space: pre-wrap;">{회차}회 {정/컴} {교시}교시 {번호}번 {문제제목} pdf 가 있으면 만들어주고 못찾으면 다시 말해줘 {1교시형/2교시형}이야</code>
+</div>
+</details>
 
 <div class="filter-section">
   <div class="domain-buttons">
