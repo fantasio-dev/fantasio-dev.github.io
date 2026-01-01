@@ -198,6 +198,38 @@ tr.has-page {
 
 # 📝 통합 기출문제
 
+<details class="exam-guide-box" style="margin-bottom: 1rem; padding: 0.75rem 1rem; background: linear-gradient(135deg, #f8fafc, #f1f5f9); border: 1px solid #e2e8f0; border-radius: 10px;">
+<summary style="cursor: pointer; font-weight: 700; font-size: 0.9rem; color: #475569;">📘 기출문제 페이지 생성 가이드 (AI 명령 예시)</summary>
+
+<div style="margin-top: 0.75rem; font-size: 0.85rem; line-height: 1.6; color: #334155;">
+
+**기본 명령 형식:**
+```
+{회차}회 {정/컴} {교시}교시 {번호}번 {문제제목}
+pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
+{1교시형/2교시형}이야
+```
+
+**예시:**
+```
+137회 컴시응 1교시 6번 SIL/HIL 테스팅
+pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
+1교시형이야
+```
+
+**문제 유형:**
+- **1교시형**: 단답형 (고딩수준 접기 + 기술사수준)
+- **2교시형**: 서술형 (Quick개념잡기 접기 + 기술사수준 단락별)
+
+**자동 처리 항목:**
+- PDF 해설지에서 내용 추출 (`assets/기출문제/{회차}회/`)
+- 학습 페이지 생성 (`docs/{도메인}/exam/`)
+- 기출문제 목록 테이블 업데이트
+- Git 커밋 & 푸시
+
+</div>
+</details>
+
 <div class="filter-section">
   <div class="domain-buttons">
     <button class="domain-btn active" data-domain="all">전체</button>
