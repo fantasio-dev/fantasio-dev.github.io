@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/caos
 ---
 
-# CAOS (컴퓨터구조/OS) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/caos/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/caos/exam">📝 기출문제</a></span>
-{: .fs-9 .page-title-with-cta }
+# CAOS (컴퓨터구조/OS)
+{: .fs-9 }
 
 
 ---

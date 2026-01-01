@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/sw
 ---
 
-# SW (소프트웨어공학) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/sw/exam">📝 기출문제</a></span>
-{: .fs-9 .page-title-with-cta }
+# SW (소프트웨어공학)
+{: .fs-9 }
 
 <style>
 /* 진행률 바 */

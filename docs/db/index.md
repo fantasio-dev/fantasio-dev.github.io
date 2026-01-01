@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/db
 ---
 
-# DB (데이터베이스) <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/db/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/db/exam">📝 기출문제</a></span>
-{: .fs-9 .page-title-with-cta }
+# DB (데이터베이스)
+{: .fs-9 }
 
 
 ---

@@ -8,7 +8,7 @@ permalink: /docs/ds
 ---
 
 # DS (Digital Service) <span class="page-title-ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/daily">🃏 데일리 암기 덱</a> <a class="exam-top-cta" href="{{ site.baseurl }}/docs/ds/exam">📝 기출문제</a> <a class="exam-top-cta exam-top-cta--green" href="{{ site.baseurl }}/docs/ds/notes">📚 학습노트</a></span>
-{: .fs-9 .page-title-with-cta }
+{: .fs-9 }
 
 
 ---

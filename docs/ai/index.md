@@ -7,8 +7,8 @@ has_toc: false
 permalink: /docs/ai
 ---
 
-# AI 학습 가이드 <span class="page-title-with-cta__ctas"><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/daily">🃏 데일리 암기 덱</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/map">🧭 레거시 MAP</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/legacy">🗂️ 레거시 메인</a><a class="exam-top-cta" href="{{ site.baseurl }}/docs/ai/exam">📝 기출문제</a></span>
-{: .fs-9 .page-title-with-cta }
+# AI 학습 가이드
+{: .fs-9 }
 
 
 ---
