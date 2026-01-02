@@ -9,9 +9,6 @@ permalink: /docs/daily
 # 🃏 Daily 암기 덱
 {: .no_toc }
 
-**모든 도메인의 토픽**을 "노트 넘기기"처럼 보는 모드입니다.  
-왼쪽에서 항목을 고르면, 오른쪽에 **정의/구성요소/암기**가 바로 펼쳐집니다.
-
 <div class="daily-deck" id="dailyDeckRoot">
 
   <div class="daily-deck__toolbar">
