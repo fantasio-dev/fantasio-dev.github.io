@@ -175,6 +175,7 @@ permalink: /docs/daily
         { value: 'topics-4', label: '④ AI 윤리/보안' },
         { value: 'topics-6', label: '⑥ 운영/프로세스' },
         { value: 'topics-7', label: '⑦ 서비스' },
+        { value: 'exam-all', label: '📝 기출문제 전체' },
         { value: 'exam-1', label: '📝 기출 1교시형' },
         { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
@@ -197,6 +198,7 @@ permalink: /docs/daily
         { value: 'topics-10', label: '⑩ 유지보수' },
         { value: 'topics-11', label: '⑪ 조달/계약' },
         { value: 'topics-15', label: '⑮ DevOps' },
+        { value: 'exam-all', label: '📝 기출문제 전체' },
         { value: 'exam-1', label: '📝 기출 1교시형' },
         { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
@@ -213,6 +215,7 @@ permalink: /docs/daily
         { value: 'topics-3', label: '③ 블록체인' },
         { value: 'topics-4', label: '④ 스마트카/자율주행' },
         { value: 'topics-7', label: '⑦ 가상화/컨테이너' },
+        { value: 'exam-all', label: '📝 기출문제 전체' },
         { value: 'exam-1', label: '📝 기출 1교시형' },
         { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
@@ -225,6 +228,7 @@ permalink: /docs/daily
       hasExam: true,
       categories: [
         { value: 'topics-all', label: 'SEC 토픽 · 전체' },
+        { value: 'exam-all', label: '📝 기출문제 전체' },
         { value: 'exam-1', label: '📝 기출 1교시형' },
         { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
@@ -237,6 +241,7 @@ permalink: /docs/daily
       hasExam: true,
       categories: [
         { value: 'topics-all', label: 'NW 토픽 · 전체' },
+        { value: 'exam-all', label: '📝 기출문제 전체' },
         { value: 'exam-1', label: '📝 기출 1교시형' },
         { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
@@ -371,9 +376,10 @@ permalink: /docs/daily
       base = examRows.slice();
       if (examType === '1') {
         base = base.filter(function(c) { return c.exam_type === '1'; });
-      } else {
+      } else if (examType === '2') {
         base = base.filter(function(c) { return c.exam_type !== '1'; });
       }
+      // examType === 'all' 일 때는 필터링 없이 전체 표시
     } else {
       base = topicRows.slice();
       
