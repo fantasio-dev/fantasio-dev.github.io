@@ -86,41 +86,86 @@ permalink: /docs/sw
 .sdlc-step--deploy { background: linear-gradient(135deg, #475569 0%, #64748b 100%); }
 .sdlc-step--maint { background: linear-gradient(135deg, #334155 0%, #475569 100%); }
 
-/* Sticky 섹션 헤더 */
-.sticky-header {
-  position: sticky;
-  top: 60px; /* 상단 네비게이션 바 높이 */
-  background: white;
-  padding: 0.8rem 1rem;
-  margin: 0 -1rem;
+/* 동적 스티키 헤더 (Breadcrumb 스타일) */
+.dynamic-sticky-header {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
   z-index: 100;
-  border-bottom: 2px solid #e2e8f0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.3s ease;
+}
+.dynamic-sticky-header.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.dynamic-sticky-header__category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.dynamic-sticky-header__separator {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+}
+.dynamic-sticky-header__section {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 768px) {
-  .sticky-header {
-    top: 56px; /* 모바일 네비게이션 바 높이 */
+  .dynamic-sticky-header {
+    top: 56px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  .dynamic-sticky-header__category {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
   }
 }
-.sticky-header-sdlc {
+
+/* 카테고리별 색상 */
+.dynamic-sticky-header[data-category="sdlc"] {
   background: linear-gradient(135deg, #0f766e 0%, #0369a1 100%);
-  color: #fff;
-  border-bottom: none;
 }
-.sticky-header-quality {
+.dynamic-sticky-header[data-category="quality"] {
   background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%);
-  color: #fff;
-  border-bottom: none;
 }
-.sticky-header-mgmt {
+.dynamic-sticky-header[data-category="mgmt"] {
   background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-  color: #fff;
-  border-bottom: none;
 }
-.sticky-header-advanced {
+.dynamic-sticky-header[data-category="advanced"] {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #fff;
-  border-bottom: none;
+}
+
+/* 섹션 마커 (비표시, JS 감지용) */
+.section-marker {
+  position: relative;
+  scroll-margin-top: 120px;
+}
+.section-marker::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: -1px;
 }
 
 /* 암기법 코드 스타일 */
@@ -167,12 +212,86 @@ permalink: /docs/sw
 
 <!-- 진행률 바 -->
 <div class="progress-bar" id="progressBar"></div>
+
+<!-- 동적 스티키 헤더 -->
+<div class="dynamic-sticky-header" id="dynamicStickyHeader">
+  <span class="dynamic-sticky-header__category" id="stickyCategory">🔄 SDLC</span>
+  <span class="dynamic-sticky-header__separator">›</span>
+  <span class="dynamic-sticky-header__section" id="stickySection">개발 모델</span>
+</div>
+
 <script>
+// 진행률 바
 window.addEventListener('scroll', function() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// 동적 스티키 헤더
+document.addEventListener('DOMContentLoaded', function() {
+  var header = document.getElementById('dynamicStickyHeader');
+  var categoryEl = document.getElementById('stickyCategory');
+  var sectionEl = document.getElementById('stickySection');
+  
+  // 섹션 마커들 수집
+  var sections = document.querySelectorAll('.section-marker');
+  var lastCategory = '';
+  var lastSection = '';
+  var showThreshold = 300; // 300px 스크롤 후 헤더 표시
+  
+  function updateStickyHeader() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    // 스크롤 위치에 따라 헤더 표시/숨김
+    if (scrollTop > showThreshold) {
+      header.classList.add('visible');
+    } else {
+      header.classList.remove('visible');
+      return;
+    }
+    
+    // 현재 보이는 섹션 찾기
+    var currentSection = null;
+    sections.forEach(function(section) {
+      var rect = section.getBoundingClientRect();
+      if (rect.top <= 150) {
+        currentSection = section;
+      }
+    });
+    
+    if (currentSection) {
+      var category = currentSection.dataset.category || '';
+      var categoryIcon = currentSection.dataset.categoryIcon || '';
+      var categoryName = currentSection.dataset.categoryName || '';
+      var sectionName = currentSection.dataset.section || '';
+      
+      if (category !== lastCategory || sectionName !== lastSection) {
+        lastCategory = category;
+        lastSection = sectionName;
+        
+        header.setAttribute('data-category', category);
+        categoryEl.textContent = categoryIcon + ' ' + categoryName;
+        sectionEl.textContent = sectionName;
+      }
+    }
+  }
+  
+  // 스크롤 이벤트 (throttle 적용)
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateStickyHeader();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  
+  // 초기 실행
+  updateStickyHeader();
 });
 </script>
 
@@ -195,7 +314,9 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-sdlc" class="sticky-header sticky-header-sdlc">🔄 SDLC (Software Development Life Cycle)</div>
+<div id="s-sdlc" class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="소프트웨어 개발 생명주기"></div>
+
+## 🔄 SDLC (Software Development Life Cycle)
 
 <div class="sdlc-flow">
   <div class="sdlc-flow__title">소프트웨어 개발 생명주기</div>
@@ -232,6 +353,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="SDLC / 프로젝트 개발 모델"></div>
+
 ### SDLC / 프로젝트 개발 모델
 
 `폭 프 S 반 증 진 R`
@@ -247,6 +370,8 @@ window.addEventListener('scroll', function() {
 | RAD | 개발도구(CASE), 빠른개발 / 지라씨(JRAC) / JRP: Joint Requirment Planning(분석,모델링,1~2주), JAD: Joint Application Design(설계,개발,평가,3~5주), Cut Over: 테스트,인수 |
 
 ---
+
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="개발방법론"></div>
 
 ### 개발방법론
 
@@ -268,7 +393,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-req-arch"></div>
+<div id="s-req-arch" class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="요구사항 정의"></div>
 
 ### 요구사항 정의
 
@@ -279,6 +404,8 @@ window.addEventListener('scroll', function() {
 | 요구사항 상세화 실무 가이드 | 기펑성규 기무품 |
 
 ---
+
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="SW Architecture"></div>
 
 ### SW Architecture
 
@@ -291,6 +418,8 @@ window.addEventListener('scroll', function() {
 | ㄴ CBAM | ATAM기반, ROI, 경제성 평가 / 시나리오 수집→정제→우선순위 / 반응예측→효용성분석 / 효용예측분석→반응값 예측→예상효율→이익계산→ROI분석→결과검증 |
 
 ---
+
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="MSA"></div>
 
 ### MSA
 
@@ -309,7 +438,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-uml-pattern"></div>
+<div id="s-uml-pattern" class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="UML"></div>
 
 ### UML
 
@@ -329,6 +458,8 @@ window.addEventListener('scroll', function() {
 | Interaction Diagram | 커뮤니케이션(액객링메프, 액터 객체 링크 메시지 프레임), 인터랙션오버뷰(액티비티→시퀀스) |
 
 ---
+
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="디자인 패턴"></div>
 
 ### 디자인 패턴
 
@@ -350,7 +481,7 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-test-maint"></div>
+<div id="s-test-maint" class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="테스트"></div>
 
 ### 테스트
 
@@ -377,6 +508,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="sdlc" data-category-icon="🔄" data-category-name="SDLC" data-section="유지보수"></div>
+
 ### 유지보수
 
 | 토픽 | 암기법 |
@@ -392,7 +525,9 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-quality" class="sticky-header sticky-header-quality">🏆 소프트웨어 품질관리</div>
+<div id="s-quality" class="section-marker" data-category="quality" data-category-icon="🏆" data-category-name="품질관리" data-section="SW 품질"></div>
+
+## 🏆 소프트웨어 품질관리
 
 ### SW 품질
 
@@ -410,6 +545,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="quality" data-category-icon="🏆" data-category-name="품질관리" data-section="SW 안전성"></div>
+
 ### SW 안전성
 
 | 토픽 | 암기법 |
@@ -422,7 +559,9 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-mgmt" class="sticky-header sticky-header-mgmt">📋 소프트웨어 사업 관리</div>
+<div id="s-mgmt" class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="발주 프로세스"></div>
+
+## 📋 소프트웨어 사업 관리
 
 ### 발주 프로세스
 
@@ -440,6 +579,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="SW 비용산정"></div>
+
 ### SW 비용산정
 
 | 토픽 | 암기법 |
@@ -450,6 +591,8 @@ window.addEventListener('scroll', function() {
 | 공공SW사업 과업변경 | 변소50 4547 요구심통작금 |
 
 ---
+
+<div class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="오픈소스"></div>
 
 ### 오픈소스
 
@@ -462,6 +605,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="FP (Function Point)"></div>
+
 ### FP (Function Point)
 
 | 토픽 | 암기법 |
@@ -470,6 +615,8 @@ window.addEventListener('scroll', function() {
 | 정규법 | - |
 
 ---
+
+<div class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="감리"></div>
 
 ### 감리
 
@@ -484,6 +631,8 @@ window.addEventListener('scroll', function() {
 
 ---
 
+<div class="section-marker" data-category="mgmt" data-category-icon="📋" data-category-name="사업관리" data-section="TDD / DevOps / SRE"></div>
+
 ### TDD / DevOps / SRE
 
 | 토픽 | 암기법 |
@@ -495,7 +644,9 @@ window.addEventListener('scroll', function() {
 
 ---
 
-<div id="s-advanced" class="sticky-header sticky-header-advanced">🚀 심화 토픽</div>
+<div id="s-advanced" class="section-marker" data-category="advanced" data-category-icon="🚀" data-category-name="심화" data-section="심화 토픽"></div>
+
+## 🚀 심화 토픽
 
 | 토픽 | 암기법 |
 |:-----|:-------|
