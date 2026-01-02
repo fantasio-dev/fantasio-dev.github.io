@@ -1,0 +1,278 @@
+[
+  {
+    "title": "137회-2교시-4번 sLLM(Small Large Language Model)",
+    "url": "/docs/ai/exam/137-2-4-sllm",
+    "nav_order": 1372204,
+    "exam_type": "1",
+    "round": 137,
+    "session": 2,
+    "number": 4,
+    "topic": "sLLM(Small Large Language Model)"
+  },
+  {
+    "title": "137회-1교시-9번 멀티모달(Multimodal)의 기술요소",
+    "url": "/docs/ai/exam/137-1-9-topic",
+    "nav_order": 1372109,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 9,
+    "topic": "멀티모달(Multimodal)의 기술요소"
+  },
+  {
+    "title": "137회-4교시-5번 유전 알고리즘(Genetic Algorithm)",
+    "url": "/docs/ai/exam/137-4-5-genetic-algorithm",
+    "nav_order": 1371405,
+    "exam_type": "1",
+    "round": 137,
+    "session": 4,
+    "number": 5,
+    "topic": "유전 알고리즘(Genetic Algorithm)"
+  },
+  {
+    "title": "137회-4교시-3번 양자 머신러닝(Quantum Machine Learning)",
+    "url": "/docs/ai/exam/137-4-3-qml",
+    "nav_order": 1371403,
+    "exam_type": "1",
+    "round": 137,
+    "session": 4,
+    "number": 3,
+    "topic": "양자 머신러닝(Quantum Machine Learning)"
+  },
+  {
+    "title": "137회-4교시-1번 AI 기반 SW개발 LLM 도입 시 보안 위험과 대응방안",
+    "url": "/docs/ai/exam/137-4-1-llm-security",
+    "nav_order": 1371401,
+    "exam_type": "1",
+    "round": 137,
+    "session": 4,
+    "number": 1,
+    "topic": "AI 기반 SW개발 LLM 도입 시 보안 위험과 대응방안"
+  },
+  {
+    "title": "137회-2교시-6번 TEXT2SQL 에 대하여 다음 각 항목을 설명하시오. 가. TEXT2S…",
+    "url": "/docs/ai/exam/137-2-6-text2sql-text2sql-text2sql-2",
+    "nav_order": 1371206,
+    "exam_type": "1",
+    "round": 137,
+    "session": 2,
+    "number": 6,
+    "topic": "TEXT2SQL 에 대하여 다음 각 항목을 설명하시오. 가. TEXT2S…"
+  },
+  {
+    "title": "137회-2교시-4번 공공부문 초거대 AI 도입·활용 가이드라인 2.0",
+    "url": "/docs/ai/exam/137-2-4-hyperscale-ai-guideline",
+    "nav_order": 1371204,
+    "exam_type": "1",
+    "round": 137,
+    "session": 2,
+    "number": 4,
+    "topic": "공공부문 초거대 AI 도입·활용 가이드라인 2.0"
+  },
+  {
+    "title": "137회-2교시-3번 MCP(Model Context Protocol)를 이용한 인공지능 서비…",
+    "url": "/docs/ai/exam/137-2-3-mcp",
+    "nav_order": 1371203,
+    "exam_type": "1",
+    "round": 137,
+    "session": 2,
+    "number": 3,
+    "topic": "MCP(Model Context Protocol)를 이용한 인공지능 서비…"
+  },
+  {
+    "title": "137회-1교시-12번 이진 탐색 트리(Binary Search Tree)",
+    "url": "/docs/ai/exam/137-1-12-bst",
+    "nav_order": 1371112,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 12,
+    "topic": "이진 탐색 트리(Binary Search Tree)"
+  },
+  {
+    "title": "137회-1교시-8번 RAG(Retrieval Augmented Generation)과 Fine Tuning",
+    "url": "/docs/ai/exam/137-1-8-rag-fine-tuning",
+    "nav_order": 1371108,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 8,
+    "topic": "RAG(Retrieval Augmented Generation)과 Fine Tuning"
+  },
+  {
+    "title": "137회-1교시-8번 AI 신뢰성 검인증 제도(CAT)를 설명하시오",
+    "url": "/docs/ai/exam/137-1-8-ai",
+    "nav_order": 1371108,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 8,
+    "topic": "AI 신뢰성 검인증 제도(CAT)를 설명하시오"
+  },
+  {
+    "title": "137회-1교시-7번 트랜스포머(Transformer)와 MoE(Mixture of Experts)",
+    "url": "/docs/ai/exam/137-1-7-moe",
+    "nav_order": 1371107,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 7,
+    "topic": "트랜스포머(Transformer)와 MoE(Mixture of Experts)"
+  },
+  {
+    "title": "137회-1교시-5번 GNN(Graph Neural Network)을 설명하시오",
+    "url": "/docs/ai/exam/137-1-5-gnn",
+    "nav_order": 1371105,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 5,
+    "topic": "GNN(Graph Neural Network)을 설명하시오"
+  },
+  {
+    "title": "136회-1교시-13번 MCP(Model Context Protocol)",
+    "url": "/docs/ai/exam/136-1-13-mcp",
+    "nav_order": 1361113,
+    "exam_type": "1",
+    "round": 136,
+    "session": 1,
+    "number": 13,
+    "topic": "MCP(Model Context Protocol)"
+  },
+  {
+    "title": "136회-1교시-3번 에이전틱 AI(Agentic AI)",
+    "url": "/docs/ai/exam/136-1-3-ai-136-1-3",
+    "nav_order": 1361103,
+    "exam_type": "1",
+    "round": 136,
+    "session": 1,
+    "number": 3,
+    "topic": "에이전틱 AI(Agentic AI)"
+  },
+  {
+    "title": "136회-1교시-2번 범용 AI(General-Purpose AI) 위험관리 프레임워크",
+    "url": "/docs/ai/exam/136-1-2-ai-136-1-2",
+    "nav_order": 1361102,
+    "exam_type": "1",
+    "round": 136,
+    "session": 1,
+    "number": 2,
+    "topic": "범용 AI(General-Purpose AI) 위험관리 프레임워크"
+  },
+  {
+    "title": "136회-3교시-2번 기업 디지털 전환(AX, AI Transformation)",
+    "url": "/docs/ai/exam/136-3-2-ax-transformation",
+    "nav_order": 1360302,
+    "exam_type": "1",
+    "round": 136,
+    "session": 3,
+    "number": 2,
+    "topic": "기업 디지털 전환(AX, AI Transformation)"
+  },
+  {
+    "title": "136회-2교시-3번 AI 기반 SW개발 LLM 도입 시 보안 위험과 대응방안",
+    "url": "/docs/ai/exam/136-2-3-llm-security",
+    "nav_order": 1360203,
+    "exam_type": "1",
+    "round": 136,
+    "session": 2,
+    "number": 3,
+    "topic": "AI 기반 SW개발 LLM 도입 시 보안 위험과 대응방안"
+  },
+  {
+    "title": "135회-1교시-12번 RAG(Retrieval-Augmented Generation)",
+    "url": "/docs/ai/exam/135-1-12-rag",
+    "nav_order": 1352112,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 12,
+    "topic": "RAG(Retrieval-Augmented Generation)"
+  },
+  {
+    "title": "135회-1교시-9번 인공지능 성능 관련 차원의 저주 (Curse of Dimensionality)",
+    "url": "/docs/ai/exam/135-1-9-topic-135-1-9",
+    "nav_order": 1352109,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 9,
+    "topic": "인공지능 성능 관련 차원의 저주 (Curse of Dimensionality)"
+  },
+  {
+    "title": "135회-1교시-4번 몬테카를로 트리탐색(Monte Carlo Tree Search)",
+    "url": "/docs/ai/exam/135-1-4-mcts",
+    "nav_order": 1352104,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 4,
+    "topic": "몬테카를로 트리탐색(Monte Carlo Tree Search)"
+  },
+  {
+    "title": "135회-1교시-13번 AGI 측면에서 ANI의 필요성",
+    "url": "/docs/ai/exam/135-1-13-agi-ani",
+    "nav_order": 1351113,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 13,
+    "topic": "AGI 측면에서 ANI의 필요성"
+  },
+  {
+    "title": "135회-1교시-12번 VAE(Variational AutoEncoder)",
+    "url": "/docs/ai/exam/135-1-12-vae",
+    "nav_order": 1351112,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 12,
+    "topic": "VAE(Variational AutoEncoder)"
+  },
+  {
+    "title": "135회-1교시-8번 불편추정량(Unbiased Estimator)",
+    "url": "/docs/ai/exam/135-1-8-unbiased-estimator",
+    "nav_order": 1351108,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 8,
+    "topic": "불편추정량(Unbiased Estimator)"
+  },
+  {
+    "title": "135회-1교시-6번 실루엣 계수(Silhouette Coefficient)",
+    "url": "/docs/ai/exam/135-1-6-topic-135-1-6",
+    "nav_order": 1351106,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 6,
+    "topic": "실루엣 계수(Silhouette Coefficient)"
+  },
+  {
+    "title": "135회-1교시-2번 Multimodal LLM(Large Language Model)",
+    "url": "/docs/ai/exam/135-1-2-multimodal-llm",
+    "nav_order": 1351102,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 2,
+    "topic": "Multimodal LLM(Large Language Model)"
+  },
+  {
+    "title": "135회-1교시-1번 PR 곡선과 ROC 곡선 비교",
+    "url": "/docs/ai/exam/135-1-1-pr-roc",
+    "nav_order": 1351101,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 1,
+    "topic": "PR 곡선과 ROC 곡선 비교"
+  },
+  {
+    "title": "📝 기출문제",
+    "url": "/docs/ai/exam",
+    "nav_order": 99,
+    "exam_type": "1"
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "title": "138회-2교시-6번 SW 대가산정",
+    "url": "/docs/sw/exam/138-2-6-sw-cost-estimation",
+    "nav_order": 138026,
+    "exam_type": "2",
+    "round": 138,
+    "session": 2,
+    "number": 6,
+    "topic": "SW 대가산정"
+  },
+  {
+    "title": "137회-3교시-2번 정보시스템 운영/유지보수 감리",
+    "url": "/docs/sw/exam/137-3-2-is-om-audit",
+    "nav_order": 137032,
+    "exam_type": "2",
+    "round": 137,
+    "session": 3,
+    "number": 2,
+    "topic": "정보시스템 운영/유지보수 감리"
+  },
+  {
+    "title": "137회-2교시-5번 SW 영향평가",
+    "url": "/docs/sw/exam/137-2-5-sw-impact-assessment",
+    "nav_order": 137025,
+    "exam_type": "2",
+    "round": 137,
+    "session": 2,
+    "number": 5,
+    "topic": "SW 영향평가"
+  },
+  {
+    "title": "137회-2교시-5번 동적 테스트",
+    "url": "/docs/sw/exam/137-2-5-dynamic-testing",
+    "nav_order": 137025,
+    "exam_type": "2",
+    "round": 137,
+    "session": 2,
+    "number": 5,
+    "topic": "동적 테스트"
+  },
+  {
+    "title": "137회-1교시-11번 역공학과 재공학",
+    "url": "/docs/sw/exam/137-1-11-reverse-reengineering",
+    "nav_order": 137011,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 11,
+    "topic": "역공학과 재공학"
+  },
+  {
+    "title": "137회-1교시-6번 SIL/HIL 테스팅",
+    "url": "/docs/sw/exam/137-1-6-sil-hil-testing",
+    "nav_order": 137006,
+    "exam_type": "1",
+    "round": 137,
+    "session": 1,
+    "number": 6,
+    "topic": "SIL/HIL 테스팅"
+  },
+  {
+    "title": "136회-4교시-3번 대형SW사업 전문평가제도",
+    "url": "/docs/sw/exam/136-4-3-sw-expert-evaluation",
+    "nav_order": 136043,
+    "exam_type": "2",
+    "round": 136,
+    "session": 4,
+    "number": 3,
+    "topic": "대형SW사업 전문평가제도"
+  },
+  {
+    "title": "136회-2교시-2번 SP 품질인증",
+    "url": "/docs/sw/exam/136-2-2-sp-certification",
+    "nav_order": 136022,
+    "exam_type": "2",
+    "round": 136,
+    "session": 2,
+    "number": 2,
+    "topic": "SP 품질인증"
+  },
+  {
+    "title": "136회-1교시-6번 DevOps 장점과 단점",
+    "url": "/docs/sw/exam/136-1-6-devops-pros-cons",
+    "nav_order": 136016,
+    "exam_type": "1",
+    "round": 136,
+    "session": 1,
+    "number": 6,
+    "topic": "DevOps 장점과 단점"
+  },
+  {
+    "title": "136회-1교시-5번 프록시 디자인 패턴",
+    "url": "/docs/sw/exam/136-1-5-proxy-design-pattern",
+    "nav_order": 136015,
+    "exam_type": "1",
+    "round": 136,
+    "session": 1,
+    "number": 5,
+    "topic": "프록시 디자인 패턴"
+  },
+  {
+    "title": "135회-2교시-2번 CI/CD DevSecOps",
+    "url": "/docs/sw/exam/135-2-2-cicd-devsecops",
+    "nav_order": 135022,
+    "exam_type": "2",
+    "round": 135,
+    "session": 2,
+    "number": 2,
+    "topic": "CI/CD DevSecOps"
+  },
+  {
+    "title": "135회-1교시-9번 소프트웨어 기술 부채",
+    "url": "/docs/sw/exam/135-1-9-technical-debt",
+    "nav_order": 135019,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 9,
+    "topic": "소프트웨어 기술 부채"
+  },
+  {
+    "title": "135회-1교시-8번 하드웨어 규모산정",
+    "url": "/docs/sw/exam/135-1-8-hw-sizing-methods",
+    "nav_order": 135018,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 8,
+    "topic": "하드웨어 규모산정"
+  },
+  {
+    "title": "135회-1교시-3번 요구사항 추적표",
+    "url": "/docs/sw/exam/135-1-3-requirement-traceability-matrix",
+    "nav_order": 135013,
+    "exam_type": "1",
+    "round": 135,
+    "session": 1,
+    "number": 3,
+    "topic": "요구사항 추적표"
+  },
+  {
+    "title": "134회-1교시-9번 플랫폼 엔지니어링",
+    "url": "/docs/sw/exam/134-1-9-platform-engineering",
+    "nav_order": 134019,
+    "exam_type": "1",
+    "round": 134,
+    "session": 1,
+    "number": 9,
+    "topic": "플랫폼 엔지니어링"
+  },
+  {
+    "title": "📝 기출문제",
+    "url": "/docs/sw/exam",
+    "nav_order": 99,
+    "exam_type": "1"
+  },
+  {
+    "title": "134회-1교시-13번 소프트웨어 품질성능 평가시험",
+    "url": "/docs/sw/exam/134-1-13-sw-quality-performance-test",
+    "nav_order": 72,
+    "exam_type": "1",
+    "round": 134,
+    "session": 1,
+    "number": 13,
+    "topic": "소프트웨어 품질성능 평가시험"
+  },
+  {
+    "title": "135회-3교시-1번 프로젝트 관리",
+    "url": "/docs/sw/exam/135-3-1-project-management",
+    "nav_order": 71,
+    "exam_type": "2",
+    "round": 135,
+    "session": 3,
+    "number": 1,
+    "topic": "프로젝트 관리"
+  },
+  {
+    "title": "134회-1교시-1번 터크만 사다리 모델",
+    "url": "/docs/sw/exam/134-1-1-tuckman-ladder-model",
+    "nav_order": 71,
+    "exam_type": "1",
+    "round": 134,
+    "session": 1,
+    "number": 1,
+    "topic": "터크만 사다리 모델"
+  },
+  {
+    "title": "136회-3교시-1번 갈등관리와 터크만 모델",
+    "url": "/docs/sw/exam/136-3-1-conflict-tuckman",
+    "nav_order": 70,
+    "exam_type": "2",
+    "round": 136,
+    "session": 3,
+    "number": 1,
+    "topic": "갈등관리와 터크만 모델"
+  },
+  {
+    "title": "136회-2교시-4번 제품계열(Product Line)",
+    "url": "/docs/sw/exam/136-2-4-product-line",
+    "nav_order": 69,
+    "exam_type": "2",
+    "round": 136,
+    "session": 2,
+    "number": 4,
+    "topic": "제품계열(Product Line)"
+  },
+  {
+    "title": "135회-4교시-4번 무중단 배포",
+    "url": "/docs/sw/exam/135-4-4-zero-downtime-deployment",
+    "nav_order": 40,
+    "exam_type": "2",
+    "round": 135,
+    "session": 4,
+    "number": 4,
+    "topic": "무중단 배포"
+  },
+  {
+    "title": "136회-3교시-3번 소프트웨어 품질보증",
+    "url": "/docs/sw/exam/136-3-3-software-quality-assurance",
+    "nav_order": 39,
+    "exam_type": "2",
+    "round": 136,
+    "session": 3,
+    "number": 3,
+    "topic": "소프트웨어 품질보증"
+  },
+  {
+    "title": "136회-2교시-2번 PMO와 정보시스템 감리",
+    "url": "/docs/sw/exam/136-2-2-pmo-audit",
+    "nav_order": 38,
+    "exam_type": "2",
+    "round": 136,
+    "session": 2,
+    "number": 2,
+    "topic": "PMO와 정보시스템 감리"
+  },
+  {
+    "title": "137회-4교시-4번 UML 행위 다이어그램",
+    "url": "/docs/sw/exam/137-4-4-uml-behavior-diagram",
+    "nav_order": 37,
+    "exam_type": "2",
+    "round": 137,
+    "session": 4,
+    "number": 4,
+    "topic": "UML 행위 다이어그램"
+  }
+]

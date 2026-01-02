@@ -163,8 +163,10 @@ permalink: /docs/daily
   var domainConfig = {
     ai: {
       topicsUrl: baseUrl + '/docs/ai/topics.json',
+      examUrl: baseUrl + '/docs/ai/exam.json',
       indexUrl: baseUrl + '/docs/ai',
       label: 'AI',
+      hasExam: true,
       categories: [
         { value: 'topics-all', label: 'AI 토픽 · 전체' },
         { value: 'topics-1', label: '① AI 개요' },
@@ -172,13 +174,17 @@ permalink: /docs/daily
         { value: 'topics-3', label: '③ AI 기술' },
         { value: 'topics-4', label: '④ AI 윤리/보안' },
         { value: 'topics-6', label: '⑥ 운영/프로세스' },
-        { value: 'topics-7', label: '⑦ 서비스' }
+        { value: 'topics-7', label: '⑦ 서비스' },
+        { value: 'exam-1', label: '📝 기출 1교시형' },
+        { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
     },
     sw: {
       topicsUrl: baseUrl + '/docs/sw/topics.json',
+      examUrl: baseUrl + '/docs/sw/exam.json',
       indexUrl: baseUrl + '/docs/sw',
       label: 'SW',
+      hasExam: true,
       categories: [
         { value: 'topics-all', label: 'SW 토픽 · 전체' },
         { value: 'topics-1', label: '① 안전성' },
@@ -190,41 +196,56 @@ permalink: /docs/daily
         { value: 'topics-9', label: '⑨ 테스팅' },
         { value: 'topics-10', label: '⑩ 유지보수' },
         { value: 'topics-11', label: '⑪ 조달/계약' },
-        { value: 'topics-15', label: '⑮ DevOps' }
+        { value: 'topics-15', label: '⑮ DevOps' },
+        { value: 'exam-1', label: '📝 기출 1교시형' },
+        { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
     },
     ds: {
       topicsUrl: baseUrl + '/docs/ds/topics.json',
+      examUrl: baseUrl + '/docs/ds/exam.json',
       indexUrl: baseUrl + '/docs/ds',
       label: 'DS',
+      hasExam: true,
       categories: [
         { value: 'topics-all', label: 'DS 토픽 · 전체' },
         { value: 'topics-1', label: '① 클라우드' },
         { value: 'topics-3', label: '③ 블록체인' },
         { value: 'topics-4', label: '④ 스마트카/자율주행' },
-        { value: 'topics-7', label: '⑦ 가상화/컨테이너' }
+        { value: 'topics-7', label: '⑦ 가상화/컨테이너' },
+        { value: 'exam-1', label: '📝 기출 1교시형' },
+        { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
     },
     sec: {
       topicsUrl: baseUrl + '/docs/sec/topics.json',
+      examUrl: baseUrl + '/docs/sec/exam.json',
       indexUrl: baseUrl + '/docs/sec',
       label: 'SEC',
+      hasExam: true,
       categories: [
-        { value: 'topics-all', label: 'SEC 토픽 · 전체' }
+        { value: 'topics-all', label: 'SEC 토픽 · 전체' },
+        { value: 'exam-1', label: '📝 기출 1교시형' },
+        { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
     },
     nw: {
       topicsUrl: baseUrl + '/docs/nw/topics.json',
+      examUrl: baseUrl + '/docs/nw/exam.json',
       indexUrl: baseUrl + '/docs/nw',
       label: 'NW',
+      hasExam: true,
       categories: [
-        { value: 'topics-all', label: 'NW 토픽 · 전체' }
+        { value: 'topics-all', label: 'NW 토픽 · 전체' },
+        { value: 'exam-1', label: '📝 기출 1교시형' },
+        { value: 'exam-2', label: '📝 기출 1교시형 외' }
       ]
     },
     db: {
       topicsUrl: baseUrl + '/docs/db/topics.json',
       indexUrl: baseUrl + '/docs/db',
       label: 'DB',
+      hasExam: false,
       categories: [
         { value: 'topics-all', label: 'DB 토픽 · 전체' }
       ]
@@ -233,6 +254,7 @@ permalink: /docs/daily
       topicsUrl: baseUrl + '/docs/caos/topics.json',
       indexUrl: baseUrl + '/docs/caos',
       label: 'CAOS',
+      hasExam: false,
       categories: [
         { value: 'topics-all', label: 'CAOS 토픽 · 전체' }
       ]
@@ -241,6 +263,7 @@ permalink: /docs/daily
       topicsUrl: baseUrl + '/docs/biz/topics.json',
       indexUrl: baseUrl + '/docs/biz',
       label: 'BIZ',
+      hasExam: false,
       categories: [
         { value: 'topics-all', label: 'BIZ 토픽 · 전체' }
       ]
@@ -267,12 +290,14 @@ permalink: /docs/daily
   var STORAGE_PREFIX = 'peDailyDeck:v1:';
 
   var topicRows = [];
+  var examRows = [];
   var cardsAll = [];
   var cards = [];
   var idx = 0;
   var hardSet = new Set();
   var pageCache = new Map();
   var currentDomain = 'ai';
+  var currentMode = 'topics-all';
 
   function safeGet(key, fallback) {
     try {
@@ -335,38 +360,52 @@ permalink: /docs/daily
 
   function applyModeAndSearch() {
     var mode = elMode.value;
+    currentMode = mode;
     var q = normalizeText(elSearch.value).toLowerCase();
 
-    var base = cardsAll.slice();
+    var base;
 
-    // Category filter (topics-1, topics-2, etc.)
-    if (mode && mode !== 'topics-all' && mode.indexOf('topics-') === 0) {
-      var catNum = mode.replace('topics-', '');
-      base = base.filter(function(c) {
-        // Match by nav_order prefix or parent category
-        var navStr = String(c.nav_order || '');
-        if (navStr.indexOf(catNum) === 0) return true;
-        var parentLower = (c.parent || '').toLowerCase();
-        if (parentLower.indexOf(catNum + '.') >= 0) return true;
-        if (parentLower.indexOf('① ') >= 0 && catNum === '1') return true;
-        if (parentLower.indexOf('② ') >= 0 && catNum === '2') return true;
-        if (parentLower.indexOf('③ ') >= 0 && catNum === '3') return true;
-        if (parentLower.indexOf('④ ') >= 0 && catNum === '4') return true;
-        if (parentLower.indexOf('⑤ ') >= 0 && catNum === '5') return true;
-        if (parentLower.indexOf('⑥ ') >= 0 && catNum === '6') return true;
-        if (parentLower.indexOf('⑦ ') >= 0 && catNum === '7') return true;
-        if (parentLower.indexOf('⑧ ') >= 0 && catNum === '8') return true;
-        if (parentLower.indexOf('⑨ ') >= 0 && catNum === '9') return true;
-        if (parentLower.indexOf('⑩ ') >= 0 && catNum === '10') return true;
-        if (parentLower.indexOf('⑪ ') >= 0 && catNum === '11') return true;
-        if (parentLower.indexOf('⑫ ') >= 0 && catNum === '12') return true;
-        if (parentLower.indexOf('⑬ ') >= 0 && catNum === '13') return true;
-        if (parentLower.indexOf('⑭ ') >= 0 && catNum === '14') return true;
-        if (parentLower.indexOf('⑮ ') >= 0 && catNum === '15') return true;
-        if (parentLower.indexOf('⑯ ') >= 0 && catNum === '16') return true;
-        if (parentLower.indexOf('⑰ ') >= 0 && catNum === '17') return true;
-        return false;
-      });
+    // 기출문제 모드 처리
+    if (mode && mode.indexOf('exam-') === 0) {
+      var examType = mode.replace('exam-', '');
+      base = examRows.slice();
+      if (examType === '1') {
+        base = base.filter(function(c) { return c.exam_type === '1'; });
+      } else {
+        base = base.filter(function(c) { return c.exam_type !== '1'; });
+      }
+    } else {
+      base = topicRows.slice();
+      
+      // Category filter (topics-1, topics-2, etc.)
+      if (mode && mode !== 'topics-all' && mode.indexOf('topics-') === 0) {
+        var catNum = mode.replace('topics-', '');
+        base = base.filter(function(c) {
+          // Match by nav_order prefix or parent category
+          var navStr = String(c.nav_order || '');
+          if (navStr.indexOf(catNum) === 0) return true;
+          var parentLower = (c.parent || '').toLowerCase();
+          if (parentLower.indexOf(catNum + '.') >= 0) return true;
+          if (parentLower.indexOf('① ') >= 0 && catNum === '1') return true;
+          if (parentLower.indexOf('② ') >= 0 && catNum === '2') return true;
+          if (parentLower.indexOf('③ ') >= 0 && catNum === '3') return true;
+          if (parentLower.indexOf('④ ') >= 0 && catNum === '4') return true;
+          if (parentLower.indexOf('⑤ ') >= 0 && catNum === '5') return true;
+          if (parentLower.indexOf('⑥ ') >= 0 && catNum === '6') return true;
+          if (parentLower.indexOf('⑦ ') >= 0 && catNum === '7') return true;
+          if (parentLower.indexOf('⑧ ') >= 0 && catNum === '8') return true;
+          if (parentLower.indexOf('⑨ ') >= 0 && catNum === '9') return true;
+          if (parentLower.indexOf('⑩ ') >= 0 && catNum === '10') return true;
+          if (parentLower.indexOf('⑪ ') >= 0 && catNum === '11') return true;
+          if (parentLower.indexOf('⑫ ') >= 0 && catNum === '12') return true;
+          if (parentLower.indexOf('⑬ ') >= 0 && catNum === '13') return true;
+          if (parentLower.indexOf('⑭ ') >= 0 && catNum === '14') return true;
+          if (parentLower.indexOf('⑮ ') >= 0 && catNum === '15') return true;
+          if (parentLower.indexOf('⑯ ') >= 0 && catNum === '16') return true;
+          if (parentLower.indexOf('⑰ ') >= 0 && catNum === '17') return true;
+          return false;
+        });
+      }
     }
 
     if (q) {
@@ -557,12 +596,19 @@ permalink: /docs/daily
         var definition = extractDefinition(doc);
         var componentsHtml = extractComponentsTables(doc);
         var mnemonic = card.mnemonic_html || normalizeMnemonicFallback(doc) || '';
+        var quickRef = null;
+
+        // 기출문제인 경우 Quick Reference 박스 추출
+        if (card.kind === 'exam') {
+          quickRef = extractQuickRef(doc);
+        }
 
         var payload = {
           url: card.url,
           definition: definition,
           components_html: componentsHtml,
-          mnemonic_html: mnemonic
+          mnemonic_html: mnemonic,
+          quick_ref_html: quickRef
         };
         pageCache.set(card.url, payload);
         applyExtracted(payload);
@@ -578,8 +624,15 @@ permalink: /docs/daily
     var cur = cards[idx];
     if (!cur || cur.url !== payload.url) return;
 
-    elDef.innerHTML = renderDefinition(payload.definition);
-    elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
+    // 기출문제인 경우 Quick Reference 박스를 개념 정의 영역에 표시
+    if (cur.kind === 'exam' && payload.quick_ref_html) {
+      elDef.innerHTML = payload.quick_ref_html;
+      elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
+    } else {
+      elDef.innerHTML = renderDefinition(payload.definition);
+      elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
+    }
+    
     if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) {
       if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html;
     }
@@ -611,13 +664,73 @@ permalink: /docs/daily
       });
   }
 
+  function loadExam() {
+    var config = domainConfig[currentDomain];
+    if (!config || !config.hasExam || !config.examUrl) {
+      examRows = [];
+      return Promise.resolve();
+    }
+
+    return fetch(config.examUrl, { credentials: 'same-origin' })
+      .then(function(r) { return r.json(); })
+      .then(function(j) {
+        examRows = (Array.isArray(j) ? j : []).map(function(p) {
+          var roundStr = p.round ? p.round + '회' : '';
+          var sessionStr = p.session ? p.session + '교시' : '';
+          var numStr = p.number ? p.number + '번' : '';
+          var badge = [roundStr, sessionStr, numStr].filter(Boolean).join(' ');
+          return {
+            kind: 'exam',
+            title: p.topic || p.title,
+            fullTitle: p.title,
+            url: p.url,
+            badge: badge || '기출문제',
+            sub_badge: p.exam_type === '1' ? '1교시형' : '2교시형 외',
+            nav_order: p.nav_order,
+            exam_type: p.exam_type,
+            round: p.round,
+            session: p.session,
+            number: p.number,
+            mnemonic_text: ''
+          };
+        });
+      })
+      .catch(function() {
+        examRows = [];
+      });
+  }
+
+  function extractQuickRef(doc) {
+    // .highlight 클래스를 가진 blockquote 찾기
+    var highlight = doc.querySelector('.highlight');
+    if (highlight) return highlight.outerHTML;
+    
+    // 핵심 암기 (Quick Reference) 헤딩 찾기
+    var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4'));
+    var target = headings.find(function(h) { 
+      var t = normalizeText(h.textContent);
+      return t.includes('핵심 암기') || t.includes('Quick Reference');
+    });
+    if (!target) return null;
+    
+    var el = target.nextElementSibling;
+    var tries = 0;
+    while (el && tries < 5) {
+      if (/^H[1-6]$/.test(el.tagName)) break;
+      if (el.classList && el.classList.contains('highlight')) return el.outerHTML;
+      if (el.tagName === 'BLOCKQUOTE') return el.outerHTML;
+      el = el.nextElementSibling;
+      tries++;
+    }
+    return null;
+  }
+
   function switchDomain(domain) {
     currentDomain = domain;
     updateModeOptions();
     
-    loadTopics()
+    Promise.all([loadTopics(), loadExam()])
       .then(function() {
-        cardsAll = topicRows;
         elStatus.textContent = '준비 완료';
         applyModeAndSearch();
       })
