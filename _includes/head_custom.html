@@ -1010,9 +1010,17 @@ div.dataTables_wrapper div.dataTables_length {
 }
 
 /* ====================================
-   Important blockquote 배경색 (Just the Docs 스타일 보완)
+   Highlight/Important blockquote 배경색 (Just the Docs 스타일 보완)
    ==================================== */
 
+/* highlight 클래스 (노란색) */
+.main-content .highlight > blockquote,
+.main-content blockquote.highlight,
+blockquote.highlight {
+  background-color: rgba(255, 243, 205, 0.85) !important; /* 연한 노란색 배경 */
+}
+
+/* important 클래스 */
 .main-content .important,
 .main-content blockquote.important,
 blockquote.important {
