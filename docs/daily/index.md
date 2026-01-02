@@ -757,11 +757,29 @@ permalink: /docs/daily
   }
 
   function extractQuickRef(doc) {
-    // .highlight 클래스를 가진 blockquote 찾기
-    var highlight = doc.querySelector('.highlight');
-    if (highlight) return highlight.outerHTML;
+    var results = [];
     
-    // 핵심 암기 (Quick Reference) 헤딩 찾기
+    // 모든 .highlight 클래스를 가진 요소 찾기
+    var highlights = doc.querySelectorAll('.highlight');
+    if (highlights && highlights.length > 0) {
+      Array.prototype.forEach.call(highlights, function(h) {
+        results.push(h.outerHTML);
+      });
+    }
+    
+    // .important 클래스도 포함
+    var importants = doc.querySelectorAll('.important');
+    if (importants && importants.length > 0) {
+      Array.prototype.forEach.call(importants, function(h) {
+        results.push(h.outerHTML);
+      });
+    }
+    
+    if (results.length > 0) {
+      return results.join('<hr style="margin: 16px 0; border: none; border-top: 1px solid rgba(15,23,42,0.12);">');
+    }
+    
+    // 핵심 암기 (Quick Reference) 헤딩 찾기 (fallback)
     var headings = Array.prototype.slice.call(doc.querySelectorAll('h1,h2,h3,h4'));
     var target = headings.find(function(h) { 
       var t = normalizeText(h.textContent);
