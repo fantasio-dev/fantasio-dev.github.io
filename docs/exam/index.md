@@ -236,6 +236,58 @@ pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
 - 기출문제 목록 테이블 업데이트
 - Git 커밋 & 푸시
 
+---
+
+**📚 수준별 학습 프롬프트**
+
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #fef3c7; border-radius: 6px;">
+<summary style="cursor: pointer; font-weight: 600; color: #92400e;">🎓 고딩 수준</summary>
+<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #fffbeb; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
+문의 주제: [토픽명]
+
+- 고등학생이 이해할 수 있게 설명해주고
+- 키워드 3개 알려줘
+- 등장배경을 짧게 알려줘
+- 개념은 정보관리기술사 답안지 처럼 작성해줘 (키워드 위주로)
+- 기술요소 또는 구성요소를 각각 2가지로 그룹화 해줘
+- 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘
+- 만약 문의 주제가 2개 이상이면 그것들의 관계도 알려줘
+- 6하원칙으로도 간단히 알려줘
+</pre>
+</details>
+
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dbeafe; border-radius: 6px;">
+<summary style="cursor: pointer; font-weight: 600; color: #1e40af;">🎯 기술사 수준</summary>
+<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #eff6ff; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
+문의 주제: [토픽명]
+
+- 정보관리기술사 수준으로 설명해줘 
+- 키워드 3개 알려줘
+- 등장배경을 짧게 알려줘
+- 개념은 정보관리기술사 답안지 처럼 작성해줘 (키워드 위주로, 22자 이내로)
+- 기술요소 또는 구성요소를 각각 2가지로 그룹화 해줘. 세부 항목은 4가지씩 알려줘
+- 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘
+- 만약 문의 주제가 2개 이상이면 그것들의 관계도 알려줘
+- 6하원칙으로도 간단히 알려줘
+- 기술사 공부하는 내가 이해 쉽게 기술사 상위 토픽들을 최상위까지 알려줘
+- 지금 내가 물어보는 SW, PM 쪽 개념들은 절차, 방법론, 산출물, 관리, 기법, 도구 측면에서도 설명해줘
+</pre>
+</details>
+
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dcfce7; border-radius: 6px;">
+<summary style="cursor: pointer; font-weight: 600; color: #166534;">💻 SW/PM 특화</summary>
+<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #f0fdf4; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
+문의 주제: [토픽명]
+
+- 정보관리기술사 수준으로 설명해줘 
+- 키워드 3개 알려줘
+- 지금 내가 물어보는 SW, PM 쪽 개념들은 절차, 방법론, 산출물, 관리, 기법, 도구 측면에서도 설명해줘
+- 개념은 정보관리기술사 답안지 처럼 작성해줘 (키워드 위주로)
+- 기술요소 또는 구성요소를 각각 2가지로 그룹화 해줘. 세부 항목은 4가지씩 알려줘
+- 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘
+</pre>
+</details>
+
 </div>
 </details>
 
