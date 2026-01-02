@@ -63,7 +63,8 @@ permalink: /docs/daily
         </div>
       </div>
 
-      <div class="daily-deck__panes">
+      <!-- 일반 토픽용 레이아웃 -->
+      <div class="daily-deck__panes" id="dailyDeckPanesNormal">
         <div class="daily-deck__pane">
           <div class="daily-deck__pane-title">개념 정의(한 줄)</div>
           <div class="daily-deck__pane-body" id="dailyDeckDefinition">-</div>
@@ -78,7 +79,15 @@ permalink: /docs/daily
         </div>
       </div>
 
-      <div class="daily-deck__footer">
+      <!-- 기출문제용 단일 레이아웃 -->
+      <div class="daily-deck__exam-content" id="dailyDeckExamContent" style="display: none;">
+        <div class="daily-deck__pane daily-deck__pane--full">
+          <div class="daily-deck__pane-title">📌 핵심 암기 (Quick Reference)</div>
+          <div class="daily-deck__pane-body" id="dailyDeckExamQuickRef">-</div>
+        </div>
+      </div>
+
+      <div class="daily-deck__footer" id="dailyDeckFooter">
         <details>
           <summary><strong>팁</strong> (클릭)</summary>
           <ul>
@@ -150,6 +159,15 @@ permalink: /docs/daily
 .daily-deck__pane-body table thead th { white-space: nowrap; }
 .daily-deck__pane-body .highlight-purple { background: rgba(245, 243, 255, 0.55); border-radius: 10px; padding: 8px; }
 .daily-deck__footer { margin-top: 10px; }
+
+/* 기출문제용 단일 레이아웃 */
+.daily-deck__exam-content { margin-top: 10px; }
+.daily-deck__pane--full { grid-column: 1 / -1; }
+.daily-deck__exam-content .daily-deck__pane-body { max-height: 60vh; overflow-y: auto; }
+
+/* 기출문제 모드: detail 섹션 전체 너비 */
+.daily-deck__layout.is-exam-mode { grid-template-columns: 1fr; }
+.daily-deck__layout.is-exam-mode .daily-deck__list { display: none; }
 </style>
 
 <script>
@@ -287,6 +305,13 @@ permalink: /docs/daily
   var elComponents = document.getElementById('dailyDeckComponents');
   var elMnemonic = document.getElementById('dailyDeckMnemonic');
   var elOpenLink = document.getElementById('dailyDeckOpenLink');
+
+  // 레이아웃 전환용 요소
+  var elLayout = document.querySelector('.daily-deck__layout');
+  var elPanesNormal = document.getElementById('dailyDeckPanesNormal');
+  var elExamContent = document.getElementById('dailyDeckExamContent');
+  var elExamQuickRef = document.getElementById('dailyDeckExamQuickRef');
+  var elFooter = document.getElementById('dailyDeckFooter');
 
   var btnPrev = document.getElementById('dailyDeckPrev');
   var btnNext = document.getElementById('dailyDeckNext');
@@ -436,8 +461,27 @@ permalink: /docs/daily
 
     cards = base;
     idx = 0;
+
+    // 기출문제 모드면 레이아웃 전환
+    var isExamMode = mode && mode.indexOf('exam-') === 0;
+    toggleExamLayout(isExamMode);
+
     renderList();
     selectIndex(0, { scrollIntoView: true });
+  }
+
+  function toggleExamLayout(isExam) {
+    if (isExam) {
+      elLayout.classList.add('is-exam-mode');
+      elPanesNormal.style.display = 'none';
+      elExamContent.style.display = 'block';
+      elFooter.style.display = 'none';
+    } else {
+      elLayout.classList.remove('is-exam-mode');
+      elPanesNormal.style.display = 'grid';
+      elExamContent.style.display = 'none';
+      elFooter.style.display = 'block';
+    }
   }
 
   function renderList() {
@@ -503,9 +547,16 @@ permalink: /docs/daily
     elTitle.textContent = c.title;
     elOpenLink.setAttribute('href', c.url || '#');
 
-    elMnemonic.innerHTML = c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-');
-    elDef.innerHTML = '-';
-    elComponents.innerHTML = '-';
+    // 기출문제 모드 여부
+    var isExam = c.kind === 'exam';
+
+    if (isExam) {
+      elExamQuickRef.innerHTML = '불러오는 중…';
+    } else {
+      elMnemonic.innerHTML = c.mnemonic_html || (c.mnemonic_text ? escapeHtml(c.mnemonic_text) : '-');
+      elDef.innerHTML = '-';
+      elComponents.innerHTML = '-';
+    }
 
     hydrateFromPage(c);
 
@@ -630,17 +681,16 @@ permalink: /docs/daily
     var cur = cards[idx];
     if (!cur || cur.url !== payload.url) return;
 
-    // 기출문제인 경우 Quick Reference 박스를 개념 정의 영역에 표시
-    if (cur.kind === 'exam' && payload.quick_ref_html) {
-      elDef.innerHTML = payload.quick_ref_html;
-      elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
+    // 기출문제인 경우 Quick Reference 박스를 단일 영역에 표시
+    if (cur.kind === 'exam') {
+      elExamQuickRef.innerHTML = payload.quick_ref_html || '-';
     } else {
       elDef.innerHTML = renderDefinition(payload.definition);
       elComponents.innerHTML = payload.components_html ? payload.components_html : '-';
-    }
-    
-    if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) {
-      if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html;
+      
+      if (!cur.mnemonic_html || cur.mnemonic_text === '-' || !cur.mnemonic_text) {
+        if (payload.mnemonic_html) elMnemonic.innerHTML = payload.mnemonic_html;
+      }
     }
   }
 
