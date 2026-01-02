@@ -6,9 +6,6 @@ has_toc: false
 permalink: /docs/daily
 ---
 
-# 🃏 Daily 암기 덱
-{: .no_toc }
-
 <div class="daily-deck" id="dailyDeckRoot">
 
   <div class="daily-deck__toolbar">
