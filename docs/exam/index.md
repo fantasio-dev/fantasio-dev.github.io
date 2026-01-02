@@ -137,7 +137,7 @@ page_no_title: true
 #examTable td {
   vertical-align: middle;
 }
-/* 회차, 정/컴, 교시, 번호 컬럼 - 최소폭 */
+/* 회차, 정/컴, 교시, 번호 컬럼 - 내용에 맞게 자동 조절 */
 #examTable td:nth-child(1),
 #examTable td:nth-child(2),
 #examTable td:nth-child(3),
@@ -146,12 +146,11 @@ page_no_title: true
 #examTable th:nth-child(2),
 #examTable th:nth-child(3),
 #examTable th:nth-child(4) {
-  width: 40px;
-  max-width: 50px;
+  width: 1%;
   white-space: nowrap;
   text-align: center;
-  padding: 0.3rem 0.4rem;
-  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
 }
 /* 문제 컬럼 */
 #examTable td:nth-child(5) {
