@@ -212,38 +212,37 @@ tr.has-page {
 
 <div style="margin-top: 0.75rem; font-size: 0.85rem; line-height: 1.6; color: #334155;">
 
-**기본 명령 형식:**
-```
-{회차}회 {정/컴} {교시}교시 {번호}번 {문제제목}
+<p><strong>기본 명령 형식:</strong></p>
+<pre style="background: #f1f5f9; padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; overflow-x: auto;">{회차}회 {정/컴} {교시}교시 {번호}번 {문제제목}
 pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
-{1교시형/2교시형}이야
-```
+{1교시형/2교시형}이야</pre>
 
-**예시:**
-```
-137회 컴시응 1교시 6번 SIL/HIL 테스팅
+<p><strong>예시:</strong></p>
+<pre style="background: #f1f5f9; padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; overflow-x: auto;">137회 컴시응 1교시 6번 SIL/HIL 테스팅
 pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
-1교시형이야
-```
+1교시형이야</pre>
 
-**문제 유형:**
-- **1교시형**: 단답형 (고딩수준 접기 + 기술사수준)
-- **2교시형**: 서술형 (Quick개념잡기 접기 + 기술사수준 단락별)
+<p><strong>문제 유형:</strong></p>
+<ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+<li><strong>1교시형</strong>: 단답형 (고딩수준 접기 + 기술사수준)</li>
+<li><strong>2교시형</strong>: 서술형 (Quick개념잡기 접기 + 기술사수준 단락별)</li>
+</ul>
 
-**자동 처리 항목:**
-- PDF 해설지에서 내용 추출 (`assets/기출문제/{회차}회/`)
-- 학습 페이지 생성 (`docs/{도메인}/exam/`)
-- 기출문제 목록 테이블 업데이트
-- Git 커밋 & 푸시
+<p><strong>자동 처리 항목:</strong></p>
+<ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+<li>PDF 해설지에서 내용 추출 (<code>assets/기출문제/{회차}회/</code>)</li>
+<li>학습 페이지 생성 (<code>docs/{도메인}/exam/</code>)</li>
+<li>기출문제 목록 테이블 업데이트</li>
+<li>Git 커밋 &amp; 푸시</li>
+</ul>
 
----
+<hr style="margin: 1rem 0; border: none; border-top: 1px solid #e2e8f0;">
 
-**📚 수준별 학습 프롬프트**
+<p><strong>📚 수준별 학습 프롬프트</strong></p>
 
-<details style="margin: 0.5rem 0; padding: 0.5rem; background: #fef3c7; border-radius: 6px;">
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px;">
 <summary style="cursor: pointer; font-weight: 600; color: #92400e;">🎓 고딩 수준</summary>
-<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #fffbeb; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
-문의 주제: [토픽명]
+<pre style="margin: 0.5rem 0; padding: 0.75rem; background: #fffbeb; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap; line-height: 1.5;">문의 주제: [토픽명]
 
 - 고등학생이 이해할 수 있게 설명해주고
 - 키워드 3개 알려줘
@@ -252,14 +251,12 @@ pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
 - 기술요소 또는 구성요소를 각각 2가지로 그룹화 해줘
 - 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘
 - 만약 문의 주제가 2개 이상이면 그것들의 관계도 알려줘
-- 6하원칙으로도 간단히 알려줘
-</pre>
+- 6하원칙으로도 간단히 알려줘</pre>
 </details>
 
-<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dbeafe; border-radius: 6px;">
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dbeafe; border: 1px solid #93c5fd; border-radius: 6px;">
 <summary style="cursor: pointer; font-weight: 600; color: #1e40af;">🎯 기술사 수준</summary>
-<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #eff6ff; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
-문의 주제: [토픽명]
+<pre style="margin: 0.5rem 0; padding: 0.75rem; background: #eff6ff; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap; line-height: 1.5;">문의 주제: [토픽명]
 
 - 정보관리기술사 수준으로 설명해줘 
 - 키워드 3개 알려줘
@@ -270,22 +267,19 @@ pdf 가 있으면 만들어주고 못찾으면 다시 말해줘
 - 만약 문의 주제가 2개 이상이면 그것들의 관계도 알려줘
 - 6하원칙으로도 간단히 알려줘
 - 기술사 공부하는 내가 이해 쉽게 기술사 상위 토픽들을 최상위까지 알려줘
-- 지금 내가 물어보는 SW, PM 쪽 개념들은 절차, 방법론, 산출물, 관리, 기법, 도구 측면에서도 설명해줘
-</pre>
+- 지금 내가 물어보는 SW, PM 쪽 개념들은 절차, 방법론, 산출물, 관리, 기법, 도구 측면에서도 설명해줘</pre>
 </details>
 
-<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dcfce7; border-radius: 6px;">
+<details style="margin: 0.5rem 0; padding: 0.5rem; background: #dcfce7; border: 1px solid #86efac; border-radius: 6px;">
 <summary style="cursor: pointer; font-weight: 600; color: #166534;">💻 SW/PM 특화</summary>
-<pre style="margin: 0.5rem 0; padding: 0.5rem; background: #f0fdf4; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap;">
-문의 주제: [토픽명]
+<pre style="margin: 0.5rem 0; padding: 0.75rem; background: #f0fdf4; border-radius: 4px; font-size: 0.8rem; white-space: pre-wrap; line-height: 1.5;">문의 주제: [토픽명]
 
 - 정보관리기술사 수준으로 설명해줘 
 - 키워드 3개 알려줘
 - 지금 내가 물어보는 SW, PM 쪽 개념들은 절차, 방법론, 산출물, 관리, 기법, 도구 측면에서도 설명해줘
 - 개념은 정보관리기술사 답안지 처럼 작성해줘 (키워드 위주로)
 - 기술요소 또는 구성요소를 각각 2가지로 그룹화 해줘. 세부 항목은 4가지씩 알려줘
-- 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘
-</pre>
+- 기술사 답안지에 차별점을 줄 수 있는 추가 키워드 제일 중요한거 하나만 알려줘</pre>
 </details>
 
 </div>
