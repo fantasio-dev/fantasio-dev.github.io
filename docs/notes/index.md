@@ -232,27 +232,4 @@ permalink: /docs/notes
   </ul>
 </div>
 
----
-
-## 💡 학습노트 활용 팁
-
-<div class="tip-box">
-  <div class="tip-box__title">💡 효과적인 노트 정리법</div>
-  <div class="tip-box__content">
-    <strong>1. 멘토 피드백은 즉시 기록</strong> - 모의고사 직후 받은 피드백을 바로 정리<br>
-    <strong>2. 토픽별 인사이트 분류</strong> - 개별 토픽에 대한 팁은 따로 모아두기<br>
-    <strong>3. 반복 지적사항 강조</strong> - 여러 번 지적받은 내용은 ⭐로 표시<br>
-    <strong>4. 답안 작성 팁 정리</strong> - 채점 기준, 답안 구성 팁 별도 관리
-  </div>
-</div>
-
----
-
-## 🔗 관련 링크
-
-| 링크 | 설명 |
-|:-----|:-----|
-| [특강]({{ site.baseurl }}/docs/lecture) | 138회 대비 법인가출 특강 자료 |
-| [DS 기출문제]({{ site.baseurl }}/docs/ds/exam) | DS 영역 기출문제 목록 |
-| [SW 기출문제]({{ site.baseurl }}/docs/sw/exam) | SW 영역 기출문제 목록 |
 
