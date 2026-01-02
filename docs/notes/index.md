@@ -193,10 +193,10 @@ permalink: /docs/notes
       <h3 class="note-card__title">SEC (보안)</h3>
     </div>
     <p class="note-card__desc">
-      보안 영역 학습 기록, 프레임워크/공격기법/대응방안 노트
+      NW/보안 영역 학습 기록, 프레임워크/공격기법/대응방안 노트
     </p>
-    <a href="{{ site.baseurl }}/docs/sec/notes" class="note-card__link" style="background: #94a3b8; pointer-events: none;">
-      준비 중
+    <a href="{{ site.baseurl }}/docs/sec/notes" class="note-card__link">
+      노트 보기 →
     </a>
   </div>
 
@@ -221,6 +221,10 @@ permalink: /docs/notes
 <div class="recent-notes">
   <div class="recent-notes__title">📝 최근 기록</div>
   <ul class="recent-notes__list">
+    <li class="recent-notes__item">
+      <a href="{{ site.baseurl }}/docs/sec/notes">NW/보안 주간 모의고사 피드백</a>
+      <span class="recent-notes__date">2025-12-14</span>
+    </li>
     <li class="recent-notes__item">
       <a href="{{ site.baseurl }}/docs/ds/notes">DS 주간 모의고사 피드백</a>
       <span class="recent-notes__date">2025-12-07</span>
