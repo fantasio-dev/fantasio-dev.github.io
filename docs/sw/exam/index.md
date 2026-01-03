@@ -192,6 +192,7 @@ permalink: /docs/sw/exam
 <tr class="has-page has-mnemonic"><td>135</td><td>관리</td><td>4</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/135-4-4-zero-downtime-deployment">무중단 배포</a></td><td>DevOps</td><td><code>(전략) 롤블카</code></td></tr>
 <!-- 134회 -->
 <tr class="has-page has-mnemonic"><td>134</td><td>관리</td><td>1</td><td>1</td><td><a href="{{ site.baseurl }}/docs/sw/exam/134-1-1-tuckman-ladder-model">터크만 사다리 모델</a></td><td>PM</td><td><code>(단계) 포스노퍼어</code></td></tr>
+<tr class="has-page has-mnemonic"><td>134</td><td>관리</td><td>1</td><td>4</td><td><a href="{{ site.baseurl }}/docs/sw/exam/134-1-4-configuration-management">형상관리와 기준선</a></td><td>형상관리</td><td><code>(절차) 식통감기</code> <code>(기준선) 기분설제</code></td></tr>
 <tr class="has-page has-mnemonic"><td>134</td><td>관리</td><td>1</td><td>5</td><td><a href="{{ site.baseurl }}/docs/sw/exam/134-1-5-information-hiding">정보은닉</a></td><td>OOP</td><td><code>(기법) PPPD</code></td></tr>
 <tr class="has-page has-mnemonic"><td>134</td><td>관리</td><td>1</td><td>9</td><td><a href="{{ site.baseurl }}/docs/sw/exam/134-1-9-platform-engineering">플랫폼 엔지니어링</a></td><td>DevOps</td><td><code>(구성) IDP-포셀골</code></td></tr>
 <tr class="has-page has-mnemonic"><td>134</td><td>관리</td><td>1</td><td>11</td><td><a href="{{ site.baseurl }}/docs/sw/exam/134-1-11-agile-pros-cons">애자일 장단점</a></td><td>방법론</td><td><code>(장점) 빠유효협</code></td></tr>
